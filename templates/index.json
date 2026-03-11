@@ -1,0 +1,917 @@
+{
+    "sections": {
+        "slideshow": {
+            "type": "slideshow",
+            "blocks": {
+                "video_7zWDmq": {
+                    "type": "video",
+                    "settings": {
+                        "video": "",
+                        "mobile_video": "",
+                        "allow_sound": true,
+                        "subheading": "designer glassware & gifts since 1997",
+                        "title": "Pyramid Glass",
+                        "mobile_text_position": "place-self-center text-center",
+                        "desktop_text_position": "sm:place-self-end-center sm:text-center",
+                        "content_max_width": 780,
+                        "button_1_text": "Discover our Brands",
+                        "button_1_link": "shopify:\/\/pages\/brands",
+                        "button_1_style": "link",
+                        "button_1_background": "#ffffff",
+                        "button_1_text_color": "#000000",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "outline",
+                        "button_2_background": "rgba(0,0,0,0)",
+                        "button_2_text_color": "#000000",
+                        "background": "",
+                        "background_opacity": 50,
+                        "text_color": "#ffffff",
+                        "border_color": "",
+                        "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+                    }
+                },
+                "image_P6YjhR": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/1_Borowski_chameleon_bowl_green_XL.jpg",
+                        "mobile_image": "shopify:\/\/shop_images\/chameleon_bowl_green-d-1536x1536.jpg",
+                        "subheading": "Unique Pieces",
+                        "title": "Exquisite colourful glassware",
+                        "mobile_text_position": "place-self-end-center text-center",
+                        "desktop_text_position": "sm:place-self-end-start sm:text-start",
+                        "content_max_width": 780,
+                        "button_1_text": "Discover more",
+                        "button_1_link": "",
+                        "button_1_style": "outline",
+                        "button_1_background": "#ffffff",
+                        "button_1_text_color": "#1c1c1c",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "link",
+                        "button_2_background": "rgba(0,0,0,0)",
+                        "button_2_text_color": "#000000",
+                        "background": "",
+                        "background_opacity": 50,
+                        "text_color": "#ffffff",
+                        "border_color": "",
+                        "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+                    }
+                },
+                "slide-2": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Orrefors_Carat_Candleholders_and_votives_3fd30ffd-f746-4e02-b333-f82751e072ca.png",
+                        "mobile_image": "shopify:\/\/shop_images\/Carat_Votive_small_Clear_Orrefors_jpg.webp",
+                        "subheading": "Orrefors",
+                        "title": "Luxury Crystal Tableware",
+                        "mobile_text_position": "place-self-end-start text-start",
+                        "desktop_text_position": "sm:place-self-center-end sm:text-end",
+                        "content_max_width": 780,
+                        "button_1_text": "Shop Tablerware",
+                        "button_1_link": "shopify:\/\/collections\/orrefors",
+                        "button_1_style": "solid",
+                        "button_1_background": "#f3f3f3",
+                        "button_1_text_color": "#000000",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "outline",
+                        "button_2_background": "#f3f3f3",
+                        "button_2_text_color": "#000000",
+                        "background": "",
+                        "background_opacity": 50,
+                        "text_color": "#ffffff",
+                        "border_color": "",
+                        "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+                    }
+                },
+                "image_awWDi9": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Lalique_tourbillons_collection.jpg",
+                        "mobile_image": "shopify:\/\/shop_images\/tourbillons-small-vase_10549900-b.jpg",
+                        "subheading": "Lalique",
+                        "title": "French crystal  ",
+                        "mobile_text_position": "place-self-end-center text-center",
+                        "desktop_text_position": "sm:place-self-end-start sm:text-start",
+                        "content_max_width": 780,
+                        "button_1_text": "Shop Vases",
+                        "button_1_link": "shopify:\/\/collections\/vases",
+                        "button_1_style": "solid",
+                        "button_1_background": "#ffffff",
+                        "button_1_text_color": "#000000",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "outline",
+                        "button_2_background": "#f3f3f3",
+                        "button_2_text_color": "#000000",
+                        "background": "",
+                        "background_opacity": 50,
+                        "text_color": "#ffffff",
+                        "border_color": "",
+                        "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+                    }
+                },
+                "image_V4VKPq": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/PETER_LAYTON_-_Monet_large_Flattend_Wase.jpg",
+                        "subheading": "Seductive Glass pieces",
+                        "title": "Bowls & Dishes",
+                        "mobile_text_position": "place-self-end-center text-center",
+                        "desktop_text_position": "sm:place-self-end-start sm:text-start",
+                        "content_max_width": 780,
+                        "button_1_text": "Shop Bowls & Dishes",
+                        "button_1_link": "shopify:\/\/collections\/bowls-dishes",
+                        "button_1_style": "solid",
+                        "button_1_background": "#f3f3f3",
+                        "button_1_text_color": "#000000",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "outline",
+                        "button_2_background": "#ffffff",
+                        "button_2_text_color": "#000000",
+                        "background": "",
+                        "background_opacity": 50,
+                        "text_color": "#ffffff",
+                        "border_color": "",
+                        "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+                    }
+                },
+                "image_49C4py": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/1_Borowski_slow-jim_slow-jack_vase_XL.jpg",
+                        "subheading": "handmade crystal wildlife sculptures from",
+                        "title": "Målerås",
+                        "mobile_text_position": "place-self-end-start text-start",
+                        "desktop_text_position": "sm:place-self-end-start sm:text-start",
+                        "content_max_width": 780,
+                        "button_1_text": "Shop Målerås",
+                        "button_1_link": "shopify:\/\/collections\/maleras",
+                        "button_1_style": "solid",
+                        "button_1_background": "#f3f3f3",
+                        "button_1_text_color": "#000000",
+                        "button_2_text": "",
+                        "button_2_link": "",
+                        "button_2_style": "outline",
+                        "button_2_background": "#ffffff",
+                        "button_2_text_color": "#000000",
+                        "background": "",
+                        "background_opacity": 50,
+                        "text_color": "#ffffff",
+                        "border_color": "",
+                        "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+                    }
+                }
+            },
+            "block_order": [
+                "video_7zWDmq",
+                "image_P6YjhR",
+                "slide-2",
+                "image_awWDi9",
+                "image_V4VKPq",
+                "image_49C4py"
+            ],
+            "custom_css": [
+                ".content-over-media {max-height: 100vh;}"
+            ],
+            "settings": {
+                "allow_transparent_header": true,
+                "show_next_section_button": true,
+                "media_size": "auto",
+                "show_initial_transition": true,
+                "autoplay": true,
+                "autoplay_pause_on_video": true,
+                "cycle_speed": 8,
+                "background": "#000000",
+                "controls_color": "#ffffff"
+            }
+        },
+        "logo_list_mrexnb": {
+            "type": "logo-list",
+            "blocks": {
+                "logo_QACFkK": {
+                    "type": "logo",
+                    "settings": {
+                        "logo": "shopify:\/\/shop_images\/pngwing.com.png",
+                        "logo_width": 120,
+                        "link": "shopify:\/\/collections\/lalique"
+                    }
+                },
+                "logo_3HNjrN": {
+                    "type": "logo",
+                    "settings": {
+                        "logo": "shopify:\/\/shop_images\/ORREFORS_-_Logo_Symbol_-_RGB_Positive.png",
+                        "logo_width": 120,
+                        "link": "shopify:\/\/collections\/orrefors"
+                    }
+                },
+                "logo_7GjC4X": {
+                    "type": "logo",
+                    "settings": {
+                        "logo": "shopify:\/\/shop_images\/borowski-logo.png",
+                        "logo_width": 120,
+                        "link": "shopify:\/\/collections\/borowski-glasstudio"
+                    }
+                },
+                "logo_pQjMb8": {
+                    "type": "logo",
+                    "settings": {
+                        "logo": "shopify:\/\/shop_images\/M_png_152e6838-83af-41d8-a6d2-026fb8c75ef6.png",
+                        "logo_width": 120,
+                        "link": "shopify:\/\/collections\/maleras"
+                    }
+                },
+                "logo_yPFdbY": {
+                    "type": "logo",
+                    "settings": {
+                        "logo": "shopify:\/\/shop_images\/KOSTA_BODA_-_Logo_white_background.jpg",
+                        "logo_width": 120,
+                        "link": "shopify:\/\/collections\/kosta-boda"
+                    }
+                }
+            },
+            "block_order": [
+                "logo_QACFkK",
+                "logo_3HNjrN",
+                "logo_7GjC4X",
+                "logo_pQjMb8",
+                "logo_yPFdbY"
+            ],
+            "settings": {
+                "color_scheme": "",
+                "separate_section_with_border": true,
+                "subheading": "featured brands",
+                "title": "European Glass Royalty at Pyramid",
+                "stack_on_mobile": false,
+                "items_per_row": 7,
+                "logo_item_background": "",
+                "logo_item_border": ""
+            }
+        },
+        "scrolling_content_TWXYLG": {
+            "type": "scrolling-content",
+            "blocks": {
+                "image_8CCXdi": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/M_png.png"
+                    }
+                },
+                "image_BAeWY4": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/ORREFORS_-_Logo_Symbol_-_RGB_Positive.png"
+                    }
+                },
+                "image_CYdy9T": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/pngwing.com.png"
+                    }
+                },
+                "image_J3iMXE": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/borowski-logo.png"
+                    }
+                },
+                "image_xT3rhK": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/iittala_logo_2024_ecom.svg"
+                    }
+                },
+                "image_eWQUk8": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/kostaBoda.png"
+                    }
+                }
+            },
+            "block_order": [
+                "image_8CCXdi",
+                "image_BAeWY4",
+                "image_CYdy9T",
+                "image_J3iMXE",
+                "image_xT3rhK",
+                "image_eWQUk8"
+            ],
+            "disabled": true,
+            "custom_css": [],
+            "name": "Scrolling Brand Logo Carousel",
+            "settings": {
+                "separate_section_with_border": false,
+                "scrolling_speed": 0.1,
+                "scroll_direction": "left",
+                "pause_on_hover": false,
+                "text_font": "heading",
+                "text_font_size_mobile": 60,
+                "text_font_size_desktop": 98,
+                "section_vertical_spacing_mobile": 10,
+                "section_vertical_spacing_desktop": 10,
+                "item_horizontal_spacing_mobile": 80,
+                "item_horizontal_spacing_desktop": 10,
+                "background": "#f3f3f3",
+                "text_color": ""
+            }
+        },
+        "rich_text_ArXJNc": {
+            "type": "rich-text",
+            "blocks": {
+                "subheading_AHMewt": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "European Glass Royalty at Pyramid Glass"
+                    }
+                },
+                "heading_MEGQcF": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "Featured Brands",
+                        "heading_tag": "h1"
+                    }
+                },
+                "richtext_DngaYp": {
+                    "type": "richtext",
+                    "settings": {
+                        "content": "<p><strong>Direct from the Source - Our European Studio Partnerships<\/strong><\/p><p><em>28 years of personal relationships with continental Europe's premier glass houses - access you won't find elsewhere<\/em><\/p><p><\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_AHMewt",
+                "heading_MEGQcF",
+                "richtext_DngaYp"
+            ],
+            "name": "\"Featured Brand\" Introduction Text",
+            "settings": {
+                "color_scheme": "",
+                "separate_section_with_border": true,
+                "content_width": "sm",
+                "text_position": "center",
+                "remove_vertical_spacing": false
+            }
+        },
+        "collection_list_3wpy77": {
+            "type": "collection-list",
+            "blocks": {
+                "collection_YyYdjk": {
+                    "type": "collection",
+                    "settings": {
+                        "color_scheme": "scheme-4",
+                        "collection": "maleras",
+                        "image": "shopify:\/\/shop_images\/Maskulin-grup-2.jpg",
+                        "expand_collection": true,
+                        "content_position": "place-self-end-start text-start",
+                        "subheading": "",
+                        "title": "{{ block.settings.collection.title }}",
+                        "button_text": "Discover  {{ block.settings.collection.title }}",
+                        "button_link": "{{ block.settings.collection.url }}",
+                        "button_style": "link",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 15
+                    }
+                },
+                "collection_dUCtR8": {
+                    "type": "collection",
+                    "settings": {
+                        "color_scheme": "",
+                        "collection": "lalique",
+                        "image": "{{ block.settings.collection.image }}",
+                        "expand_collection": false,
+                        "content_position": "place-self-end-start text-start",
+                        "subheading": "",
+                        "title": "{{ block.settings.collection.title }}",
+                        "button_text": "View {{ block.settings.collection.title }}",
+                        "button_link": "",
+                        "button_style": "link",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 30
+                    }
+                },
+                "collection_VBLq76": {
+                    "type": "collection",
+                    "settings": {
+                        "color_scheme": "scheme-4",
+                        "collection": "kosta-boda",
+                        "image": "shopify:\/\/shop_images\/Birthday_Occasion.jpg",
+                        "expand_collection": false,
+                        "content_position": "place-self-end-start text-start",
+                        "subheading": "",
+                        "title": "{{ block.settings.collection.title }}",
+                        "button_text": "Discover  {{ block.settings.collection.title }}",
+                        "button_link": "",
+                        "button_style": "link",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 30
+                    }
+                },
+                "collection_W6iWyH": {
+                    "type": "collection",
+                    "settings": {
+                        "color_scheme": "scheme-4",
+                        "collection": "borowski-glasstudio",
+                        "image": "shopify:\/\/shop_images\/Borowski-Glass-at-Chester-Cathedral-scaled.png",
+                        "expand_collection": false,
+                        "content_position": "place-self-end-start text-start",
+                        "subheading": "",
+                        "title": "{{ block.settings.collection.title }}",
+                        "button_text": "Discover  {{ block.settings.collection.title }}",
+                        "button_link": "",
+                        "button_style": "link",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 30
+                    }
+                },
+                "collection_m3VPgU": {
+                    "type": "collection",
+                    "settings": {
+                        "color_scheme": "",
+                        "collection": "littala",
+                        "expand_collection": false,
+                        "content_position": "place-self-end-start text-start",
+                        "subheading": "",
+                        "title": "{{ block.settings.collection.title }}",
+                        "button_text": "Discover {{ block.settings.collection.title }}",
+                        "button_link": "shopify:\/\/collections\/littala",
+                        "button_style": "link",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 30
+                    }
+                }
+            },
+            "block_order": [
+                "collection_YyYdjk",
+                "collection_dUCtR8",
+                "collection_VBLq76",
+                "collection_W6iWyH",
+                "collection_m3VPgU"
+            ],
+            "name": "Brand Collection List",
+            "settings": {
+                "color_scheme": "scheme-1",
+                "separate_section_with_border": false,
+                "image_size": "xs",
+                "show_text_outside": false,
+                "space_items": false,
+                "stack_collections": false,
+                "collections_per_row_mobile": "1",
+                "collections_per_row_desktop": 4,
+                "subheading": "",
+                "title": "",
+                "content": ""
+            }
+        },
+        "featured_collections_XqAd7C": {
+            "type": "featured-collections",
+            "blocks": {
+                "collection_ACT3V3": {
+                    "type": "collection",
+                    "settings": {
+                        "collection": "new-arrivals",
+                        "products_count": 8,
+                        "title": "",
+                        "link_url": "shopify:\/\/collections\/new-arrivals",
+                        "link_text": "View {{ block.settings.collection.title }}"
+                    }
+                }
+            },
+            "block_order": [
+                "collection_ACT3V3"
+            ],
+            "name": "New Arrivals",
+            "settings": {
+                "color_scheme": "scheme-2",
+                "separate_section_with_border": true,
+                "hide_product_information": false,
+                "stack_products": false,
+                "products_per_row_mobile": "2",
+                "products_per_row_desktop": 4,
+                "horizontal_spacing_factor": 1,
+                "vertical_spacing_factor": 1,
+                "subheading": ""
+            }
+        },
+        "image_with_text_overlay_GMrkTW": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "subheading_nJ6eyW": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "European Crystal & Glassware Gifts for"
+                    }
+                },
+                "heading_bTe9ac": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "<strong>Weddings & Anniversaries<\/strong>",
+                        "heading_tag": "h1"
+                    }
+                },
+                "button_nwtWAh": {
+                    "type": "button",
+                    "settings": {
+                        "style": "solid",
+                        "text": "Discover  Weddings Gifts",
+                        "url": "shopify:\/\/collections\/wedding-anniversary",
+                        "background": "#5c5c5c",
+                        "text_color": "#ffffff"
+                    }
+                },
+                "button_dbFG9r": {
+                    "type": "button",
+                    "settings": {
+                        "style": "outline",
+                        "text": "Discover Candleholders & Votives",
+                        "url": "shopify:\/\/collections\/candle-holders-votives",
+                        "background": "#5c5c5c",
+                        "text_color": "#ffffff"
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_nJ6eyW",
+                "heading_bTe9ac",
+                "button_nwtWAh",
+                "button_dbFG9r"
+            ],
+            "custom_css": [
+                ".prose {display: flex; flex-direction: column;}"
+            ],
+            "name": "'Weddings & Anniversaries' CTA",
+            "settings": {
+                "color_scheme": "scheme-1",
+                "image_size": "lg",
+                "image": "shopify:\/\/shop_images\/Ani__Wedding.png",
+                "allow_transparent_header": false,
+                "reveal_on_scroll": true,
+                "remove_vertical_spacing": true,
+                "content_width": "xs",
+                "mobile_text_position": "place-self-center-start text-start",
+                "desktop_text_position": "sm:place-self-start sm:text-start",
+                "overlay_color": "#fffffe",
+                "overlay_opacity": 12
+            }
+        },
+        "media_grid_FCBhg9": {
+            "type": "media-grid",
+            "blocks": {
+                "image_qkYcbK": {
+                    "type": "image",
+                    "settings": {
+                        "color_scheme": "",
+                        "image": "shopify:\/\/shop_images\/Mothers_Day_Occasion_1b0edba1-90a2-4af6-98f0-a857ee23dba2.jpg",
+                        "column_count": "8",
+                        "row_count": 2,
+                        "title": "Gift Ideas",
+                        "heading_tag": "h2",
+                        "content": "<p>Gifting is one of life’s great pleasures. Explore our world of unique Scandinavian gift ideas and find the perfect gift whether celebrating a special occasion or simply saying I love you.<\/p>",
+                        "link_text": "Explore Gift Ideas",
+                        "link_url": "",
+                        "link_style": "link",
+                        "text_position": "place-self-end-start text-start",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 30
+                    }
+                },
+                "image_V8kkra": {
+                    "type": "image",
+                    "settings": {
+                        "color_scheme": "",
+                        "image": "shopify:\/\/shop_images\/Paon-Earrings-silver-c.png",
+                        "column_count": "4",
+                        "row_count": 1,
+                        "title": "Jewellery",
+                        "heading_tag": "h4",
+                        "content": "",
+                        "link_text": "Discover",
+                        "link_url": "shopify:\/\/collections\/jewellery",
+                        "link_style": "link",
+                        "text_position": "place-self-end-start text-start",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                },
+                "image_eMQMpi": {
+                    "type": "image",
+                    "settings": {
+                        "color_scheme": "",
+                        "image": "shopify:\/\/shop_images\/Brains_Collector_Display-with-Brains_f5d7302e-6470-416c-96a4-f5af930efd2a.jpg",
+                        "column_count": "4",
+                        "row_count": 1,
+                        "title": "special offers",
+                        "heading_tag": "h4",
+                        "content": "",
+                        "link_text": "Discover",
+                        "link_url": "shopify:\/\/collections\/sale",
+                        "link_style": "link",
+                        "text_position": "place-self-end-start text-start",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 22
+                    }
+                },
+                "image_tDajJc": {
+                    "type": "image",
+                    "settings": {
+                        "color_scheme": "scheme-4",
+                        "image": "shopify:\/\/shop_images\/The_Rock_votive_pink_91mm_Kosta_Boda_-lifestyle_1.png",
+                        "column_count": "4",
+                        "row_count": 1,
+                        "title": "Unique Votives",
+                        "heading_tag": "h4",
+                        "content": "",
+                        "link_text": "Candleholders & Votives",
+                        "link_url": "shopify:\/\/collections\/kosta-boda-candleholders-votives",
+                        "link_style": "link",
+                        "text_position": "place-self-start text-start",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 30
+                    }
+                },
+                "image_WaPRaJ": {
+                    "type": "image",
+                    "settings": {
+                        "color_scheme": "scheme-4",
+                        "image": "shopify:\/\/shop_images\/Quirky_Stylejpg_520ef39b-030c-4568-9978-832dd1d9b519.png",
+                        "column_count": "8",
+                        "row_count": 1,
+                        "title": "Fun & Quiky Gift Ideas",
+                        "heading_tag": "h4",
+                        "content": "",
+                        "link_text": "Discover",
+                        "link_url": "",
+                        "link_style": "link",
+                        "text_position": "place-self-start text-start",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 15
+                    }
+                },
+                "image_bynFpx": {
+                    "type": "image",
+                    "settings": {
+                        "color_scheme": "scheme-1",
+                        "image": "shopify:\/\/shop_images\/Peter_Layton.png",
+                        "column_count": "12",
+                        "row_count": 2,
+                        "title": "Art Glass",
+                        "heading_tag": "h1",
+                        "content": "<p>Investment art pieces from master glass artists<\/p>",
+                        "link_text": "Discover Art Glass",
+                        "link_url": "shopify:\/\/collections\/art-glass",
+                        "link_style": "link",
+                        "text_position": "place-self-start text-start",
+                        "overlay_color": "#000000",
+                        "overlay_opacity": 0
+                    }
+                }
+            },
+            "block_order": [
+                "image_qkYcbK",
+                "image_V8kkra",
+                "image_eMQMpi",
+                "image_tDajJc",
+                "image_WaPRaJ",
+                "image_bynFpx"
+            ],
+            "settings": {
+                "color_scheme": "scheme-1",
+                "separate_section_with_border": true,
+                "desktop_row_height": 290,
+                "mobile_row_height": 180,
+                "section_width": "lg",
+                "spacing": "md",
+                "subheading": "Lalique, Orrefors & European Masters",
+                "title": "<strong>Shop UK's most comprehensive European glass collection<\/strong>",
+                "content": "<p>Champagne flutes, wine glasses, vases and keepsakes with professional hand-engraving service<\/p>"
+            }
+        },
+        "image_with_text_overlay_hmAn7g": {
+            "type": "image-with-text-overlay",
+            "blocks": {
+                "subheading_YzG6fy": {
+                    "type": "subheading",
+                    "settings": {
+                        "text": "Home & Lifestyle"
+                    }
+                },
+                "heading_mJCP9K": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "The ultimate Scadinavian",
+                        "heading_tag": "h2"
+                    }
+                },
+                "heading_JMxjCE": {
+                    "type": "heading",
+                    "settings": {
+                        "text": "interior design",
+                        "heading_tag": "h2"
+                    }
+                },
+                "button_6pcdXA": {
+                    "type": "button",
+                    "settings": {
+                        "style": "outline",
+                        "text": "Discover Interior design",
+                        "url": "shopify:\/\/collections\/home-lifestyle",
+                        "background": "",
+                        "text_color": ""
+                    }
+                }
+            },
+            "block_order": [
+                "subheading_YzG6fy",
+                "heading_mJCP9K",
+                "heading_JMxjCE",
+                "button_6pcdXA"
+            ],
+            "settings": {
+                "color_scheme": "",
+                "image_size": "lg",
+                "image": "shopify:\/\/shop_images\/65886-Ideo-Lifestyle-2_1.png",
+                "allow_transparent_header": false,
+                "reveal_on_scroll": true,
+                "remove_vertical_spacing": true,
+                "content_width": "xs",
+                "mobile_text_position": "place-self-center-end text-end",
+                "desktop_text_position": "sm:place-self-center-end sm:text-end",
+                "overlay_color": "#000000",
+                "overlay_opacity": 20
+            }
+        },
+        "shop-the-look": {
+            "type": "shop-the-look",
+            "blocks": {
+                "look_7Ud7jA": {
+                    "type": "look",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Lalique-Still-Water-682x1024.jpg",
+                        "hot_spots_background": "#ffffff",
+                        "product_1": "still-water-sculpture-clear-lim-edition",
+                        "product_1_horizontal_position": 26,
+                        "product_1_vertical_position": 73,
+                        "product_2": "",
+                        "product_2_horizontal_position": 25,
+                        "product_2_vertical_position": 40,
+                        "product_3": "",
+                        "product_3_horizontal_position": 65,
+                        "product_3_vertical_position": 60,
+                        "product_4": "",
+                        "product_4_horizontal_position": 85,
+                        "product_4_vertical_position": 85
+                    }
+                },
+                "look-1": {
+                    "type": "look",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Classic_Style.png",
+                        "hot_spots_background": "#ffffff",
+                        "product_1": "carat-tlight-small",
+                        "product_1_horizontal_position": 70,
+                        "product_1_vertical_position": 85,
+                        "product_2": "carat-globe-vase-lg",
+                        "product_2_horizontal_position": 62,
+                        "product_2_vertical_position": 55,
+                        "product_3": "carat-candlesticks-brass-set-of-2",
+                        "product_3_horizontal_position": 83,
+                        "product_3_vertical_position": 48,
+                        "product_4": "",
+                        "product_4_horizontal_position": 85,
+                        "product_4_vertical_position": 85
+                    }
+                }
+            },
+            "block_order": [
+                "look_7Ud7jA",
+                "look-1"
+            ],
+            "settings": {
+                "color_scheme": "scheme-1",
+                "separate_section_with_border": false,
+                "subheading": "<strong>Weather-Resistant Glass Art<\/strong>",
+                "title": "Elevate Your Home",
+                "content": "<p>Exceptional crystal from emerging artists and established studios worldwide<\/p>",
+                "popover_title": "Be Inspired"
+            }
+        },
+        "blog-posts": {
+            "type": "blog-posts",
+            "settings": {
+                "color_scheme": "scheme-3",
+                "separate_section_with_border": true,
+                "blog": "events",
+                "posts_count": 3,
+                "stack_on_mobile": false,
+                "show_category": true,
+                "show_date": false,
+                "show_excerpt": true,
+                "show_read_more": true,
+                "subheading": "events",
+                "title": "Evenings at Pyramid",
+                "content": "",
+                "button_link": "",
+                "button_text": "View all"
+            }
+        },
+        "testimonials_48n6RL": {
+            "type": "testimonials",
+            "blocks": {
+                "testimonial_GCHKAF": {
+                    "type": "testimonial",
+                    "settings": {
+                        "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+                        "logo_max_width": 140,
+                        "logo_mobile_max_width": 100,
+                        "author": ""
+                    }
+                },
+                "testimonial_4mrBMj": {
+                    "type": "testimonial",
+                    "settings": {
+                        "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+                        "logo_max_width": 140,
+                        "logo_mobile_max_width": 100,
+                        "author": ""
+                    }
+                },
+                "testimonial_4G4Ewk": {
+                    "type": "testimonial",
+                    "settings": {
+                        "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.<\/p>",
+                        "logo_max_width": 140,
+                        "logo_mobile_max_width": 100,
+                        "author": ""
+                    }
+                }
+            },
+            "block_order": [
+                "testimonial_GCHKAF",
+                "testimonial_4mrBMj",
+                "testimonial_4G4Ewk"
+            ],
+            "disabled": true,
+            "settings": {
+                "color_scheme": "",
+                "separate_section_with_border": true,
+                "auto_rotate_between_testimonials": false,
+                "cycle_speed": 5,
+                "font_size_factor": 1,
+                "subheading": "",
+                "title": "",
+                "content": ""
+            }
+        },
+        "newsletter": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+                "color_scheme": "scheme-1",
+                "separate_section_with_border": true,
+                "image_size": "sm",
+                "image": "shopify:\/\/shop_images\/newsletter.png",
+                "subheading": "Keep me updated",
+                "title": "Newsletter",
+                "content": "<p>A short sentence describing what someone will receive by subscribing.<\/p>",
+                "button_text": "Subscribe",
+                "overlay_color": "#000000",
+                "overlay_opacity": 0
+            }
+        },
+        "1749114793e53b6a69": {
+            "type": "apps",
+            "blocks": {
+                "rocket_google_reviews_app_block_rVdQiV": {
+                    "type": "shopify:\/\/apps\/rocket-google-reviews\/blocks\/app-block\/d11c8893-a181-4aff-a280-7446d42cec3b",
+                    "settings": {}
+                }
+            },
+            "block_order": [
+                "rocket_google_reviews_app_block_rVdQiV"
+            ],
+            "settings": {
+                "color_scheme": "",
+                "separate_section_with_border": true,
+                "remove_vertical_spacing": false,
+                "remove_horizontal_spacing": false
+            }
+        }
+    },
+    "order": [
+        "slideshow",
+        "logo_list_mrexnb",
+        "scrolling_content_TWXYLG",
+        "rich_text_ArXJNc",
+        "collection_list_3wpy77",
+        "featured_collections_XqAd7C",
+        "image_with_text_overlay_GMrkTW",
+        "media_grid_FCBhg9",
+        "image_with_text_overlay_hmAn7g",
+        "shop-the-look",
+        "blog-posts",
+        "testimonials_48n6RL",
+        "newsletter",
+        "1749114793e53b6a69"
+    ]
+}
