@@ -1,0 +1,36 @@
+{% comment %}
+  Studio Peake — Focal-Point Image Container
+  Renders an image with focal-point-aware cropping inside a responsive container.
+
+  Usage: {% render 'sp-focal-image', image: section.settings.image, sizes: '100vw', section_id: section.id %}
+
+  Parameters:
+    image        — Shopify image object (required)
+    sizes        — sizes attribute string (default: '100vw')
+    section_id   — section ID for scoped styles (required)
+    aspect_ratio — optional CSS aspect-ratio value, e.g. '16/9'
+    widths       — optional width list (default: '400,600,800,1000,1200,1600,2000,2400,3200')
+{% endcomment %}
+
+{%- if image == blank -%}
+  {%- break -%}
+{%- endif -%}
+
+{%- assign sp_sizes = sizes | default: '100vw' -%}
+{%- assign sp_widths = widths | default: '400,600,800,1000,1200,1600,2000,2400,3200' -%}
+{%- assign sp_focal = image.presentation.focal_point | default: '50% 50%' -%}
+
+<style>
+  #shopify-section-{{ section_id }} .sp-focal-image img {
+    object-position: {{ sp_focal }};
+  }
+  {%- if aspect_ratio != blank %}
+  #shopify-section-{{ section_id }} .sp-focal-image {
+    aspect-ratio: {{ aspect_ratio }};
+  }
+  {%- endif %}
+</style>
+
+<div class="sp-focal-image">
+  {{ image | image_url: width: image.width | image_tag: sizes: sp_sizes, widths: sp_widths }}
+</div>

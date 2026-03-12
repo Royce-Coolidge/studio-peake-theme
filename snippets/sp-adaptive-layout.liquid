@@ -1,0 +1,17 @@
+{%- comment -%}
+  Studio Peake — Adaptive Layout Detection
+  Outputs a CSS class name based on image aspect ratio.
+  portrait (< 0.9), square (0.9–1.2), landscape (> 1.2)
+
+  Usage: <div class="sp-adaptive {% render 'sp-adaptive-layout', image: section.settings.image %}">
+{%- endcomment -%}
+{%- liquid
+  assign ratio = image.aspect_ratio | default: 1.0
+  if ratio < 0.9
+    echo 'sp-adaptive--portrait'
+  elsif ratio > 1.2
+    echo 'sp-adaptive--landscape'
+  else
+    echo 'sp-adaptive--square'
+  endif
+-%}

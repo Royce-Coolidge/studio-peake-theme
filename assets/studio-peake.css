@@ -33,3 +33,51 @@
   position: relative;
   z-index: 2;
 }
+
+/* === Focal-Point Image Container (VISF-02) === */
+
+.sp-focal-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-focal-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position set via section-scoped style from sp-focal-image.liquid */
+}
+
+/* When aspect ratio is set on container */
+.sp-focal-image[style*="aspect-ratio"] img {
+  position: absolute;
+  inset: 0;
+}
+
+/* === Adaptive Layout (VISF-03) === */
+
+.sp-adaptive--portrait .sp-adaptive__text {
+  text-align: center;
+  padding-inline: var(--spacing, 1.5rem);
+}
+
+.sp-adaptive--landscape .sp-adaptive__text {
+  text-align: start;
+  padding-inline-start: var(--spacing, 2rem);
+}
+
+.sp-adaptive--square .sp-adaptive__text {
+  text-align: center;
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+/* Responsive: on mobile all adaptive layouts collapse to centred text */
+@media screen and (max-width: 699px) {
+  .sp-adaptive .sp-adaptive__text {
+    text-align: center;
+    padding-inline: var(--spacing, 1rem);
+    max-width: 100%;
+  }
+}
