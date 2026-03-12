@@ -144,3 +144,64 @@
     transform: rotate(90deg);
   }
 }
+
+/* === SP Link Row + Link Group (INTR-04, Phase 4) === */
+/* Keyline draws left-to-right on scroll via background-size transition */
+
+.sp-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+  text-decoration: none;
+  color: currentColor;
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  font-style: var(--heading-font-style);
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+  font-size: var(--text-h6);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 1px;
+}
+
+.sp-link-row__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.sp-link-row svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.sp-link-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Animate keyline in when group becomes visible */
+.sp-link-group.sp-is-visible .sp-link-row {
+  background-size: 100% 1px;
+  transition: background-size 0.6s ease-out;
+}
+
+.sp-link-group.sp-is-visible .sp-link-row:nth-child(2) { transition-delay: 0.15s; }
+.sp-link-group.sp-is-visible .sp-link-row:nth-child(3) { transition-delay: 0.3s; }
+.sp-link-group.sp-is-visible .sp-link-row:nth-child(4) { transition-delay: 0.45s; }
+.sp-link-group.sp-is-visible .sp-link-row:nth-child(5) { transition-delay: 0.6s; }
+
+/* Standalone sp-link (not in group) */
+.sp-link-row.sp-is-visible {
+  background-size: 100% 1px;
+  transition: background-size 0.6s ease-out;
+}
+
+/* First link in group gets a top keyline (static) */
+.sp-link-group .sp-link-row:first-child {
+  border-top: 1px solid rgb(var(--text-color) / 0.15);
+}

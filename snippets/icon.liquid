@@ -61,6 +61,11 @@ Supported variables
       <path d="m5 17 8-8-8-8" stroke="currentColor" stroke-linecap="square"/>
     </svg>
 
+  {%- when 'arrow-down-right' -%}
+    <svg aria-hidden="true" focusable="false" fill="none" width="{{ width | default: 16 }}" class="{{ class | strip }}" viewBox="0 0 16 16">
+      <path d="M4 2l8 8m0 0H5m7 0V3" stroke="currentColor" stroke-linecap="square"/>
+    </svg>
+
   {%- when 'dropdown-chevron' -%}
     <svg aria-hidden="true" focusable="false" fill="none" width="{{ width | default: 10 }}" class="{{ class | strip }}" viewBox="0 0 10 6">
       <path d="m1 1 4 4 4-4" stroke="currentColor" stroke-linecap="square"/>

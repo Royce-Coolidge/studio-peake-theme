@@ -80,6 +80,30 @@
                       <a href="{{ block.settings.url }}">{{ block.settings.text }}</a>
                     </div>
                   {%- endif -%}
+
+                {%- when 'sp-link' -%}
+                  {%- if block.settings.text != blank -%}
+                    <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="sp-link-row" {{ block.shopify_attributes }}>
+                      <span class="sp-link-row__text">{{ block.settings.text | escape }}</span>
+                      {%- render 'icon' with 'arrow-down-right', width: 14 -%}
+                    </a>
+                  {%- endif -%}
+
+                {%- when 'sp-link-group' -%}
+                  <div class="sp-link-group" {{ block.shopify_attributes }}>
+                    {%- for i in (1..5) -%}
+                      {%- assign text_key = 'link_text_' | append: i -%}
+                      {%- assign url_key = 'link_url_' | append: i -%}
+                      {%- assign link_text = block.settings[text_key] -%}
+                      {%- assign link_url = block.settings[url_key] -%}
+                      {%- if link_text != blank -%}
+                        <a {% if link_url != blank %}href="{{ link_url }}"{% endif %} class="sp-link-row">
+                          <span class="sp-link-row__text">{{ link_text | escape }}</span>
+                          {%- render 'icon' with 'arrow-down-right', width: 14 -%}
+                        </a>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
               {%- endcase -%}
             {%- endfor -%}
           </div>
@@ -384,6 +408,79 @@
           "id": "liquid",
           "label": "t:global.code.liquid",
           "default": "<p>Use this text to output some custom Liquid code to include widget or dynamic code.</p>"
+        }
+      ]
+    },
+    {
+      "type": "sp-link",
+      "name": "SP Link with arrow",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "sp-link-group",
+      "name": "SP Link group",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text_1",
+          "label": "Link 1 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "Link 1 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_2",
+          "label": "Link 2 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_2",
+          "label": "Link 2 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_3",
+          "label": "Link 3 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_3",
+          "label": "Link 3 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_4",
+          "label": "Link 4 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_4",
+          "label": "Link 4 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_5",
+          "label": "Link 5 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_5",
+          "label": "Link 5 URL"
         }
       ]
     },
