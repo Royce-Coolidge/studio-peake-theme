@@ -174,11 +174,69 @@
         "title": "",
         "content": ""
       }
+    },
+    "image_with_text_DcpmQg": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_aTMnEm": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_C68e6m": {
+          "type": "heading",
+          "settings": {
+            "text": "the studio",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_YJmEKU": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Studio Peake is an interior design and interior architecture studio creating high-end residential and commercial spaces worldwide. Defined by a philosophy that places the client at the heart of the design, every Studio Peake project involves an orchestra of creative input, with clients, designers, architects and makers working in harmony to create something truly unique – a reflection of who the client is and how they live. <br/><br/>Founded by Sarah Peake, the studio is based in London but its work ranges across the globe. Recent and ongoing projects include a Georgian townhouse in London, a Grade II listed Arts & Crafts house in Surrey and an architecturally ambitious villa on the water just outside Stockholm.</p>"
+          }
+        },
+        "button_etmkqJ": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Learn more",
+            "url": "",
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "liquid_hPYADW": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<p>Write custom Liquid code to include widget or dynamic code.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_aTMnEm",
+        "heading_C68e6m",
+        "richtext_YJmEKU",
+        "button_etmkqJ",
+        "liquid_hPYADW"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "image": "shopify://shop_images/studiopeake-home-the-studio.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "remove_vertical_spacing": true
+      }
     }
   },
   "order": [
     "slideshow",
     "multi_column_F7XhFW",
-    "collection_list_TG3AKw"
+    "collection_list_TG3AKw",
+    "image_with_text_DcpmQg"
   ]
 }
