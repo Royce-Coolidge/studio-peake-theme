@@ -4867,8 +4867,17 @@ product-rerender {
   flex-wrap: wrap;
   grid-area: primary-nav;
   align-items: center;
+  justify-content: flex-end;
   gap: .625rem 1.25rem;
   display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.875rem;
+}
+
+.header__account-link,
+.header__cart-link {
+  display: none;
 }
 
 .header__primary-nav-item:before {
@@ -4878,12 +4887,7 @@ product-rerender {
   transform-origin: var(--transform-origin-start);
   background: rgb(var(--text-color));
   color: #0000;
-  font-size: var(--text-h6);
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  font-style: var(--heading-font-style);
-  letter-spacing: var(--heading-letter-spacing);
-  text-transform: var(--heading-text-transform);
+  font: inherit;
   pointer-events: none;
   transition: transform .2s ease-in-out;
   position: absolute;
@@ -7797,6 +7801,7 @@ product-rerender {
   font-weight: var(--heading-font-weight);
   font-style: var(--heading-font-style);
   letter-spacing: var(--heading-letter-spacing);
+  line-height: var(--heading-line-height, 1.5);
   text-transform: var(--heading-text-transform);
   overflow-wrap: anywhere;
 }

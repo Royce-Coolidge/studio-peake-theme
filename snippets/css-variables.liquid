@@ -74,9 +74,10 @@ note that this may have impact on different places.
      */
 
     /* Font properties */
-    --heading-font-family: {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
-    --heading-font-weight: {{ settings.heading_font.weight }};
-    --heading-font-style: {{ settings.heading_font.style }};
+    --heading-font-family: 'Mynaruse Flare', {{ settings.heading_font.family }}, {{ settings.heading_font.fallback_families }};
+    --heading-font-weight: 400;
+    --heading-font-style: normal;
+    --heading-line-height: 1.1;
     --heading-text-transform: {{ settings.heading_text_transform }};
     --heading-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.heading_letter_spacing | divided_by: 100.0 }}{% endif %}em;
     --text-font-family: {{ settings.text_font.family }}, {{ settings.text_font.fallback_families }};
