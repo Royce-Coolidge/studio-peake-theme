@@ -90,47 +90,47 @@ None — all 35 features scoped for v1.
 | VISF-01 | Phase 1 | Pending |
 | VISF-02 | Phase 1 | Pending |
 | VISF-03 | Phase 1 | Pending |
-| VISF-04 | Phase 1 | Pending |
-| VISF-05 | Phase 1 | Pending |
-| INTR-01 | TBD | Pending |
-| INTR-02 | TBD | Pending |
-| INTR-03 | TBD | Pending |
-| INTR-04 | TBD | Pending |
-| INTR-05 | TBD | Pending |
-| INTR-06 | TBD | Pending |
-| INTR-07 | TBD | Pending |
-| INTR-08 | TBD | Pending |
-| NAVF-01 | TBD | Pending |
-| NAVF-02 | TBD | Pending |
-| NAVF-03 | TBD | Pending |
-| NAVF-04 | TBD | Pending |
-| NAVF-05 | TBD | Pending |
-| NAVF-06 | TBD | Pending |
-| NAVF-07 | TBD | Pending |
-| CARG-01 | TBD | Pending |
-| CARG-02 | TBD | Pending |
-| CARG-03 | TBD | Pending |
-| CARG-04 | TBD | Pending |
-| CARG-05 | TBD | Pending |
-| LAYC-01 | TBD | Pending |
-| LAYC-02 | TBD | Pending |
-| LAYC-03 | TBD | Pending |
-| LAYC-04 | TBD | Pending |
-| LAYC-05 | TBD | Pending |
-| LAYC-06 | TBD | Pending |
-| PAGE-01 | TBD | Pending |
-| PAGE-02 | TBD | Pending |
-| PAGE-03 | TBD | Pending |
-| PAGE-04 | TBD | Pending |
-| PAGE-05 | TBD | Pending |
-| PAGE-06 | TBD | Pending |
-| PAGE-07 | TBD | Pending |
+| VISF-04 | Phase 2 | Pending |
+| VISF-05 | Phase 2 | Pending |
+| INTR-01 | Phase 3 | Pending |
+| INTR-02 | Phase 4 | Pending |
+| INTR-03 | Phase 4 | Pending |
+| INTR-04 | Phase 4 | Pending |
+| INTR-05 | Phase 5 | Pending |
+| INTR-06 | Phase 5 | Pending |
+| INTR-07 | Phase 3 | Pending |
+| INTR-08 | Phase 5 | Pending |
+| NAVF-01 | Phase 6 | Pending |
+| NAVF-02 | Phase 6 | Pending |
+| NAVF-03 | Phase 6 | Pending |
+| NAVF-04 | Phase 6 | Pending |
+| NAVF-05 | Phase 6 | Pending |
+| NAVF-06 | Phase 6 | Pending |
+| NAVF-07 | Phase 6 | Pending |
+| CARG-01 | Phase 7 | Pending |
+| CARG-02 | Phase 7 | Pending |
+| CARG-03 | Phase 7 | Pending |
+| CARG-04 | Phase 7 | Pending |
+| CARG-05 | Phase 7 | Pending |
+| LAYC-01 | Phase 8 | Pending |
+| LAYC-02 | Phase 8 | Pending |
+| LAYC-03 | Phase 8 | Pending |
+| LAYC-04 | Phase 8 | Pending |
+| LAYC-05 | Phase 8 | Pending |
+| LAYC-06 | Phase 8 | Pending |
+| PAGE-01 | Phase 9 | Pending |
+| PAGE-02 | Phase 9 | Pending |
+| PAGE-03 | Phase 9 | Pending |
+| PAGE-04 | Phase 9 | Pending |
+| PAGE-05 | Phase 9 | Pending |
+| PAGE-06 | Phase 4 | Pending |
+| PAGE-07 | Phase 9 | Pending |
 
 **Coverage:**
 - v1 requirements: 38 total
-- Mapped to phases: 5
-- Unmapped: 33 (TBD — assigned during roadmap creation)
+- Mapped to phases: 38
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-12*
-*Last updated: 2026-03-12 after initial definition*
+*Last updated: 2026-03-12 after roadmap creation*
