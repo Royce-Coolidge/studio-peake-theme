@@ -61,10 +61,13 @@
 
     <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
     <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'studio-peake.js' | asset_url }}"></script>
 
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    {{- 'custom-fonts.css' | asset_url | stylesheet_tag -}}
+    {{- 'studio-peake.css' | asset_url | stylesheet_tag -}}
   </head>
 
   {% liquid

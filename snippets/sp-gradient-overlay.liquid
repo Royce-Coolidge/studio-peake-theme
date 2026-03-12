@@ -1,0 +1,26 @@
+{% comment %}
+  Studio Peake — Gradient Overlay
+  Renders section-scoped styles for dual gradient overlays on image sections.
+
+  Usage: {% render 'sp-gradient-overlay', section: section %}
+
+  Required section schema settings:
+  { "type": "checkbox", "id": "sp_enable_gradient", "label": "Enable Studio Peake gradient overlay", "default": true }
+  { "type": "range", "id": "sp_gradient_strength", "label": "Gradient strength", "min": 0, "max": 100, "step": 5, "unit": "%", "default": 100, "info": "Adjusts the opacity of the gradient overlay" }
+
+  The section must also add the .sp-gradient-overlay class to its .content-over-media element.
+{% endcomment %}
+
+{%- if section.settings.sp_enable_gradient -%}
+  {%- assign sp_strength = section.settings.sp_gradient_strength | default: 100 | divided_by: 100.0 -%}
+  <style>
+    #shopify-section-{{ section.id }} .sp-gradient-overlay::before,
+    #shopify-section-{{ section.id }} .sp-gradient-overlay::after {
+      opacity: {{ sp_strength }};
+    }
+
+    #shopify-section-{{ section.id }} .content-over-media::before {
+      background: transparent;
+    }
+  </style>
+{%- endif -%}
