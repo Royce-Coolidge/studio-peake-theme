@@ -104,3 +104,43 @@
     background-size: 100% 1px;
   }
 }
+
+/* === Close Icon Rotation (INTR-07) === */
+
+/* Regular close buttons (newsletter popup, privacy banner, quick-buy, active facets) */
+.pop-in__close-button svg,
+.quick-buy-modal__close-button svg,
+[data-action="close"] svg {
+  transition: transform 0.3s ease-out;
+}
+
+@media screen and (pointer: fine) {
+  .pop-in__close-button:hover svg,
+  .quick-buy-modal__close-button:hover svg,
+  [data-action="close"]:hover svg {
+    transform: rotate(90deg);
+  }
+
+  /* Shadow DOM close buttons — Prestige already sets transition: all on pointer:fine,
+     so transform is covered. We just add the rotate on hover. */
+  :where(.modal, .drawer, .popover, .header-search, .header-sidebar)::part(close-button):hover {
+    transform: rotate(90deg);
+  }
+}
+
+/* Mobile: rotate on tap via :active */
+@media screen and (pointer: coarse) {
+  .pop-in__close-button:active svg,
+  .quick-buy-modal__close-button:active svg,
+  [data-action="close"]:active svg {
+    transform: rotate(90deg);
+  }
+
+  :where(.modal, .drawer, .popover, .header-search, .header-sidebar)::part(close-button) {
+    transition: transform 0.3s ease-out;
+  }
+
+  :where(.modal, .drawer, .popover, .header-search, .header-sidebar)::part(close-button):active {
+    transform: rotate(90deg);
+  }
+}
