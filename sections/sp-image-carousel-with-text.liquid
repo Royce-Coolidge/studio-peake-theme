@@ -1,0 +1,456 @@
+{%- if section.blocks.size > 0 -%}
+  {%- comment -%}
+  ------------------------------------------------------------------------------------------------------------------------
+  SP: Image carousel with text — image-with-text layout with a multi-image carousel + dot navigation
+  ------------------------------------------------------------------------------------------------------------------------
+  {%- endcomment -%}
+
+  {%- assign carousel_id = 'carousel-' | append: section.id -%}
+  {%- assign image_blocks = section.blocks | where: 'type', 'carousel_image' -%}
+
+  <style>
+    #shopify-section-{{ section.id }} {
+      --image-with-text-content-max-width: {% if section.settings.content_width == 'sm' %}430px{% elsif section.settings.content_width == 'md' %}780px{% else %}100%{% endif %};
+    }
+
+    #shopify-section-{{ section.id }} .sp-carousel-media {
+      position: relative;
+      width: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .sp-carousel-media .sp-carousel__slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    /* First slide always stays relative to hold container height */
+    #shopify-section-{{ section.id }} .sp-carousel-media .sp-carousel__slide:first-child {
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .sp-carousel-media .sp-carousel__slide.is-selected {
+      opacity: 1;
+    }
+
+    #shopify-section-{{ section.id }} .sp-carousel-media img,
+    #shopify-section-{{ section.id }} .sp-carousel-media svg {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    #shopify-section-{{ section.id }} .sp-carousel__dots {
+      margin-block-start: 1rem;
+    }
+  </style>
+
+  {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+  <div class="{% unless section.settings.remove_vertical_spacing %}section-spacing{% endunless %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    <image-with-text class="image-with-text {% if section.settings.image_position == 'end' %}image-with-text--reverse{% endif %}">
+      {%- comment -%}--- CAROUSEL COLUMN ---{%- endcomment -%}
+      <div class="sp-carousel-media">
+        {%- if image_blocks.size > 0 -%}
+          <sp-fade-carousel id="{{ carousel_id }}" allow-swipe cell-selector=".sp-carousel__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %}>
+            {%- assign sp_img_index = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'carousel_image' -%}
+                <div class="sp-carousel__slide {% if sp_img_index == 0 %}is-selected{% endif %}" {{ block.shopify_attributes }}>
+                  {%- if block.settings.image != blank -%}
+                    {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
+                    {%- if sp_img_index == 0 -%}
+                      {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000', reveal-on-scroll: section.settings.reveal_on_scroll -}}
+                    {%- else -%}
+                      {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800,2000', loading: 'lazy' -}}
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- capture placeholder -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
+                    {{- placeholder | placeholder_svg_tag: 'placeholder' -}}
+                  {%- endif -%}
+                </div>
+                {%- assign sp_img_index = sp_img_index | plus: 1 -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </sp-fade-carousel>
+
+          {%- if image_blocks.size > 1 -%}
+            <carousel-navigation aria-controls="{{ carousel_id }}" class="page-dots sp-carousel__dots">
+              {%- assign sp_dot_index = 0 -%}
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'carousel_image' -%}
+                  <button class="tap-area" aria-current="{% if sp_dot_index == 0 %}true{% else %}false{% endif %}">
+                    <span class="sr-only">{{ 'general.accessibility.go_to_item' | t: index: sp_dot_index | plus: 1 }}</span>
+                  </button>
+                  {%- assign sp_dot_index = sp_dot_index | plus: 1 -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </carousel-navigation>
+          {%- endif -%}
+        {%- else -%}
+          {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
+        {%- endif -%}
+      </div>
+
+      {%- comment -%}--- TEXT COLUMN ---{%- endcomment -%}
+      <div class="prose text-center sm:text-start">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'subheading' -%}
+              {%- if block.settings.text != blank -%}
+                <p class="h6" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+              {%- endif -%}
+
+            {%- when 'heading' -%}
+              {%- if block.settings.text != blank -%}
+                <p class="{{ block.settings.heading_tag }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+              {%- endif -%}
+
+            {%- when 'richtext' -%}
+              {%- if block.settings.content != blank -%}
+                <div {{ block.shopify_attributes }}>
+                  {{- block.settings.content -}}
+                </div>
+              {%- endif -%}
+
+            {%- when 'sp-link' -%}
+              {%- if block.settings.text != blank -%}
+                <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="sp-link-row" {{ block.shopify_attributes }}>
+                  <span class="sp-link-row__text">{{ block.settings.text | escape }}</span>
+                  {%- render 'icon' with 'arrow-down-right', width: 14 -%}
+                </a>
+              {%- endif -%}
+
+            {%- when 'sp-link-group' -%}
+              <div class="sp-link-group" {{ block.shopify_attributes }}>
+                {%- for i in (1..5) -%}
+                  {%- assign text_key = 'link_text_' | append: i -%}
+                  {%- assign url_key = 'link_url_' | append: i -%}
+                  {%- assign link_text = block.settings[text_key] -%}
+                  {%- assign link_url = block.settings[url_key] -%}
+                  {%- if link_text != blank -%}
+                    <a {% if link_url != blank %}href="{{ link_url }}"{% endif %} class="sp-link-row">
+                      <span class="sp-link-row__text">{{ link_text | escape }}</span>
+                      {%- render 'icon' with 'arrow-down-right', width: 14 -%}
+                    </a>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+
+            {%- when 'button' -%}
+              {%- if block.settings.text != blank -%}
+                {% render 'button', content: block.settings.text, href: block.settings.url, style: block.settings.style, background: block.settings.background, text_color: block.settings.text_color, block: block %}
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </image-with-text>
+  </div>
+
+  <script type="module">
+    await customElements.whenDefined('effect-carousel');
+
+    if (!customElements.get('sp-fade-carousel')) {
+      const EffectCarouselClass = customElements.get('effect-carousel');
+
+      customElements.define('sp-fade-carousel', class extends EffectCarouselClass {
+        createOnChangeAnimationControls(fromSlide, toSlide, { direction } = {}) {
+          const fromAnim = fromSlide.animate(
+            [{ opacity: 1 }, { opacity: 0 }],
+            { duration: 1000, easing: 'ease-in-out', fill: 'forwards' }
+          );
+          toSlide.classList.add('is-selected');
+          const toAnim = toSlide.animate(
+            [{ opacity: 0 }, { opacity: 1 }],
+            { duration: 1000, easing: 'ease-in-out', fill: 'forwards', delay: 300 }
+          );
+          return {
+            finished: Promise.all([fromAnim.finished, toAnim.finished]),
+            finish: () => { fromAnim.finish(); toAnim.finish(); }
+          };
+        }
+      });
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "SP Carousel with text",
+  "class": "shopify-section--image-with-text",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "reveal_on_scroll",
+      "label": "t:global.animation.reveal_image_on_scroll",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "t:sections.image_with_text.image_position",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:global.position.left"
+        },
+        {
+          "value": "end",
+          "label": "t:global.position.right"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "content_width",
+      "label": "t:global.sizes.content_width",
+      "options": [
+        {
+          "value": "sm",
+          "label": "t:global.sizes.small"
+        },
+        {
+          "value": "md",
+          "label": "t:global.sizes.medium"
+        },
+        {
+          "value": "lg",
+          "label": "t:global.sizes.large"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_vertical_spacing",
+      "label": "t:global.spacing.remove_vertical_spacing",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Carousel"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:global.video.autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "unit": "s",
+      "label": "Autoplay speed",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "carousel_image",
+      "name": "Carousel image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image"
+        }
+      ]
+    },
+    {
+      "type": "subheading",
+      "name": "t:sections.image_with_text.blocks.subheading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "t:global.text.text",
+          "default": "Subheading"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "t:sections.image_with_text.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "t:global.text.text",
+          "default": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "t:global.text.style",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" }
+          ],
+          "default": "h1"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "name": "t:sections.image_with_text.blocks.paragraph.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:global.text.content",
+          "default": "<p>Use this text to share information about your brand with your customers.</p>"
+        }
+      ]
+    },
+    {
+      "type": "sp-link",
+      "name": "SP Link with arrow",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Link text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "sp-link-group",
+      "name": "SP Link group",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_text_1",
+          "label": "Link 1 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "Link 1 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_2",
+          "label": "Link 2 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_2",
+          "label": "Link 2 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_3",
+          "label": "Link 3 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_3",
+          "label": "Link 3 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_4",
+          "label": "Link 4 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_4",
+          "label": "Link 4 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_5",
+          "label": "Link 5 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_5",
+          "label": "Link 5 URL"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image_with_text.blocks.button.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "style",
+          "label": "t:global.text.style",
+          "options": [
+            { "value": "outline", "label": "t:global.text.button_style_options.outline" },
+            { "value": "solid", "label": "t:global.text.button_style_options.solid" }
+          ],
+          "default": "solid"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:global.text.text",
+          "default": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:global.text.link"
+        },
+        {
+          "type": "color",
+          "id": "background",
+          "label": "t:global.colors.background"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "t:global.text.text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SP Carousel with text",
+      "blocks": [
+        { "type": "carousel_image" },
+        { "type": "carousel_image" },
+        { "type": "carousel_image" },
+        { "type": "heading", "settings": { "text": "Project title" } },
+        { "type": "richtext" },
+        { "type": "sp-link", "settings": { "text": "View project" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
