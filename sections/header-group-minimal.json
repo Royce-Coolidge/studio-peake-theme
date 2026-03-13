@@ -1,0 +1,37 @@
+{
+  "type": "header",
+  "name": "Header group (minimal)",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "enable_sticky": true,
+        "hide_on_scroll": false,
+        "show_separation_border": false,
+        "reduce_padding": true,
+        "logo_max_width": 40,
+        "logo_mobile_max_width": 30,
+        "menu": "main-menu",
+        "sidebar_menu": "",
+        "menu_open_trigger": "hover",
+        "menu_text_font": "body",
+        "enable_search": false,
+        "sidebar_color_scheme": "",
+        "sidebar_text_font": "body",
+        "sidebar_show_dividers": false,
+        "sidebar_open_second_level_menus": false,
+        "layout": "logo_left_navigation_inline",
+        "show_icons": false,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "show_locale_selector": false,
+        "transparent_header_text_color": "#f7f1eb"
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}
