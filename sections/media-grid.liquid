@@ -33,16 +33,70 @@
       <div class="section-stack">
         {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content -%}
 
+        {%- liquid
+          comment
+            SP: Resolve metaobject gallery images list
+          endcomment
+          assign sp_gallery_images = nil
+          if section.settings.sp_use_metaobject_gallery and metaobject != blank and metaobject.gallery_images != blank
+            assign sp_gallery_images = metaobject.gallery_images.value
+          endif
+
+          comment
+            SP: Masonry pattern logic
+          endcomment
+          assign sp_use_pattern = false
+          if section.settings.sp_masonry_style != 'custom'
+            assign sp_use_pattern = true
+            case section.settings.sp_masonry_style
+              when 'balanced'
+                assign sp_pattern_cols = '6,6,6,6' | split: ','
+                assign sp_pattern_rows = '2,2,2,2' | split: ','
+              when 'editorial'
+                assign sp_pattern_cols = '8,4,4,8' | split: ','
+                assign sp_pattern_rows = '2,2,1,1' | split: ','
+              when 'mosaic'
+                assign sp_pattern_cols = '4,4,4,8,4,8' | split: ','
+                assign sp_pattern_rows = '2,1,1,2,2,1' | split: ','
+              when 'landscape_thirds'
+                assign sp_pattern_cols = '6,6,12' | split: ','
+                assign sp_pattern_rows = '2,2,2' | split: ','
+              when 'uniform'
+                assign sp_pattern_cols = '4,4,4' | split: ','
+                assign sp_pattern_rows = '2,2,2' | split: ','
+            endcase
+          endif
+        -%}
+
         <media-grid class="media-grid">
           {%- for block in section.blocks -%}
+            {%- comment -%} SP: Resolve image — gallery by position, then block picker fallback {%- endcomment -%}
+            {%- assign sp_block_image = block.settings.image -%}
+            {%- if sp_gallery_images and block.type == 'image' -%}
+              {%- assign sp_gallery_img = sp_gallery_images[forloop.index0] -%}
+              {%- if sp_gallery_img -%}
+                {%- assign sp_block_image = sp_gallery_img -%}
+              {%- endif -%}
+            {%- endif -%}
+
+            {%- comment -%} SP: Masonry effective spans {%- endcomment -%}
+            {%- if sp_use_pattern -%}
+              {%- assign sp_idx = forloop.index0 | modulo: sp_pattern_cols.size -%}
+              {%- assign effective_col = sp_pattern_cols[sp_idx] -%}
+              {%- assign effective_row = sp_pattern_rows[sp_idx] -%}
+            {%- else -%}
+              {%- assign effective_col = block.settings.column_count -%}
+              {%- assign effective_row = block.settings.row_count -%}
+            {%- endif -%}
+
             {%- capture block_content -%}
               <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
                 {%- if block.type == 'image' -%}
-                  {%- if block.settings.image -%}
+                  {%- if sp_block_image -%}
                     {%- if section.settings.section_width == 'full' -%}
-                      {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 100.0 | divided_by: 12.0 | times: block.settings.column_count | round }}vw{%- endcapture -%}
+                      {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 100.0 | divided_by: 12.0 | times: effective_col | round }}vw{%- endcapture -%}
                     {%- else -%}
-                      {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 1260.0 | divided_by: 12.0 | times: block.settings.column_count | round }}px{%- endcapture -%}
+                      {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 1260.0 | divided_by: 12.0 | times: effective_col | round }}px{%- endcapture -%}
                     {%- endif -%}
 
                     {%- liquid
@@ -54,7 +108,7 @@
                         assign loading_strategy = 'lazy'
                       endif
 
-                      echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: 'zoom-image group-hover:zoom'
+                      echo sp_block_image | image_url: width: sp_block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: 'zoom-image group-hover:zoom'
                     -%}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
@@ -84,11 +138,11 @@
             {%- endcapture -%}
 
             {%- if block.settings.link_url -%}
-              <a href="{{ block.settings.link_url }}" class="media-grid__item" style="--media-grid-item-column-span: {{ block.settings.column_count }}; --media-grid-item-row-span: {{ block.settings.row_count }}" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.link_url }}" class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}" {{ block.shopify_attributes }}>
                 {{- block_content -}}
               </a>
             {%- else -%}
-              <div class="media-grid__item" style="--media-grid-item-column-span: {{ block.settings.column_count }}; --media-grid-item-row-span: {{ block.settings.row_count }}" {{ block.shopify_attributes }}>
+              <div class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}" {{ block.shopify_attributes }}>
                 {{- block_content -}}
               </div>
             {%- endif -%}
@@ -195,6 +249,32 @@
         }
       ],
       "default": "md"
+    },
+    {
+      "type": "header",
+      "content": "Gallery layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "sp_use_metaobject_gallery",
+      "label": "Use project gallery images",
+      "info": "When enabled on a project page, each block's image is sourced from the metaobject gallery_images field by position. Block image pickers are used as fallback.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "sp_masonry_style",
+      "label": "Masonry layout pattern",
+      "info": "Overrides per-block column/row settings. Set to Custom to use individual block settings.",
+      "options": [
+        { "value": "custom", "label": "Custom (use block settings)" },
+        { "value": "balanced", "label": "Balanced (50/50 grid)" },
+        { "value": "editorial", "label": "Editorial (hero + supporting)" },
+        { "value": "mosaic", "label": "Mosaic (mixed sizes)" },
+        { "value": "landscape_thirds", "label": "Landscape every third" },
+        { "value": "uniform", "label": "Uniform grid" }
+      ],
+      "default": "custom"
     },
     {
       "type": "header",
