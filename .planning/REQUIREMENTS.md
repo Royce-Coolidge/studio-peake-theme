@@ -53,6 +53,15 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **LAYC-05**: Components support per-instance colour assignment, allowing block colour to be set specifically per product or section via Shopify admin
 - [ ] **LAYC-06**: Blog page uses the same modular, block-based template approach as project pages with repeatable content-type blocks
 
+### Data Architecture
+
+- [ ] **DATA-01**: Four metaobject types created in Shopify Admin — `project` (title, category list, hero image, gallery images, video URL, description, press link, featured boolean), `press_accolade` (publication, headline, article URL, date), `team_member` (name, role, bio, image, anchor_id), `career_opening` (title, specification, is_active boolean)
+- [ ] **DATA-02**: Product metafield namespace `workshop` defined with fields — tearsheet_pdf (file_reference), secondary_image (file_reference), room_scheme_images (list.file_reference), interactive_tags (json), video_url (url), category (single_line_text), collection_name (single_line_text)
+- [ ] **DATA-03**: Collection structure created — `workshop-all`, `workshop-[collection]` sub-collections, `portfolio-all`, `portfolio-residential`, `portfolio-commercial`, `portfolio-hospitality`
+- [ ] **DATA-04**: Portfolio filtering uses URL-based collection routing (each category = own collection URL, active state set server-side in Liquid) rather than client-side JS filtering
+- [x] **DATA-05**: Page templates created for all routes — index, page.about, page.contact, page.press, page.careers, collection.portfolio, collection.workshop, product.workshop-item, blog.journal, article.journal-entry, 404
+- [ ] **DATA-06**: Portfolio projects use metaobjects (not products/collections) as CMS, giving full control over custom fields (video, gallery, press links) without forcing into the product model
+
 ### Pages & Sections
 
 - [ ] **PAGE-01**: Subscribe pop-up appears after 10-second delay or 30% page scroll on Workshop page, and when clicking Subscribe in the footer; displays centred on screen
@@ -125,10 +134,16 @@ None — all 35 features scoped for v1.
 | PAGE-05 | Phase 9 | Pending |
 | PAGE-06 | Phase 4 | Pending |
 | PAGE-07 | Phase 9 | Pending |
+| DATA-01 | Phase 4.1 | Pending |
+| DATA-02 | Phase 4.1 | Pending |
+| DATA-03 | Phase 4.1 | Pending |
+| DATA-04 | Phase 6 | Pending |
+| DATA-05 | Phase 4.1 | Complete |
+| DATA-06 | Phase 4.1 | Pending |
 
 **Coverage:**
-- v1 requirements: 38 total
-- Mapped to phases: 38
+- v1 requirements: 44 total
+- Mapped to phases: 44
 - Unmapped: 0
 
 ---
