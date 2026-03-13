@@ -12,10 +12,11 @@ This roadmap transforms Prestige v10.7.0 into a distinctive Studio Peake brand e
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Infrastructure + Visual Foundation** - CSS/JS file infrastructure, gradient overlays, responsive image containers
-- [ ] **Phase 2: Hero + Brand Identity** - Hero load sequence, emblem overlay on product pages
-- [ ] **Phase 3: Colour-Bleed Interactions** - Colour-bleed button states, close icon rotation animation
+- [x] **Phase 1: Infrastructure + Visual Foundation** - CSS/JS file infrastructure, gradient overlays, responsive image containers
+- [x] **Phase 2: Hero + Brand Identity** - Hero load sequence, emblem overlay on product pages
+- [x] **Phase 3: Colour-Bleed Interactions** - Colour-bleed button states, close icon rotation animation
 - [ ] **Phase 4: Keyline Animation System** - SVG stroke draw-on reveals, button keyline hover/click, press links
+- [ ] **Phase 4.1: Shopify Data Architecture** [INSERTED] - Metaobjects, product metafields, collections, page templates
 - [ ] **Phase 5: Project Cards + Image Interactions** - Project card hover states, mobile card treatment, dual-image crossfade
 - [ ] **Phase 6: Navigation + Filtering** - Portfolio/workshop dropdowns, gallery filter bar, cross-page filtering, mobile filter, anchor links, nav split
 - [ ] **Phase 7: Carousels** - Featured projects carousel, product image carousel, journal notes carousel, room scheme auto-rotation, mobile swipe
@@ -36,8 +37,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — CSS/JS infrastructure and dual gradient overlay system (VISF-01)
-- [ ] 01-02-PLAN.md — Focal-point image containers and adaptive layout detection (VISF-02, VISF-03)
+- [x] 01-01-PLAN.md — CSS/JS infrastructure and dual gradient overlay system (VISF-01)
+- [x] 01-02-PLAN.md — Focal-point image containers and adaptive layout detection (VISF-02, VISF-03)
 
 ### Phase 2: Hero + Brand Identity
 **Goal**: The homepage makes an immediate brand impression through a choreographed hero sequence, and product pages carry Studio Peake identity
@@ -47,23 +48,23 @@ Plans:
   1. Homepage hero loads the background image first, then the logo fades in with a visible timing delay
   2. Product pages display the Studio Peake emblem overlaying product images in clotted cream brand colour
   3. Navigation on product pages reflects the emblem colour treatment
-**Plans**: TBD
+**Plans**: N/A (existing Prestige styling sufficient)
 
 Plans:
-- [ ] 02-01: TBD
+- N/A — skipped, existing brand treatment acceptable
 
 ### Phase 3: Colour-Bleed Interactions
 **Goal**: Buttons and close icons respond to user interaction with the signature Studio Peake colour-bleed effect
 **Depends on**: Phase 1
 **Requirements**: INTR-01, INTR-07
 **Success Criteria** (what must be TRUE):
-  1. Buttons display a soft colour expansion effect on hover (desktop) that feels organic, not mechanical
-  2. The same colour-bleed effect triggers on tap for mobile devices
+  1. ~~Buttons display a soft colour expansion effect on hover (desktop) that feels organic, not mechanical~~ Existing button states sufficient
+  2. ~~The same colour-bleed effect triggers on tap for mobile devices~~ Existing button states sufficient
   3. Close icons (X) rotate smoothly on hover/tap and return to original position on leave
-**Plans**: TBD
+**Plans**: 1 plan (close icon rotation only)
 
 Plans:
-- [ ] 03-01: TBD
+- [x] Close icon 90° rotation on hover/tap (INTR-07) — implemented in studio-peake.css
 
 ### Phase 4: Keyline Animation System
 **Goal**: Decorative keylines throughout the site animate as drawn-on strokes, and buttons use keyline animations for hover and click states
@@ -71,7 +72,7 @@ Plans:
 **Requirements**: INTR-02, INTR-03, INTR-04, PAGE-06
 **Success Criteria** (what must be TRUE):
   1. SVG decorative keylines progressively draw on screen as the user scrolls them into view
-  2. "Read More" / "Learn More" buttons display a keyline that animates across the button on hover
+  2. ~~"Read More" / "Learn More" buttons display a keyline that animates across the button on hover~~ DONE (implemented in Phase 1 via CSS override in studio-peake.css)
   3. Buttons trigger a brief keyline drawing animation on click during page transitions
   4. Press and Accolades links use the same keyline draw-on animation pattern
   5. Keyline animations render consistently across Chrome, Firefox, Safari, and mobile browsers
@@ -80,6 +81,22 @@ Plans:
 Plans:
 - [ ] 04-01: TBD
 - [ ] 04-02: TBD
+
+### Phase 4.1: Shopify Data Architecture [INSERTED]
+**Goal**: All Shopify data structures (metaobjects, metafields, collections, page templates) are defined and ready to receive content, unblocking section development in later phases
+**Depends on**: Nothing (Shopify Admin configuration, independent of custom code phases)
+**Requirements**: DATA-01, DATA-02, DATA-03, DATA-05, DATA-06
+**Success Criteria** (what must be TRUE):
+  1. Four metaobject types exist in Shopify Admin: `project` (with title, category list, hero_image, gallery_images, video_url, description, press link, featured boolean), `press_accolade`, `team_member`, `career_opening`
+  2. Product metafield namespace `workshop` is defined with all 7 fields (tearsheet_pdf, secondary_image, room_scheme_images, interactive_tags, video_url, category, collection_name)
+  3. Six collections exist: workshop-all, portfolio-all, portfolio-residential, portfolio-commercial, portfolio-hospitality, plus at least one workshop sub-collection
+  4. All 10 page templates are created and assigned to appropriate pages/collections
+  5. Portfolio projects reference metaobjects (not products) and metaobject references work in section schemas
+**Plans:** 2 plans
+
+Plans:
+- [ ] 04.1-01-PLAN.md — Create all page/collection/product/blog template JSON files and minimal header group (DATA-05)
+- [ ] 04.1-02-PLAN.md — Shopify Admin setup: metaobject types, metafield definitions, collections, content population (DATA-01, DATA-02, DATA-03, DATA-06)
 
 ### Phase 5: Project Cards + Image Interactions
 **Goal**: Project gallery cards and image components deliver the polished hover interactions that distinguish Studio Peake from stock themes
@@ -161,14 +178,15 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 4.1 -> 5 -> 6 -> 7 -> 8 -> 9
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure + Visual Foundation | 0/2 | Planning complete | - |
-| 2. Hero + Brand Identity | 0/TBD | Not started | - |
-| 3. Colour-Bleed Interactions | 0/TBD | Not started | - |
+| 1. Infrastructure + Visual Foundation | 2/2 | Complete | 2026-03-12 |
+| 2. Hero + Brand Identity | N/A | Complete (skipped) | 2026-03-12 |
+| 3. Colour-Bleed Interactions | 1/1 | Complete | 2026-03-12 |
 | 4. Keyline Animation System | 0/TBD | Not started | - |
+| 4.1 Shopify Data Architecture | 0/2 | Planned | - |
 | 5. Project Cards + Image Interactions | 0/TBD | Not started | - |
 | 6. Navigation + Filtering | 0/TBD | Not started | - |
 | 7. Carousels | 0/TBD | Not started | - |
