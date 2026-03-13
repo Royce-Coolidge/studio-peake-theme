@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v10.7
 milestone_name: milestone
 status: completed
-stopped_at: Completed 04.1-01-PLAN.md
+stopped_at: Phase 4.1 checkpoint -- Admin setup partial (project metaobject created, 3 remaining)
 last_updated: "2026-03-13T15:12:10.104Z"
 last_activity: 2026-03-12 -- Button keyline animation + subheading font
 progress:
@@ -26,9 +26,9 @@ See: .planning/PROJECT.md (updated 2026-03-12)
 ## Current Position
 
 Phase: 04.1 of 9 (Shopify Data Architecture)
-Plan: 1 of 2 in Phase 04.1 -- COMPLETE
-Status: Plan 04.1-01 complete (template scaffolding). Plan 04.1-02 next.
-Last activity: 2026-03-13 -- Template scaffolding (7 templates + minimal header group)
+Plan: 2 of 2 in Phase 04.1 -- CHECKPOINT (human-action)
+Status: Plan 04.1-01 complete. Plan 04.1-02 paused at Admin setup checkpoint. Project metaobject created; press_accolade, team_member, career_opening skipped. Remaining: metafields, collections, templates, sample content.
+Last activity: 2026-03-13 -- Admin setup partial + template scaffolding
 
 Progress: [███░░░░░░░] 25%
 
@@ -76,5 +76,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-13T15:12:10.102Z
-Stopped at: Completed 04.1-01-PLAN.md
-Resume file: None
+Stopped at: Phase 4.1 checkpoint -- Admin setup partial (project metaobject created, 3 remaining)
+Resume file: .planning/phases/04.1-shopify-data-architecture/shopify-admin-setup.md

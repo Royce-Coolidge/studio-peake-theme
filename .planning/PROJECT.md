@@ -75,6 +75,13 @@ The theme must feel unmistakably Studio Peake — not a stock Prestige install �
 - [ ] Navigation split option (Workshop right-aligned)
 - [ ] Press & Accolades link with keyline animation
 
+**Data Architecture:**
+- [ ] Metaobjects: project, press_accolade, team_member, career_opening
+- [ ] Product metafields: workshop namespace (tearsheet_pdf, secondary_image, room_scheme_images, interactive_tags, video_url, category, collection_name)
+- [ ] Collections: workshop-all, workshop-[sub], portfolio-all, portfolio-residential, portfolio-commercial, portfolio-hospitality
+- [ ] Page templates: index, page.about, page.contact, page.press, page.careers, collection.portfolio, collection.workshop, product.workshop-item, blog.journal, article.journal-entry, 404
+- [ ] Portfolio projects as metaobjects (not products) — full CMS control over video, gallery, press links
+
 ### Out of Scope
 
 - Full theme rebuild — extending Prestige, not replacing it
@@ -92,6 +99,7 @@ The theme must feel unmistakably Studio Peake — not a stock Prestige install �
 - **Existing JS patterns:** theme.js uses custom elements, vendor.min.js provides `inView` and `animate` animation utilities
 - **CSS approach:** theme.css with CSS variables, scoped section styles, Tailwind-like utility classes
 - **No build tooling:** Assets served directly through Shopify, no bundler
+- **Data architecture:** Portfolio projects use metaobjects (not products) for full custom field control. Workshop items are standard Shopify products with `workshop` namespace metafields. Portfolio filtering uses URL-based collection routing (server-side Liquid, not JS). Full spec in `shopify-build-plan.md` §2.3.
 
 ## Constraints
 
@@ -109,6 +117,8 @@ The theme must feel unmistakably Studio Peake — not a stock Prestige install �
 | Merchant UX prioritised over pixel-perfect fidelity | Client needs to manage content independently | — Pending |
 | Gradient overlays as first phase | Unblocks project card hover, hero section, mobile tiles; pure CSS = low risk | — Pending |
 | No hard deadline | Quality over speed | — Pending |
+| Portfolio projects as metaobjects, not products | Projects aren't purchasable; metaobjects give full custom field control (video, gallery, press links) without forcing into the product/collection model | — Pending |
+| URL-based collection routing for portfolio filtering | Server-side Liquid filtering is fast, SEO-friendly, requires no JS | — Pending |
 
 ---
 *Last updated: 2026-03-12 after initialization*

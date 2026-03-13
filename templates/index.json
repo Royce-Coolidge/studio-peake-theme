@@ -114,7 +114,7 @@
             "subheading": "Interior & Architectural Design",
             "title": "RESIDENTIAL",
             "button_text": "",
-            "button_link": "",
+            "button_link": "shopify://collections/residential",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -197,8 +197,24 @@
             "content": "<p>Studio Peake is an interior design and interior architecture studio creating high-end residential and commercial spaces worldwide. Defined by a philosophy that places the client at the heart of the design, every Studio Peake project involves an orchestra of creative input, with clients, designers, architects and makers working in harmony to create something truly unique – a reflection of who the client is and how they live. <br/><br/>Founded by Sarah Peake, the studio is based in London but its work ranges across the globe. Recent and ongoing projects include a Georgian townhouse in London, a Grade II listed Arts & Crafts house in Surrey and an architecturally ambitious villa on the water just outside Stockholm.</p>"
           }
         },
+        "sp_link_group_GE8CYD": {
+          "type": "sp-link-group",
+          "settings": {
+            "link_text_1": "House and Garden Top 100 2025 ",
+            "link_url_1": "",
+            "link_text_2": "Country & Townhouse Top 50 2024",
+            "link_url_2": "",
+            "link_text_3": "AD (Germany) Top 100 2022",
+            "link_url_3": "",
+            "link_text_4": "AD (Germany) Top 100 2022",
+            "link_url_4": "",
+            "link_text_5": "",
+            "link_url_5": ""
+          }
+        },
         "button_etmkqJ": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "style": "outline",
             "text": "Learn more",
@@ -206,20 +222,14 @@
             "background": "",
             "text_color": ""
           }
-        },
-        "liquid_hPYADW": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<p>Write custom Liquid code to include widget or dynamic code.</p>"
-          }
         }
       },
       "block_order": [
         "subheading_aTMnEm",
         "heading_C68e6m",
         "richtext_YJmEKU",
-        "button_etmkqJ",
-        "liquid_hPYADW"
+        "sp_link_group_GE8CYD",
+        "button_etmkqJ"
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
