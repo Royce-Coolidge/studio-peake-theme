@@ -338,6 +338,10 @@ height-observer {
   letter-spacing: 0.15em;
 }
 
+.blog-post-card__info a {
+  color: inherit;
+}
+
 .blog-post-card__title a {
   text-decoration: none;
 }

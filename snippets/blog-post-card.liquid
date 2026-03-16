@@ -24,6 +24,10 @@ Supported parameters
     assign loading_strategy = 'lazy'
   endif
 
+  assign article_color = article.metafields.custom.card_colour.value
+  assign article_text_color = article.metafields.custom.text_color.value
+  assign article_subheading = article.metafields.custom.subheading.value
+
   if card_color_scheme
     assign panel_scheme_hash = card_color_scheme.settings.background_gradient | default: card_color_scheme.settings.background | md5
   endif
@@ -42,7 +46,18 @@ Supported parameters
     {%- endif -%}
   </div>
 
-  <div class="blog-post-card__info {% if card_color_scheme %}color-scheme color-scheme--{{ card_color_scheme.id }} color-scheme--bg-{{ panel_scheme_hash }}{% endif %}">
+  {%- capture panel_style -%}
+    {%- if article_color != blank %}background-color: {{ article_color }};{% endif -%}
+    {%- if article_text_color != blank %} color: {{ article_text_color }};{% endif -%}
+  {%- endcapture -%}
+
+  {%- if article_color != blank -%}
+    <div class="blog-post-card__info" style="{{ panel_style }}">
+  {%- elsif card_color_scheme -%}
+    <div class="blog-post-card__info color-scheme color-scheme--{{ card_color_scheme.id }} color-scheme--bg-{{ panel_scheme_hash }}" {% if article_text_color != blank %}style="color: {{ article_text_color }};"{% endif %}>
+  {%- else -%}
+    <div class="blog-post-card__info" {% if article_text_color != blank %}style="color: {{ article_text_color }};"{% endif %}>
+  {%- endif -%}
     <div class="blog-post-card__info-top">
       {%- if article -%}
         <p class="blog-post-card__title h4">
@@ -52,7 +67,9 @@ Supported parameters
         <p class="blog-post-card__title h4">{{- 'general.on_boarding.blog_post_title' | t -}}</p>
       {%- endif -%}
 
-      {%- if show_category and article.tags.size > 0 -%}
+      {%- if article_subheading != blank -%}
+        <p class="blog-post-card__category">{{ article_subheading }}</p>
+      {%- elsif show_category and article.tags.size > 0 -%}
         <p class="blog-post-card__category">
           <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="link-faded">{{ article.tags | first }}</a>
         </p>
