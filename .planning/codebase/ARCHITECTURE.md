@@ -1,266 +1,185 @@
 # Architecture
 
-**Analysis Date:** 2026-03-10
+**Analysis Date:** 2026-03-16
 
 ## Pattern Overview
 
-**Overall:** Shopify Theme Component Architecture (Prestige Theme)
+**Overall:** Shopify Dawn-based Theme with Modular Section Architecture
 
 **Key Characteristics:**
-- Section-based modular component system
-- Block-driven customizable content composition
-- Liquid templating with JSON configuration
-- Color scheme abstraction layer for theming
-- Responsive responsive design system with Tailwind-like utility classes
-- Hierarchical template + section + block structure
-- Snippet-based reusable component library
+- JSON Schema-driven configuration for dynamic sections and blocks
+- Liquid templating with reusable snippet components
+- Client-side JavaScript enhancement using custom web components
+- CSS-in-JS via Liquid computed variables for dynamic styling
+- Metaobject-based data structure for custom content types (e.g., projects, artworks)
+- Multi-locale support with translation strings in `locales/`
 
 ## Layers
 
-**Layout Layer:**
-- Purpose: Root HTML structure and global context setup
-- Location: `layout/theme.liquid`
-- Contains: Document head (meta, assets, fonts), global scripts, body structure, header/footer group references
-- Depends on: Shopify platform APIs, asset references, section groups
-- Used by: All page templates via content_for_layout
+**Presentation Layer (Client-Facing):**
+- Purpose: Render HTML, CSS, and interactive components to the browser
+- Location: `templates/`, `sections/`, `blocks/`, `snippets/`
+- Contains: Liquid markup, inline styles, custom HTML elements
+- Depends on: Shopify liquid filters, settings from `config/`, locale strings
+- Used by: Browser renders this as the visible page
 
-**Template Layer:**
-- Purpose: Page-specific content composition and section orchestration
-- Location: `templates/*.json`
-- Contains: JSON configurations that declare which sections to render and in what order
-- Depends on: Section definitions, color schemes, settings
-- Used by: Shopify request handling to render specific page types (product, collection, homepage, etc.)
-
-**Section Layer:**
-- Purpose: Reusable page components with configurable blocks and settings
-- Location: `sections/*.liquid`
-- Contains: Component logic, styling (scoped), schema definitions, block rendering loops, responsive behavior
-- Depends on: Block definitions, snippets, Shopify platform features
-- Used by: Templates (via section references), dynamically composed on pages
-
-**Block Layer:**
-- Purpose: Sub-components within sections that provide granular customization
-- Location: `blocks/*.liquid`
-- Contains: Minimal template code, delegating to snippets or rendering directly
-- Depends on: Snippet helpers, block settings schema
-- Used by: Sections (via block loops and case statements)
-
-**Snippet Layer (Reusable Components):**
-- Purpose: Shared template utilities and component abstractions
-- Location: `snippets/*.liquid`
-- Contains: Partial templates (buttons, product cards, galleries, form components, meta tags)
-- Depends on: Shopify helpers, CSS classes, settings passed via parameters
-- Used by: Sections, blocks, other snippets
+**Section & Block Layer (Dynamic Content):**
+- Purpose: Modular content blocks that merchants can add/configure in Shopify admin
+- Location: `sections/*.liquid`, `blocks/*.liquid`
+- Contains: 60 section files (e.g., `featured-product.liquid`, `hero-banner.liquid`), 12 block files (e.g., `accordion.liquid`, `button.liquid`)
+- Depends on: Shopify section schema, product/collection objects, settings
+- Used by: Templates reference sections; sections reference blocks
 
 **Configuration Layer:**
-- Purpose: Theme-wide settings, color schemes, fonts, branding
-- Location: `config/settings_schema.json`, `config/settings_data.json`, `config/markets.json`, `config/metafields.json`
-- Contains: Schema definitions for customizer UI, applied settings, market configurations, metafield definitions
-- Depends on: Theme customizer (Shopify platform)
-- Used by: All sections and snippets via `settings` and `color_scheme` context
+- Purpose: Define theme-wide settings, color schemes, and font choices
+- Location: `config/settings_schema.json`, `config/settings_data.json`, `config/markets.json`
+- Contains: Color scheme definitions, typography settings, spacing presets, feature toggles
+- Depends on: Shopify admin inputs
+- Used by: Rendered as CSS variables by `css-variables.liquid` snippet
 
-**Styling Layer:**
-- Purpose: Global and component-scoped CSS
-- Location: `assets/theme.css`, `assets/custom-fonts.css`, component-level `<style>` blocks in sections
-- Contains: Base styles, utility classes, CSS variables (theme-wide: colors, spacing, fonts), responsive media queries
-- Depends on: CSS custom properties, Tailwind-like utility naming
-- Used by: Layout, sections, blocks, snippets
+**Snippet Reusable Components:**
+- Purpose: Shared Liquid components used across sections and templates
+- Location: `snippets/*.liquid` (54 files total)
+- Contains: Icons (`icon.liquid`), form inputs (`input.liquid`, `checkbox.liquid`), product components (`product-gallery.liquid`, `product-info.liquid`), UI elements (`button.liquid`, `banner.liquid`)
+- Depends on: Liquid filters, locale strings, CSS classes
+- Used by: Called via `{% render %}` from sections and templates
 
-**Asset Layer:**
-- Purpose: Non-template assets and libraries
-- Location: `assets/`
-- Contains: JavaScript files (theme.js, vendor.min.js, newsletter-popup.js, photoswipe.min.js), SVGs, custom fonts (.otf)
-- Depends on: ES module import system, Shopify asset URL filters
-- Used by: Layout theme.liquid, conditional loads for specific pages
+**Data/Content Layer:**
+- Purpose: Shopify data (products, collections, pages) and custom metaobject data
+- Location: Shopify admin (remote), plus `templates/metaobject/` for custom metaobject templates
+- Contains: Product catalog, collections, pages, custom metaobject entries (e.g., `project.kensington-townhouse.json`)
+- Depends on: Shopify GraphQL API or Liquid object access
+- Used by: Sections render product/collection data; metaobject templates render custom content
 
-**Localization Layer:**
-- Purpose: Multi-language string management
-- Location: `locales/*.json`, `locales/*.schema.json`
-- Contains: Translation strings organized by feature/component, schema translations
-- Depends on: Shopify Liquid translation filters (| t)
-- Used by: All templates, sections, snippets via t filter
+**Asset/Static Files:**
+- Purpose: Compiled CSS, JavaScript, fonts, and SVG assets
+- Location: `assets/` (16 subdirectories or files)
+- Contains: `theme.css`, `theme.js`, `vendor.min.js`, `studio-peake.css`, `studio-peake.js`, `custom-fonts.css`, font files, SVG utilities
+- Depends on: Build process (external)
+- Used by: Included in `layout/theme.liquid` via `asset_url` filter
+
+**Locale/Internationalization:**
+- Purpose: Multi-language support with translation strings
+- Location: `locales/` (32 language files)
+- Contains: JSON translation keys for all UI text
+- Depends on: Request locale
+- Used by: Liquid `t` filter translates keys to user's language
 
 ## Data Flow
 
-**Page Render Flow:**
+**Page Request Flow:**
 
-1. Shopify routes request to page type (product, collection, index, etc.)
-2. Loads corresponding `templates/[page-type].json` configuration
-3. Template JSON declares sections in order: `{ "sections": { "section-id": { "type": "section-name" } } }`
-4. Layout `layout/theme.liquid` wraps content:
-   - Renders `header-group` sections (before main)
-   - Renders `content_for_layout` (template-generated HTML)
-   - Renders `footer-group` sections (inside main)
-5. Each section (`sections/section-name.liquid`):
-   - Accesses `section.settings` (customizer values)
-   - Accesses `section.blocks` (child components)
-   - Loops through blocks with case statement matching `block.type`
-   - Each block delegates to specific rendering (direct HTML or snippet call)
-6. Snippets render partial templates with passed parameters
-7. CSS is scoped via section/block ID selectors using Liquid injection
-8. Liquid filters apply settings (colors, fonts, localization)
+1. Shopify routes request to `layout/theme.liquid`
+2. Layout renders `<head>` with CSS, fonts, and JS imports
+3. Layout renders body with header/footer sections (from `sections/`)
+4. Layout renders `{{ content_for_template }}` which loads the appropriate template (e.g., `templates/index.json`, `templates/product.json`)
+5. Template defines which sections to render and their block configuration
+6. Each section renders its configured blocks, calling snippets for reusable components
+7. Browser executes JavaScript modules to enhance interactivity (web components, carousels, etc.)
 
-**Settings Application Flow:**
+**Section Configuration Flow:**
 
-1. `config/settings_schema.json` defines all customizer UI fields
-2. User customizes in Shopify admin
-3. Settings stored in `config/settings_data.json`
-4. Liquid accesses via `settings.*` (global) or `color_scheme.settings.*` (scheme-specific)
-5. Colors, fonts, spacing applied to CSS custom properties
-6. Responsive breakpoints (mobile: <700px, tablet: 700px-1000px, desktop: 1000px+)
+1. Merchant configures section settings in Shopify admin
+2. Settings stored in template JSON file (e.g., `templates/index.json`)
+3. Section Liquid accesses settings via `section.settings` object
+4. Settings map to schema-defined input types (color picker, text field, range, etc.)
+5. Dynamic CSS computed in section `<style>` block using Liquid math
+6. Section renders with merchant-configured appearance
 
-**Product Page Data Flow (Example):**
+**Block Nesting Flow:**
 
-1. Request to `/products/product-slug`
-2. Loads `templates/product.json`
-3. Declares section "main-product" with nested blocks (vendor, title, price, gallery, variant-picker, buy-buttons)
-4. `sections/main-product.liquid` renders:
-   - Uses Liquid `for block in section.blocks` loop
-   - Each block type has dedicated rendering (some inline, some via snippets like `product-gallery`)
-   - Snippets receive `product`, `variant` data and render accordingly
-5. Gallery snippet initializes JavaScript for zoom/carousel
-6. Variant picker snippet handles form submission
+1. Section defines `blocks` array in its schema (e.g., announcement-bar allows up to 5 message blocks)
+2. Template populates blocks in section configuration
+3. Section loops through `section.blocks` and renders each block with `block.shopify_attributes` for admin editing
+4. Each block has independent settings (e.g., text, color, link)
 
 **State Management:**
 
-- Form state: Managed via Shopify form helpers (`form` object), no explicit state library
-- Cart state: Managed by Shopify (form_id references)
-- Page state: Managed via URL parameters (filters, sorting, pagination)
-- Component state: JavaScript custom elements (e.g., `<x-header>`, `<product-rerender>`) manage visibility, animations
-- Customizer state: Stored in `settings_data.json`, accessed globally
+- **Client-side state:** Web component properties, localStorage (for cart data, user preferences)
+- **Server-side state:** Shopify admin configuration, product/inventory data, customer accounts
+- **Shared state:** CSS custom properties (computed in Liquid, consumed by CSS and JavaScript)
 
 ## Key Abstractions
 
-**Section:**
-- Purpose: Represents a configurable page component with blocks and settings
-- Examples: `sections/slideshow.liquid`, `sections/featured-product.liquid`, `sections/header.liquid`
-- Pattern: Liquid template with `<style>`, HTML, and `{% schema %}` block containing JSON config
+**Section Abstraction:**
+- Purpose: Encapsulate a page component with configurable settings and nested blocks
+- Examples: `sections/featured-product.liquid` (1712 lines), `sections/hero-banner.liquid`, `sections/collection-list.liquid`
+- Pattern: Each section file contains markup, inline `<style>`, and `{% schema %}` defining inputs
 
-**Block:**
-- Purpose: Child component within a section that users can add/remove/reorder
-- Examples: `blocks/button.liquid`, `blocks/image.liquid`, `blocks/video.liquid`
-- Pattern: Minimal code, usually delegates to snippets via `{% render %}`
+**Block Abstraction:**
+- Purpose: Small, reusable components nested within sections (e.g., carousel slides, accordion items)
+- Examples: `blocks/accordion.liquid`, `blocks/button.liquid`, `blocks/icon.liquid`
+- Pattern: Block files are minimal; sections loop through `section.blocks` and render them
 
-**Snippet:**
-- Purpose: Reusable template partial
-- Examples: `snippets/button.liquid`, `snippets/product-gallery.liquid`, `snippets/social-meta-tags.liquid`
-- Pattern: Pure template function taking parameters, returns rendered HTML
+**Snippet Abstraction:**
+- Purpose: Reusable Liquid components for shared UI patterns
+- Examples: `snippets/icon.liquid` (82,032 bytes - large SVG icon library), `snippets/button.liquid`, `snippets/product-gallery.liquid`
+- Pattern: Called via `{% render 'snippet-name' with param1: value1 %}`, parameters passed in
 
-**Color Scheme:**
-- Purpose: Abstraction over color palettes with customizable values
-- Examples: scheme-1 (white bg, dark text), scheme-2 (light gray bg), scheme-3 (dark bg, white text), scheme-4 (transparent)
-- Implementation: `config/settings_data.json` contains scheme definitions with background/text/button colors
-- Usage: Sections apply via `color-scheme--{{ section.settings.color_scheme.id }}` class
+**Color Scheme Abstraction:**
+- Purpose: Define cohesive color palettes for different sections of the site
+- Implementation: `config/settings_schema.json` defines `color_scheme_group` with multiple schemes
+- Usage: Sections apply `class="color-scheme color-scheme--{{ section.settings.color_scheme.id }}"` to inherit colors
 
-**Container:**
-- Purpose: Width constraint wrapper
-- Implementation: CSS class `container--lg`, `container--xl`, `container--full`
-- Used to: Constrain section content width responsively
-
-**Responsive Spacing:**
-- Purpose: Consistent spacing system
-- Examples: `gap-4` (0.5rem), `gap-5` (1rem), `sm:gap-5` (gap-5 on tablet+)
-- Values: Defined in CSS with TW-like naming (xs, sm, md, lg, xl)
+**CSS Variables Pattern:**
+- Purpose: Dynamic styling computed in Liquid, consumed by CSS and JavaScript
+- Implementation: `snippets/css-variables.liquid` (15,902 bytes) renders CSS custom properties based on settings
+- Example: `--announcement-bar-height` set in JavaScript, used by announcement-bar section styling
 
 ## Entry Points
 
-**Layout Entry:**
+**Layout Entry Point:**
 - Location: `layout/theme.liquid`
-- Triggers: Every page load (universal wrapper)
-- Responsibilities:
-  - Renders HTML document structure
-  - Outputs head meta/preconnect/fonts/CSS
-  - Calls `{%- sections 'header-group' -%}` to render header
-  - Calls `{%- sections 'overlay-group' -%}` for modal/drawer sections
-  - Outputs `{{ content_for_layout }}` (template sections)
-  - Calls `{%- sections 'footer-group' -%}` for footer
+- Triggers: Every page load
+- Responsibilities: Render HTML doctype, head metadata, script/style imports, body wrapper with header/footer sections, locale tracking
 
-**Product Page Entry:**
-- Location: `templates/product.json`
-- Triggers: GET /products/:slug
-- Responsibilities: Declares section "main-product" with blocks (vendor, title, price, gallery, variant-picker, buy-buttons, complementary-products, related-products)
+**Template Entry Points (Page-Type Specific):**
+- `templates/index.json`: Homepage configuration
+- `templates/product.json`: Product page layout (uses `main-product` section)
+- `templates/collection.json`: Collection listing page
+- `templates/page.json`: Static pages
+- `templates/article.json`: Blog post pages
+- `templates/customers/*.json`: Customer account pages (login, account, order history)
 
-**Homepage Entry:**
-- Location: `templates/index.json`
-- Triggers: GET /
-- Responsibilities: Declares ordered sections (slideshow, logo-list, collection-list, featured-collections, media-grid, shop-the-look, blog-posts, apps)
+**Section Entry Points (Dynamic Content Areas):**
+- Major sections: `featured-product` (1712 lines), `main-product` (1807 lines), `slideshow` (832 lines), `collection-list` (421 lines)
+- Supporting sections: `announcement-bar`, `cart-drawer`, `footer`, `header`, etc.
+- Each has schema defining which templates can use it
 
-**Collection Page Entry:**
-- Location: `templates/collection.json`
-- Triggers: GET /collections/:handle
-- Responsibilities: Declares "main-collection" section with filters and product grid
-
-**Header Group Entry:**
-- Location: `sections/header-group.json` (linked group)
-- Sections: header.liquid (sticky nav with logo/menu), announcement-bar.liquid, search-modal.liquid
-- Responsibilities: Navigation, branding, search functionality
-
-**Footer Group Entry:**
-- Location: `sections/footer-group.json` (linked group)
-- Sections: footer.liquid with blocks for links, images, text
-- Responsibilities: Links, contact info, social, newsletter signup
+**Metaobject Data Entry Points:**
+- Location: `templates/metaobject/` directory
+- Purpose: Custom content types beyond products/collections
+- Example: `templates/metaobject/project.kensington-townhouse.json` - renders portfolio/project entries
 
 ## Error Handling
 
-**Strategy:** Progressive enhancement with fallback rendering
+**Strategy:** Silent fallbacks and conditional rendering
 
 **Patterns:**
-
-- **Blank Check:** Most rendering blocks check `if product != blank` or `if block.settings.image != blank` before rendering
-  - Example: `{% if block.settings.image != blank %} <img> {% else %} {{ placeholder_image | placeholder_svg_tag }} {% endif %}`
-  - Location: Used throughout sections (featured-product.liquid, media-grid.liquid)
-
-- **Placeholder Fallbacks:** When product/image missing, render placeholder SVG
-  - Example: slideshow.liquid uses `{% cycle 'placeholder': 'lifestyle-1', 'lifestyle-2' %}` when image is blank
-  - Location: `sections/slideshow.liquid` lines 20-23
-
-- **Form Validation:** Delegated to Shopify form helpers (built-in validation)
-  - Location: `sections/main-product.liquid` (buy_buttons block uses Shopify form)
-
-- **No explicit error logging** - All errors surface as missing content or broken forms
-  - Assumption: Theme author/shop owner monitors admin for misconfigurations
+- `{%- if product -%}...{%- endif -%}` - Check for required objects before rendering
+- `{%- unless settings.heading_font.system? -%}...{%- endunless -%}` - Conditional resource loading
+- `{% if section.blocks.size > 0 %}` - Only render section if blocks exist
+- No explicit error messages; missing data results in empty/skipped sections
 
 ## Cross-Cutting Concerns
 
-**Logging:** No explicit logging implemented. Relies on Shopify admin console and browser DevTools.
+**Logging:** Minimal client-side logging; errors surfaced via browser console from JavaScript modules
 
-**Validation:**
-- Schema field validation handled by Shopify customizer (enforces required/type)
-- Product/collection existence checked with blank conditional rendering
-- Form validation handled by Shopify (required field, inventory check)
+**Validation:** Shopify schema validation in admin UI; theme enforces no explicit validation
 
-**Authentication:** Not implemented in theme. Delegated to Shopify (customer login via form submission).
-
-**Color Consistency:**
-- Global color schemes defined in settings_data.json
-- Sections apply scheme via CSS class: `color-scheme--{{ scheme.id }}`
-- CSS custom properties expose color values: `var(--color-scheme-background)`
-- Example in header.liquid: `color-scheme color-scheme--{{ section.settings.color_scheme.id }}`
-
-**Responsive Behavior:**
-- Mobile: <700px (base, "mobile" class in body)
-- Tablet: 700px-1000px (sm: prefix in Liquid classes)
-- Desktop: 1000px+ (default, sm: queries kick in)
-- Example: `class="h6 sm:h4"` renders h6 on mobile, h4 on tablet+
+**Authentication:** Shopify handles customer authentication; theme renders customer-specific content based on `customer` object (when logged in)
 
 **Accessibility:**
-- ARIA attributes in templates (aria-hidden, role="region")
-- Skip-to-content link in layout
-- Alt text via `image_tag` filter (auto-generated or manual)
-- Example in layout.liquid: `<a href="#main" allow-hash-change class="skip-to-content sr-only">`
+- ARIA labels on interactive elements (e.g., `aria-controls`, `aria-hidden`)
+- Skip-to-content link in layout: `<a href="#main" class="skip-to-content sr-only">`
+- Semantic HTML (`<button>`, `<nav>`, `<section>`)
+- Localization via translation filters
 
-**Internationalization:**
-- String keys in schema/templates as `t:path.to.key`
-- Locales in `locales/*.json` contain translations
-- Applied via Liquid filter: `{{ 'general.page' | t: page: current_page }}`
-- Supports 32+ languages via multiple locale files
-
-**Performance Optimization:**
-- Lazy loading: `loading: 'lazy'` on non-critical images
-- Preload: Critical fonts/images use `rel="preload"`
-- Asset optimization: Vendored scripts minified (vendor.min.js)
-- Example in layout.liquid: `<link rel="preload" href="{{ settings.heading_font | font_url }}" as="font">`
+**Styling Approach:**
+- Utility-first CSS with Tailwind-like class names (e.g., `sm:place-self-end-center`)
+- Inline scoped styles in sections (`<style>` tags with `#shopify-section-{{ section.id }}` selectors)
+- Dynamic CSS variables for merchant-configured settings
 
 ---
 
-*Architecture analysis: 2026-03-10*
+*Architecture analysis: 2026-03-16*

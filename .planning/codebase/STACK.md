@@ -1,135 +1,124 @@
 # Technology Stack
 
-**Analysis Date:** 2026-03-10
+**Analysis Date:** 2026-03-16
 
 ## Languages
 
 **Primary:**
-- Liquid - Shopify template language for theme development
-- JavaScript/ES6+ - Client-side interactivity
+- Liquid - Shopify template language used for all page templates, sections, blocks, and snippets
+- JavaScript/ES modules - Used for interactive components and animations
 
 **Secondary:**
-- HTML - Template markup structure
-- CSS - Theme styling
+- CSS - Custom styling and component styles
+- JSON - Theme configuration, section schemas, and metaobject definitions
+- HTML - Markup structure embedded in Liquid templates
 
 ## Runtime
 
 **Environment:**
-- Shopify Theme Runtime - Merchant-provided Shopify platform
+- Shopify Theme runtime (Liquid renderer)
+- Browser (Modern ES modules support required)
 
-**Platform:**
-- Shopify Plus/Advanced Plan - Theme hosting and rendering
+**Package Manager:**
+- None - This is a Shopify theme, not a Node.js project
+- No `package.json` or dependency lockfile present
 
 ## Frameworks
 
 **Core:**
-- Prestige Theme v10.7.0 - Base theme framework by Maestrooo
-  - Location: Shopify theme template system
-  - Purpose: Provides theme foundation, layout components, and styling system
+- Shopify Theme Framework (v10.7.0, "Prestige" base theme) - Custom liquid sections and blocks
+- Shopify Metaobjects - Data structure for custom content types (`project` metaobject defined in `templates/metaobject/`)
 
-**Frontend Libraries:**
-- Motion library (likely) - Animation framework for marquee and carousel functionality
-  - Imported as `vendor` in `assets/vendor.min.js`
-  - Provides: `inView`, `animate` functions
+**Frontend/Interaction:**
+- Web Components - Custom elements (`<confirm-button>`, `<copy-button>`, `<share-button>`, `<marquee-text>`, `<dialog-close-button>`, etc.)
+- Intersection Observer API - Animation triggering via `inView()` utility from vendor library
+- Fetch API - Cart and checkout operations
 
-**UI Components:**
-- Web Components (Custom Elements) - For interactive features
-  - `confirm-button` - Confirmation dialogs
-  - `copy-button` - Clipboard interactions
-  - `share-button` - Native share functionality
-  - `marquee-text` - Animated marquee text
-  - `carousel` - Image/product carousel functionality
-  - `quick-buy-modal` - Product quick-view modal
-  - `loading-bar` - Loading indicators
-  - Located in: `assets/theme.js`
+**Animation/Motion:**
+- Motion library (imported as "vendor") - Provides `inView()` for scroll-based animations and `animate()` for animation sequences
 
-**Image Gallery:**
-- PhotoSwipe v5 (minified)
-  - File: `assets/photoswipe.min.js`
-  - Purpose: Lightbox/image gallery functionality
+**Asset Handling:**
+- PhotoSwipe 5.4.4 - Image gallery and lightbox functionality (`assets/photoswipe.min.js`)
+- QRCode.js - QR code generation for gift cards
 
 ## Key Dependencies
 
 **Critical:**
-- Shopify Liquid - Theme template rendering
-- Shopify JavaScript APIs:
-  - `Shopify.routes` - Route generation
-  - Cart API endpoints (`/cart.js`, `/cart/update.js`, `/cart/change.js`)
-  - Shipping rates API (`/cart/prepare_shipping_rates.json`)
-  - QR code library (`vendor/qrcode.js` for gift cards)
+- Shopify Asset Pipeline - Handles CSS/JS compilation and CDN delivery
+- Shopify Liquid Filters - Image processing, translation, URL generation
 
 **Infrastructure:**
-- Shopify CDN for fonts - `fonts.shopifycdn.com`
-- Custom fonts via Shopify asset pipeline
-- Theme asset versioning through Shopify's built-in system
-
-**Vendor JavaScript:**
-- `vendor.min.js` (52.5KB) - Contains:
-  - Focus trap library
-  - Intersection Observer utilities
-  - Animation libraries
-  - Event handling utilities
+- Shopify Font CDN (`fonts.shopifycdn.com`) - Web font delivery for custom typefaces
+- Shopify Metafield API - Custom field storage on products, pages, and custom metaobjects
+- Shopify Cart API - JavaScript cart manipulation via `/cart.js`, `/cart/add.js`, `/cart/change.js`
 
 ## Configuration
 
 **Environment:**
-- Theme settings defined via `config/settings_schema.json`
-- Theme data stored in `config/settings_data.json`
-- No external environment variables required (theme-native configuration only)
+- Shopify store-specific settings configured via Shopify admin
+- Theme settings defined in `config/settings_schema.json`
+- Color schemes, typography, spacing, and feature toggles configurable through theme editor
 
 **Build:**
-- No build process detected
-- Assets served directly through Shopify
-- Liquid files compiled by Shopify servers
-- JavaScript compiled/minified (pre-compiled in assets)
+- No build system detected - Shopify handles bundling and deployment
+- Asset URLs use Shopify liquid filters: `{{ 'filename.js' | asset_url }}`
+- Metafield definitions in `.shopify/metafields.json` (auto-generated)
 
 **Theme Configuration Files:**
-- `config/settings_schema.json` - Theme customization settings exposed to Shopify admin
-- `config/settings_data.json` - Current theme settings and app integrations
-- `config/markets.json` - Market/locale configuration (empty in current config)
-- `.shopify/metafields.json` - Custom metafield definitions
-- Layout: `layout/theme.liquid`
+- `config/settings_schema.json` - Theme editor settings (appearance, colors, typography, social links)
+- `config/settings_data.json` - Current theme configuration snapshot
+- `.shopify/metafields.json` - Metafield definitions for custom data structures
 
 ## Platform Requirements
 
 **Development:**
-- Shopify CLI (for local development)
-- Web browser with JavaScript ES6+ support
-- No Node.js/npm required for theme itself
+- Shopify CLI (implied for theme management)
+- Text editor with Liquid syntax support
+- Modern browser for testing (ES modules support required)
+- No build tools required
 
 **Production:**
-- Shopify store account (any plan level)
-- Modern browser support required (ES6+, Web Components, CSS Grid, Flexbox)
-- Internet connection for Shopify CDN assets
+- Shopify Plus or Standard plan with theme store access
+- Deployed via Shopify theme upload/CLI
 
-**Browser Requirements:**
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14.1+
-- Modern mobile browsers
+## Static Assets
 
-## Asset Pipeline
+**Hosted on Shopify CDN:**
+- CSS files:
+  - `assets/theme.css` - Core theme styles
+  - `assets/custom-fonts.css` - Custom font declarations
+  - `assets/studio-peake.css` - Studio Peake custom component layer
 
-**CSS:**
-- `assets/theme.css` - Main stylesheet
-- `assets/custom-fonts.css` - Custom font definitions
-- CSS variables for theming (configured in theme settings)
+- JavaScript files (ES modules):
+  - `assets/vendor.min.js` - External libraries (motion library, utility functions)
+  - `assets/theme.js` - Core theme components (web components, cart logic)
+  - `assets/studio-peake.js` - Studio Peake specific interactions
+  - `assets/newsletter-popup.js` - Newsletter signup functionality
+  - `assets/photoswipe.min.js` - Image gallery library
 
-**JavaScript:**
-- `assets/theme.js` (5,868 lines) - Main application bundle
-- `assets/vendor.min.js` (22 lines minified) - Vendor dependencies
-- `assets/photoswipe.min.js` - Image gallery library
-- `assets/newsletter-popup.js` (83 lines) - Newsletter subscription popup
+- Fonts:
+  - `assets/mynaruse_flare_regular.ttf` - Custom display font
+  - Web fonts from `fonts.shopifycdn.com`
 
-**Fonts:**
-- Custom fonts served via Shopify asset pipeline:
-  - Located in: `assets/` directory
-  - Example: `roxboroughcf-medium.otf`
+- Images/Icons:
+  - `assets/emblem.svg` - Theme logo/emblem
+  - `assets/cursor-zoom-in.svg.liquid` - Liquid-generated SVG for zoom cursor
+  - `assets/checkmark.svg.liquid` - Liquid-generated SVG for checkmarks
 
-**Images/Media:**
-- SVG assets: `assets/checkmark.svg`, `assets/cursor-zoom-in.svg`
-- Served through Shopify CDN
+## API Endpoints (Shopify Native)
+
+**Cart Operations:**
+- `GET /cart.js` - Fetch current cart state
+- `POST /cart/add.js` - Add items to cart
+- `POST /cart/change.js` - Update cart item quantities
+- `POST /cart/update.js` - Update cart attributes
+- `POST /cart/prepare_shipping_rates.json` - Calculate shipping
+- `GET /cart/async_shipping_rates.json` - Async shipping rates
+
+**Metaobject Queries:**
+- Via Shopify GraphQL admin API (configured in `.shopify/metafields.json`)
+- `project` metaobject with fields for portfolio/project data
 
 ---
 
-*Stack analysis: 2026-03-10*
+*Stack analysis: 2026-03-16*
