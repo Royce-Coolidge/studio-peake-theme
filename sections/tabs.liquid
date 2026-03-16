@@ -26,12 +26,21 @@
             -%}
 
             {%- if title != blank and content != blank -%}
-              <button class="h6" type="button" role="tab" slot="title" {{ block.shopify_attributes }}>{{ title }}</button>
+              <button class="tabs__title" type="button" role="tab" slot="title" {{ block.shopify_attributes }}>{{ title }}</button>
 
               <div role="tabpanel" slot="content" {% cycle '', 'hidden', 'hidden', 'hidden', 'hidden' %}>
-                <div class="prose">
-                  {{- content -}}
-                </div>
+                {%- if block.settings.image != blank -%}
+                  <div class="tabs__panel-with-image">
+                    <div class="prose">
+                      {{- content -}}
+                    </div>
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: '(max-width: 699px) 100vw, 50vw', widths: '300,400,500,600,800,1000,1200,1400,1600', class: 'tabs__panel-image' -}}
+                  </div>
+                {%- else -%}
+                  <div class="prose">
+                    {{- content -}}
+                  </div>
+                {%- endif -%}
               </div>
             {%- endif -%}
           {%- endfor -%}
@@ -123,6 +132,11 @@
           "default": "Tab"
         },
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image"
+        },
+        {
           "type": "richtext",
           "id": "content",
           "label": "t:global.text.content",
@@ -152,6 +166,11 @@
           "id": "title",
           "label": "t:global.text.title",
           "default": "Tab"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image"
         },
         {
           "type": "liquid",

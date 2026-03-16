@@ -25,15 +25,35 @@ LIQUID
               <div class="blog-posts-header__content prose">{{- section.settings.content -}}</div>
             {%- endif -%}
 
-            {%- if section.settings.button_text != blank -%}
-              {%- assign button_link = section.settings.button_link | default: section.settings.blog.url -%}
-              {%- render 'button', href: button_link, content: section.settings.button_text -%}
-            {%- endif -%}
+            <div class="blog-posts-header__controls">
+              {%- if section.settings.button_text != blank -%}
+                {%- assign button_link = section.settings.button_link | default: section.settings.blog.url -%}
+                {%- render 'button', href: button_link, content: section.settings.button_text -%}
+              {%- endif -%}
+
+              {%- assign carousel_id = 'blog-carousel-' | append: section.id -%}
+              <div class="blog-posts-header__arrows">
+                <carousel-prev-button aria-controls="{{ carousel_id }}">
+                  <button type="button" class="prev-next-button prev-next-button--prev" disabled>
+                    <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+                    {%- render 'icon' with 'arrow-left', direction_aware: true -%}
+                  </button>
+                </carousel-prev-button>
+
+                <carousel-next-button aria-controls="{{ carousel_id }}">
+                  <button type="button" class="prev-next-button prev-next-button--next">
+                    <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+                    {%- render 'icon' with 'arrow-right', direction_aware: true -%}
+                  </button>
+                </carousel-next-button>
+              </div>
+            </div>
           </div>
         </div>
       {%- endif -%}
 
-      <blog-posts class="blog-post-list {% unless section.settings.stack_on_mobile %}blog-post-list--carousel scroll-area snap-x {% if section.settings.full_width %}full-bleed{% else %}bleed{% endif %}{% endunless %}" {% if settings.stagger_blog_posts_apparition %}reveal-on-scroll="true"{% endif %}>
+      {%- assign carousel_id = 'blog-carousel-' | append: section.id -%}
+      <scroll-carousel id="{{ carousel_id }}" class="blog-post-list {% unless section.settings.stack_on_mobile %}blog-post-list--carousel scroll-area snap-x {% if section.settings.full_width %}full-bleed{% else %}bleed{% endif %}{% endunless %}">
         {%- capture sizes -%}(max-width: 699px) 95vw, (max-width: 1149px) calc(100vw / 2), calc((80rem - (5rem * ({{ section.settings.blog.articles_count | default: 3 | at_most: 3 }} - 1) / 3){%- endcapture -%}
 
         {%- for article in section.settings.blog.articles limit: section.settings.posts_count -%}
@@ -43,7 +63,7 @@ LIQUID
             {%- render 'blog-post-card', show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt, card_color_scheme: section.settings.card_color_scheme -%}
           {%- endfor -%}
         {%- endfor -%}
-      </blog-posts>
+      </scroll-carousel>
     </div>
   </div>
 </div>
