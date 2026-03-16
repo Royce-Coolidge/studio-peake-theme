@@ -88,7 +88,8 @@ note that this may have impact on different places.
     --text-font-style: {{ settings.text_font.style }};
     --text-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.text_font_letter_spacing | divided_by: 100.0 }}{% endif %}em;
     --button-font-family: {{ settings.button_font.family }}, {{ settings.button_font.fallback_families }};
-    --button-font: {{ settings.button_font.style }} {{ settings.button_font.weight }} var(--text-sm) / 1.65 var(--button-font-family);
+    --button-font-weight: {{ settings.button_font.weight }};
+    --button-font-style: {{ settings.button_font.style }};
     --button-text-transform: {{ settings.button_text_transform }};
     --button-letter-spacing: {% if language_code == 'ar' %}0{% else %}{{ settings.button_letter_spacing | divided_by: 100.0 }}{% endif %}em;
 

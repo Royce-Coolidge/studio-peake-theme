@@ -458,7 +458,11 @@ height-observer {
   -webkit-appearance: none;
   appearance: none;
   text-transform: var(--button-text-transform);
-  font: var(--button-font);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  font-size: var(--text-sm);
+  line-height: 1.65;
   letter-spacing: var(--button-letter-spacing);
   text-shadow: none;
   text-align: center;
@@ -2678,7 +2682,11 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 .link {
-  font: var(--button-font);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  font-size: var(--text-sm);
+  line-height: 1.65;
   letter-spacing: var(--button-letter-spacing);
   text-transform: var(--button-text-transform);
   background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;

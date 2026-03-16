@@ -89,12 +89,12 @@
 .link-reverse,
 .prose a:not(.h1, .h2, .h3, .h4, .h5, .h6, .button, .link-faded, .link-faded-reverse, :has(img)) {
   background-size: 0 1px;
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  font-style: var(--heading-font-style);
-  letter-spacing: var(--heading-letter-spacing);
-  text-transform: uppercase;
-  font-size: var(--text-h6);
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+  font-size: var(--text-sm);
 }
 
 @media screen and (pointer: fine) {

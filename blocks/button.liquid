@@ -1,8 +1,9 @@
 {%- if block.settings.text != blank -%}
-  {%- render 'button', 
+  {%- render 'button',
     href: block.settings.url,
     content: block.settings.text,
-    background: block.settings.background, 
+    style: block.settings.style,
+    background: block.settings.background,
     text_color: block.settings.text_color,
     block: block -%}
 {%- endif -%}
@@ -12,6 +13,26 @@
   "name": "t:blocks.button.name",
   "tag": null,
   "settings": [
+  {
+    "type": "select",
+    "id": "style",
+    "label": "Style",
+    "options": [
+      {
+        "value": "outline",
+        "label": "Outline"
+      },
+      {
+        "value": "solid",
+        "label": "Solid"
+      },
+      {
+        "value": "link",
+        "label": "Link"
+      }
+    ],
+    "default": "link"
+  },
   {
     "type": "text",
     "id": "text",
