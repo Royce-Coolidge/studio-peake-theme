@@ -4508,6 +4508,14 @@ product-rerender {
   row-gap: 3rem;
 }
 
+.collection-card__subheading {
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  font-style: italic;
+  font-size: var(--text-base);
+  margin: 0;
+}
+
 .collection-card {
   align-content: start;
   gap: 1.5rem;

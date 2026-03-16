@@ -70,12 +70,12 @@
 
             {%- capture collection_card_info -%}
               <div class="collection-card__content color-scheme color-scheme--{{ block.settings.color_scheme.id }} prose prose--tight {{ block.settings.content_position }}">
-                {%- if block.settings.subheading != blank -%}
-                  <p class="h6">{{- block.settings.subheading -}}</p>
-                {%- endif -%}
-
                 {%- if block.settings.title != blank -%}
                   <p class="h3">{{- block.settings.title -}}</p>
+                {%- endif -%}
+
+                {%- if block.settings.subheading != blank -%}
+                  <p class="collection-card__subheading">{{- block.settings.subheading -}}</p>
                 {%- endif -%}
 
                 {%- if block.settings.button_text != blank -%}

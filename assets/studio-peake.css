@@ -148,7 +148,8 @@
 /* === SP Link Row + Link Group (INTR-04, Phase 4) === */
 /* Keyline draws left-to-right on scroll via background-size transition */
 
-.sp-link-row {
+.sp-link-row,
+.prose a.sp-link-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,16 +157,17 @@
   padding-block: 0.75rem;
   text-decoration: none;
   color: currentColor;
-  font-family: var(--heading-font-family);
-  font-weight: var(--heading-font-weight);
-  font-style: var(--heading-font-style);
-  letter-spacing: var(--heading-letter-spacing);
-  text-transform: uppercase;
-  font-size: var(--text-h6);
-  background-image: linear-gradient(currentColor, currentColor);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 0% 1px;
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+  letter-spacing: var(--text-letter-spacing);
+  text-transform: none;
+  font-size: var(--text-base);
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(currentColor, currentColor) bottom left / 0% 1px no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  transition: none;
 }
 
 .sp-link-row__text {
