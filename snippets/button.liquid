@@ -15,7 +15,7 @@ Supported variables
 * size: can be "sm". If none is set, the default "base" size is used.
 * background: an optional background color to use that override the default
 * text_color: an optional text color to use that override the default
-* style: "solid", "outline" or "link". If none is set "solid" is assumed
+* style: "solid", "outline" or "link". If none is set "link" is assumed
 * stretch: if passed to true, a full width button is generated
 * subdued: when using the "outline" mode, this reduced the importance of the button
 * type: when href is empty, can be either "button" or "submit" (default to button if none is set)
@@ -30,6 +30,8 @@ Supported variables
 {%- endcomment -%}
 
 {% liquid
+  assign style = style | default: 'link'
+
   capture class_attribute
     if style == 'link'
       echo 'link'

@@ -82,7 +82,7 @@
                   </div>
                 {%- endif -%}
 
-                {%- render 'blog-post-card', article: article, blog: blog, show_category: section.settings.show_category, show_date: section.settings.show_date, show_excerpt: section.settings.show_excerpt, show_read_more: section.settings.show_read_more, sizes: sizes, position: forloop.index -%}
+                {%- render 'blog-post-card', article: article, blog: blog, show_category: section.settings.show_category, show_date: section.settings.show_date, show_excerpt: section.settings.show_excerpt, show_read_more: section.settings.show_read_more, card_color_scheme: section.settings.card_color_scheme, sizes: sizes, position: forloop.index -%}
               {%- endfor -%}
             </blog-posts>
 
@@ -153,6 +153,12 @@
     {
       "type": "header",
       "content": "t:sections.main_blog.card_category"
+    },
+    {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "Card color scheme",
+      "default": "scheme-1"
     },
     {
       "type": "checkbox",
