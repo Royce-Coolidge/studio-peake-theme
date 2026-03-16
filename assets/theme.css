@@ -2678,6 +2678,9 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 }
 
 .link {
+  font: var(--button-font);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
   background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
   text-decoration: none;
   transition: background-size .3s ease-in-out;

@@ -327,20 +327,10 @@
         "content": "t:theme_settings.typography.button_category"
       },
       {
-        "type": "select",
-        "id": "button_text_font",
+        "type": "font_picker",
+        "id": "button_font",
         "label": "t:theme_settings.typography.button_text_font",
-        "options": [
-          {
-            "value": "heading",
-            "label": "t:theme_settings.typography.button_text_font_options.heading"
-          },
-          {
-            "value": "body",
-            "label": "t:theme_settings.typography.button_text_font_options.body"
-          }
-        ],
-        "default": "body"
+        "default": "nunito_sans_n4"
       },
       {
         "type": "select",
