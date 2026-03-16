@@ -6284,6 +6284,15 @@ product-rerender {
   grid-area: product-content;
 }
 
+.product .accordion__toggle {
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  font-style: var(--text-font-style);
+  letter-spacing: var(--text-letter-spacing);
+  text-transform: none;
+  font-size: var(--text-base);
+}
+
 .product-content-below-gallery :is(product-recommendations:not(:first-child)) {
   margin-block-start: max(48px, var(--product-gap, 0px));
 }
