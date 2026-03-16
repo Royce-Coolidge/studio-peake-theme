@@ -40,7 +40,7 @@
         {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
       {%- endif -%}
 
-      <div class="prose text-center sm:text-start">
+      <div class="prose text-center sm:text-{{ section.settings.content_alignment | default: 'start' }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'subheading' -%}
@@ -100,6 +100,13 @@
                   {%- endif -%}
                 {%- endfor -%}
               </div>
+
+            {%- when 'image' -%}
+              {%- if block.settings.image != blank -%}
+                <div class="image-with-text__inline-image" {{ block.shopify_attributes }}>
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: '250px', widths: '250,500,750', class: 'image-with-text__inline-img' -}}
+                </div>
+              {%- endif -%}
 
             {%- when 'button' -%}
               {%- if block.settings.text != blank -%}
@@ -186,6 +193,26 @@
         }
       ],
       "default": "sm"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "start"
     },
     {
       "type": "checkbox",
@@ -283,6 +310,17 @@
           "id": "liquid",
           "label": "t:global.code.liquid",
           "default": "<p>Write custom Liquid code to include widget or dynamic code.</p>"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image"
         }
       ]
     },
