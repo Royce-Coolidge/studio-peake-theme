@@ -4,7 +4,15 @@
   aria-label="Product Enquiry">
   <div class="enquiry-modal__layout">
     <div class="enquiry-modal__image-panel" aria-hidden="true">
-      {{- 'lifestyle-1' | placeholder_svg_tag: 'enquiry-modal__image placeholder' -}}
+      {%- if section.settings.fallback_image != blank -%}
+        {{- section.settings.fallback_image | image_url: width: section.settings.fallback_image.width
+            | image_tag: class: 'enquiry-modal__image',
+                         sizes: '40vw',
+                         widths: '400,600,800,1000,1200,1600',
+                         loading: 'eager' -}}
+      {%- else -%}
+        {{- 'lifestyle-1' | placeholder_svg_tag: 'enquiry-modal__image placeholder' -}}
+      {%- endif -%}
     </div>
     <div class="enquiry-modal__form-panel">
       <dialog-close-button class="contents">
@@ -15,6 +23,7 @@
       </dialog-close-button>
       <div class="enquiry-modal__form-content">
         {%- form 'contact', class: 'form' -%}
+          <input type="hidden" name="contact[Product]" value="">
             <div class="enquiry-modal__success" {% unless form.posted_successfully? %}hidden{% endunless %}>
               <p class="h2">WE'LL BE IN TOUCH</p>
               <p class="text-subdued">Thank you for your enquiry. We'll get back to you shortly.</p>
@@ -25,6 +34,8 @@
               {%- capture error_content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
               {%- render 'banner', status: 'error', content: error_content -%}
             {%- endif -%}
+
+            <p class="h2 enquiry-modal__product-heading"></p>
 
             {%- assign has_first_name = false -%}
             {%- assign has_last_name = false -%}
@@ -166,6 +177,32 @@
     const modal = document.getElementById('enquiry-modal');
     if (!modal) return;
 
+    // Product data bridge — read from main-product section data attributes
+    const productSource = document.querySelector('[data-enquiry-product-title]');
+    const productTitle = productSource?.dataset.enquiryProductTitle || '';
+    const imageUrl = productSource?.dataset.enquiryImageUrl || '';
+
+    // Update heading
+    const heading = modal.querySelector('.enquiry-modal__product-heading');
+    if (heading && productTitle) heading.textContent = productTitle;
+
+    // Update hidden field
+    const hiddenField = modal.querySelector('input[name="contact[Product]"]');
+    if (hiddenField && productTitle) hiddenField.value = productTitle;
+
+    // Update image panel (replace fallback/placeholder with product image)
+    if (imageUrl) {
+      const imagePanel = modal.querySelector('.enquiry-modal__image-panel');
+      if (imagePanel) {
+        const img = document.createElement('img');
+        img.className = 'enquiry-modal__image';
+        img.src = imageUrl;
+        img.alt = productTitle;
+        img.loading = 'eager';
+        imagePanel.replaceChildren(img);
+      }
+    }
+
     modal.addEventListener('dialog:after-hide', () => {
       const success = modal.querySelector('.enquiry-modal__success');
       const fields = modal.querySelector('.enquiry-modal__fields');
@@ -194,6 +231,12 @@
       "id": "color_scheme",
       "label": "t:global.colors.scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback image",
+      "info": "Shown when no product image is available"
     }
   ],
   "blocks": [
