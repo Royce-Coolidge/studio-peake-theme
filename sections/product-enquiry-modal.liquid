@@ -15,12 +15,12 @@
       </dialog-close-button>
       <div class="enquiry-modal__form-content">
         {%- form 'contact', class: 'form' -%}
-          {%- if form.posted_successfully? -%}
-            <div class="enquiry-modal__success">
+            <div class="enquiry-modal__success" {% unless form.posted_successfully? %}hidden{% endunless %}>
               <p class="h2">WE'LL BE IN TOUCH</p>
               <p class="text-subdued">Thank you for your enquiry. We'll get back to you shortly.</p>
             </div>
-          {%- else -%}
+
+            <div class="enquiry-modal__fields" {% if form.posted_successfully? %}hidden{% endif %}>
             {%- if form.errors -%}
               {%- capture error_content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
               {%- render 'banner', status: 'error', content: error_content -%}
@@ -150,7 +150,7 @@
             </div>
 
             {%- render 'button', content: 'Submit Enquiry', type: 'submit' -%}
-          {%- endif -%}
+          </div>
         {%- endform -%}
       </div>
     </div>
@@ -162,7 +162,11 @@
     const modal = document.getElementById('enquiry-modal');
     if (!modal) return;
     modal.addEventListener('dialog:after-hide', () => {
+      const success = modal.querySelector('.enquiry-modal__success');
+      const fields = modal.querySelector('.enquiry-modal__fields');
       const form = modal.querySelector('form');
+      if (success) success.hidden = true;
+      if (fields) fields.hidden = false;
       if (form) form.reset();
     });
   });
