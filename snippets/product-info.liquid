@@ -512,7 +512,11 @@ Supported variables
 
           {%- when 'button' -%}
             {%- if block.settings.text != blank -%}
-              {%- render 'button', href: block.settings.link, content: block.settings.text, stretch: block.settings.stretch, background: block.settings.background, text_color: block.settings.text_color -%}
+              {%- if block.settings.aria_controls != blank -%}
+                {%- render 'button', aria_controls: block.settings.aria_controls, content: block.settings.text, stretch: block.settings.stretch, background: block.settings.background, text_color: block.settings.text_color -%}
+              {%- else -%}
+                {%- render 'button', href: block.settings.link, content: block.settings.text, stretch: block.settings.stretch, background: block.settings.background, text_color: block.settings.text_color -%}
+              {%- endif -%}
             {%- endif -%}
 
           {%- when 'button_group' -%}
