@@ -171,7 +171,7 @@
       if (form) form.reset();
     });
 
-    if (!modal.querySelector('.enquiry-modal__success').hidden) {
+    if (!modal.querySelector('.enquiry-modal__success').hidden || modal.querySelector('.banner--error')) {
       modal.show();
     }
   });
