@@ -44,9 +44,9 @@
 
 ### Trigger
 
-- [ ] **TRIG-01**: Existing button block on product page triggers the modal
-- [ ] **TRIG-02**: Add `aria_controls` schema setting to button block for merchant flexibility
-- [ ] **TRIG-03**: `aria-controls="enquiry-modal"` wiring between button and modal
+- [x] **TRIG-01**: Existing button block on product page triggers the modal
+- [x] **TRIG-02**: Add `aria_controls` schema setting to button block for merchant flexibility
+- [x] **TRIG-03**: `aria-controls="enquiry-modal"` wiring between button and modal
 
 ### Styling
 
@@ -105,9 +105,9 @@
 | SUBM-03 | Phase 2 | Complete |
 | SUBM-04 | Phase 2 | Complete |
 | SUBM-05 | Phase 2 | Complete |
-| TRIG-01 | Phase 4 | Pending |
-| TRIG-02 | Phase 4 | Pending |
-| TRIG-03 | Phase 4 | Pending |
+| TRIG-01 | Phase 4 | Complete |
+| TRIG-02 | Phase 4 | Complete |
+| TRIG-03 | Phase 4 | Complete |
 | STYL-01 | Phase 5 | Pending |
 | STYL-02 | Phase 5 | Pending |
 | STYL-03 | Phase 5 | Pending |
