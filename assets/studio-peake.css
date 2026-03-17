@@ -284,16 +284,7 @@
   z-index: 1;
 }
 
-/* Enquiry form: labels use button font, inputs underline-only */
-
-.enquiry-modal__form-content .floating-label,
-.enquiry-modal__form-content .form-control > label {
-  font-family: var(--button-font-family);
-  font-weight: var(--button-font-weight);
-  font-style: var(--button-font-style);
-  letter-spacing: var(--button-letter-spacing);
-  text-transform: var(--button-text-transform);
-}
+/* Enquiry form: inputs underline-only */
 
 .enquiry-modal__form-content .input,
 .enquiry-modal__form-content .textarea,
