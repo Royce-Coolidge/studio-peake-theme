@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v10.7
 milestone_name: milestone
 status: planning
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-17T13:55:27.549Z"
+stopped_at: "Completed 02-form-and-field-system-01-PLAN.md, checkpoint:human-verify pending"
+last_updated: "2026-03-17T14:19:53.463Z"
 last_activity: 2026-03-17 — Roadmap created, all 34 requirements mapped to 5 phases
 progress:
   total_phases: 5
-  completed_phases: 0
-  total_plans: 1
-  completed_plans: 0
+  completed_phases: 1
+  total_plans: 2
+  completed_plans: 1
   percent: 0
 ---
 
@@ -50,6 +50,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 02-form-and-field-system P01 | 2 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -62,6 +63,9 @@ Recent decisions affecting current work:
 - Init: JS data bridge via `data-` attributes on `main-product.liquid` — product context not available in Liquid inside overlay group
 - Init: Standard Shopify contact form POST with `posted_successfully?` inline success state — no AJAX
 - Init: Reuse existing button block as trigger via `aria_controls` setting
+- [Phase 02-form-and-field-system]: Collect-then-render pattern for paired fields: first pass detects which fields are present, second pass renders in merchant block order with rendered_* guard vars
+- [Phase 02-form-and-field-system]: notes field uses contact[body] not contact[notes] -- Shopify maps contact[body] to email body
+- [Phase 02-form-and-field-system]: Marketing disclaimer uses richtext setting so merchant can include hyperlinks in consent text
 
 ### Pending Todos
 
@@ -74,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T13:55:27.546Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-form-and-field-system/02-CONTEXT.md
+Last session: 2026-03-17T14:19:53.460Z
+Stopped at: Completed 02-form-and-field-system-01-PLAN.md, checkpoint:human-verify pending
+Resume file: None

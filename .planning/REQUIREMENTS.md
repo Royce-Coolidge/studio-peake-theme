@@ -23,24 +23,24 @@
 
 ### Form Fields
 
-- [ ] **FORM-01**: First Name field (togglable in theme editor)
-- [ ] **FORM-02**: Last Name field (togglable in theme editor)
-- [ ] **FORM-03**: Company Name field (togglable in theme editor)
-- [ ] **FORM-04**: Email Address field (togglable in theme editor)
-- [ ] **FORM-05**: Phone Number field (togglable in theme editor)
-- [ ] **FORM-06**: Address field (togglable in theme editor)
-- [ ] **FORM-07**: Country field (togglable in theme editor)
-- [ ] **FORM-08**: Postcode field (togglable in theme editor)
-- [ ] **FORM-09**: Add Notes field (togglable in theme editor)
-- [ ] **FORM-10**: Marketing opt-in checkbox with disclaimer text (togglable in theme editor)
+- [x] **FORM-01**: First Name field (togglable in theme editor)
+- [x] **FORM-02**: Last Name field (togglable in theme editor)
+- [x] **FORM-03**: Company Name field (togglable in theme editor)
+- [x] **FORM-04**: Email Address field (togglable in theme editor)
+- [x] **FORM-05**: Phone Number field (togglable in theme editor)
+- [x] **FORM-06**: Address field (togglable in theme editor)
+- [x] **FORM-07**: Country field (togglable in theme editor)
+- [x] **FORM-08**: Postcode field (togglable in theme editor)
+- [x] **FORM-09**: Add Notes field (togglable in theme editor)
+- [x] **FORM-10**: Marketing opt-in checkbox with disclaimer text (togglable in theme editor)
 
 ### Form Submission
 
-- [ ] **SUBM-01**: Form submits via Shopify `{% form 'contact' %}` to store email
-- [ ] **SUBM-02**: Success state shown inside modal using `form.posted_successfully?` pattern
-- [ ] **SUBM-03**: Success state displays "WE'LL BE IN TOUCH" heading with confirmation text
-- [ ] **SUBM-04**: Success state keeps 40/60 layout on desktop (image left, confirmation right)
-- [ ] **SUBM-05**: "Submit Enquiry" button text
+- [x] **SUBM-01**: Form submits via Shopify `{% form 'contact' %}` to store email
+- [x] **SUBM-02**: Success state shown inside modal using `form.posted_successfully?` pattern
+- [x] **SUBM-03**: Success state displays "WE'LL BE IN TOUCH" heading with confirmation text
+- [x] **SUBM-04**: Success state keeps 40/60 layout on desktop (image left, confirmation right)
+- [x] **SUBM-05**: "Submit Enquiry" button text
 
 ### Trigger
 
@@ -90,21 +90,21 @@
 | DATA-02 | Phase 3 | Pending |
 | DATA-03 | Phase 3 | Pending |
 | DATA-04 | Phase 3 | Pending |
-| FORM-01 | Phase 2 | Pending |
-| FORM-02 | Phase 2 | Pending |
-| FORM-03 | Phase 2 | Pending |
-| FORM-04 | Phase 2 | Pending |
-| FORM-05 | Phase 2 | Pending |
-| FORM-06 | Phase 2 | Pending |
-| FORM-07 | Phase 2 | Pending |
-| FORM-08 | Phase 2 | Pending |
-| FORM-09 | Phase 2 | Pending |
-| FORM-10 | Phase 2 | Pending |
-| SUBM-01 | Phase 2 | Pending |
-| SUBM-02 | Phase 2 | Pending |
-| SUBM-03 | Phase 2 | Pending |
-| SUBM-04 | Phase 2 | Pending |
-| SUBM-05 | Phase 2 | Pending |
+| FORM-01 | Phase 2 | Complete |
+| FORM-02 | Phase 2 | Complete |
+| FORM-03 | Phase 2 | Complete |
+| FORM-04 | Phase 2 | Complete |
+| FORM-05 | Phase 2 | Complete |
+| FORM-06 | Phase 2 | Complete |
+| FORM-07 | Phase 2 | Complete |
+| FORM-08 | Phase 2 | Complete |
+| FORM-09 | Phase 2 | Complete |
+| FORM-10 | Phase 2 | Complete |
+| SUBM-01 | Phase 2 | Complete |
+| SUBM-02 | Phase 2 | Complete |
+| SUBM-03 | Phase 2 | Complete |
+| SUBM-04 | Phase 2 | Complete |
+| SUBM-05 | Phase 2 | Complete |
 | TRIG-01 | Phase 4 | Pending |
 | TRIG-02 | Phase 4 | Pending |
 | TRIG-03 | Phase 4 | Pending |

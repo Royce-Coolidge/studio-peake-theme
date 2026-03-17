@@ -13,7 +13,7 @@ Build a product-specific enquiry modal on the Prestige v10.7.0 Shopify theme by 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Modal Scaffolding** - `x-modal` shell registered in overlay group, opens and closes correctly
-- [ ] **Phase 2: Form and Field System** - Contact form with all configurable fields, success state, and error handling
+- [x] **Phase 2: Form and Field System** - Contact form with all configurable fields, success state, and error handling (completed 2026-03-17)
 - [ ] **Phase 3: Product Data Bridge** - Product title and image flow dynamically from product page into modal
 - [ ] **Phase 4: Trigger Wiring** - Enquire button on product page opens the modal end-to-end
 - [ ] **Phase 5: Visual Design** - Brand-aligned styling: layout, typography, inputs, image treatment
@@ -44,7 +44,7 @@ Plans:
   3. The success state preserves the 40/60 layout on desktop (image left, confirmation right)
   4. Each form field can be individually toggled on/off in the Shopify theme editor
   5. Form validation errors appear inline within the modal (not on a separate page)
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
 - [ ] 02-01-PLAN.md — Contact form with 10 field blocks, success state, error handling, and form reset
 
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Modal Scaffolding | 0/1 | Planned | - |
-| 2. Form and Field System | 0/1 | Planned | - |
+| 2. Form and Field System | 1/1 | Complete   | 2026-03-17 |
 | 3. Product Data Bridge | 0/? | Not started | - |
 | 4. Trigger Wiring | 0/? | Not started | - |
 | 5. Visual Design | 0/? | Not started | - |
