@@ -44,7 +44,7 @@ therefore using a different structure for the Shadow DOM template
   </div>
 </template>
 
-<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--{{ color_scheme.id }}" template="header-sidebar-template" open-from="left">
+<header-sidebar id="sidebar-menu" class="header-sidebar drawer drawer--sm color-scheme color-scheme--{{ color_scheme.id }}" template="header-sidebar-template" open-from="left" style="--background: 24 53 79; --text-color: 247 241 235; --border-color: 247 241 235 / 0.15;">
   {%- comment -%}We are using a Shadow DOM where each panel has a slot, so we can directly render each level individually{%- endcomment -%}
 
   {%- comment -%}Panel 1 is the first level{%- endcomment -%}
@@ -78,37 +78,47 @@ therefore using a different structure for the Shadow DOM template
       endif
     -%}
 
-    {%- if shop.customer_accounts_enabled or show_country_selector or show_locale_selector -%}
-      <div class="header-sidebar__footer">
-        {%- if shop.customer_accounts_enabled -%}
-          <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="text-with-icon smallcaps sm:hidden">
-            {%- render 'icon' with 'account', width: 20 -%}
-            
-            {%- if customer -%}
-              {{- 'header.general.account' | t -}}
-            {%- else -%}
-              {{- 'header.general.login' | t -}}
-            {%- endif -%}
-          </a>
-        {%- endif -%}
+    <div class="header-sidebar__footer">
+      {%- if section.settings.sidebar_contact_title != blank or section.settings.sidebar_contact_text != blank -%}
+        <div class="header-sidebar__footer-block">
+          {%- if section.settings.sidebar_contact_title != blank -%}
+            <p class="header-sidebar__footer-title">{{ section.settings.sidebar_contact_title }}</p>
+          {%- endif -%}
+          {%- if section.settings.sidebar_contact_text != blank -%}
+            <div class="header-sidebar__footer-text">{{ section.settings.sidebar_contact_text }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
 
-        {%- if show_country_selector or show_locale_selector -%}
-          <div class="localization-selectors">
-            {%- if show_country_selector -%}
-              {%- render 'localization-selector', type: 'country', placement: 'top-start', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag, id_prefix: 'header-sidebar' -%}
-            {%- endif -%}
+      {%- if section.settings.sidebar_visit_title != blank or section.settings.sidebar_visit_text != blank -%}
+        <div class="header-sidebar__footer-block">
+          {%- if section.settings.sidebar_visit_title != blank -%}
+            <p class="header-sidebar__footer-title">{{ section.settings.sidebar_visit_title }}</p>
+          {%- endif -%}
+          {%- if section.settings.sidebar_visit_text != blank -%}
+            <div class="header-sidebar__footer-text">{{ section.settings.sidebar_visit_text }}</div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
 
-            {%- if show_country_selector and show_locale_selector -%}
-              <span class="localization-selectors__separator" aria-hidden="true"></span>
-            {%- endif -%}
+      {%- comment -%} Login link hidden {%- endcomment -%}
 
-            {%- if show_locale_selector -%}
-              {%- render 'localization-selector', type: 'locale', placement: 'top-start', id_prefix: 'header-sidebar' -%}
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
+      {%- if show_country_selector or show_locale_selector -%}
+        <div class="localization-selectors">
+          {%- if show_country_selector -%}
+            {%- render 'localization-selector', type: 'country', placement: 'top-start', show_country_name: section.settings.show_country_name, show_country_flag: section.settings.show_country_flag, id_prefix: 'header-sidebar' -%}
+          {%- endif -%}
+
+          {%- if show_country_selector and show_locale_selector -%}
+            <span class="localization-selectors__separator" aria-hidden="true"></span>
+          {%- endif -%}
+
+          {%- if show_locale_selector -%}
+            {%- render 'localization-selector', type: 'locale', placement: 'top-start', id_prefix: 'header-sidebar' -%}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
   </div>
 
   {%- comment -%}Panel 2 holds all the second levels{%- endcomment -%}

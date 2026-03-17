@@ -82,17 +82,6 @@
   }
 }
 
-/* === Subheading (.h6) uses button font === */
-.h6, .prose :where(h6) {
-  font-family: var(--button-font-family);
-  font-weight: var(--button-font-weight);
-  font-style: var(--button-font-style);
-  font-size: var(--text-sm);
-  line-height: 1.65;
-  letter-spacing: var(--button-letter-spacing);
-  text-transform: var(--button-text-transform);
-}
-
 /* === Link Button Keyline (#114, #113, #111, #41) === */
 /* Hide underline by default, draw on hover */
 

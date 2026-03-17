@@ -4,7 +4,7 @@
   }
 
   #shopify-section-{{ section.id }} {
-    --header-grid: "primary-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
+    --header-grid: "logo secondary-nav primary-nav" / auto 1fr auto;
     --header-padding-block: 1rem;
     --header-transparent-header-text-color: {{ section.settings.transparent_header_text_color.rgb }};
     --header-separation-border-color: {% if section.settings.show_separation_border %}{{ section.settings.color_scheme.settings.text_color.rgb }} / 0.15{% else %}0 0 0 / 0{% endif %};
@@ -452,6 +452,34 @@
       "id": "sidebar_open_second_level_menus",
       "label": "t:sections.header.sidebar_open_second_level_menus",
       "default": false
+    },
+    {
+      "type": "header",
+      "content": "Sidebar footer"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_contact_title",
+      "label": "Contact title",
+      "default": "CONTACT"
+    },
+    {
+      "type": "richtext",
+      "id": "sidebar_contact_text",
+      "label": "Contact text",
+      "default": "<p><a href=\"mailto:info@studiopeake.com\">info@studiopeake.com</a></p>"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_visit_title",
+      "label": "Visit title",
+      "default": "VISIT"
+    },
+    {
+      "type": "richtext",
+      "id": "sidebar_visit_text",
+      "label": "Visit text",
+      "default": "<p>First Floor, Unit 6 Glenthorne Mews<br>115a Glenthorne Road, London, W6 0LJ</p>"
     },
     {
       "type": "header",

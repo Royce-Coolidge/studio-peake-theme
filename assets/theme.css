@@ -5467,6 +5467,14 @@ product-rerender {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.4);
   padding-block-start: calc(var(--header-linklist-padding-block) / 2);
   padding-block-end: calc(var(--header-linklist-padding-block) / 2);
   transition: color .2s;
@@ -5544,6 +5552,34 @@ product-rerender {
   padding-block: 1.25rem;
   padding-inline-start: var(--drawer-footer-padding-inline);
   padding-inline-end: var(--drawer-footer-padding-inline);
+}
+
+.header-sidebar__footer-block {
+  padding-block: 0.75rem;
+  padding-inline-start: var(--drawer-footer-padding-inline);
+  padding-inline-end: var(--drawer-footer-padding-inline);
+}
+
+.header-sidebar__footer-title {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  font-size: var(--text-sm);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: uppercase;
+  margin: 0 0 0.25rem;
+}
+
+.header-sidebar__footer-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.header-sidebar__footer-text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .header-sidebar__footer .localization-selectors {
@@ -8021,7 +8057,7 @@ product-rerender {
   font-size: var(--text-xl);
 }
 
-.heading, .h1, .h2, .h3, .h4, .h5, .h6, .prose :where(h1, h2, h3, h4, h5, h6) {
+.heading, .h1, .h2, .h3, .h4, .h5, .prose :where(h1, h2, h3, h4, h5) {
   font-family: var(--heading-font-family);
   font-weight: var(--heading-font-weight);
   font-style: var(--heading-font-style);
@@ -8057,8 +8093,13 @@ product-rerender {
 }
 
 .h6, :where(.prose h6) {
-  font-size: var(--text-h6);
-  line-height: 1.7;
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
 }
 
 .prose blockquote {
