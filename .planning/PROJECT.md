@@ -1,124 +1,72 @@
-# Studio Peake — Custom Theme Build
+# Product Enquiry Modal
 
 ## What This Is
 
-A custom Shopify theme for Studio Peake, an interior design studio, built by extending the Prestige v10.7.0 base theme. The build adds bespoke animations, interactions, navigation patterns, and layout components specified in the Figma design to transform Prestige into a distinctive brand experience — while keeping Shopify admin usability as the top priority for the client.
+A product-specific contact/enquiry modal for the Studio Peake Shopify theme (Prestige v10.7.0 base). When a user clicks the "Enquire" button on any product page, a full-screen modal opens with a 50/50 layout — product image on the left, enquiry form on the right. The product name and image are populated dynamically from the current product. Form submissions go to the store email via Shopify's built-in contact form.
 
 ## Core Value
 
-The theme must feel unmistakably Studio Peake — not a stock Prestige install — through polished interactions (animations, transitions, hover states) that the client can populate and manage entirely through the Shopify admin without developer assistance.
+Customers can enquire about any specific product through a visually rich, on-page modal without leaving the product page — with the product context (name, image) carried through automatically.
 
 ## Requirements
 
 ### Validated
 
-<!-- Shipped and confirmed valuable. -->
-
 - ✓ Prestige v10.7.0 base theme — installed and configured
-- ✓ Studio Peake design tokens (colours, typography, spacing) — applied
-- ✓ Header layout with emblem/logo — implemented
-- ✓ Nav bar show/hide on scroll direction — implemented
-- ✓ Section-based modular architecture — inherited from Prestige
-- ✓ Colour scheme system with CSS custom properties — inherited
-- ✓ Web Components pattern for interactive features — inherited
-- ✓ Responsive breakpoints (mobile <700px, tablet 700-1000px, desktop 1000px+) — inherited
+- ✓ Overlay group pattern for modals (cart-drawer, newsletter-popup) — existing
+- ✓ Drawer/modal web component system — existing in theme.js
+- ✓ Product page with block-based layout — existing
+- ✓ Button block on product page — existing
+- ✓ Shopify contact form action for email submissions — available
 
 ### Active
 
-<!-- Current scope. Building toward these. -->
-
-**Animation & Interaction:**
-- [ ] Gradient overlays on image sections (CSS-based, top/bottom, for text legibility)
-- [ ] Keyline draw-on animation (SVG stroke reveal on scroll/interaction)
-- [ ] Colour-bleed button states (soft colour expansion on hover/tap)
-- [ ] Button hover keyline animation
-- [ ] Button click keyline draw animation
-- [ ] Hero load sequence (image first, then logo fade-in)
-- [ ] Close icon rotation on hover/tap
-- [ ] Product image interactive tags (pulsing hotspots with expandable info)
-
-**Layout & UI Components:**
-- [ ] Two-column independent scroll (sticky right panel, scrolling left gallery)
-- [ ] Dual-image crossfade on hover
-- [ ] Adaptive image containers with focal point cropping
-- [ ] Room scheme auto-rotation (2s fade cycle)
-- [ ] Expandable info panel / accordion (no-reflow reveal)
-- [ ] Emblem overlay on product pages (brand colour)
-- [ ] Per-instance colour assignment for components
-
-**Navigation & Filtering:**
-- [ ] Portfolio dropdown with active state filtering (60% opacity)
-- [ ] Workshop dropdown navigation
-- [ ] Gallery filter bar with filled-circle indicators
-- [ ] Cross-page category filtering (homepage → gallery pre-filtered)
-- [ ] Mobile navigation filter (sub-categories)
-- [ ] Mobile menu open animation (colour-bleed downward)
-
-**Carousel & Gallery:**
-- [ ] Featured projects carousel (full-bleed, drag + arrow)
-- [ ] Project card hover state (gradient strengthen + zoom)
-- [ ] Product image carousel (swipe navigation)
-- [ ] Journal notes carousel (arrows desktop, stack mobile)
-- [ ] Mobile carousel swipe gestures
-
-**Pages & Sections:**
-- [ ] Subscribe pop-up (10s delay OR 30% scroll trigger, footer link trigger)
-- [ ] Careers collapsible block (toggleable, repeatable job specs)
-- [ ] Tearsheet PDF auto-open
-- [ ] Project video section (looping, auto-play on scroll, replaceable with image)
-- [ ] About section text toggle with image update
-- [ ] Blog page modular template (repeatable content blocks)
-- [ ] Contact form (placeholder behaviour, validation states, radio buttons)
-
-**Links & Routing:**
-- [ ] Anchor links (Our Process / Our Team smooth scroll)
-- [ ] Navigation split option (Workshop right-aligned)
-- [ ] Press & Accolades link with keyline animation
-
-**Data Architecture:**
-- [ ] Metaobjects: project, press_accolade, team_member, career_opening
-- [ ] Product metafields: workshop namespace (tearsheet_pdf, secondary_image, room_scheme_images, interactive_tags, video_url, category, collection_name)
-- [ ] Collections: workshop-all, workshop-[sub], portfolio-all, portfolio-residential, portfolio-commercial, portfolio-hospitality
-- [ ] Page templates: index, page.about, page.contact, page.press, page.careers, collection.portfolio, collection.workshop, product.workshop-item, blog.journal, article.journal-entry, 404
-- [ ] Portfolio projects as metaobjects (not products) — full CMS control over video, gallery, press links
+- [ ] Product enquiry modal section in overlay group
+- [ ] 50/50 layout: product image left, form right
+- [ ] Dynamic product image from current product page
+- [ ] Dynamic product title as modal heading
+- [ ] Configurable form fields (toggle on/off in theme editor):
+  - First Name, Last Name, Company Name, Email Address, Phone Number, Address, Country, Postcode, Notes, Marketing opt-in
+- [ ] Form submits to store email via Shopify contact form
+- [ ] Product name included in submission (hidden field)
+- [ ] "Submit Enquiry" button styled with theme button font
+- [ ] Close button (X) top-right of form panel
+- [ ] Existing product page button block triggers the modal (via aria-controls)
+- [ ] Mobile responsive: stacks vertically (image top, form below)
+- [ ] Form field labels use button font (uppercase), inputs use body font
+- [ ] Customise existing sections and blocks — no unnecessary new components
 
 ### Out of Scope
 
-- Full theme rebuild — extending Prestige, not replacing it
-- E-commerce checkout customisation — using Shopify default checkout
-- Multi-language content — English only for v1
-- Custom app integrations — standard Shopify apps only
-- Performance optimisation beyond what Prestige provides — address only if issues surface
+- Custom email templates — uses Shopify's default contact form notification
+- Third-party form integrations (Klaviyo, HubSpot) — Shopify email only
+- AJAX form submission — standard Shopify form post with redirect
+- Product variant selection within the modal
 
 ## Context
 
-- **Base theme:** Prestige v10.7.0 by Maestrooo, with Web Components, CSS custom properties, and modular section architecture already in place
-- **Design source:** Figma comments document (`figma-comments.md`) with reference sites (studioashby.com, studiogorman.com, normcph.com, andtradition.com, audocph.com). Client will share Figma file URLs during build.
-- **Designer/developer notes by:** Anna Vail
-- **Client feedback by:** Sarah Peake
-- **Existing JS patterns:** theme.js uses custom elements, vendor.min.js provides `inView` and `animate` animation utilities
-- **CSS approach:** theme.css with CSS variables, scoped section styles, Tailwind-like utility classes
-- **No build tooling:** Assets served directly through Shopify, no bundler
-- **Data architecture:** Portfolio projects use metaobjects (not products) for full custom field control. Workshop items are standard Shopify products with `workshop` namespace metafields. Portfolio filtering uses URL-based collection routing (server-side Liquid, not JS). Full spec in `shopify-build-plan.md` §2.3.
+- The theme already has a modal/drawer system using web components (`Drawer` class in theme.js) with shadow DOM templates
+- The overlay group (`sections/overlay-group.json`) holds global overlays like cart-drawer and newsletter-popup
+- Existing `button` block on the product page can point at a modal via `aria-controls`
+- Form field labels should match the screenshot: uppercase button font, underline-only inputs
+- The product image in the modal should be the featured image, full-height on desktop
+- Studio Peake brand colours and typography already configured in theme settings
 
 ## Constraints
 
-- **Tech stack**: Must extend Prestige Liquid/JS/CSS — no external frameworks or build tools
-- **Merchant UX**: Every custom feature must be configurable through Shopify admin (section settings, blocks, metafields) without code changes
-- **Animation library**: Use existing `vendor.min.js` (`inView`, `animate`) where possible before adding new dependencies
-- **Browser support**: Chrome/Edge 90+, Firefox 88+, Safari 14.1+, modern mobile browsers
-- **Mobile parity**: All desktop interactions must have mobile equivalents (hover → tap)
+- **Tech stack**: Shopify Liquid + existing web component patterns (no new JS frameworks)
+- **Theme editor**: All form fields must be togglable via section settings in Shopify admin
+- **Approach**: Customise existing sections/blocks rather than creating new ones where possible
+- **Accessibility**: Modal must trap focus, close on Escape, and label form fields properly
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Extend Prestige rather than rebuild | Preserves proven e-commerce foundation, reduces risk, faster delivery | — Pending |
-| Merchant UX prioritised over pixel-perfect fidelity | Client needs to manage content independently | — Pending |
-| Gradient overlays as first phase | Unblocks project card hover, hero section, mobile tiles; pure CSS = low risk | — Pending |
-| No hard deadline | Quality over speed | — Pending |
-| Portfolio projects as metaobjects, not products | Projects aren't purchasable; metaobjects give full custom field control (video, gallery, press links) without forcing into the product/collection model | — Pending |
-| URL-based collection routing for portfolio filtering | Server-side Liquid filtering is fast, SEO-friendly, requires no JS | — Pending |
+| Use Shopify contact form action | Simple, no third-party dependency, submissions go to store email | — Pending |
+| Configurable fields via settings | Merchant flexibility without code changes | — Pending |
+| Reuse existing button block as trigger | Avoid creating a new block type, customise what exists | — Pending |
+| Overlay group section | Follows existing theme pattern for modals | — Pending |
 
 ---
-*Last updated: 2026-03-12 after initialization*
+*Last updated: 2026-03-17 after initialization*
