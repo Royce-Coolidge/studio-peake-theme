@@ -44,7 +44,9 @@ Plans:
   3. The success state preserves the 40/60 layout on desktop (image left, confirmation right)
   4. Each form field can be individually toggled on/off in the Shopify theme editor
   5. Form validation errors appear inline within the modal (not on a separate page)
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 02-01-PLAN.md — Contact form with 10 field blocks, success state, error handling, and form reset
 
 ### Phase 3: Product Data Bridge
 **Goal**: The modal displays the correct product title and featured image for whichever product page the visitor is on
@@ -87,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Modal Scaffolding | 0/1 | Planned | - |
-| 2. Form and Field System | 0/? | Not started | - |
+| 2. Form and Field System | 0/1 | Planned | - |
 | 3. Product Data Bridge | 0/? | Not started | - |
 | 4. Trigger Wiring | 0/? | Not started | - |
 | 5. Visual Design | 0/? | Not started | - |
