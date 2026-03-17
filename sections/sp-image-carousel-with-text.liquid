@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   {%- comment -%}
   ------------------------------------------------------------------------------------------------------------------------
   SP: Image carousel with text — image-with-text layout with a multi-image carousel + dot navigation
@@ -180,7 +184,10 @@
   "class": "shopify-section--image-with-text",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -262,6 +269,12 @@
       "unit": "s",
       "label": "Autoplay speed",
       "default": 5
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [
@@ -305,12 +318,30 @@
           "id": "heading_tag",
           "label": "t:global.text.style",
           "options": [
-            { "value": "h1", "label": "H1" },
-            { "value": "h2", "label": "H2" },
-            { "value": "h3", "label": "H3" },
-            { "value": "h4", "label": "H4" },
-            { "value": "h5", "label": "H5" },
-            { "value": "h6", "label": "H6" }
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
           ],
           "default": "h1"
         }
@@ -410,8 +441,14 @@
           "id": "style",
           "label": "t:global.text.style",
           "options": [
-            { "value": "outline", "label": "t:global.text.button_style_options.outline" },
-            { "value": "solid", "label": "t:global.text.button_style_options.solid" }
+            {
+              "value": "outline",
+              "label": "t:global.text.button_style_options.outline"
+            },
+            {
+              "value": "solid",
+              "label": "t:global.text.button_style_options.solid"
+            }
           ],
           "default": "solid"
         },
@@ -443,12 +480,30 @@
     {
       "name": "SP Carousel with text",
       "blocks": [
-        { "type": "carousel_image" },
-        { "type": "carousel_image" },
-        { "type": "carousel_image" },
-        { "type": "heading", "settings": { "text": "Project title" } },
-        { "type": "richtext" },
-        { "type": "sp-link", "settings": { "text": "View project" } }
+        {
+          "type": "carousel_image"
+        },
+        {
+          "type": "carousel_image"
+        },
+        {
+          "type": "carousel_image"
+        },
+        {
+          "type": "heading",
+          "settings": {
+            "text": "Project title"
+          }
+        },
+        {
+          "type": "richtext"
+        },
+        {
+          "type": "sp-link",
+          "settings": {
+            "text": "View project"
+          }
+        }
       ]
     }
   ]

@@ -1,3 +1,6 @@
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
 {%- liquid
   assign active_values_count = 0
 
@@ -399,6 +402,12 @@ LIQUID
       "id": "open_filters_by_default",
       "label": "t:global.faceting.open_filters_by_default",
       "default": false
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ]
 }

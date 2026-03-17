@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <style>
     #shopify-section-{{ section.id }} {
       --multi-column-gap: {% if section.settings.spacing == 'xs' %}1.5rem{% elsif section.settings.spacing == 'sm' %}2.5rem{% elsif section.settings.spacing == 'md' %}3.125rem{% else %}4.375rem{% endif %};
@@ -99,7 +103,10 @@
   "class": "shopify-section--multi-column",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -218,6 +225,12 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

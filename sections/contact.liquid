@@ -1,6 +1,10 @@
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
 <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <div class="container container--xs">
     <div class="section-stack text-center">
       {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: 'center' -%}
@@ -63,7 +67,10 @@
   "class": "shopify-section--contact",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -93,6 +100,12 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

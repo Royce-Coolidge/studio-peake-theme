@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
   <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
@@ -76,7 +80,10 @@
   "class": "shopify-section--tabs",
   "max_blocks": 5,
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -118,6 +125,12 @@
         }
       ],
       "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

@@ -1,3 +1,6 @@
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
 <product-recommendations class="block" product="{{ product.id }}" limit="{{ section.settings.recommendations_count }}" intent="related">
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <style>
@@ -64,7 +67,9 @@
 {
   "name": "t:sections.related_products.name",
   "enabled_on": {
-    "templates": ["product"]
+    "templates": [
+      "product"
+    ]
   },
   "class": "shopify-section--related-products",
   "tag": "section",
@@ -175,6 +180,12 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "presets": [

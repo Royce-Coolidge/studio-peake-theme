@@ -1,4 +1,8 @@
 {%- if section.settings.image != blank or section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <style>
     #shopify-section-{{ section.id }} {
       --image-with-text-block-aspect-ratio: {% if section.settings.image != blank and section.settings.image_size == 'auto' and section.blocks.size == 0 %}{{ section.settings.image.aspect_ratio }}{% else %}auto{% endif %};
@@ -74,7 +78,10 @@
   "tag": "section",
   "max_blocks": 6,
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -160,6 +167,12 @@
       "id": "remove_vertical_spacing",
       "label": "t:global.spacing.remove_vertical_spacing",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [
@@ -221,7 +234,7 @@
     {
       "name": "t:sections.image_with_text_block.presets.image_with_text_block.name",
       "blocks": [
-       {
+        {
           "type": "subheading",
           "settings": {
             "text": "Image with text block"

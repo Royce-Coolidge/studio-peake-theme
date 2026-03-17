@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <style>
     #shopify-section-{{ section.id }} {
       --timeline-nav-mobile-background: {{ section.settings.item_color_scheme.settings.background.rgb }};
@@ -83,7 +87,10 @@
   "class": "shopify-section--timeline",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "max_blocks": 10,
   "settings": [
@@ -104,6 +111,12 @@
       "id": "separate_section_with_border",
       "label": "t:global.section.separate_section_with_border",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

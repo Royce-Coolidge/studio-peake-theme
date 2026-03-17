@@ -1,4 +1,8 @@
 {%- if section.settings.show_image == false or collection.image == blank and section.settings.image == blank -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   {%- assign show_image = false -%}
 {%- else -%}
   {%- assign show_image = true -%}
@@ -238,6 +242,12 @@
       "step": 1,
       "unit": "%",
       "default": 30
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ]
 }

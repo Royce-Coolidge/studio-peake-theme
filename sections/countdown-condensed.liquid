@@ -3,6 +3,10 @@ This countdown section can only be added on the header group (as a condensed sec
 usable in the main template, please look at the "countdown.liquid" section instead.
 {%- endcomment -%}
 
+
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
 <style>
   @media screen and (min-width: 700px) {
     #shopify-section-{{ section.id }} {
@@ -63,7 +67,9 @@ usable in the main template, please look at the "countdown.liquid" section inste
   "tag": "section",
   "limit": 1,
   "enabled_on": {
-    "groups": ["header"]
+    "groups": [
+      "header"
+    ]
   },
   "settings": [
     {
@@ -135,6 +141,12 @@ usable in the main template, please look at the "countdown.liquid" section inste
         }
       ],
       "default": "space-between"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "presets": [

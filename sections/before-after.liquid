@@ -1,3 +1,6 @@
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
 <style>
   #shopify-section-{{ section.id }} {
     --before-after-initial-cursor-position: {{ section.settings.cursor_initial_position }}%;
@@ -99,7 +102,10 @@
   "class": "shopify-section--before-after-image",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -171,6 +177,12 @@
       "id": "cursor_arrows_color",
       "label": "t:sections.before_after.cursor_arrows_color",
       "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

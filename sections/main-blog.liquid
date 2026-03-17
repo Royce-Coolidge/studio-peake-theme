@@ -1,5 +1,9 @@
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
+
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
 <div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme }} color-scheme--bg-{{ color_scheme_hash }}">
   {%- if blog.articles_count == 0 -%}
     <div class="container container--xs">
@@ -184,6 +188,12 @@
       "id": "show_read_more",
       "label": "t:global.blog.show_read_more",
       "default": true
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ]
 }

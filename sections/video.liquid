@@ -1,4 +1,8 @@
 {%- if section.settings.video != blank or section.settings.external_video_url != blank -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <div class="content-over-media content-over-media--{{ section.settings.video_size }}" style="{% render 'surface', text_color: section.settings.text_color %}">
     {%- assign poster_image = section.settings.poster | default: section.settings.video.preview_image -%}
 
@@ -86,7 +90,10 @@
   "class": "shopify-section--video",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -150,7 +157,10 @@
     {
       "type": "video_url",
       "id": "external_video_url",
-      "accept": ["vimeo", "youtube"],
+      "accept": [
+        "vimeo",
+        "youtube"
+      ],
       "label": "t:global.video.video_url",
       "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
     },
@@ -165,6 +175,12 @@
       "id": "text_color",
       "label": "t:global.colors.text",
       "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

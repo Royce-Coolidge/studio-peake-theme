@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <style>
     #shopify-section-{{ section.id }} {
       --media-grid-row-height: {{ section.settings.mobile_row_height }}px;
@@ -159,7 +163,10 @@
   "class": "shopify-section--media-grid",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -267,12 +274,30 @@
       "label": "Masonry layout pattern",
       "info": "Overrides per-block column/row settings. Set to Custom to use individual block settings.",
       "options": [
-        { "value": "custom", "label": "Custom (use block settings)" },
-        { "value": "balanced", "label": "Balanced (50/50 grid)" },
-        { "value": "editorial", "label": "Editorial (hero + supporting)" },
-        { "value": "mosaic", "label": "Mosaic (mixed sizes)" },
-        { "value": "landscape_thirds", "label": "Landscape every third" },
-        { "value": "uniform", "label": "Uniform grid" }
+        {
+          "value": "custom",
+          "label": "Custom (use block settings)"
+        },
+        {
+          "value": "balanced",
+          "label": "Balanced (50/50 grid)"
+        },
+        {
+          "value": "editorial",
+          "label": "Editorial (hero + supporting)"
+        },
+        {
+          "value": "mosaic",
+          "label": "Mosaic (mixed sizes)"
+        },
+        {
+          "value": "landscape_thirds",
+          "label": "Landscape every third"
+        },
+        {
+          "value": "uniform",
+          "label": "Uniform grid"
+        }
       ],
       "default": "custom"
     },
@@ -295,6 +320,12 @@
       "type": "richtext",
       "id": "content",
       "label": "t:global.text.content"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

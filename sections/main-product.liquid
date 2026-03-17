@@ -1,3 +1,6 @@
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
 {%- liquid
   assign has_content_below_gallery = false
 
@@ -186,7 +189,7 @@ quick buy information in a template, that will be extracted in JS, which ensures
   "class": "shopify-section--main-product",
   "tag": "section",
   "settings": [
-   {
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:global.colors.scheme",
@@ -334,6 +337,12 @@ quick buy information in a template, that will be extracted in JS, which ensures
       "step": 0.5,
       "label": "t:sections.main_product.image_zoom_max_level",
       "default": 3
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [
@@ -1815,9 +1824,18 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "id": "button_1_style",
           "label": "Style",
           "options": [
-            { "value": "outline", "label": "Outline" },
-            { "value": "solid", "label": "Solid" },
-            { "value": "link", "label": "Link" }
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            }
           ],
           "default": "solid"
         },
@@ -1857,9 +1875,18 @@ quick buy information in a template, that will be extracted in JS, which ensures
           "id": "button_2_style",
           "label": "Style",
           "options": [
-            { "value": "outline", "label": "Outline" },
-            { "value": "solid", "label": "Solid" },
-            { "value": "link", "label": "Link" }
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "link",
+              "label": "Link"
+            }
           ],
           "default": "outline"
         },

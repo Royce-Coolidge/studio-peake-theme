@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <style>
     #shopify-section-{{ section.id }} {
       {%- if section.settings.stack_on_mobile -%}
@@ -116,6 +120,12 @@
       "type": "color",
       "id": "logo_item_border",
       "label": "t:sections.logo_list.logo_border"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [

@@ -1,4 +1,8 @@
 {%- if section.settings.image != blank or section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   {%- comment -%}
   ------------------------------------------------------------------------------------------------------------------------
   CSS
@@ -120,7 +124,10 @@
   "tag": "section",
   "max_blocks": 6,
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -328,6 +335,12 @@
       "step": 1,
       "unit": "%",
       "default": 30
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "blocks": [
@@ -549,7 +562,7 @@
     {
       "name": "t:sections.image_with_text_overlay.presets.image_with_text_overlay.name",
       "blocks": [
-       {
+        {
           "type": "heading",
           "settings": {
             "text": "Image with text overlay"

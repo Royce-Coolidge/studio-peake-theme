@@ -1,4 +1,8 @@
 {%- if section.blocks.size > 0 -%}
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
   <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
@@ -159,214 +163,223 @@
 {%- endif -%}
 
 {% schema %}
-  {
-    "name": "t:sections.shop_the_look.name",
-    "class": "shopify-section--shop-the-look",
-    "tag": "section",
-    "max_blocks": 5,
-    "disabled_on": {
-      "groups": ["header", "custom.overlay"]
-    },
-    "settings": [
-      {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:global.colors.scheme",
-        "default": "scheme-1"
-      },
-      {
-        "type": "checkbox",
-        "id": "separate_section_with_border",
-        "label": "t:global.section.separate_section_with_border",
-        "default": true
-      },
-      {
-        "type": "inline_richtext",
-        "id": "subheading",
-        "label": "t:global.text.subheading"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "title",
-        "label": "t:global.text.heading",
-        "default": "Shop the look"
-      },
-      {
-        "type": "richtext",
-        "id": "content",
-        "label": "t:global.text.content"
-      },
-      {
-        "type": "inline_richtext",
-        "id": "popover_title",
-        "label": "t:sections.shop_the_look.popover_title",
-        "default": "Shop the look"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "look",
-        "name": "t:sections.shop_the_look.blocks.look.name",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "t:global.image.image",
-            "info": "t:sections.shop_the_look.blocks.look.image_size_recommendation"
-          },
-          {
-            "type": "color",
-            "id": "hot_spots_background",
-            "label": "t:sections.shop_the_look.blocks.look.hot_spots_background",
-            "default": "#ffffff"
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_1_category"
-          },
-          {
-            "type": "product",
-            "id": "product_1",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_1_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 55
-          },
-          {
-            "type": "range",
-            "id": "product_1_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 30
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_2_category"
-          },
-          {
-            "type": "product",
-            "id": "product_2",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_2_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 25
-          },
-          {
-            "type": "range",
-            "id": "product_2_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 40
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_3_category"
-          },
-          {
-            "type": "product",
-            "id": "product_3",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_3_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 65
-          },
-          {
-            "type": "range",
-            "id": "product_3_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 10,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 60
-          },
-          {
-            "type": "header",
-            "content": "t:sections.shop_the_look.blocks.look.product_4_category"
-          },
-          {
-            "type": "product",
-            "id": "product_4",
-            "label": "t:sections.shop_the_look.blocks.look.product"
-          },
-          {
-            "type": "range",
-            "id": "product_4_horizontal_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
-            "min": 5,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 85
-          },
-          {
-            "type": "range",
-            "id": "product_4_vertical_position",
-            "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
-            "min": 10,
-            "max": 95,
-            "step": 1,
-            "unit": "%",
-            "default": 85
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "t:sections.shop_the_look.presets.shop_the_look.name",
-        "blocks": [
-          {
-            "type": "look",
-            "settings": {
-              "product_1_horizontal_position": 35,
-              "product_1_vertical_position": 35,
-              "product_2_horizontal_position": 34,
-              "product_2_vertical_position": 65,
-              "product_3_horizontal_position": 66,
-              "product_3_vertical_position": 42
-            }
-          },
-          {
-            "type": "look",
-            "settings": {
-              "product_1_horizontal_position": 30,
-              "product_1_vertical_position": 35,
-              "product_2_horizontal_position": 70,
-              "product_2_vertical_position": 30,
-              "product_3_horizontal_position": 60,
-              "product_3_vertical_position": 65
-            }
-          }
-        ]
-      }
+{
+  "name": "t:sections.shop_the_look.name",
+  "class": "shopify-section--shop-the-look",
+  "tag": "section",
+  "max_blocks": 5,
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
     ]
-  }
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:global.colors.scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "separate_section_with_border",
+      "label": "t:global.section.separate_section_with_border",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subheading",
+      "label": "t:global.text.subheading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "t:global.text.heading",
+      "default": "Shop the look"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:global.text.content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "popover_title",
+      "label": "t:sections.shop_the_look.popover_title",
+      "default": "Shop the look"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "look",
+      "name": "t:sections.shop_the_look.blocks.look.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image",
+          "info": "t:sections.shop_the_look.blocks.look.image_size_recommendation"
+        },
+        {
+          "type": "color",
+          "id": "hot_spots_background",
+          "label": "t:sections.shop_the_look.blocks.look.hot_spots_background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.shop_the_look.blocks.look.product_1_category"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "t:sections.shop_the_look.blocks.look.product"
+        },
+        {
+          "type": "range",
+          "id": "product_1_horizontal_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 55
+        },
+        {
+          "type": "range",
+          "id": "product_1_vertical_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 30
+        },
+        {
+          "type": "header",
+          "content": "t:sections.shop_the_look.blocks.look.product_2_category"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "t:sections.shop_the_look.blocks.look.product"
+        },
+        {
+          "type": "range",
+          "id": "product_2_horizontal_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 25
+        },
+        {
+          "type": "range",
+          "id": "product_2_vertical_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 40
+        },
+        {
+          "type": "header",
+          "content": "t:sections.shop_the_look.blocks.look.product_3_category"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "t:sections.shop_the_look.blocks.look.product"
+        },
+        {
+          "type": "range",
+          "id": "product_3_horizontal_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 65
+        },
+        {
+          "type": "range",
+          "id": "product_3_vertical_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
+          "min": 10,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 60
+        },
+        {
+          "type": "header",
+          "content": "t:sections.shop_the_look.blocks.look.product_4_category"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "t:sections.shop_the_look.blocks.look.product"
+        },
+        {
+          "type": "range",
+          "id": "product_4_horizontal_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_horizontal_position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 85
+        },
+        {
+          "type": "range",
+          "id": "product_4_vertical_position",
+          "label": "t:sections.shop_the_look.blocks.look.product_vertical_position",
+          "min": 10,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 85
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.shop_the_look.presets.shop_the_look.name",
+      "blocks": [
+        {
+          "type": "look",
+          "settings": {
+            "product_1_horizontal_position": 35,
+            "product_1_vertical_position": 35,
+            "product_2_horizontal_position": 34,
+            "product_2_vertical_position": 65,
+            "product_3_horizontal_position": 66,
+            "product_3_vertical_position": 42
+          }
+        },
+        {
+          "type": "look",
+          "settings": {
+            "product_1_horizontal_position": 30,
+            "product_1_vertical_position": 35,
+            "product_2_horizontal_position": 70,
+            "product_2_vertical_position": 30,
+            "product_3_horizontal_position": 60,
+            "product_3_vertical_position": 65
+          }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

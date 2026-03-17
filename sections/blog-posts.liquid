@@ -6,6 +6,10 @@ LIQUID
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
 <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+
+  {%- if section.settings.anchor_id != blank -%}
+    <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+  {%- endif -%}
   <div class="container">
     <div class="section-stack">
       {%- if section.settings.title != blank or section.settings.subheading != blank or section.settings.content != blank or section.settings.button_text != blank -%}
@@ -74,7 +78,10 @@ LIQUID
   "class": "shopify-section--blog-posts",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "custom.overlay"]
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
   },
   "settings": [
     {
@@ -177,6 +184,12 @@ LIQUID
       "id": "button_text",
       "label": "t:global.text.button_text",
       "default": "View all"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID",
+      "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
     }
   ],
   "presets": [
