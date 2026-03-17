@@ -1,151 +1,125 @@
-# Requirements: Studio Peake Custom Theme Build
+# Requirements: Product Enquiry Modal
 
-**Defined:** 2026-03-12
-**Core Value:** The theme must feel unmistakably Studio Peake through polished interactions that the client can manage entirely through Shopify admin.
+**Defined:** 2026-03-17
+**Core Value:** Customers can enquire about any specific product through a visually rich, on-page modal without leaving the product page
 
 ## v1 Requirements
 
-Requirements for initial release. Each maps to roadmap phases.
+### Modal Structure
 
-### Visual Foundation
+- [ ] **MODL-01**: Modal opens as full-screen overlay using existing `x-modal` web component
+- [ ] **MODL-02**: Desktop layout is 40/60 split — product image left (40%), form/content right (60%)
+- [ ] **MODL-03**: Mobile layout is single column — form only, no image
+- [ ] **MODL-04**: Close button (X) positioned top-right of form panel, inherits cross icon animation from theme settings
+- [ ] **MODL-05**: Modal registered in overlay group (`sections/overlay-group.json`)
+- [ ] **MODL-06**: Hardcoded modal ID (`enquiry-modal`) for reliable trigger wiring
 
-- [ ] **VISF-01**: Image sections with overlaid text display CSS-based gradient overlays (top and bottom) for text legibility, applied in the layout layer (not baked into images)
-- [ ] **VISF-02**: Image containers enforce a defined aspect ratio with configurable focal-point cropping, scaling fluidly across breakpoints without fixed heights
-- [ ] **VISF-03**: Specific components adapt layout when image proportions differ (e.g. square vs landscape), reshuffling text alignment and spacing while maintaining balance
-- [ ] **VISF-04**: Homepage hero image loads first, followed by a smooth fade-in of the logo with intentional timing delay
-- [ ] **VISF-05**: Product pages display the Studio Peake emblem overlaying images in clotted cream brand colour, with matching nav treatment
+### Product Data
 
-### Interaction System
+- [ ] **DATA-01**: Product title displayed as modal heading (dynamic, from current product page)
+- [ ] **DATA-02**: Product featured image displayed in left panel on desktop (dynamic)
+- [ ] **DATA-03**: JS data bridge passes product context from product page into overlay group modal
+- [ ] **DATA-04**: Hidden form field includes product name in email submission
 
-- [ ] **INTR-01**: Buttons display a colour-bleed effect — a subtle colour that softly expands into view on hover (desktop) and tap (mobile)
-- [ ] **INTR-02**: "Read More" / "Learn More" buttons display a keyline that animates across the button on hover
-- [ ] **INTR-03**: Buttons trigger a brief keyline drawing animation on click during page transition for visual continuity
-- [ ] **INTR-04**: Decorative keylines throughout the site animate into view as if being drawn on — SVG stroke reveals progressively along its path on scroll
-- [ ] **INTR-05**: Project gallery cards display centre-aligned copy over a soft gradient, with gradient strengthening and gentle image zoom on hover (ref: studioashby.com/projects/)
-- [ ] **INTR-06**: On mobile, project gallery cards display persistent gradient overlay (desktop hover state as default)
-- [ ] **INTR-07**: Close icon (X) gently rotates on hover (desktop) or tap (mobile) and returns to original position on leave
-- [ ] **INTR-08**: Two images stacked in the same fixed frame crossfade on hover — second image fades in while first fades out (homepage + workshop)
+### Form Fields
 
-### Navigation & Filtering
+- [ ] **FORM-01**: First Name field (togglable in theme editor)
+- [ ] **FORM-02**: Last Name field (togglable in theme editor)
+- [ ] **FORM-03**: Company Name field (togglable in theme editor)
+- [ ] **FORM-04**: Email Address field (togglable in theme editor)
+- [ ] **FORM-05**: Phone Number field (togglable in theme editor)
+- [ ] **FORM-06**: Address field (togglable in theme editor)
+- [ ] **FORM-07**: Country field (togglable in theme editor)
+- [ ] **FORM-08**: Postcode field (togglable in theme editor)
+- [ ] **FORM-09**: Add Notes field (togglable in theme editor)
+- [ ] **FORM-10**: Marketing opt-in checkbox with disclaimer text (togglable in theme editor)
 
-- [ ] **NAVF-01**: Portfolio section uses dropdown navigation where the active page displays at 60% opacity and clicking filters the gallery to that category
-- [ ] **NAVF-02**: Workshop section uses the same dropdown navigation pattern with active category at 60% opacity
-- [ ] **NAVF-03**: Gallery filter bar displays with filled-circle indicators for selected state, defaulting to "All Projects" filled
-- [ ] **NAVF-04**: Clicking a portfolio category on the homepage navigates to the gallery page with results pre-filtered to that category
-- [ ] **NAVF-05**: Mobile filter reveals sub-categories on tap, matching the desktop category structure
-- [ ] **NAVF-06**: "Our Process" and "Our Team" links smooth-scroll to the corresponding section on the page
-- [ ] **NAVF-07**: Navigation supports a split layout option with all items centralised except "The Workshop" right-aligned
+### Form Submission
 
-### Carousel & Gallery
+- [ ] **SUBM-01**: Form submits via Shopify `{% form 'contact' %}` to store email
+- [ ] **SUBM-02**: Success state shown inside modal using `form.posted_successfully?` pattern
+- [ ] **SUBM-03**: Success state displays "WE'LL BE IN TOUCH" heading with confirmation text
+- [ ] **SUBM-04**: Success state keeps 40/60 layout on desktop (image left, confirmation right)
+- [ ] **SUBM-05**: "Submit Enquiry" button text
 
-- [ ] **CARG-01**: Featured projects carousel displays full-bleed slides with smooth transitions, navigable via drag and arrow controls
-- [ ] **CARG-02**: Product image carousel supports horizontal swipe gesture navigation
-- [ ] **CARG-03**: All carousels support horizontal swipe gesture navigation on mobile devices
-- [ ] **CARG-04**: Journal notes carousel navigates via arrows on desktop with smooth transitions, and stacks vertically on mobile
-- [ ] **CARG-05**: Room scheme section auto-rotates between images with a fade transition every 2 seconds
+### Trigger
 
-### Layout & Content
+- [ ] **TRIG-01**: Existing button block on product page triggers the modal
+- [ ] **TRIG-02**: Add `aria_controls` schema setting to button block for merchant flexibility
+- [ ] **TRIG-03**: `aria-controls="enquiry-modal"` wiring between button and modal
 
-- [ ] **LAYC-01**: Project detail page uses a two-column layout where the left image gallery scrolls normally and the right content panel is sticky or scrolls independently
-- [ ] **LAYC-02**: Expandable info panels reveal additional content on arrow click without reflowing surrounding layout, with arrow rotating to indicate open state
-- [ ] **LAYC-03**: Product images display interactive tags (hotspot dots) that pulse to draw attention and expand to reveal product information on click
-- [ ] **LAYC-04**: About section filter/tabs reveal different text blocks while simultaneously updating the accompanying image
-- [ ] **LAYC-05**: Components support per-instance colour assignment, allowing block colour to be set specifically per product or section via Shopify admin
-- [ ] **LAYC-06**: Blog page uses the same modular, block-based template approach as project pages with repeatable content-type blocks
+### Styling
 
-### Data Architecture
-
-- [ ] **DATA-01**: Four metaobject types created in Shopify Admin — `project` (title, category list, hero image, gallery images, video URL, description, press link, featured boolean), `press_accolade` (publication, headline, article URL, date), `team_member` (name, role, bio, image, anchor_id), `career_opening` (title, specification, is_active boolean)
-- [ ] **DATA-02**: Product metafield namespace `workshop` defined with fields — tearsheet_pdf (file_reference), secondary_image (file_reference), room_scheme_images (list.file_reference), interactive_tags (json), video_url (url), category (single_line_text), collection_name (single_line_text)
-- [ ] **DATA-03**: Collection structure created — `workshop-all`, `workshop-[collection]` sub-collections, `portfolio-all`, `portfolio-residential`, `portfolio-commercial`, `portfolio-hospitality`
-- [ ] **DATA-04**: Portfolio filtering uses URL-based collection routing (each category = own collection URL, active state set server-side in Liquid) rather than client-side JS filtering
-- [x] **DATA-05**: Page templates created for all routes — index, page.about, page.contact, page.press, page.careers, collection.portfolio, collection.workshop, product.workshop-item, blog.journal, article.journal-entry, 404
-- [ ] **DATA-06**: Portfolio projects use metaobjects (not products/collections) as CMS, giving full control over custom fields (video, gallery, press links) without forcing into the product model
-
-### Pages & Sections
-
-- [ ] **PAGE-01**: Subscribe pop-up appears after 10-second delay or 30% page scroll on Workshop page, and when clicking Subscribe in the footer; displays centred on screen
-- [ ] **PAGE-02**: Contact form clears placeholder text on input, highlights affected fields on validation errors, and uses filled-circle radio buttons for selection
-- [ ] **PAGE-03**: Careers section functions as a collapsible block toggling between hiring and not-hiring states, with repeatable/duplicatable job specification blocks
-- [ ] **PAGE-04**: Project video section plays looping video that auto-starts when scrolled into view, with option to replace with full-bleed image or hide entirely
-- [ ] **PAGE-05**: Clicking "Tearsheet" on product pages automatically opens the product PDF
-- [ ] **PAGE-06**: Press & Accolades links use the keyline draw-on animation
-- [ ] **PAGE-07**: Mobile menu open triggers a colour-bleed transition animating downward from the top of the screen
+- [ ] **STYL-01**: Field labels use button font (uppercase, small)
+- [ ] **STYL-02**: Inputs use underline-only style (no box border)
+- [ ] **STYL-03**: Submit button matches theme button styling
+- [ ] **STYL-04**: First Name / Last Name and Country / Postcode in 50/50 grid rows
+- [ ] **STYL-05**: Form panel background matches theme color scheme
+- [ ] **STYL-06**: Product image is full-height, object-fit cover on desktop
 
 ## v2 Requirements
 
-None — all 35 features scoped for v1.
+### Enhancements
+
+- **ENH-01**: AJAX form submission (no page reload)
+- **ENH-02**: Variant-specific image in modal
+- **ENH-03**: GDPR-compliant marketing consent with Shopify customer tags
+- **ENH-04**: Custom email templates for enquiry notifications
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| Full theme rebuild | Extending Prestige, not replacing it |
-| Checkout customisation | Using Shopify default checkout |
-| Multi-language content | English only for v1 |
-| Custom app integrations | Standard Shopify apps only |
-| Parallax scrolling | Dated pattern, causes motion sickness, inconsistent mobile performance |
-| SPA-style page transitions | Shopify is multi-page; fighting this breaks analytics and adds fragility |
-| Custom cursor / cursor follower | Distracting, interferes with accessibility |
-| Scroll-hijacking | Intrusive, breaks native scroll and accessibility tools |
-| Heavy animation libraries (GSAP) | No build tooling; Motion One already bundled in vendor.min.js |
-| Infinite scroll on gallery | Prevents reaching footer, contradicts curated luxury feel |
-| Skeleton loading / shimmer effects | Feels like a web app, not a luxury studio |
+| Third-party form integrations (Klaviyo, HubSpot) | Shopify email sufficient for v1 |
+| AJAX form submission | Standard Shopify form post with `posted_successfully?` is simpler and reliable |
+| Variant selection in modal | Adds complexity, not needed for enquiry |
+| Custom redirect after submission | Success state shown in-modal instead |
+| Nested confirmation dialogs | Anti-pattern, adds UX complexity |
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VISF-01 | Phase 1 | Pending |
-| VISF-02 | Phase 1 | Pending |
-| VISF-03 | Phase 1 | Pending |
-| VISF-04 | Phase 2 | Pending |
-| VISF-05 | Phase 2 | Pending |
-| INTR-01 | Phase 3 | Pending |
-| INTR-02 | Phase 4 | Pending |
-| INTR-03 | Phase 4 | Pending |
-| INTR-04 | Phase 4 | Pending |
-| INTR-05 | Phase 5 | Pending |
-| INTR-06 | Phase 5 | Pending |
-| INTR-07 | Phase 3 | Pending |
-| INTR-08 | Phase 5 | Pending |
-| NAVF-01 | Phase 6 | Pending |
-| NAVF-02 | Phase 6 | Pending |
-| NAVF-03 | Phase 6 | Pending |
-| NAVF-04 | Phase 6 | Pending |
-| NAVF-05 | Phase 6 | Pending |
-| NAVF-06 | Phase 6 | Pending |
-| NAVF-07 | Phase 6 | Pending |
-| CARG-01 | Phase 7 | Pending |
-| CARG-02 | Phase 7 | Pending |
-| CARG-03 | Phase 7 | Pending |
-| CARG-04 | Phase 7 | Pending |
-| CARG-05 | Phase 7 | Pending |
-| LAYC-01 | Phase 8 | Pending |
-| LAYC-02 | Phase 8 | Pending |
-| LAYC-03 | Phase 8 | Pending |
-| LAYC-04 | Phase 8 | Pending |
-| LAYC-05 | Phase 8 | Pending |
-| LAYC-06 | Phase 8 | Pending |
-| PAGE-01 | Phase 9 | Pending |
-| PAGE-02 | Phase 9 | Pending |
-| PAGE-03 | Phase 9 | Pending |
-| PAGE-04 | Phase 9 | Pending |
-| PAGE-05 | Phase 9 | Pending |
-| PAGE-06 | Phase 4 | Pending |
-| PAGE-07 | Phase 9 | Pending |
-| DATA-01 | Phase 4.1 | Pending |
-| DATA-02 | Phase 4.1 | Pending |
-| DATA-03 | Phase 4.1 | Pending |
-| DATA-04 | Phase 6 | Pending |
-| DATA-05 | Phase 4.1 | Complete |
-| DATA-06 | Phase 4.1 | Pending |
+| MODL-01 | — | Pending |
+| MODL-02 | — | Pending |
+| MODL-03 | — | Pending |
+| MODL-04 | — | Pending |
+| MODL-05 | — | Pending |
+| MODL-06 | — | Pending |
+| DATA-01 | — | Pending |
+| DATA-02 | — | Pending |
+| DATA-03 | — | Pending |
+| DATA-04 | — | Pending |
+| FORM-01 | — | Pending |
+| FORM-02 | — | Pending |
+| FORM-03 | — | Pending |
+| FORM-04 | — | Pending |
+| FORM-05 | — | Pending |
+| FORM-06 | — | Pending |
+| FORM-07 | — | Pending |
+| FORM-08 | — | Pending |
+| FORM-09 | — | Pending |
+| FORM-10 | — | Pending |
+| SUBM-01 | — | Pending |
+| SUBM-02 | — | Pending |
+| SUBM-03 | — | Pending |
+| SUBM-04 | — | Pending |
+| SUBM-05 | — | Pending |
+| TRIG-01 | — | Pending |
+| TRIG-02 | — | Pending |
+| TRIG-03 | — | Pending |
+| STYL-01 | — | Pending |
+| STYL-02 | — | Pending |
+| STYL-03 | — | Pending |
+| STYL-04 | — | Pending |
+| STYL-05 | — | Pending |
+| STYL-06 | — | Pending |
 
 **Coverage:**
-- v1 requirements: 44 total
-- Mapped to phases: 44
-- Unmapped: 0
+- v1 requirements: 34 total
+- Mapped to phases: 0
+- Unmapped: 34
 
 ---
-*Requirements defined: 2026-03-12*
-*Last updated: 2026-03-12 after roadmap creation*
+*Requirements defined: 2026-03-17*
+*Last updated: 2026-03-17 after initial definition*
