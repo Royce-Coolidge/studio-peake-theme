@@ -284,6 +284,12 @@
   z-index: 1;
 }
 
+/* Enquiry form: product heading spacing */
+
+.enquiry-modal__product-heading {
+  margin-bottom: 1.5rem;
+}
+
 /* Enquiry form: inputs underline-only */
 
 .enquiry-modal__form-content .input,
