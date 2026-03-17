@@ -284,6 +284,29 @@
   z-index: 1;
 }
 
+/* Enquiry form: labels use button font, inputs underline-only */
+
+.enquiry-modal__form-content .floating-label,
+.enquiry-modal__form-content .form-control > label {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+}
+
+.enquiry-modal__form-content .input,
+.enquiry-modal__form-content .textarea,
+.enquiry-modal__form-content .select {
+  border: none;
+  border-bottom: 1px solid rgb(var(--text-color) / .3);
+  border-radius: 0;
+}
+
+.enquiry-modal__form-content :is(.input:focus, .textarea:focus, .select:focus-visible) {
+  border-bottom-color: currentColor;
+}
+
 @media screen and (max-width: 749px) {
   .enquiry-modal__layout {
     grid-template-columns: 1fr;
