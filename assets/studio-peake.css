@@ -295,6 +295,14 @@
   text-transform: var(--button-text-transform);
 }
 
+.enquiry-modal__form-content :is(.input, .textarea, .select)::placeholder {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+}
+
 .enquiry-modal__form-content .input,
 .enquiry-modal__form-content .textarea,
 .enquiry-modal__form-content .select {
