@@ -30,7 +30,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "apparition_delay": 5,
-        "show_only_on_index": true,
+        "show_only_on_index": false,
         "hide_for_account_holders": true,
         "show_only_once": true,
         "show_newsletter_form": true,
@@ -51,9 +51,7 @@
     },
     "product-enquiry-modal": {
       "type": "product-enquiry-modal",
-      "settings": {
-        "color_scheme": ""
-      }
+      "settings": {}
     }
   },
   "order": [
