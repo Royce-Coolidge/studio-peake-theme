@@ -1,619 +1,265 @@
-# Architecture Patterns
-
-**Domain:** Shopify theme customisation -- integrating custom animations, interactive components, and filtering into Prestige v10.7.0
-**Researched:** 2026-03-12
-**Confidence:** HIGH (based on direct codebase analysis of existing Prestige patterns)
-
-## Recommended Architecture
-
-Custom code integrates into Prestige's existing layered architecture. The key principle: **follow Prestige's own patterns** -- Web Components for JS behaviour, scoped `<style>` blocks for section CSS, snippets for reusable Liquid, and section schemas for admin configurability. Do not invent new patterns when the theme already has proven ones.
-
-### Architecture Diagram
-
-```
-layout/theme.liquid
-  |
-  +-- snippets/css-variables.liquid     (Studio Peake design tokens already here)
-  +-- snippets/js-variables.liquid      (expose settings to JS)
-  +-- importmap { "vendor", "theme", "studio-peake" }
-  |                                      ^^ NEW custom JS entry
-  +-- assets/theme.css                  (Prestige base styles)
-  +-- assets/studio-peake.css           (NEW: all custom CSS)
-  |
-  +-- sections/header-group
-  |     +-- sections/header.liquid      (already customised)
-  |
-  +-- content_for_layout
-  |     +-- templates/*.json            (section composition)
-  |           +-- sections/sp-*.liquid  (NEW custom sections, sp- prefix)
-  |           +-- sections/*.liquid     (extended Prestige sections)
-  |                 +-- blocks/*.liquid
-  |                 +-- snippets/sp-*.liquid  (NEW reusable partials)
-  |
-  +-- assets/studio-peake.js           (NEW: custom Web Components)
-  +-- assets/vendor.min.js             (Motion One: animate, inView, scroll, timeline, stagger)
-  +-- assets/theme.js                  (Prestige Web Components -- DO NOT EDIT)
-```
-
-### Component Boundaries
-
-| Component | Responsibility | Communicates With | Location |
-|-----------|---------------|-------------------|----------|
-| **studio-peake.css** | All custom styles: gradient overlays, colour-bleed buttons, keyline animations, layout utilities | Consumed by all custom sections/snippets | `assets/studio-peake.css` |
-| **studio-peake.js** | Custom Web Components for interactive features | Imports from `vendor` (Motion One), reads `data-*` attributes from Liquid | `assets/studio-peake.js` |
-| **sp-* sections** | New full sections (e.g., `sp-project-carousel`, `sp-gallery-filter`) | Use sp-* snippets, schema settings, custom Web Components | `sections/sp-*.liquid` |
-| **sp-* snippets** | Reusable Liquid partials (e.g., `sp-gradient-overlay`, `sp-keyline-button`) | Consumed by sections via `{% render %}`, receive params | `snippets/sp-*.liquid` |
-| **Extended sections** | Modified Prestige sections (minimise changes) | Reference sp-* snippets for new behaviours | `sections/*.liquid` (existing files) |
-| **css-variables.liquid** | Design token injection (already customised) | All CSS consumes these variables | `snippets/css-variables.liquid` |
-
-## Where Custom Code Should Live
-
-### CSS Strategy: Dedicated Asset File
-
-**Use `assets/studio-peake.css`** for all custom styles. Do NOT scatter custom CSS into `theme.css`.
-
-**Rationale:**
-- Prestige's `theme.css` is the vendor file. Modifying it makes theme updates impossible to merge.
-- Section-scoped `<style>` blocks work for section-specific overrides (and Prestige uses them), but shared styles (gradient overlays, button animations, keyline patterns) need a single source of truth.
-- Shopify serves assets from CDN -- a separate file is negligible overhead and caches independently.
-
-**Loading:** Add to `layout/theme.liquid` after theme.css:
-
-```liquid
-{{- 'studio-peake.css' | asset_url | stylesheet_tag -}}
-```
-
-**Section-scoped styles** (using Liquid-injected CSS variables) still go in `<style>` blocks within each section, following Prestige's pattern:
-
-```liquid
-<style>
-  #shopify-section-{{ section.id }} {
-    --sp-gradient-opacity: {{ section.settings.gradient_opacity | divided_by: 100.0 }};
-    --sp-gradient-color: {{ section.settings.gradient_color.rgb }};
-  }
-</style>
-```
-
-The shared `.sp-gradient-overlay` class lives in `studio-peake.css` and reads those variables.
-
-### JavaScript Strategy: Custom Web Components via Dedicated Module
-
-**Use `assets/studio-peake.js`** as a single ES module containing all custom Web Components.
-
-**Rationale:**
-- Prestige's `theme.js` is compiled/minified from a source build system we do not have. Editing it is fragile and blocks theme updates.
-- The importmap in `layout/theme.liquid` already supports module resolution. Add `"studio-peake"` as a new entry.
-- Custom elements follow the identical pattern: class extends HTMLElement, register with `customElements.define()`, import `{ animate, inView, timeline, scroll, stagger }` from `"vendor"`.
-
-**Loading:** Add to `layout/theme.liquid` importmap and script tags:
-
-```html
-<script type="importmap">
-  {
-    "imports": {
-      "vendor": "{{ 'vendor.min.js' | asset_url }}",
-      "theme": "{{ 'theme.js' | asset_url }}",
-      "studio-peake": "{{ 'studio-peake.js' | asset_url }}"
-    }
-  }
-</script>
-<script type="module" src="{{ 'studio-peake.js' | asset_url }}"></script>
-```
-
-**Available from vendor.min.js (Motion One + utilities):**
-- `animate` -- animate elements with WAAPI (Web Animations API) with fallback
-- `inView` -- IntersectionObserver wrapper for scroll-triggered animations
-- `timeline` -- sequence multiple animations
-- `scroll` -- scroll-linked animations (parallax, progress-based)
-- `stagger` -- delay animations across multiple elements
-- `Delegate` -- event delegation utility
-- `FocusTrap` -- focus management for modals/drawers
-- `PhotoSwipeLightbox` -- lightbox (already used for product galleries)
-- `ScrollOffset` -- scroll position constants
-
-### Liquid Strategy: Snippets for Reusable Patterns, Sections for Page Components
-
-**Reusable animation/interaction patterns go in snippets.** Use the `sp-` prefix to distinguish custom code from Prestige code.
-
-**Key snippets to create:**
-
-| Snippet | Purpose | Used By |
-|---------|---------|---------|
-| `sp-gradient-overlay.liquid` | Renders gradient overlay on image containers | Hero sections, project cards, mobile tiles |
-| `sp-keyline-button.liquid` | Button with keyline draw animation | CTAs throughout site |
-| `sp-animate-on-scroll.liquid` | Wrapper that applies scroll-reveal attributes | Any section needing reveal animation |
-| `sp-image-hotspot.liquid` | Pulsing hotspot with expandable info panel | Product image tags |
-| `sp-crossfade-images.liquid` | Dual-image hover crossfade | Portfolio cards, product previews |
-
-**Pattern for snippet-driven animation:**
-
-```liquid
-{%- comment -%}
-SP-GRADIENT-OVERLAY
-Renders a CSS gradient overlay on an image container.
-
-Supported variables:
-* position: 'top', 'bottom', 'both' (default: 'bottom')
-* color: CSS color value (default: uses color scheme)
-* opacity: 0-100 (default: 60)
-{%- endcomment -%}
-
-{%- assign sp_gradient_position = position | default: 'bottom' -%}
-{%- assign sp_gradient_opacity = opacity | default: 60 -%}
-
-<div class="sp-gradient-overlay sp-gradient-overlay--{{ sp_gradient_position }}"
-     style="--sp-gradient-opacity: {{ sp_gradient_opacity | divided_by: 100.0 }};
-            {%- if color %} --sp-gradient-color: {{ color }};{%- endif -%}">
-</div>
-```
-
-### Admin Configurability: Section Schemas
-
-Every custom feature must be configurable through Shopify admin. Three mechanisms, ordered by preference:
-
-**1. Section Settings (primary)** -- for per-section configuration:
-
-```json
-{
-  "type": "range",
-  "id": "gradient_opacity",
-  "label": "Gradient overlay opacity",
-  "min": 0,
-  "max": 100,
-  "step": 5,
-  "default": 60,
-  "unit": "%"
-}
-```
-
-**2. Block Settings** -- for repeatable/reorderable sub-components within sections:
-
-```json
-{
-  "type": "image_hotspot",
-  "name": "Product tag",
-  "limit": 6,
-  "settings": [
-    { "type": "range", "id": "x_position", "label": "Horizontal position", "min": 0, "max": 100, "default": 50, "unit": "%" },
-    { "type": "range", "id": "y_position", "label": "Vertical position", "min": 0, "max": 100, "default": 50, "unit": "%" },
-    { "type": "product", "id": "product", "label": "Product" },
-    { "type": "text", "id": "label", "label": "Tag label" }
-  ]
-}
-```
-
-**3. Metafields** -- for per-product/per-collection data that sections read:
-
-Use metafields for data that belongs to a resource (product, collection) rather than a section instance. Example: a product's "room scheme" images for auto-rotation, or a project's "category" for filtering.
-
-Define in `config/metafields.json`:
-```json
-{
-  "metafields": [
-    {
-      "namespace": "studio_peake",
-      "key": "project_category",
-      "name": "Project Category",
-      "type": "single_line_text_field",
-      "owner_type": "PRODUCT"
-    }
-  ]
-}
-```
-
-Access in Liquid: `{{ product.metafields.studio_peake.project_category.value }}`
-
-## Data Flow
-
-### Custom Animation Data Flow
-
-```
-Section Schema (admin settings)
-  |
-  v
-Section Liquid (reads section.settings, renders HTML with data attributes)
-  |
-  v
-Snippet Liquid (renders reusable pattern with CSS classes + data-* attrs)
-  |
-  v
-studio-peake.css (styles based on CSS classes, reads CSS custom properties)
-  |
-  v
-studio-peake.js Web Component (enhances with JS behaviour via custom element)
-  |
-  v
-vendor.min.js Motion One (executes animations: animate, inView, timeline)
-```
-
-### Filtering Data Flow
-
-```
-Collection/Product Metafields (category, tags)
-  |
-  v
-Section Liquid (renders filter bar UI + product grid with data-category attributes)
-  |
-  v
-Web Component <sp-gallery-filter> (reads data attributes, shows/hides items)
-  |
-  v
-URL Parameters (preserves filter state for cross-page navigation)
-  |
-  v
-animate() from vendor (fade/slide transitions on filter change)
-```
-
-### Cross-Page Filter Navigation
-
-```
-Homepage project card (links to /pages/gallery?category=residential)
-  |
-  v
-Gallery page section Liquid (reads URL param: request.params.category)
-  |
-  v
-<sp-gallery-filter> Web Component (initialises with pre-selected filter)
-```
-
-## Patterns to Follow
-
-### Pattern 1: Web Component with Motion One
-
-**What:** Extend HTMLElement, import Motion One from vendor, use `inView` for scroll triggers and `animate` for animations. Register with guard check.
-
-**When:** Any interactive behaviour that goes beyond CSS (scroll-triggered sequences, gesture handling, state management).
-
-**Example:**
-
-```javascript
-// In studio-peake.js
-import { animate, inView, timeline } from "vendor";
-
-var SpKeylineReveal = class extends HTMLElement {
-  connectedCallback() {
-    // Only animate if user hasn't requested reduced motion
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    inView(this, () => {
-      let path = this.querySelector("path");
-      let length = path.getTotalLength();
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = length;
-
-      animate(path, { strokeDashoffset: 0 }, {
-        duration: parseFloat(this.getAttribute("data-duration") || "1.5"),
-        easing: "ease-out"
-      });
-    }, { margin: "-10%" });
-  }
-};
-if (!window.customElements.get("sp-keyline-reveal")) {
-  window.customElements.define("sp-keyline-reveal", SpKeylineReveal);
-}
-```
-
-**Liquid usage:**
-
-```liquid
-<sp-keyline-reveal data-duration="{{ section.settings.animation_duration }}">
-  <svg>
-    <path d="{{ section.settings.keyline_path }}" fill="none" stroke="currentColor" stroke-width="1"/>
-  </svg>
-</sp-keyline-reveal>
-```
-
-### Pattern 2: CSS-Only Animation with Liquid-Injected Variables
-
-**What:** Pure CSS animations configured through section settings, no JS required.
-
-**When:** Gradient overlays, hover states, colour transitions, simple transforms.
-
-**Example:**
-
-```css
-/* studio-peake.css */
-.sp-gradient-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.sp-gradient-overlay--bottom {
-  background: linear-gradient(
-    to top,
-    rgb(var(--sp-gradient-color, 0 0 0) / var(--sp-gradient-opacity, 0.6)) 0%,
-    transparent 60%
-  );
-}
-
-.sp-colour-bleed-button {
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s ease;
-}
-
-.sp-colour-bleed-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--sp-button-bleed-color, currentColor);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.sp-colour-bleed-button:hover::before,
-.sp-colour-bleed-button:focus-visible::before {
-  transform: scaleX(1);
-}
-```
-
-### Pattern 3: Section Schema for Admin Control
-
-**What:** Every visual parameter exposed as a section setting with sensible defaults.
-
-**When:** Always. The client must be able to adjust colours, speeds, toggle animations, and configure content without code.
-
-**Example schema pattern:**
-
-```json
-{
-  "type": "header",
-  "content": "Animation"
-},
-{
-  "type": "checkbox",
-  "id": "enable_animation",
-  "label": "Enable scroll animation",
-  "default": true
-},
-{
-  "type": "range",
-  "id": "animation_duration",
-  "label": "Animation speed",
-  "min": 0.3,
-  "max": 3.0,
-  "step": 0.1,
-  "default": 1.0,
-  "unit": "s"
-},
-{
-  "type": "select",
-  "id": "animation_style",
-  "label": "Animation style",
-  "options": [
-    { "value": "fade", "label": "Fade in" },
-    { "value": "slide-up", "label": "Slide up" },
-    { "value": "reveal", "label": "Reveal" }
-  ],
-  "default": "fade"
-}
-```
-
-### Pattern 4: Progressive Enhancement
-
-**What:** Features work without JS (content visible, layout intact), JS enhances with animation and interactivity.
-
-**When:** Always. Ensures content is accessible, crawlable, and works in edge cases.
-
-**Example:**
-
-```liquid
-{%- comment -%} Gallery items are visible by default, filter JS hides non-matching ones {%- endcomment -%}
-<sp-gallery-filter>
-  <div class="sp-filter-bar">
-    {%- for tag in collection.all_tags -%}
-      <button class="sp-filter-button" data-filter="{{ tag | handleize }}">{{ tag }}</button>
-    {%- endfor -%}
-  </div>
-
-  <div class="sp-gallery-grid">
-    {%- for product in collection.products -%}
-      <div class="sp-gallery-item" data-category="{{ product.metafields.studio_peake.project_category.value | handleize }}">
-        {%- render 'product-card', product: product -%}
-      </div>
-    {%- endfor -%}
-  </div>
-</sp-gallery-filter>
-```
-
-Without JS: all items show, filter buttons do nothing. With JS: the Web Component enables filtering with animated transitions.
-
-## Anti-Patterns to Avoid
-
-### Anti-Pattern 1: Editing theme.js or theme.css
-
-**What:** Modifying Prestige's compiled/vendor files directly.
-**Why bad:** Prestige releases updates. Any merge becomes impossible. The theme.js source is compiled from a private build system -- edits to the minified output are fragile and unreadable.
-**Instead:** Create `studio-peake.js` and `studio-peake.css` as separate files. Override Prestige styles via CSS specificity (use `#shopify-section-{{ section.id }}` scoping when needed).
-
-### Anti-Pattern 2: Inline onclick Handlers
-
-**What:** Using `onclick="doSomething()"` in Liquid templates.
-**Why bad:** Requires global function scope, breaks Content Security Policy, difficult to test, couples Liquid to JS implementation. The existing `newsletter-popup.js` uses this pattern -- do not replicate it.
-**Instead:** Use Web Components. The element encapsulates its own behaviour. Liquid just renders the element with data attributes.
-
-### Anti-Pattern 3: jQuery or External Animation Libraries
-
-**What:** Adding jQuery, GSAP, Anime.js, or other animation libraries.
-**Why bad:** vendor.min.js already bundles Motion One (animate, inView, timeline, scroll, stagger). Adding another library duplicates functionality, increases payload, and introduces API inconsistency.
-**Instead:** Use Motion One via `import { animate, inView } from "vendor"`. It provides everything needed: WAAPI-based animations, scroll triggers, timeline sequencing, and stagger utilities.
-
-### Anti-Pattern 4: CSS in Liquid Assigns
-
-**What:** Building CSS strings in Liquid and injecting them inline on elements.
-**Why bad:** Unreadable, uncacheable, impossible to override, defeats DevTools inspection.
-**Instead:** Use CSS custom properties set via `<style>` blocks scoped to `#shopify-section-{{ section.id }}`, consumed by classes in `studio-peake.css`.
-
-### Anti-Pattern 5: Modifying Existing Section Schemas Heavily
-
-**What:** Adding many custom settings to Prestige's existing section schemas.
-**Why bad:** Theme updates will conflict. The admin UI becomes cluttered.
-**Instead:** Create new `sp-*` sections that wrap or replace Prestige sections. For minor extensions to existing sections (e.g., adding gradient overlay to slideshow), add minimal settings and document each change clearly with comments.
-
-## Component Definitions
-
-### Custom Web Components to Build
-
-| Component | HTML Tag | Responsibility | Dependencies |
-|-----------|----------|---------------|--------------|
-| Keyline Reveal | `<sp-keyline-reveal>` | SVG stroke-dashoffset animation on scroll | `inView`, `animate` from vendor |
-| Colour Bleed Button | `<sp-colour-bleed>` | Enhanced button hover/click with colour expansion | CSS-only (no JS needed) |
-| Gallery Filter | `<sp-gallery-filter>` | Client-side filtering with animated show/hide | `animate`, `stagger` from vendor |
-| Image Crossfade | `<sp-image-crossfade>` | Dual image hover crossfade | CSS-only with optional JS for touch |
-| Image Hotspot | `<sp-image-hotspot>` | Pulsing dot with expandable info panel | `animate` from vendor, `Delegate` for event handling |
-| Auto Rotation | `<sp-auto-rotate>` | Timed crossfade between child elements | `animate`, `timeline` from vendor |
-| Hero Sequence | `<sp-hero-sequence>` | Orchestrated load: image first, then logo fade | `timeline` from vendor |
-| Two Column Scroll | `<sp-split-scroll>` | Sticky right panel, scrolling left gallery | CSS `position: sticky` + `scroll` from vendor |
-| Subscribe Popup | `<sp-subscribe-popup>` | Timed/scroll-triggered popup (extends existing newsletter-popup pattern) | `inView` from vendor |
-| Project Carousel | `<sp-project-carousel>` | Full-bleed drag + arrow carousel for featured projects | Extends Prestige's `effect-carousel` pattern |
-| Mobile Nav Filter | `<sp-mobile-filter>` | Sub-category filter in mobile nav | `animate` from vendor |
-
-### Custom Sections to Build
-
-| Section File | Purpose | Blocks | Key Settings |
-|-------------|---------|--------|--------------|
-| `sp-hero.liquid` | Hero with load sequence + gradient overlay | heading, subheading, button | image, gradient_opacity, gradient_position, enable_load_animation |
-| `sp-project-carousel.liquid` | Featured projects full-bleed carousel | project_slide | autoplay, transition_speed, gradient_on_hover |
-| `sp-gallery-filter.liquid` | Filterable project/product gallery | (none -- uses collection products) | collection, filter_source, columns, animation_style |
-| `sp-two-column.liquid` | Independent scroll two-column layout | left_image, right_content | sticky_side, gap |
-| `sp-image-hotspots.liquid` | Product image with interactive tags | hotspot | image, mobile_image, hotspot_color |
-| `sp-video-section.liquid` | Looping video with fallback image | (none) | video, fallback_image, autoplay_on_scroll |
-| `sp-about-toggle.liquid` | Text toggle with image update | content_panel | default_panel, transition_style |
-| `sp-careers.liquid` | Collapsible job spec blocks | job_posting | (inherits Prestige accordion pattern) |
-
-### Custom Snippets to Build
-
-| Snippet File | Purpose | Parameters |
-|-------------|---------|------------|
-| `sp-gradient-overlay.liquid` | Gradient overlay on images | position, color, opacity |
-| `sp-keyline-button.liquid` | Button with keyline draw animation | content, href, style, animation_type |
-| `sp-project-card.liquid` | Project card with hover gradient + zoom | project, show_gradient, gradient_strength |
-| `sp-filter-button.liquid` | Filter bar button with filled-circle indicator | label, filter_value, active |
-| `sp-scroll-reveal.liquid` | Wrapper for scroll-triggered reveal | animation_type, duration, delay |
-
-## File Organisation Summary
-
-```
-assets/
-  studio-peake.css          # All custom styles
-  studio-peake.js           # All custom Web Components
-  theme.css                 # DO NOT EDIT (Prestige)
-  theme.js                  # DO NOT EDIT (Prestige)
-  vendor.min.js             # DO NOT EDIT (Motion One + utilities)
-  custom-fonts.css          # Already customised for SP fonts
-
-sections/
-  sp-hero.liquid            # New sections with sp- prefix
-  sp-project-carousel.liquid
-  sp-gallery-filter.liquid
-  sp-two-column.liquid
-  sp-image-hotspots.liquid
-  sp-video-section.liquid
-  sp-about-toggle.liquid
-  sp-careers.liquid
-  header.liquid             # Already modified (minimal changes)
-  slideshow.liquid           # May need minimal gradient overlay addition
-
-snippets/
-  sp-gradient-overlay.liquid
-  sp-keyline-button.liquid
-  sp-project-card.liquid
-  sp-filter-button.liquid
-  sp-scroll-reveal.liquid
-  css-variables.liquid       # Already customised with SP tokens
-
-layout/
-  theme.liquid              # Add studio-peake.css + studio-peake.js loading
-
-config/
-  metafields.json           # Add studio_peake namespace metafield defs
-```
-
-## Build Order (Dependencies)
-
-Components have dependencies that dictate implementation order:
-
-```
-Phase 1: Foundation (no dependencies)
-  |-- studio-peake.css file + loading in theme.liquid
-  |-- studio-peake.js file + importmap entry in theme.liquid
-  |-- sp-gradient-overlay snippet (CSS-only, used everywhere)
-  |-- CSS custom properties for SP animation tokens
-  |
-Phase 2: CSS-Only Animations (depends on Phase 1)
-  |-- Gradient overlays on image sections
-  |-- Colour-bleed button states (CSS transitions)
-  |-- Button hover keyline animation (CSS)
-  |-- Close icon rotation (CSS)
-  |
-Phase 3: Core Web Components (depends on Phase 1)
-  |-- <sp-keyline-reveal> (SVG stroke animation)
-  |-- <sp-hero-sequence> (load orchestration)
-  |-- <sp-image-crossfade> (hover crossfade)
-  |-- <sp-auto-rotate> (room scheme rotation)
-  |
-Phase 4: Layout Components (depends on Phase 1)
-  |-- <sp-split-scroll> (two-column layout)
-  |-- sp-two-column section
-  |-- Accordion/expandable panel (extends Prestige accordion)
-  |
-Phase 5: Carousel Components (depends on Phase 3)
-  |-- <sp-project-carousel> (builds on carousel knowledge from Phase 3)
-  |-- sp-project-carousel section
-  |-- Project card hover state (uses gradient overlay from Phase 2)
-  |-- Journal notes carousel
-  |
-Phase 6: Filtering System (depends on Phase 1, 3)
-  |-- Metafield definitions for categories
-  |-- <sp-gallery-filter> Web Component
-  |-- sp-gallery-filter section
-  |-- Cross-page filter navigation (URL params)
-  |-- Mobile nav filter
-  |
-Phase 7: Page-Specific Sections (depends on Phase 1-4)
-  |-- sp-image-hotspots section
-  |-- sp-video-section
-  |-- sp-about-toggle section
-  |-- sp-careers section
-  |-- Subscribe popup enhancement
-  |-- Contact form styling
-  |
-Phase 8: Navigation Enhancements (depends on Phase 2, 6)
-  |-- Portfolio dropdown with active state
-  |-- Workshop dropdown
-  |-- Mobile menu colour-bleed animation
-  |-- Anchor link smooth scroll
-```
-
-**Ordering rationale:**
-1. Foundation first because everything depends on the CSS/JS infrastructure
-2. CSS-only animations next because they are low-risk, high-visibility, and unblock visual review
-3. Core Web Components before complex sections because sections compose these components
-4. Filtering after core components because it needs the animation patterns established earlier
-5. Page-specific sections last because they are independent and can be built in parallel once patterns are established
-
-## Scalability Considerations
-
-| Concern | Current (10 components) | Future (30+ components) |
-|---------|------------------------|------------------------|
-| JS file size | Single studio-peake.js is fine | Consider splitting into multiple files with dynamic import if >100KB |
-| CSS file size | Single studio-peake.css is fine | Stays single file -- CSS is small and cacheable |
-| Section count | sp-* sections manageable | Shopify handles unlimited sections -- not a concern |
-| Admin UX | Clear sp- prefixed settings | Group settings with `header` type dividers, use `info` hints |
-
-## Sources
-
-- Direct analysis of Prestige v10.7.0 codebase (HIGH confidence)
-- `assets/vendor.min.js` exports: Motion One (animate, inView, scroll, timeline, stagger), Delegate, FocusTrap, PhotoSwipeLightbox
-- `assets/theme.js`: 80+ custom elements registered, all following identical pattern
-- `layout/theme.liquid`: importmap configuration, script loading order
-- `snippets/css-variables.liquid`: CSS custom property injection pattern
-- `snippets/js-variables.liquid`: `window.themeVariables` exposure pattern
-- Shopify theme development patterns (training data, MEDIUM confidence)
+# Architecture Patterns: Product Enquiry Modal
+
+**Domain:** Shopify theme modal — product-contextual overlay with contact form
+**Researched:** 2026-03-17
+**Overall confidence:** HIGH (based on direct code inspection of the existing theme)
 
 ---
 
-*Architecture analysis: 2026-03-12*
+## Recommended Architecture
+
+The enquiry modal integrates as a new section inside the existing overlay group, driven by the `x-modal` web component (which extends `DialogElement` → `Modal`). The trigger is the existing `button` block on the product page, modified with an `aria-controls` value pointing at the modal's section ID.
+
+```
+layout/theme.liquid
+  └── sections/overlay-group.json        ← registers enquiry-modal section
+        └── sections/enquiry-modal.liquid ← NEW section (primary deliverable)
+              ├── <x-modal id="enquiry-modal-{{ section.id }}">
+              │     ├── [slot="header"]  ← product title (hidden field mirror)
+              │     └── [body slot]
+              │           ├── .enquiry-modal__image  ← product featured image
+              │           └── {%- form 'contact' -%}  ← Shopify contact form
+              │                 ├── hidden: contact[body] = product title
+              │                 └── visible fields (toggled via section.settings)
+              └── {% schema %}           ← checkbox settings for each form field
+
+templates/product.json
+  └── sections/main-product.liquid
+        └── blocks/button.liquid         ← MODIFIED: aria-controls points at modal
+              └── snippets/button.liquid ← already supports aria_controls param
+```
+
+---
+
+## Component Boundaries
+
+| Component | Responsibility | Communicates With |
+|-----------|---------------|-------------------|
+| `sections/overlay-group.json` | Registers all global overlay sections; rendered once in layout | `layout/theme.liquid` (rendered via `content_for_header`); hosts the new section |
+| `sections/enquiry-modal.liquid` | Renders the full-screen modal HTML, contact form, image slot, and schema | Receives product data from Liquid page context; outputs `x-modal` web component |
+| `x-modal` web component (theme.js) | Opens/closes modal, traps focus, locks scroll, handles Escape key, appends to body | Listens for clicks on `[aria-controls="<its-id>"]` anywhere in the DOM |
+| `blocks/button.liquid` (on product page) | Triggers the modal open via `aria-controls` | Renders via `snippets/button.liquid` which already emits the `aria-controls` attribute |
+| `snippets/button.liquid` | Renders `<button aria-controls="...">` | Called from `blocks/button.liquid`; `aria_controls` param supported natively |
+| `snippets/input.liquid` | Renders individual form fields (text, email, tel, textarea) | Called from inside `{%- form 'contact' -%}` in the modal section |
+| Shopify contact form (`form 'contact'`) | POSTs to Shopify, emails store owner, redirects back | No JS dependency; standard Shopify form action |
+
+---
+
+## Data Flow
+
+### Product Context into the Modal
+
+The modal section is in the overlay group, which is rendered globally (not on a specific page). The product object is **not available** in that context. Product data must be passed from the product page to the modal via the DOM.
+
+Two proven patterns exist in this theme and Shopify ecosystem:
+
+**Pattern A — JavaScript data bridge via `data-` attributes (recommended)**
+
+The `main-product` section renders `data-product-title` and `data-product-image` on a container element. A small script in `studio-peake.js` reads these on page load and writes them into the modal's image `src` and the hidden `contact[body]` field.
+
+```
+main-product.liquid
+  └── <div data-enquiry-product-title="{{ product.title }}"
+            data-enquiry-product-image="{{ product.featured_image | image_url: width: 800 }}">
+
+studio-peake.js (or inline <script> in modal section)
+  └── reads data attributes → sets modal image src + hidden field value
+
+enquiry-modal.liquid
+  └── <img id="enquiry-modal-product-image" src="" alt="">
+  └── <input type="hidden" name="contact[body]" id="enquiry-modal-product-name" value="">
+```
+
+This is consistent with how `js-variables.liquid` and CSS variable patterns work in the theme — Liquid writes data to the DOM; JavaScript reads it.
+
+**Pattern B — Liquid variables in layout (not recommended)**
+
+Attempting to access `product` inside the overlay group section fails because the overlay group renders outside of page template context. The `product` object is only available in product-scoped templates. Do not rely on this.
+
+### Form Submission Flow
+
+```
+User fills form
+  → POST /contact (Shopify native contact form action)
+  → Shopify emails store owner
+  → Page reload with form.posted_successfully? = true
+  → Modal section renders success state
+```
+
+No AJAX. No third-party service. Standard redirect-on-submit. The `form 'contact'` tag is used in `sections/contact.liquid` already, confirming the pattern works in this theme.
+
+### Trigger Flow
+
+```
+Product page renders
+  └── button block outputs:
+        <button aria-controls="enquiry-modal-{{ section.id }}">Enquire</button>
+
+x-modal connectedCallback() (theme.js:1650)
+  └── Delegate listens for click on [aria-controls="enquiry-modal-..."]
+  └── On click: calls this.show() → adds open attribute → runs enter animation
+  └── Focus trapped, scroll locked, Escape closes
+```
+
+The modal ID must match exactly. The overlay group section ID is stable (set in `overlay-group.json`). The button block's `aria-controls` value must be hardcoded to match — or both must use a shared identifier. The safest approach: use a predictable fixed ID (e.g., `enquiry-modal`) rather than `section.id`, since `section.id` in the overlay group differs from `section.id` in the product section.
+
+---
+
+## Patterns to Follow
+
+### Pattern 1: Overlay Group Section Registration
+
+`sections/cart-drawer.liquid` and `sections/newsletter-popup.liquid` are the two reference implementations. Both follow this structure:
+
+- The section file wraps content in a web component custom element (`<cart-drawer>`, `<newsletter-popup>`).
+- The web component extends `DialogElement` (for `pop-in`) or `Drawer`/`Modal`.
+- The section is registered in `sections/overlay-group.json` with a named key.
+- No `presets` or `enabled_on` schema entry is needed — the overlay group handles placement.
+
+For the enquiry modal, use `<x-modal>` directly (it is already registered; no new custom element class required unless custom behaviour is needed). The `x-modal` element is the right choice over `x-drawer` because the design is a full-screen centred overlay, not a side panel.
+
+### Pattern 2: Shadow DOM Template
+
+`x-modal` uses `modal-default-template` by default (defined in `snippets/shadow-dom-templates.liquid`). That template provides:
+- `part="overlay"` — the backdrop (click to close)
+- `part="content"` — the white panel
+- `slot="header"` — receives header slot content
+- Default `<slot>` — receives body content
+- Built-in close button via `dialog-close-button`
+
+The 50/50 layout lives **inside** the default body slot. No need to create a custom shadow DOM template — override with CSS targeting `::part(content)` to set `max-width: 100%; width: 100%` for full-screen behaviour.
+
+### Pattern 3: Button Block aria-controls
+
+`snippets/button.liquid` already supports `aria_controls` (line 27 in that file). The `blocks/button.liquid` currently passes `href` and `style` but not `aria_controls`. The required change is:
+
+1. Add an `aria_controls` setting to `blocks/button.liquid` schema (a `text` type input, or a hardcoded render pass-through).
+2. Pass `aria_controls: block.settings.aria_controls` (or a hardcoded string) to the `render 'button'` call.
+
+The `snippets/button.liquid` will then emit `aria-controls="enquiry-modal"` on the rendered `<button>` element, and `x-modal` will pick it up automatically.
+
+### Pattern 4: Field Toggle via Section Settings
+
+`sections/contact.liquid` uses block-level field toggling. For the enquiry modal, since fields are fixed (not merchant-added), use `section.settings` checkboxes instead:
+
+```liquid
+{%- if section.settings.show_phone -%}
+  {%- render 'input', type: 'tel', name: 'contact[Phone]', label: 'Phone Number' -%}
+{%- endif -%}
+```
+
+Each configurable field gets a `checkbox` setting in the schema. This is simpler than blocks for a fixed-field form.
+
+---
+
+## Anti-Patterns to Avoid
+
+### Anti-Pattern 1: Accessing `product` in the Overlay Group Section
+
+**What goes wrong:** `product` is `nil` in the overlay group context. Image and title will be blank at render time.
+
+**Why bad:** The overlay group renders once globally, outside product template scope. Liquid server-render happens before any product page context is established.
+
+**Instead:** Use the JavaScript data bridge (Pattern A above). Render the modal structure with empty `src` and `value` attributes; populate them client-side from `data-` attributes set by `main-product.liquid`.
+
+### Anti-Pattern 2: Creating a New Custom Element Class for a Standard Modal
+
+**What goes wrong:** Unnecessary complexity; diverges from theme conventions.
+
+**Why bad:** `x-modal` already does full-screen modal, focus trap, scroll lock, Escape handling, and aria. Creating a new element (e.g., `enquiry-modal`) requires adding JS to `studio-peake.js`, risks breaking future theme updates, and adds maintenance burden.
+
+**Instead:** Use `<x-modal id="enquiry-modal">` directly. Only extend if genuinely new behaviour is needed (e.g., pre-populating fields on open — which can be done with a small `<script>` in the section or in `studio-peake.js` instead).
+
+### Anti-Pattern 3: Embedding the Modal in `main-product.liquid`
+
+**What goes wrong:** The modal renders once per product section instance. If `featured-product` also appears on the homepage, duplicate modals appear.
+
+**Why bad:** Overlay group is the established pattern for global one-instance overlays. It ensures the modal exists once in the DOM regardless of how many product sections are on a page.
+
+**Instead:** Place the section in the overlay group, populate data via JS.
+
+### Anti-Pattern 4: Using a Fixed `aria-controls` Value Without Coordination
+
+**What goes wrong:** The `x-modal` id and the button's `aria-controls` value must match exactly. If the modal uses `id="enquiry-modal-{{ section.id }}"`, the button block cannot know the `section.id` of the overlay group section at render time.
+
+**Instead:** Use a fixed, predictable ID string (e.g., `enquiry-modal`) for the `x-modal` element, not `section.id`. This makes the wiring explicit and avoids coordination problems between sections.
+
+---
+
+## Build Order (Phase Dependencies)
+
+The components have clear sequential dependencies:
+
+```
+Step 1: sections/enquiry-modal.liquid (the modal section)
+  - Define x-modal structure with fixed id="enquiry-modal"
+  - Add Shopify contact form with hidden product field (empty value initially)
+  - Add product image placeholder (empty src initially)
+  - Add section schema with field-toggle checkboxes
+  - Register in sections/overlay-group.json
+
+Step 2: CSS for modal layout
+  - Full-screen override for ::part(content)
+  - 50/50 desktop grid, stacked mobile layout
+  - Input label styling (uppercase button font, underline inputs)
+  - Lives in assets/studio-peake.css
+
+Step 3: JS data bridge in assets/studio-peake.js
+  - On DOMContentLoaded, read data attributes from main-product container
+  - Write product title into hidden contact field
+  - Write product image URL into modal image src
+  - Runs only if both the data source and modal target exist in the DOM
+
+Step 4: Trigger wiring — blocks/button.liquid modification
+  - Add aria_controls setting to schema (text input, default "enquiry-modal")
+  - Pass aria_controls to render 'button' call
+  - Verify button text renders "Enquire" by default
+
+Step 5: main-product.liquid data attributes
+  - Add data-enquiry-product-title and data-enquiry-product-image to a container
+  - These are the source for the Step 3 JS bridge
+```
+
+Steps 1 and 2 can be developed together. Step 3 depends on Steps 1 and 5. Step 4 is independent and can proceed any time after Step 1 (since x-modal only cares that the element with the matching ID exists in the DOM at click time).
+
+---
+
+## Scalability Considerations
+
+| Concern | Approach |
+|---------|----------|
+| Multiple product sections on one page (e.g., featured-product on homepage) | Single modal in overlay group; JS bridge only fires on product template pages where `data-enquiry-product-*` attributes exist |
+| Theme editor live preview | x-modal respects `shopify:section:select` and `shopify:block:select` events (already in DialogElement); `handle-editor-events` attribute on the element enables this |
+| Form submission redirect | Standard Shopify contact form redirect returns to same URL; modal will not auto-reopen (acceptable per project scope, which excludes AJAX submission) |
+| Locale/translation | Form labels should use `'t'` filter keys added to `locales/en.default.json`; field labels are visible text so they need translation entries |
+
+---
+
+## Key File Locations
+
+| File | Role | Action |
+|------|------|--------|
+| `sections/enquiry-modal.liquid` | Primary new file | Create |
+| `sections/overlay-group.json` | Overlay registration | Modify — add enquiry-modal entry |
+| `blocks/button.liquid` | Trigger wiring | Modify — add aria_controls setting |
+| `assets/studio-peake.css` | Modal layout styles | Modify — add enquiry modal rules |
+| `assets/studio-peake.js` | JS data bridge | Modify — add product data population |
+| `sections/main-product.liquid` | Data source | Modify — add data-enquiry-* attributes |
+| `snippets/shadow-dom-templates.liquid` | Shadow DOM templates | Read-only reference (no changes needed) |
+| `snippets/input.liquid` | Form field rendering | Read-only reference (use as-is) |
+| `snippets/button.liquid` | Button rendering | Read-only reference (aria_controls already supported) |
+| `locales/en.default.json` | Translation strings | Modify — add enquiry modal label keys |
+
+---
+
+## Sources
+
+- Direct code inspection: `assets/theme.js` lines 1630–2042 (DialogElement, Modal, Drawer, PopIn class implementations)
+- Direct code inspection: `snippets/shadow-dom-templates.liquid` (modal-default-template structure)
+- Direct code inspection: `snippets/button.liquid` (aria_controls parameter support confirmed)
+- Direct code inspection: `sections/newsletter-popup.liquid` and `sections/cart-drawer.liquid` (overlay group section pattern)
+- Direct code inspection: `sections/overlay-group.json` (overlay group registration format)
+- Direct code inspection: `sections/contact.liquid` (Shopify contact form pattern)
+- Direct code inspection: `snippets/input.liquid` (form field rendering API)
+- Project requirements: `.planning/PROJECT.md`
+- Existing architecture analysis: `.planning/codebase/ARCHITECTURE.md`

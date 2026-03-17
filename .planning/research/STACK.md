@@ -1,166 +1,202 @@
-# Technology Stack
+# Technology Stack: Product Enquiry Modal
 
-**Project:** Studio Peake Custom Theme
-**Researched:** 2026-03-12
-
-## Recommended Stack
-
-The stack recommendation is conservative by design: Prestige v10.7.0 already ships Motion (formerly motion-one), Web Components, CSS custom properties, and a mature overlay/gradient system. The job is to extend these existing patterns, not introduce new dependencies.
-
-### Animation Layer
-
-| Technology | Version | Purpose | Why | Confidence |
-|------------|---------|---------|-----|------------|
-| Motion (via vendor.min.js) | Bundled with Prestige | JS-driven animations: fade, slide, opacity, transform sequences | Already imported throughout theme.js. Provides `animate`, `inView`, `scroll`, `timeline`. No additional dependency needed. | HIGH |
-| CSS @keyframes | Native | Looping animations: pulse hotspots, room scheme rotation, icon spin on hover | Simpler than JS for continuous/looping states. Theme already uses `@keyframes animateIconInline` and `animateIconBlock`. | HIGH |
-| CSS transitions | Native | Hover states: colour-bleed buttons, gradient intensification, opacity changes | Already the primary interaction pattern in theme.css (60+ transition declarations). Consistent with existing UX. | HIGH |
-| Web Animations API (element.animate()) | Native | Simple one-shot animations: crossfade between images, close icon rotation | Already used directly in theme.js (product-card.liquid line ~2630). Lighter than Motion for trivial cases. | HIGH |
-
-**Do NOT use:**
-
-| Technology | Why Not |
-|------------|---------|
-| GSAP | Commercial license required for Shopify themes (business use). Overkill for the animations specified. Motion already handles timeline sequencing. |
-| Anime.js | Adds unnecessary dependency when Motion is already bundled. Overlapping API surface. |
-| CSS scroll-driven animations (`animation-timeline: scroll()`) | Safari support landed in Safari 18 (Sep 2024) but the project targets Safari 14.1+. Use Motion's `scroll()` function instead -- it polyfills scroll-linked animations via the Web Animations API with broad support. |
-| Lottie / Rive | Heavyweight for the animations described (stroke reveals, fades, transforms). Adds runtime dependency and asset pipeline complexity to a no-build Shopify theme. |
-| Framer Motion (React) | Wrong ecosystem entirely. Prestige is vanilla JS + Liquid. |
-
-### CSS Techniques
-
-| Technique | Purpose | How | Browser Support | Confidence |
-|-----------|---------|-----|-----------------|------------|
-| `linear-gradient` overlays via `::before` pseudo-elements | Gradient overlays on image sections for text legibility | Prestige already does this with `content-over-media` pattern using `--content-over-media-overlay` CSS variable. Extend, don't reinvent. | All targets | HIGH |
-| `background-size` transition for colour-bleed | Button hover colour expansion effect | Theme already uses this pattern (theme.css line ~380): transition `background-size` from `0% 100%` to `100% 100%` with cubic-bezier easing. Apply same pattern to new buttons. | All targets | HIGH |
-| `stroke-dasharray` + `stroke-dashoffset` for SVG keyline draw | SVG stroke reveal animation on scroll | Set `stroke-dasharray` to path length, animate `stroke-dashoffset` from path length to 0. Use `getTotalLength()` in JS to compute. Trigger via Motion's `inView()`. | All targets | HIGH |
-| `position: sticky` for independent scroll columns | Two-column layout with sticky right panel | Use `position: sticky; top: 0; height: 100vh` on right panel while left scrolls. Theme already has `safe-sticky` custom element handling edge cases. | All targets | HIGH |
-| CSS `mix-blend-mode` | Emblem overlay blending on product pages | `mix-blend-mode: multiply` or `screen` for brand colour emblem overlay. Pure CSS, no JS. | All targets (Chrome 90+, FF 88+, Safari 14.1+) | MEDIUM |
-| `@media (prefers-reduced-motion)` | Accessibility: disable animations for users who prefer reduced motion | Theme already implements this check in JS (ImageParallax component). Apply consistently to all new CSS animations with `@media (prefers-reduced-motion: reduce) { animation: none; transition: none; }`. | All targets | HIGH |
-
-### JavaScript Patterns
-
-| Pattern | Purpose | Why | Confidence |
-|---------|---------|-----|------------|
-| Web Components (Custom Elements) | All new interactive components | Prestige defines 80+ custom elements. This is the established pattern. Every new interactive feature (hotspot tags, filter bars, accordions, carousels) should be a custom element registered with `customElements.define()`. | HIGH |
-| `import { animate, inView, scroll, timeline } from "vendor"` | Animation orchestration | The existing import pattern. Motion's `inView()` handles IntersectionObserver for reveal-on-scroll. `scroll()` handles scroll-linked parallax. `timeline()` handles sequenced animations (hero load sequence). | HIGH |
-| `connectedCallback()` / `disconnectedCallback()` lifecycle | Component setup/teardown | Standard Web Components lifecycle. Used throughout theme.js. `connectedCallback` for event listeners + IntersectionObserver setup. `disconnectedCallback` for cleanup (AbortController pattern). | HIGH |
-| `AbortController` for event cleanup | Preventing memory leaks | Theme.js uses `this.#abortController = new AbortController()` with `{ signal: this.#abortController.signal }` on event listeners. Abort in `disconnectedCallback`. | HIGH |
-| URL params for filter state | Cross-page category filtering, gallery filters | Theme already uses URL parameters for faceted filtering (`facets-form` element). Encode filter state in URL params for shareable/bookmarkable filtered views. | HIGH |
-| `data-*` attributes for configuration | Passing settings from Liquid to JS | Standard Shopify theme pattern. Liquid renders `data-delay="10000"` or `data-scroll-threshold="0.3"`, JS reads via `this.getAttribute()` or `this.dataset`. | HIGH |
-
-**Do NOT use:**
-
-| Pattern | Why Not |
-|---------|---------|
-| React/Vue/Svelte components | No build tooling. Prestige is vanilla. Adding a framework means adding a bundler, which breaks the Shopify asset pipeline. |
-| ES modules with bare specifiers (except "vendor") | Shopify serves assets directly. Only `"vendor"` is import-mapped. New JS files must use `{{ 'file.js' \| asset_url }}` with `<script>` tags or inline in sections. |
-| jQuery | Not present in Prestige. Modern Web Components + vanilla JS cover all use cases. Adding jQuery in 2026 is backwards. |
-| Third-party carousel libraries (Swiper, Flickity, Splide) | Prestige ships `effect-carousel` and `scroll-carousel` custom elements with full touch/drag/arrow support. Extend these. |
-| npm packages requiring bundling | No build process. Any library must be a single ES module or IIFE that can live in `assets/`. |
-
-### SVG Stroke Animation Approach
-
-| Aspect | Recommendation | Confidence |
-|--------|---------------|------------|
-| Technique | CSS `stroke-dasharray` + `stroke-dashoffset` animated via Motion `animate()` triggered by `inView()` | HIGH |
-| Path preparation | Export SVG paths from Figma with `fill="none"` and explicit `stroke` attributes. Use `getTotalLength()` at runtime to set `stroke-dasharray`. | HIGH |
-| Hosting | Inline SVG in Liquid templates (not `<img>` tags) so stroke properties are CSS-accessible | HIGH |
-| Fallback | For `prefers-reduced-motion`, show the fully-drawn keyline immediately (set `stroke-dashoffset: 0`) | HIGH |
-| Library | None needed. Native SVG + CSS + Motion's `animate()` is sufficient. | HIGH |
-
-**Example pattern for keyline draw-on:**
-```javascript
-// Inside a custom element's connectedCallback
-import { inView, animate } from "vendor";
-
-class KeylineDraw extends HTMLElement {
-  connectedCallback() {
-    const path = this.querySelector('path');
-    const length = path.getTotalLength();
-
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
-
-    inView(this, () => {
-      animate(path,
-        { strokeDashoffset: [length, 0] },
-        { duration: 1.2, easing: [0.645, 0.045, 0.355, 1] }
-      );
-    });
-  }
-}
-
-if (!window.customElements.get('keyline-draw')) {
-  window.customElements.define('keyline-draw', KeylineDraw);
-}
-```
-
-### Liquid Template Patterns
-
-| Pattern | Purpose | Why | Confidence |
-|---------|---------|-----|------------|
-| Section schema with `"type": "range"` settings | Configurable animation timing, opacity, delays | Lets merchants adjust overlay opacity (0-100), animation duration, scroll trigger threshold from Shopify admin. Prestige already uses range for `overlay_opacity`. | HIGH |
-| Block-based repeatable content | Careers collapsible blocks, blog content modules, hotspot tags | Merchants add/remove/reorder blocks in admin. Each block is a `{% case block.type %}` in the section Liquid. | HIGH |
-| Snippet parameters for reusable components | Shared button styles, card layouts, gradient overlays | `{% render 'button', style: 'colour-bleed', color_scheme: section.settings.color_scheme %}`. Keeps DRY. | HIGH |
-| `color_scheme` setting type | Per-instance colour assignment | Prestige's colour scheme system (`color-scheme--{{ scheme.id }}`) already supports this. Add `color_scheme` to any new section's schema. | HIGH |
-| `"type": "image_picker"` + focal point | Adaptive image containers | Shopify's image picker includes focal point data. Access via `image.presentation.focal_point`. Use `object-position` CSS. | HIGH |
-| Metafield-backed settings | Complex data (project categories, filter taxonomies) | Use `metaobject` definitions for structured data that doesn't fit section settings. Define in `.shopify/metafields.json`. | MEDIUM |
-| `{% style %}` tag for scoped CSS | Per-section CSS variable injection | Pattern used throughout Prestige: `{% style %}#shopify-section-{{ section.id }} { --overlay-opacity: {{ section.settings.overlay_opacity }}; }{% endstyle %}`. | HIGH |
-
-### Supporting Infrastructure
-
-| Technology | Purpose | Why | Confidence |
-|------------|---------|-----|------------|
-| Shopify CLI | Local development and theme preview | Standard tooling. `shopify theme dev` for live preview. | HIGH |
-| CSS custom properties (variables) | Theme-wide design token system | Already the core of Prestige's theming. All new components must use existing variables (`--color-scheme-background`, `--text-color`, etc.) and add new ones following the naming convention. | HIGH |
-| Shopify asset pipeline | Asset delivery | No CDN setup needed. `{{ 'file.js' \| asset_url }}` handles versioning and delivery. | HIGH |
-
-## Alternatives Considered
-
-| Category | Recommended | Alternative | Why Not |
-|----------|-------------|-------------|---------|
-| Animation engine | Motion (bundled) | GSAP | License cost, unnecessary dependency when Motion is already present |
-| Animation engine | Motion (bundled) | CSS scroll-driven animations | Safari 14.1 not supported; Motion's `scroll()` provides equivalent functionality |
-| Component model | Web Components | Lit / Stencil | Adds build step and dependency. Prestige proves vanilla custom elements work at scale (80+ components). |
-| Carousel | Prestige's built-in carousels | Swiper.js | Additional 40KB+ dependency. Prestige carousels already handle touch, drag, arrows, responsive. |
-| SVG animation | Native stroke-dash + Motion | Vivus.js / SVG.js | Unnecessary dependency for stroke-dashoffset animation, which is ~10 lines of code. |
-| State management | URL params + data attributes | Alpine.js | Adds dependency. The features don't require reactive state -- they're animation/interaction states managed by custom element internals. |
-| Gradient overlays | CSS `::before` + `linear-gradient` | Canvas overlay | Massively overcomplicated for a gradient. CSS is the right tool. |
-| Filtering | URL params + Liquid | Algolia / instant search | Out of scope per PROJECT.md. Standard Shopify filtering with `facets-form` pattern is sufficient for portfolio/gallery filtering. |
-
-## Installation
-
-```bash
-# No installation needed for core stack -- it's already in the theme.
-
-# Development only:
-shopify theme dev --store=studio-peake.myshopify.com
-```
-
-New JavaScript files are added directly to `assets/` and loaded via Liquid:
-```liquid
-{%- comment -%} In the section that needs the component {%- endcomment -%}
-<script src="{{ 'studio-peake-animations.js' | asset_url }}" defer></script>
-```
-
-Or inline in section files for small, section-specific components.
-
-## Key Constraints to Remember
-
-1. **No build process.** Every JS/CSS file must work as-is when served by Shopify. No JSX, no TypeScript, no SCSS, no PostCSS.
-2. **Motion imports only via `"vendor"` specifier.** The import map in Prestige maps `"vendor"` to `vendor.min.js`. New files that need Motion must use `import { animate } from "vendor"` and be loaded as ES modules.
-3. **Safari 14.1+ baseline.** No `@container` queries (Safari 16+), no `:has()` pseudo-class (Safari 15.4+), no `scroll-timeline` (Safari 18). Use feature detection or stick to widely-supported CSS.
-4. **Reduced motion must be respected.** Check `prefers-reduced-motion` in both CSS (`@media`) and JS (`window.matchMedia`) before running animations. Prestige already does this -- follow the pattern.
-5. **All settings must be merchant-configurable.** Animation durations, colours, opacities, delays -- expose via section schema, not hardcoded values.
-
-## Sources
-
-- Prestige theme.js source analysis (80+ custom elements, Motion imports confirmed)
-- Prestige theme.css source analysis (transition/keyframe patterns, overlay system)
-- Prestige vendor.min.js analysis (Motion library with animate, inView, scroll, timeline, FocusTrap, Delegate exports)
-- PROJECT.md constraints (no external frameworks, Safari 14.1+ target, no build tooling)
-- Prestige section schemas (overlay_opacity range pattern, color_scheme settings)
+**Project:** Studio Peake — Product Enquiry Modal
+**Researched:** 2026-03-17
+**Scope:** Additive milestone on Prestige v10.7.0. Not a ground-up decision — every choice must fit the existing system.
 
 ---
 
-*Stack research: 2026-03-12*
+## Summary Recommendation
+
+Build the enquiry modal as a new section in the overlay group, using the existing `x-modal` web component with a custom shadow DOM template, triggered by the existing button block via `aria-controls`. Use `{% form 'contact' %}` for form submission. No new JavaScript framework, no new JS file unless strictly necessary.
+
+---
+
+## Core Approach: `x-modal` Web Component
+
+**Use:** `<x-modal>` (the `Modal` class registered at `window.customElements.define("x-modal", Modal)`)
+
+**Why not `x-drawer`:** The design spec calls for a full-screen 50/50 layout — image left, form right. This is a modal pattern, not a sidebar drawer. The `Drawer` class slides in from the side and uses `drawer-default-template`; `Modal` fades in centered and uses `modal-default-template`. The full-screen variant needs neither of those defaults — it needs a custom shadow DOM template (see below).
+
+**Why not a native `<dialog>` element:** The theme already has `DialogElement` → `Modal` → `Drawer` as a complete, production-tested abstraction with focus trap (via `FocusTrap` from vendor), scroll lock, Escape key handling, editor event integration (`shopify:block:select` / `shopify:block:deselect`), and animation via the motion library. Re-implementing any of that would be duplication and would miss the editor integration for free.
+
+**Confidence:** HIGH — sourced directly from `assets/theme.js` (lines 1963–2000).
+
+---
+
+## Trigger Mechanism: `aria-controls` on Existing Button Block
+
+**Use:** The existing `button` block (`blocks/button.liquid`) already passes `aria_controls` to the `button` snippet, which renders it as `aria-controls="[id]"` on the `<button>` element.
+
+**How it works:** `DialogElement.connectedCallback()` registers a delegated click listener on `document.body` matching `[aria-controls="${this.id}"]`. Any button anywhere on the page with `aria-controls` pointing at the modal's ID will open it — no custom JS needed.
+
+**What this means in practice:** The product page already has a button block. The merchant configures that block's URL field to be empty and sets an `aria-controls` value pointing at the enquiry modal's section ID. The modal opens automatically.
+
+**Constraint:** The existing `button` block schema (`blocks/button.liquid`) does not have an `aria_controls` settings field — it only has `url`, `text`, `style`, `background`, `text_color`. The button snippet supports `aria_controls` as a parameter but the block's schema does not expose it. This means either: (a) the button block schema needs a new `text` setting for the modal ID, or (b) the button block renders with a hardcoded `aria-controls` value pointing at a stable ID. Option (b) is cleaner — hardcode the modal ID (e.g., `product-enquiry-modal`) in the button block render call within the product section, and give the modal section that stable ID.
+
+**Confidence:** HIGH — sourced from `snippets/button.liquid` (line 82) and `assets/theme.js` (line 1650).
+
+---
+
+## Modal Placement: Overlay Group Section
+
+**Use:** Add a new section (e.g., `sections/product-enquiry-modal.liquid`) to `sections/overlay-group.json`.
+
+**Why:** The overlay group (`sections/overlay-group.json`, type `custom.overlay`) is the established pattern for globally-available overlays: cart-drawer and newsletter-popup already live here. This ensures the modal markup is present on every page without being tied to a specific template, and it benefits from the overlay group's position in the DOM (appended to body via `shouldAppendToBody: true` on `DialogElement`).
+
+**Why not inside `main-product` section:** Putting a modal inside the product section ties it to the product template only and complicates section schema nesting. The overlay group keeps global overlays decoupled from page-specific sections, matching the existing pattern.
+
+**Confidence:** HIGH — sourced from `sections/overlay-group.json` and `sections/cart-drawer.liquid`.
+
+---
+
+## Shadow DOM Template: Custom, Not Default
+
+**Use:** A new custom shadow DOM template defined in `snippets/shadow-dom-templates.liquid`, not `modal-default-template`.
+
+**Why:** `modal-default-template` includes a fixed header slot and a body slot — it has no provision for a two-column layout, no image slot, and its close button is in the shadow DOM header (not in the light DOM form panel). The enquiry modal needs a full-screen 50/50 grid: image column (left) and form panel (right). This requires a bespoke template structure, e.g.:
+
+```html
+<template id="product-enquiry-modal-template">
+  <div part="base">
+    <div part="overlay"></div>
+    <div part="content">
+      <slot name="image"></slot>
+      <div part="form-panel">
+        <slot></slot>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+The close button moves to the light DOM (inside the default slot, in the form panel), using the existing `dialog-close-button` web component which works anywhere in the light or shadow DOM.
+
+**How to activate it:** Add `template="product-enquiry-modal-template"` attribute to the `<x-modal>` element.
+
+**Confidence:** HIGH — sourced from `snippets/shadow-dom-templates.liquid` and `assets/theme.js` (line 1969, `getAttribute("template")`).
+
+---
+
+## Form Submission: `{% form 'contact' %}`
+
+**Use:** Shopify's built-in `{% form 'contact' %}` Liquid tag.
+
+**Why:** This is the standard pattern for all store-owner email contact forms in Shopify themes. It generates a `<form>` that POSTs to `/contact` and routes submissions to the store's notification email. It handles CSRF automatically, provides `form.posted_successfully?` and `form.errors` objects, and requires zero server-side configuration. The existing `sections/contact.liquid` in this codebase uses exactly this pattern — the enquiry modal reuses it without modification.
+
+**Hidden product field:** Include `<input type="hidden" name="contact[body]" value="{{ product.title }}">` (or append to it) to carry the product name into the submission. Use `contact[tags]` with a value like `product-enquiry` to allow filtering in the Shopify admin notifications.
+
+**Submission behaviour:** Standard browser POST with redirect to `/contact#contact_form` on success. The `form.posted_successfully?` flag is checked on re-render to show a success state. This is intentional — out of scope is AJAX submission.
+
+**Confidence:** HIGH — this is stable Shopify platform behaviour, confirmed in `sections/contact.liquid`.
+
+---
+
+## Form Fields: Section Settings (Checkboxes), Not Blocks
+
+**Use:** Each form field (First Name, Last Name, Company, Email, Phone, Address, Country, Postcode, Notes, Marketing opt-in) as a `checkbox` setting in the section schema, not as blocks.
+
+**Why not blocks:** The contact section uses blocks for arbitrary custom fields. The enquiry modal has a known, finite set of specific fields. Using blocks would require the merchant to manually add each field and get the field names right — which breaks the "toggle on/off" requirement. Settings checkboxes are simpler, more robust, and match the newsletter-popup pattern (`show_newsletter_form` checkbox).
+
+**Why not hardcode all fields:** Some fields (Company, Address, Country, Postcode) are optional for many product enquiries. Merchant-controllable toggles avoid cluttering the form for use cases that don't need them.
+
+**Implementation pattern (from `snippets/input.liquid`):** Each field renders via `{% render 'input', type: 'text', name: 'contact[first_name]', label: 'First Name', required: true %}`. The checkbox pattern from `snippets/checkbox.liquid` handles the marketing opt-in.
+
+**Confidence:** HIGH — sourced from `sections/newsletter-popup.liquid` (checkbox settings pattern) and `sections/contact.liquid` (form field pattern).
+
+---
+
+## Product Data Injection: Liquid via `product` Object
+
+**Use:** The `product` global Liquid object, available on product pages where the modal is triggered.
+
+**Approach:** The enquiry modal section renders in the overlay group, which is global. The `product` object is only available when the current template is a product page. Use conditional rendering:
+
+```liquid
+{%- if product -%}
+  {%- assign enquiry_image = product.featured_image -%}
+  {%- assign enquiry_title = product.title -%}
+{%- endif -%}
+```
+
+The product image renders via `{% render 'image', image: enquiry_image %}` (using the existing snippet). The product title populates both the modal heading and a hidden form field.
+
+**Why not JavaScript injection:** Keeping this in Liquid avoids a JS dependency for data that is available server-side. The `product` object is reliably available on product pages — where the enquiry button exists.
+
+**Constraint:** On non-product pages the modal section still renders (it's in the overlay group), but `product` will be nil. The modal simply won't be triggered on non-product pages because the button is only in the product template. The empty modal rendering is harmless.
+
+**Confidence:** HIGH — the `product` object is a standard Shopify global, and the pattern of conditional rendering around it exists throughout this codebase (confirmed in `sections/main-product.liquid` patterns and `codebase/ARCHITECTURE.md`).
+
+---
+
+## Styling: Inline Section `<style>` + Existing CSS Classes
+
+**Use:** Inline `<style>` block scoped to `#shopify-section-{{ section.id }}` within the section file, plus existing utility classes from the theme.
+
+**Why:** This is the established convention for all sections in this codebase (confirmed in `codebase/ARCHITECTURE.md`: "Dynamic CSS computed in section `<style>` block"). The 50/50 layout grid, image sizing, form panel padding, and mobile stack behaviour all belong in this scoped block.
+
+**CSS classes to reuse:** `.form`, `.form-control`, `.fieldset`, `.button`, `.button--outline`, `color-scheme`, `color-scheme--{{ section.settings.color_scheme.id }}` — all present in theme.css and used by existing sections.
+
+**Do not add to `studio-peake.css`:** Section-scoped styles belong in the section file, not the global custom CSS file. `studio-peake.css` is for cross-section, theme-wide Studio Peake customisations.
+
+**Confidence:** HIGH — sourced from `codebase/ARCHITECTURE.md` and `codebase/CONVENTIONS.md`.
+
+---
+
+## No New JavaScript Required
+
+**Assertion:** For the described requirements, no new JS file is needed.
+
+**Rationale:**
+- Modal open/close: handled by `DialogElement` in `theme.js` via `aria-controls`
+- Focus trap + Escape key: handled by `DialogElement` (uses `FocusTrap` from vendor)
+- Close button: handled by `dialog-close-button` web component already in `theme.js`
+- Form submission: standard browser POST, no JS needed
+- Product data: injected via Liquid at render time
+
+**Exception — if needed:** If the product image needs to be updated dynamically when the modal opens (e.g., to reflect a selected variant), a small enhancement to `assets/studio-peake.js` would be appropriate. This is out of scope per the PROJECT.md requirements. If it becomes in-scope, extend `studio-peake.js` — do not create a new file.
+
+**Confidence:** HIGH for current requirements. MEDIUM for variant-image future requirement.
+
+---
+
+## What NOT to Use
+
+| Approach | Why Not |
+|---|---|
+| Native `<dialog>` HTML element | Bypasses the theme's `DialogElement` system — loses focus trap, scroll lock, editor events, animation |
+| Third-party form library (Klaviyo, Typeform embed) | Explicitly out of scope; adds dependency |
+| AJAX form submission | Explicitly out of scope; standard POST is sufficient |
+| New web component class | Nothing in the requirements exceeds what `x-modal` + `aria-controls` already provides |
+| Inline JavaScript in section Liquid | Violates codebase conventions; JS belongs in assets |
+| `x-drawer` component | Wrong motion model (slide-in sidebar) for a full-screen centered modal |
+| Adding the modal to `main-product` section | Couples modal to product template; overlay group is the correct pattern |
+
+---
+
+## File Inventory
+
+Files to create or modify:
+
+| File | Action | Purpose |
+|---|---|---|
+| `sections/product-enquiry-modal.liquid` | Create | The modal section: markup, form, schema with field toggle settings |
+| `snippets/shadow-dom-templates.liquid` | Modify | Add `product-enquiry-modal-template` template element |
+| `sections/overlay-group.json` | Modify | Register the new section in the overlay group |
+
+No new assets files unless a JS enhancement becomes necessary.
+
+---
+
+## Confidence Summary
+
+| Area | Confidence | Basis |
+|---|---|---|
+| `x-modal` web component | HIGH | Read directly from `assets/theme.js` |
+| `aria-controls` trigger mechanism | HIGH | Read directly from `assets/theme.js` and `snippets/button.liquid` |
+| Overlay group placement | HIGH | Read directly from `sections/overlay-group.json` |
+| Custom shadow DOM template | HIGH | Read directly from `snippets/shadow-dom-templates.liquid` |
+| `{% form 'contact' %}` | HIGH | Confirmed in `sections/contact.liquid` |
+| Section settings for field toggles | HIGH | Confirmed against newsletter-popup pattern |
+| Product object availability | HIGH | Standard Shopify platform behaviour |
+| No JS required | HIGH for current scope | All required behaviour is in existing components |
