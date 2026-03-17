@@ -14,12 +14,159 @@
         </button>
       </dialog-close-button>
       <div class="enquiry-modal__form-content">
-        <h2 class="h2">PLACEHOLDER TITLE</h2>
-        <p>Form fields will go here (Phase 2)</p>
+        {%- form 'contact', class: 'form' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="enquiry-modal__success">
+              <p class="h2">WE'LL BE IN TOUCH</p>
+              <p class="text-subdued">Thank you for your enquiry. We'll get back to you shortly.</p>
+            </div>
+          {%- else -%}
+            {%- if form.errors -%}
+              {%- capture error_content -%}{{ form.errors.translated_fields[form.errors.first] | capitalize }} {{ form.errors.messages[form.errors.first] }}{%- endcapture -%}
+              {%- render 'banner', status: 'error', content: error_content -%}
+            {%- endif -%}
+
+            {%- assign has_first_name = false -%}
+            {%- assign has_last_name = false -%}
+            {%- assign has_country = false -%}
+            {%- assign has_postcode = false -%}
+            {%- assign rendered_first_name = false -%}
+            {%- assign rendered_last_name = false -%}
+            {%- assign rendered_country = false -%}
+            {%- assign rendered_postcode = false -%}
+            {%- for block in section.blocks -%}
+              {%- case block.type -%}
+                {%- when 'first_name' -%}{%- assign has_first_name = true -%}
+                {%- when 'last_name' -%}{%- assign has_last_name = true -%}
+                {%- when 'country' -%}{%- assign has_country = true -%}
+                {%- when 'postcode' -%}{%- assign has_postcode = true -%}
+              {%- endcase -%}
+            {%- endfor -%}
+
+            <div class="fieldset">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+
+                  {%- when 'first_name' -%}
+                    {%- unless rendered_first_name -%}
+                      {%- if has_first_name and has_last_name -%}
+                        <div class="fieldset-row" {{ block.shopify_attributes }}>
+                          {%- render 'input', type: 'text', name: 'contact[first_name]', label: 'First Name', value: customer.first_name, autocomplete: 'given-name' -%}
+                          {%- render 'input', type: 'text', name: 'contact[last_name]', label: 'Last Name', value: customer.last_name, autocomplete: 'family-name' -%}
+                        </div>
+                        {%- assign rendered_first_name = true -%}
+                        {%- assign rendered_last_name = true -%}
+                      {%- else -%}
+                        <div {{ block.shopify_attributes }}>
+                          {%- render 'input', type: 'text', name: 'contact[first_name]', label: 'First Name', value: customer.first_name, autocomplete: 'given-name' -%}
+                        </div>
+                        {%- assign rendered_first_name = true -%}
+                      {%- endif -%}
+                    {%- endunless -%}
+
+                  {%- when 'last_name' -%}
+                    {%- unless rendered_last_name -%}
+                      {%- if has_first_name and has_last_name -%}
+                        <div class="fieldset-row" {{ block.shopify_attributes }}>
+                          {%- render 'input', type: 'text', name: 'contact[first_name]', label: 'First Name', value: customer.first_name, autocomplete: 'given-name' -%}
+                          {%- render 'input', type: 'text', name: 'contact[last_name]', label: 'Last Name', value: customer.last_name, autocomplete: 'family-name' -%}
+                        </div>
+                        {%- assign rendered_first_name = true -%}
+                        {%- assign rendered_last_name = true -%}
+                      {%- else -%}
+                        <div {{ block.shopify_attributes }}>
+                          {%- render 'input', type: 'text', name: 'contact[last_name]', label: 'Last Name', value: customer.last_name, autocomplete: 'family-name' -%}
+                        </div>
+                        {%- assign rendered_last_name = true -%}
+                      {%- endif -%}
+                    {%- endunless -%}
+
+                  {%- when 'email' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'input', type: 'email', name: 'contact[email]', label: 'Email Address', value: customer.email, autocomplete: 'email' -%}
+                    </div>
+
+                  {%- when 'company' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'input', type: 'text', name: 'contact[company]', label: 'Company Name', autocomplete: 'organization' -%}
+                    </div>
+
+                  {%- when 'phone' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'input', type: 'tel', name: 'contact[phone]', label: 'Phone Number', autocomplete: 'tel' -%}
+                    </div>
+
+                  {%- when 'address' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'input', type: 'text', name: 'contact[address]', label: 'Address', autocomplete: 'street-address' -%}
+                    </div>
+
+                  {%- when 'country' -%}
+                    {%- unless rendered_country -%}
+                      {%- if has_country and has_postcode -%}
+                        <div class="fieldset-row" {{ block.shopify_attributes }}>
+                          {%- render 'select', name: 'contact[country]', label: 'Country', options: all_country_option_tags, show_empty_value: true, autocomplete: 'country' -%}
+                          {%- render 'input', type: 'text', name: 'contact[postcode]', label: 'Postcode', autocomplete: 'postal-code' -%}
+                        </div>
+                        {%- assign rendered_country = true -%}
+                        {%- assign rendered_postcode = true -%}
+                      {%- else -%}
+                        <div {{ block.shopify_attributes }}>
+                          {%- render 'select', name: 'contact[country]', label: 'Country', options: all_country_option_tags, show_empty_value: true, autocomplete: 'country' -%}
+                        </div>
+                        {%- assign rendered_country = true -%}
+                      {%- endif -%}
+                    {%- endunless -%}
+
+                  {%- when 'postcode' -%}
+                    {%- unless rendered_postcode -%}
+                      {%- if has_country and has_postcode -%}
+                        <div class="fieldset-row" {{ block.shopify_attributes }}>
+                          {%- render 'select', name: 'contact[country]', label: 'Country', options: all_country_option_tags, show_empty_value: true, autocomplete: 'country' -%}
+                          {%- render 'input', type: 'text', name: 'contact[postcode]', label: 'Postcode', autocomplete: 'postal-code' -%}
+                        </div>
+                        {%- assign rendered_country = true -%}
+                        {%- assign rendered_postcode = true -%}
+                      {%- else -%}
+                        <div {{ block.shopify_attributes }}>
+                          {%- render 'input', type: 'text', name: 'contact[postcode]', label: 'Postcode', autocomplete: 'postal-code' -%}
+                        </div>
+                        {%- assign rendered_postcode = true -%}
+                      {%- endif -%}
+                    {%- endunless -%}
+
+                  {%- when 'notes' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'input', name: 'contact[body]', label: 'Add Notes', multiline: 4 -%}
+                    </div>
+
+                  {%- when 'marketing' -%}
+                    <div {{ block.shopify_attributes }}>
+                      {%- render 'checkbox', name: 'contact[marketing]', value: 'yes', label: block.settings.disclaimer_text -%}
+                    </div>
+
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+
+            {%- render 'button', content: 'Submit Enquiry', type: 'submit' -%}
+          {%- endif -%}
+        {%- endform -%}
       </div>
     </div>
   </div>
 </x-modal>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('enquiry-modal');
+    if (!modal) return;
+    modal.addEventListener('dialog:after-hide', () => {
+      const form = modal.querySelector('form');
+      if (form) form.reset();
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -34,6 +181,75 @@
       "id": "color_scheme",
       "label": "t:global.colors.scheme",
       "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "first_name",
+      "name": "First Name",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "last_name",
+      "name": "Last Name",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "email",
+      "name": "Email Address",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "company",
+      "name": "Company Name",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "phone",
+      "name": "Phone Number",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "address",
+      "name": "Address",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "country",
+      "name": "Country",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "postcode",
+      "name": "Postcode",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "notes",
+      "name": "Notes",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "marketing",
+      "name": "Marketing Opt-in",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "disclaimer_text",
+          "label": "Disclaimer text",
+          "default": "<p>I agree to receive marketing communications from Studio Peake.</p>"
+        }
+      ]
     }
   ]
 }
