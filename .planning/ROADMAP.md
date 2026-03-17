@@ -69,7 +69,9 @@ Plans:
   1. Clicking the Enquire button on any product page opens the enquiry modal
   2. A merchant can configure the button's `aria-controls` target via the theme editor
   3. The button does not navigate away from the product page when clicked
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 04-01-PLAN.md — Add aria_controls schema setting to button block and conditional render call
 
 ### Phase 5: Visual Design
 **Goal**: The modal matches the Studio Peake brand: full-screen 40/60 desktop layout, underline-only inputs, uppercase button-font labels, full-height editorial product image
@@ -93,5 +95,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Modal Scaffolding | 0/1 | Planned | - |
 | 2. Form and Field System | 1/1 | Complete   | 2026-03-17 |
 | 3. Product Data Bridge | 1/1 | Complete   | 2026-03-17 |
-| 4. Trigger Wiring | 0/? | Not started | - |
+| 4. Trigger Wiring | 0/1 | Planned | - |
 | 5. Visual Design | 0/? | Not started | - |
