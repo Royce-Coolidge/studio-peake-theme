@@ -298,6 +298,25 @@
   border-bottom-color: currentColor;
 }
 
+/* Enquiry form: marketing opt-in block */
+
+.enquiry-modal__marketing .checkbox-control {
+  margin-bottom: 0.25rem;
+}
+
+.enquiry-modal__marketing-disclaimer {
+  margin: 0;
+  padding-inline-start: calc(1rem + var(--checkbox-control-gap, 0.5rem));
+  font-size: var(--text-xs);
+}
+
+/* Enquiry form: submit button padding */
+
+.enquiry-modal__form-content .button--outline {
+  padding: 0.875rem 2.5rem;
+  margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 749px) {
   .enquiry-modal__layout {
     grid-template-columns: 1fr;
