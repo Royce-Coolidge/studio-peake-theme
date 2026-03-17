@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v10.7
 milestone_name: milestone
 status: planning
-stopped_at: "Completed 02-form-and-field-system-01-PLAN.md, checkpoint:human-verify pending"
-last_updated: "2026-03-17T14:19:53.463Z"
+stopped_at: Completed 02-form-and-field-system-01-PLAN.md
+last_updated: "2026-03-17T15:03:51.043Z"
 last_activity: 2026-03-17 — Roadmap created, all 34 requirements mapped to 5 phases
 progress:
   total_phases: 5
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 02-form-and-field-system P01 | 2 | 2 tasks | 2 files |
+| Phase 02-form-and-field-system P01 | 90 | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,8 @@ Recent decisions affecting current work:
 - [Phase 02-form-and-field-system]: Collect-then-render pattern for paired fields: first pass detects which fields are present, second pass renders in merchant block order with rendered_* guard vars
 - [Phase 02-form-and-field-system]: notes field uses contact[body] not contact[notes] -- Shopify maps contact[body] to email body
 - [Phase 02-form-and-field-system]: Marketing disclaimer uses richtext setting so merchant can include hyperlinks in consent text
+- [Phase 02-form-and-field-system]: Both success and form states rendered in DOM simultaneously; JS toggles visibility after Shopify contact form POST redirect causes full page reload
+- [Phase 02-form-and-field-system]: Modal auto-opens after POST redirect via JS checking Liquid-rendered data attribute on DOMContentLoaded
 
 ### Pending Todos
 
@@ -78,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T14:19:53.460Z
-Stopped at: Completed 02-form-and-field-system-01-PLAN.md, checkpoint:human-verify pending
+Last session: 2026-03-17T15:03:45.828Z
+Stopped at: Completed 02-form-and-field-system-01-PLAN.md
 Resume file: None
