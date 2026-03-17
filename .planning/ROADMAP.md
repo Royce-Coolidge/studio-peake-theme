@@ -30,7 +30,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Focus is trapped inside the modal while open; scroll is locked on the body
   4. The modal survives Shopify theme editor open/close events without breaking
   5. The modal is present in the DOM on every page (registered in overlay group)
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 01-01-PLAN.md — x-modal shell with layout, CSS, overlay group registration, and visual verification
 
 ### Phase 2: Form and Field System
 **Goal**: A working Shopify contact form inside the modal with all ten fields individually togglable in the theme editor, inline success state, and error handling
@@ -84,7 +86,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Modal Scaffolding | 0/? | Not started | - |
+| 1. Modal Scaffolding | 0/1 | Planned | - |
 | 2. Form and Field System | 0/? | Not started | - |
 | 3. Product Data Bridge | 0/? | Not started | - |
 | 4. Trigger Wiring | 0/? | Not started | - |
