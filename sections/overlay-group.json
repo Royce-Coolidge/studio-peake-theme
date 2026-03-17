@@ -51,6 +51,30 @@
     },
     "product-enquiry-modal": {
       "type": "product-enquiry-modal",
+      "blocks": {
+        "enquiry-first-name": { "type": "first_name" },
+        "enquiry-last-name": { "type": "last_name" },
+        "enquiry-email": { "type": "email" },
+        "enquiry-company": { "type": "company" },
+        "enquiry-phone": { "type": "phone" },
+        "enquiry-address": { "type": "address" },
+        "enquiry-country": { "type": "country" },
+        "enquiry-postcode": { "type": "postcode" },
+        "enquiry-notes": { "type": "notes" },
+        "enquiry-marketing": { "type": "marketing" }
+      },
+      "block_order": [
+        "enquiry-first-name",
+        "enquiry-last-name",
+        "enquiry-email",
+        "enquiry-company",
+        "enquiry-phone",
+        "enquiry-address",
+        "enquiry-country",
+        "enquiry-postcode",
+        "enquiry-notes",
+        "enquiry-marketing"
+      ],
       "settings": {}
     }
   },
