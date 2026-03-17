@@ -16,10 +16,10 @@
 
 ### Product Data
 
-- [ ] **DATA-01**: Product title displayed as modal heading (dynamic, from current product page)
-- [ ] **DATA-02**: Product featured image displayed in left panel on desktop (dynamic)
-- [ ] **DATA-03**: JS data bridge passes product context from product page into overlay group modal
-- [ ] **DATA-04**: Hidden form field includes product name in email submission
+- [x] **DATA-01**: Product title displayed as modal heading (dynamic, from current product page)
+- [x] **DATA-02**: Product featured image displayed in left panel on desktop (dynamic)
+- [x] **DATA-03**: JS data bridge passes product context from product page into overlay group modal
+- [x] **DATA-04**: Hidden form field includes product name in email submission
 
 ### Form Fields
 
@@ -86,10 +86,10 @@
 | MODL-04 | Phase 1 | Pending |
 | MODL-05 | Phase 1 | Pending |
 | MODL-06 | Phase 1 | Pending |
-| DATA-01 | Phase 3 | Pending |
-| DATA-02 | Phase 3 | Pending |
-| DATA-03 | Phase 3 | Pending |
-| DATA-04 | Phase 3 | Pending |
+| DATA-01 | Phase 3 | Complete |
+| DATA-02 | Phase 3 | Complete |
+| DATA-03 | Phase 3 | Complete |
+| DATA-04 | Phase 3 | Complete |
 | FORM-01 | Phase 2 | Complete |
 | FORM-02 | Phase 2 | Complete |
 | FORM-03 | Phase 2 | Complete |
