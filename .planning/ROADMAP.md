@@ -57,7 +57,9 @@ Plans:
   2. The product's featured image appears in the left panel of the modal on desktop
   3. The product name is included in the enquiry email submission (hidden field)
   4. Navigating between different product pages shows the correct product in the modal for each
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Product data attributes, JS bridge, fallback image, hidden field, and visual verification
 
 ### Phase 4: Trigger Wiring
 **Goal**: The existing Enquire button block on the product page opens the enquiry modal
@@ -90,6 +92,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Modal Scaffolding | 0/1 | Planned | - |
 | 2. Form and Field System | 1/1 | Complete   | 2026-03-17 |
-| 3. Product Data Bridge | 0/? | Not started | - |
+| 3. Product Data Bridge | 0/1 | Planned | - |
 | 4. Trigger Wiring | 0/? | Not started | - |
 | 5. Visual Design | 0/? | Not started | - |
