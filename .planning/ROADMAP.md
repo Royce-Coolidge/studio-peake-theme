@@ -1,8 +1,8 @@
-# Roadmap: Studio Peake Custom Theme
+# Roadmap: Product Enquiry Modal
 
 ## Overview
 
-This roadmap transforms Prestige v10.7.0 into a distinctive Studio Peake brand experience across 9 phases. The structure follows dependency chains: visual foundations and interaction patterns are established first because they are consumed by nearly every subsequent feature. Navigation, carousels, layouts, and page-level features follow once the core animation language exists. All custom code lives in dedicated files (studio-peake.css, studio-peake.js) -- Prestige core files are never modified.
+Build a product-specific enquiry modal on the Prestige v10.7.0 Shopify theme by composing existing primitives — the `x-modal` web component, the overlay group pattern, and the Shopify contact form. The work proceeds in five sequential phases: scaffold the modal shell, add the contact form with configurable fields, wire in the product data bridge, connect the trigger button, and apply final brand styling. Each phase delivers a verifiable capability that the next phase depends on.
 
 ## Phases
 
@@ -12,183 +12,80 @@ This roadmap transforms Prestige v10.7.0 into a distinctive Studio Peake brand e
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [x] **Phase 1: Infrastructure + Visual Foundation** - CSS/JS file infrastructure, gradient overlays, responsive image containers
-- [x] **Phase 2: Hero + Brand Identity** - Hero load sequence, emblem overlay on product pages
-- [x] **Phase 3: Colour-Bleed Interactions** - Colour-bleed button states, close icon rotation animation
-- [ ] **Phase 4: Keyline Animation System** - SVG stroke draw-on reveals, button keyline hover/click, press links
-- [ ] **Phase 4.1: Shopify Data Architecture** [INSERTED] - Metaobjects, product metafields, collections, page templates
-- [ ] **Phase 5: Project Cards + Image Interactions** - Project card hover states, mobile card treatment, dual-image crossfade
-- [ ] **Phase 6: Navigation + Filtering** - Portfolio/workshop dropdowns, gallery filter bar, cross-page filtering, mobile filter, anchor links, nav split
-- [ ] **Phase 7: Carousels** - Featured projects carousel, product image carousel, journal notes carousel, room scheme auto-rotation, mobile swipe
-- [ ] **Phase 8: Advanced Layouts** - Two-column scroll, expandable panels, hotspot tags, about toggle, per-instance colour, blog template
-- [ ] **Phase 9: Pages + Sections** - Subscribe popup, contact form, careers block, project video, tearsheet PDF, mobile menu animation
+- [ ] **Phase 1: Modal Scaffolding** - `x-modal` shell registered in overlay group, opens and closes correctly
+- [ ] **Phase 2: Form and Field System** - Contact form with all configurable fields, success state, and error handling
+- [ ] **Phase 3: Product Data Bridge** - Product title and image flow dynamically from product page into modal
+- [ ] **Phase 4: Trigger Wiring** - Enquire button on product page opens the modal end-to-end
+- [ ] **Phase 5: Visual Design** - Brand-aligned styling: layout, typography, inputs, image treatment
 
 ## Phase Details
 
-### Phase 1: Infrastructure + Visual Foundation
-**Goal**: Custom CSS/JS infrastructure is in place and image sections display polished gradient overlays with responsive focal-point cropping
+### Phase 1: Modal Scaffolding
+**Goal**: A full-screen modal overlay registered in the overlay group that opens, closes, traps focus, and survives editor events
 **Depends on**: Nothing (first phase)
-**Requirements**: VISF-01, VISF-02, VISF-03
+**Requirements**: MODL-01, MODL-02, MODL-03, MODL-04, MODL-05, MODL-06
 **Success Criteria** (what must be TRUE):
-  1. studio-peake.css and studio-peake.js load after Prestige core files on every page without errors
-  2. Image sections with overlaid text show gradient overlays that make text legible across light and dark images
-  3. Image containers maintain aspect ratio and crop from the configured focal point across mobile, tablet, and desktop
-  4. Components with differing image proportions (square vs landscape) adapt their text layout without breaking visual balance
-**Plans:** 2 plans
+  1. Clicking any trigger with `aria-controls="enquiry-modal"` opens a full-screen overlay
+  2. The modal closes on the X button click, Escape key press, and backdrop click
+  3. Focus is trapped inside the modal while open; scroll is locked on the body
+  4. The modal survives Shopify theme editor open/close events without breaking
+  5. The modal is present in the DOM on every page (registered in overlay group)
+**Plans**: TBD
 
-Plans:
-- [x] 01-01-PLAN.md — CSS/JS infrastructure and dual gradient overlay system (VISF-01)
-- [x] 01-02-PLAN.md — Focal-point image containers and adaptive layout detection (VISF-02, VISF-03)
-
-### Phase 2: Hero + Brand Identity
-**Goal**: The homepage makes an immediate brand impression through a choreographed hero sequence, and product pages carry Studio Peake identity
+### Phase 2: Form and Field System
+**Goal**: A working Shopify contact form inside the modal with all ten fields individually togglable in the theme editor, inline success state, and error handling
 **Depends on**: Phase 1
-**Requirements**: VISF-04, VISF-05
+**Requirements**: FORM-01, FORM-02, FORM-03, FORM-04, FORM-05, FORM-06, FORM-07, FORM-08, FORM-09, FORM-10, SUBM-01, SUBM-02, SUBM-03, SUBM-04, SUBM-05
 **Success Criteria** (what must be TRUE):
-  1. Homepage hero loads the background image first, then the logo fades in with a visible timing delay
-  2. Product pages display the Studio Peake emblem overlaying product images in clotted cream brand colour
-  3. Navigation on product pages reflects the emblem colour treatment
-**Plans**: N/A (existing Prestige styling sufficient)
+  1. Submitting the form sends an email to the store owner via Shopify's contact form
+  2. After submission, the modal displays a "WE'LL BE IN TOUCH" success message without navigating away
+  3. The success state preserves the 40/60 layout on desktop (image left, confirmation right)
+  4. Each form field can be individually toggled on/off in the Shopify theme editor
+  5. Form validation errors appear inline within the modal (not on a separate page)
+**Plans**: TBD
 
-Plans:
-- N/A — skipped, existing brand treatment acceptable
+### Phase 3: Product Data Bridge
+**Goal**: The modal displays the correct product title and featured image for whichever product page the visitor is on
+**Depends on**: Phase 2
+**Requirements**: DATA-01, DATA-02, DATA-03, DATA-04
+**Success Criteria** (what must be TRUE):
+  1. The modal heading shows the product title of the current product page
+  2. The product's featured image appears in the left panel of the modal on desktop
+  3. The product name is included in the enquiry email submission (hidden field)
+  4. Navigating between different product pages shows the correct product in the modal for each
+**Plans**: TBD
 
-### Phase 3: Colour-Bleed Interactions
-**Goal**: Buttons and close icons respond to user interaction with the signature Studio Peake colour-bleed effect
+### Phase 4: Trigger Wiring
+**Goal**: The existing Enquire button block on the product page opens the enquiry modal
 **Depends on**: Phase 1
-**Requirements**: INTR-01, INTR-07
+**Requirements**: TRIG-01, TRIG-02, TRIG-03
 **Success Criteria** (what must be TRUE):
-  1. ~~Buttons display a soft colour expansion effect on hover (desktop) that feels organic, not mechanical~~ Existing button states sufficient
-  2. ~~The same colour-bleed effect triggers on tap for mobile devices~~ Existing button states sufficient
-  3. Close icons (X) rotate smoothly on hover/tap and return to original position on leave
-**Plans**: 1 plan (close icon rotation only)
-
-Plans:
-- [x] Close icon 90° rotation on hover/tap (INTR-07) — implemented in studio-peake.css
-
-### Phase 4: Keyline Animation System
-**Goal**: Decorative keylines throughout the site animate as drawn-on strokes, and buttons use keyline animations for hover and click states
-**Depends on**: Phase 1
-**Requirements**: INTR-02, INTR-03, INTR-04, PAGE-06
-**Success Criteria** (what must be TRUE):
-  1. SVG decorative keylines progressively draw on screen as the user scrolls them into view
-  2. ~~"Read More" / "Learn More" buttons display a keyline that animates across the button on hover~~ DONE (implemented in Phase 1 via CSS override in studio-peake.css)
-  3. Buttons trigger a brief keyline drawing animation on click during page transitions
-  4. Press and Accolades links use the same keyline draw-on animation pattern
-  5. Keyline animations render consistently across Chrome, Firefox, Safari, and mobile browsers
+  1. Clicking the Enquire button on any product page opens the enquiry modal
+  2. A merchant can configure the button's `aria-controls` target via the theme editor
+  3. The button does not navigate away from the product page when clicked
 **Plans**: TBD
 
-Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
-
-### Phase 4.1: Shopify Data Architecture [INSERTED]
-**Goal**: All Shopify data structures (metaobjects, metafields, collections, page templates) are defined and ready to receive content, unblocking section development in later phases
-**Depends on**: Nothing (Shopify Admin configuration, independent of custom code phases)
-**Requirements**: DATA-01, DATA-02, DATA-03, DATA-05, DATA-06
+### Phase 5: Visual Design
+**Goal**: The modal matches the Studio Peake brand: full-screen 40/60 desktop layout, underline-only inputs, uppercase button-font labels, full-height editorial product image
+**Depends on**: Phase 4
+**Requirements**: STYL-01, STYL-02, STYL-03, STYL-04, STYL-05, STYL-06
 **Success Criteria** (what must be TRUE):
-  1. Four metaobject types exist in Shopify Admin: `project` (with title, category list, hero_image, gallery_images, video_url, description, press link, featured boolean), `press_accolade`, `team_member`, `career_opening`
-  2. Product metafield namespace `workshop` is defined with all 7 fields (tearsheet_pdf, secondary_image, room_scheme_images, interactive_tags, video_url, category, collection_name)
-  3. Six collections exist: workshop-all, portfolio-all, portfolio-residential, portfolio-commercial, portfolio-hospitality, plus at least one workshop sub-collection
-  4. All 10 page templates are created and assigned to appropriate pages/collections
-  5. Portfolio projects reference metaobjects (not products) and metaobject references work in section schemas
-**Plans:** 2 plans
-
-Plans:
-- [ ] 04.1-01-PLAN.md — Create all page/collection/product/blog template JSON files and minimal header group (DATA-05)
-- [ ] 04.1-02-PLAN.md — Shopify Admin setup: metaobject types, metafield definitions, collections, content population (DATA-01, DATA-02, DATA-03, DATA-06)
-
-### Phase 5: Project Cards + Image Interactions
-**Goal**: Project gallery cards and image components deliver the polished hover interactions that distinguish Studio Peake from stock themes
-**Depends on**: Phase 1 (gradient overlays), Phase 3 (colour-bleed pattern)
-**Requirements**: INTR-05, INTR-06, INTR-08
-**Success Criteria** (what must be TRUE):
-  1. Project gallery cards display centre-aligned copy over a soft gradient, with gradient strengthening and gentle image zoom on hover
-  2. On mobile, project gallery cards show the gradient overlay persistently (the hover state becomes the default state)
-  3. Two stacked images in a fixed frame crossfade on hover -- second image fades in while first fades out
+  1. On desktop, the modal presents a 40/60 split — product image fills the left panel edge-to-edge at full height
+  2. On mobile, the layout is a single column showing only the form (no image)
+  3. Form field labels are uppercase in the button font; inputs show an underline border only (no box)
+  4. First Name / Last Name and Country / Postcode each appear on a single row as 50/50 grids
+  5. The submit button matches the theme's standard button styling
 **Plans**: TBD
-
-Plans:
-- [ ] 05-01: TBD
-
-### Phase 6: Navigation + Filtering
-**Goal**: Users can browse and filter project portfolios across pages, with category state preserved during navigation
-**Depends on**: Phase 1, Phase 4 (keyline animations for nav elements)
-**Requirements**: NAVF-01, NAVF-02, NAVF-03, NAVF-04, NAVF-05, NAVF-06, NAVF-07
-**Success Criteria** (what must be TRUE):
-  1. Portfolio section dropdown shows categories with the active page at 60% opacity; clicking filters the gallery
-  2. Workshop section uses the same dropdown pattern with active state styling
-  3. Gallery filter bar displays filled-circle indicators for the selected category, defaulting to "All Projects"
-  4. Clicking a portfolio category on the homepage navigates to the gallery with results pre-filtered to that category
-  5. Mobile filter reveals sub-categories on tap matching the desktop category structure
-**Plans**: TBD
-
-Plans:
-- [ ] 06-01: TBD
-- [ ] 06-02: TBD
-
-### Phase 7: Carousels
-**Goal**: All carousel and auto-rotation components work with smooth transitions, supporting both pointer and touch input
-**Depends on**: Phase 1 (responsive containers), Phase 5 (project card hover states for carousel slides)
-**Requirements**: CARG-01, CARG-02, CARG-03, CARG-04, CARG-05
-**Success Criteria** (what must be TRUE):
-  1. Featured projects carousel displays full-bleed slides navigable via drag and arrow controls with smooth transitions
-  2. Product image carousel supports horizontal swipe gesture navigation on mobile
-  3. Journal notes carousel navigates via arrows on desktop and stacks vertically on mobile
-  4. Room scheme section auto-rotates between images with a 2-second fade transition cycle
-  5. All carousels support horizontal swipe on mobile without interfering with vertical page scrolling
-**Plans**: TBD
-
-Plans:
-- [ ] 07-01: TBD
-- [ ] 07-02: TBD
-
-### Phase 8: Advanced Layouts
-**Goal**: Project detail pages, product pages, and content sections use sophisticated layout patterns that maintain visual polish across breakpoints
-**Depends on**: Phase 1 (responsive containers), Phase 3 (colour-bleed for interactive elements)
-**Requirements**: LAYC-01, LAYC-02, LAYC-03, LAYC-04, LAYC-05, LAYC-06
-**Success Criteria** (what must be TRUE):
-  1. Project detail page left gallery scrolls while the right content panel stays sticky, creating an independent scroll experience
-  2. Expandable info panels reveal content on click without reflowing surrounding layout, with arrow rotation indicating state
-  3. Product images display pulsing hotspot dots that expand to show product information on click
-  4. About section tabs switch text blocks while simultaneously updating the accompanying image
-  5. Components accept per-instance colour assignment via Shopify admin settings
-**Plans**: TBD
-
-Plans:
-- [ ] 08-01: TBD
-- [ ] 08-02: TBD
-
-### Phase 9: Pages + Sections
-**Goal**: All remaining page-level features work correctly and are fully manageable through Shopify admin
-**Depends on**: Phase 1, Phase 3 (colour-bleed for mobile menu), Phase 4 (keyline for press links -- already done)
-**Requirements**: PAGE-01, PAGE-02, PAGE-03, PAGE-04, PAGE-05, PAGE-07
-**Success Criteria** (what must be TRUE):
-  1. Subscribe popup appears after 10s delay or 30% scroll on Workshop page, and via footer Subscribe link
-  2. Contact form clears placeholders on focus, highlights fields on validation errors, and uses filled-circle radio buttons
-  3. Careers section toggles between hiring/not-hiring states with repeatable job specification blocks
-  4. Project video loops and auto-plays when scrolled into view, with option to replace with image or hide
-  5. Clicking Tearsheet on product pages opens the product PDF automatically
-**Plans**: TBD
-
-Plans:
-- [ ] 09-01: TBD
-- [ ] 09-02: TBD
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 4.1 -> 5 -> 6 -> 7 -> 8 -> 9
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure + Visual Foundation | 2/2 | Complete | 2026-03-12 |
-| 2. Hero + Brand Identity | N/A | Complete (skipped) | 2026-03-12 |
-| 3. Colour-Bleed Interactions | 1/1 | Complete | 2026-03-12 |
-| 4. Keyline Animation System | 0/TBD | Not started | - |
-| 4.1 Shopify Data Architecture | 0/2 | Planned | - |
-| 5. Project Cards + Image Interactions | 0/TBD | Not started | - |
-| 6. Navigation + Filtering | 0/TBD | Not started | - |
-| 7. Carousels | 0/TBD | Not started | - |
-| 8. Advanced Layouts | 0/TBD | Not started | - |
-| 9. Pages + Sections | 0/TBD | Not started | - |
+| 1. Modal Scaffolding | 0/? | Not started | - |
+| 2. Form and Field System | 0/? | Not started | - |
+| 3. Product Data Bridge | 0/? | Not started | - |
+| 4. Trigger Wiring | 0/? | Not started | - |
+| 5. Visual Design | 0/? | Not started | - |

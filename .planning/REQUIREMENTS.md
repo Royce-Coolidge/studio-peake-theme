@@ -80,46 +80,46 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| MODL-01 | — | Pending |
-| MODL-02 | — | Pending |
-| MODL-03 | — | Pending |
-| MODL-04 | — | Pending |
-| MODL-05 | — | Pending |
-| MODL-06 | — | Pending |
-| DATA-01 | — | Pending |
-| DATA-02 | — | Pending |
-| DATA-03 | — | Pending |
-| DATA-04 | — | Pending |
-| FORM-01 | — | Pending |
-| FORM-02 | — | Pending |
-| FORM-03 | — | Pending |
-| FORM-04 | — | Pending |
-| FORM-05 | — | Pending |
-| FORM-06 | — | Pending |
-| FORM-07 | — | Pending |
-| FORM-08 | — | Pending |
-| FORM-09 | — | Pending |
-| FORM-10 | — | Pending |
-| SUBM-01 | — | Pending |
-| SUBM-02 | — | Pending |
-| SUBM-03 | — | Pending |
-| SUBM-04 | — | Pending |
-| SUBM-05 | — | Pending |
-| TRIG-01 | — | Pending |
-| TRIG-02 | — | Pending |
-| TRIG-03 | — | Pending |
-| STYL-01 | — | Pending |
-| STYL-02 | — | Pending |
-| STYL-03 | — | Pending |
-| STYL-04 | — | Pending |
-| STYL-05 | — | Pending |
-| STYL-06 | — | Pending |
+| MODL-01 | Phase 1 | Pending |
+| MODL-02 | Phase 1 | Pending |
+| MODL-03 | Phase 1 | Pending |
+| MODL-04 | Phase 1 | Pending |
+| MODL-05 | Phase 1 | Pending |
+| MODL-06 | Phase 1 | Pending |
+| DATA-01 | Phase 3 | Pending |
+| DATA-02 | Phase 3 | Pending |
+| DATA-03 | Phase 3 | Pending |
+| DATA-04 | Phase 3 | Pending |
+| FORM-01 | Phase 2 | Pending |
+| FORM-02 | Phase 2 | Pending |
+| FORM-03 | Phase 2 | Pending |
+| FORM-04 | Phase 2 | Pending |
+| FORM-05 | Phase 2 | Pending |
+| FORM-06 | Phase 2 | Pending |
+| FORM-07 | Phase 2 | Pending |
+| FORM-08 | Phase 2 | Pending |
+| FORM-09 | Phase 2 | Pending |
+| FORM-10 | Phase 2 | Pending |
+| SUBM-01 | Phase 2 | Pending |
+| SUBM-02 | Phase 2 | Pending |
+| SUBM-03 | Phase 2 | Pending |
+| SUBM-04 | Phase 2 | Pending |
+| SUBM-05 | Phase 2 | Pending |
+| TRIG-01 | Phase 4 | Pending |
+| TRIG-02 | Phase 4 | Pending |
+| TRIG-03 | Phase 4 | Pending |
+| STYL-01 | Phase 5 | Pending |
+| STYL-02 | Phase 5 | Pending |
+| STYL-03 | Phase 5 | Pending |
+| STYL-04 | Phase 5 | Pending |
+| STYL-05 | Phase 5 | Pending |
+| STYL-06 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 34 total
-- Mapped to phases: 0
-- Unmapped: 34
+- Mapped to phases: 34
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-17*
-*Last updated: 2026-03-17 after initial definition*
+*Last updated: 2026-03-17 after roadmap creation*

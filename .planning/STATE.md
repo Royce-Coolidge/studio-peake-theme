@@ -1,43 +1,27 @@
----
-gsd_state_version: 1.0
-milestone: v10.7
-milestone_name: milestone
-status: completed
-stopped_at: Phase 4.1 checkpoint -- Admin setup partial (project metaobject created, 3 remaining)
-last_updated: "2026-03-13T15:12:10.104Z"
-last_activity: 2026-03-12 -- Button keyline animation + subheading font
-progress:
-  total_phases: 10
-  completed_phases: 0
-  total_plans: 4
-  completed_plans: 1
-  percent: 11
----
-
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-12)
+See: .planning/PROJECT.md (updated 2026-03-17)
 
-**Core value:** The theme must feel unmistakably Studio Peake through polished interactions that the client can manage entirely through Shopify admin.
-**Current focus:** Phase 1 complete. Phase 4 keyline button hover partially done. Next: Phase 2 or continue Phase 4.
+**Core value:** Customers can enquire about any specific product through a visually rich, on-page modal without leaving the product page
+**Current focus:** Phase 1 — Modal Scaffolding
 
 ## Current Position
 
-Phase: 04.1 of 9 (Shopify Data Architecture)
-Plan: 2 of 2 in Phase 04.1 -- CHECKPOINT (human-action)
-Status: Plan 04.1-01 complete. Plan 04.1-02 paused at Admin setup checkpoint. Project metaobject created; press_accolade, team_member, career_opening skipped. Remaining: metafields, collections, templates, sample content.
-Last activity: 2026-03-13 -- Admin setup partial + template scaffolding
+Phase: 1 of 5 (Modal Scaffolding)
+Plan: 0 of ? in current phase
+Status: Ready to plan
+Last activity: 2026-03-17 — Roadmap created, all 34 requirements mapped to 5 phases
 
-Progress: [███░░░░░░░] 25%
+Progress: [░░░░░░░░░░] 0%
 
 ## Performance Metrics
 
 **Velocity:**
 - Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Average duration: —
+- Total execution time: —
 
 **By Phase:**
 
@@ -46,11 +30,10 @@ Progress: [███░░░░░░░] 25%
 | - | - | - | - |
 
 **Recent Trend:**
-- Last 5 plans: -
-- Trend: -
+- Last 5 plans: —
+- Trend: —
 
 *Updated after each plan completion*
-| Phase 04.1 P01 | 1min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -59,10 +42,10 @@ Progress: [███░░░░░░░] 25%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- [Roadmap]: All custom code in studio-peake.css and studio-peake.js -- never modify Prestige core files
-- [Roadmap]: Use .sp-* CSS class namespace for all custom styles
-- [Roadmap]: Web Components for all interactive features (sp-* custom elements)
-- [Phase 04.1]: Prestige stand-in sections for all templates; custom SP sections replace in later phases
+- Init: Use `x-modal` directly (no subclassing); fixed `id="product-enquiry-modal"` hardcoded in both modal and trigger
+- Init: JS data bridge via `data-` attributes on `main-product.liquid` — product context not available in Liquid inside overlay group
+- Init: Standard Shopify contact form POST with `posted_successfully?` inline success state — no AJAX
+- Init: Reuse existing button block as trigger via `aria_controls` setting
 
 ### Pending Todos
 
@@ -70,11 +53,11 @@ None yet.
 
 ### Blockers/Concerns
 
-- custom-fonts.css is empty (0 bytes) -- font loading strategy must be resolved in Phase 1
-- Header modifications from commit 5c40ab1 should be audited against the "never modify core files" principle
+- Phase 1: Section schema must use `enabled_on: groups: ["custom.overlay"]` — do NOT copy `contact.liquid` which has `disabled_on: custom.overlay`
+- Phase 3: `product` Liquid object is nil inside overlay group sections — data bridge required, no Liquid shortcut
 
 ## Session Continuity
 
-Last session: 2026-03-13T15:12:10.102Z
-Stopped at: Phase 4.1 checkpoint -- Admin setup partial (project metaobject created, 3 remaining)
-Resume file: .planning/phases/04.1-shopify-data-architecture/shopify-admin-setup.md
+Last session: 2026-03-17
+Stopped at: Roadmap created and written to disk; ready to plan Phase 1
+Resume file: None
