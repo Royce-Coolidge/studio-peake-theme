@@ -300,13 +300,18 @@
 
 /* Enquiry form: marketing opt-in block */
 
-.enquiry-modal__marketing .checkbox-control {
-  margin-bottom: 0.25rem;
+.enquiry-modal__marketing label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.enquiry-modal__marketing-heading {
+  font-weight: 600;
 }
 
 .enquiry-modal__marketing-disclaimer {
-  margin: 0;
-  padding-inline-start: calc(1rem + var(--checkbox-control-gap, 0.5rem));
+  color: rgb(var(--text-color) / .6);
   font-size: var(--text-xs);
 }
 

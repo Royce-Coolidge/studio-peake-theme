@@ -142,8 +142,11 @@
 
                   {%- when 'marketing' -%}
                     <div class="enquiry-modal__marketing" {{ block.shopify_attributes }}>
-                      {%- render 'checkbox', name: 'contact[marketing]', value: 'yes', type: 'radio', label: 'I want to receive email marketing' -%}
-                      <p class="enquiry-modal__marketing-disclaimer text-subdued">{{ block.settings.disclaimer_text }}</p>
+                      {%- capture marketing_label -%}
+                        <span class="enquiry-modal__marketing-heading">I want to receive email marketing</span>
+                        <span class="enquiry-modal__marketing-disclaimer">{{ block.settings.disclaimer_text }}</span>
+                      {%- endcapture -%}
+                      {%- render 'checkbox', name: 'contact[marketing]', value: 'yes', label: marketing_label -%}
                     </div>
 
                 {%- endcase -%}
