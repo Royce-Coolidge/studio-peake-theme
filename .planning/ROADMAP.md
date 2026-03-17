@@ -71,7 +71,7 @@ Plans:
   3. The button does not navigate away from the product page when clicked
 **Plans:** 1/1 plans complete
 Plans:
-- [ ] 04-01-PLAN.md — Add aria_controls schema setting to button block and conditional render call
+- [x] 04-01-PLAN.md — Add aria_controls schema setting to button block and conditional render call
 
 ### Phase 5: Visual Design
 **Goal**: The modal matches the Studio Peake brand: full-screen 40/60 desktop layout, underline-only inputs, uppercase button-font labels, full-height editorial product image
