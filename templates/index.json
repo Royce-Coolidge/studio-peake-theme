@@ -54,7 +54,8 @@
         "autoplay_pause_on_video": true,
         "cycle_speed": 8,
         "background": "#000000",
-        "controls_color": "#ffffff"
+        "controls_color": "#ffffff",
+        "anchor_id": ""
       }
     },
     "multi_column_F7XhFW": {
@@ -97,7 +98,8 @@
         "spacing": "md",
         "subheading": "",
         "title": "",
-        "content": ""
+        "content": "",
+        "anchor_id": ""
       }
     },
     "collection_list_TG3AKw": {
@@ -172,7 +174,8 @@
         "collections_per_row_desktop": 3,
         "subheading": "",
         "title": "",
-        "content": ""
+        "content": "",
+        "anchor_id": ""
       }
     },
     "image_with_text_DcpmQg": {
@@ -234,12 +237,14 @@
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "image": "shopify://shop_images/studiopeake-home-the-studio.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
-        "content_width": "sm",
-        "remove_vertical_spacing": true
+        "content_width": "lg",
+        "content_alignment": "start",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
       }
     }
   },
