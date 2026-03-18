@@ -474,14 +474,14 @@
     },
     "blog_posts_JHAxiV": {
       "type": "blog-posts",
-      "name": "t:sections.blog_posts.presets.blog_posts.name",
+      "name": "News and Views",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
         "blog": "news",
         "posts_count": 3,
         "stack_on_mobile": false,
-        "full_width": false,
+        "full_width": true,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
@@ -494,6 +494,38 @@
         "button_text": "READ MORE",
         "anchor_id": ""
       }
+    },
+    "rich_text_Vph4PC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BGQEEr": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind?",
+            "heading_tag": "h1"
+          }
+        },
+        "link_cNKae8": {
+          "type": "link",
+          "settings": {
+            "text": "Tell Us About Your Project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BGQEEr",
+        "link_cNKae8"
+      ],
+      "name": "Have a project in mind?",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -504,6 +536,7 @@
     "slideshow_d6TD8w",
     "tabs_7DqCmK",
     "slideshow_HYjBrn",
-    "blog_posts_JHAxiV"
+    "blog_posts_JHAxiV",
+    "rich_text_Vph4PC"
   ]
 }
