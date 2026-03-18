@@ -112,11 +112,52 @@
         "cycle_speed": 5,
         "anchor_id": ""
       }
+    },
+    "image_with_text_WqHdVt": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_TjdbzG": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_7TeYz7": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_zFGkgn": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_TjdbzG",
+        "heading_7TeYz7",
+        "richtext_zFGkgn"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "content_alignment": "start",
+        "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "slideshow_nLKQ96",
     "main",
-    "sp_image_carousel_with_text_i6FwJb"
+    "sp_image_carousel_with_text_i6FwJb",
+    "image_with_text_WqHdVt"
   ]
 }
