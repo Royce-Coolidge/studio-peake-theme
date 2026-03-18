@@ -109,6 +109,7 @@
         "content_width": "md",
         "remove_vertical_spacing": false,
         "autoplay": false,
+        "media_padding_inline": 10,
         "cycle_speed": 5,
         "anchor_id": ""
       }
@@ -116,6 +117,24 @@
     "sp_image_carousel_with_text_9iMFhR": {
       "type": "sp-image-carousel-with-text",
       "blocks": {
+        "carousel_image_cqAP7V": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-studio-our-process-room-scheme-02.jpg"
+          }
+        },
+        "carousel_image_LCJwa3": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-studio-our-process-room-scheme-03.jpg"
+          }
+        },
+        "carousel_image_4rVkCF": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-studio-our-process-room-scheme-04.jpg"
+          }
+        },
         "carousel_image_zCK66V": {
           "type": "carousel_image",
           "settings": {
@@ -147,6 +166,9 @@
         }
       },
       "block_order": [
+        "carousel_image_cqAP7V",
+        "carousel_image_LCJwa3",
+        "carousel_image_4rVkCF",
         "carousel_image_zCK66V",
         "heading_AyqRJw",
         "richtext_N9Pnfz",
@@ -161,6 +183,7 @@
         "content_width": "md",
         "remove_vertical_spacing": true,
         "autoplay": false,
+        "media_padding_inline": 0,
         "cycle_speed": 5,
         "anchor_id": ""
       }
