@@ -52,16 +52,46 @@
     "product-enquiry-modal": {
       "type": "product-enquiry-modal",
       "blocks": {
-        "enquiry-first-name": { "type": "first_name" },
-        "enquiry-last-name": { "type": "last_name" },
-        "enquiry-email": { "type": "email" },
-        "enquiry-company": { "type": "company" },
-        "enquiry-phone": { "type": "phone" },
-        "enquiry-address": { "type": "address" },
-        "enquiry-country": { "type": "country" },
-        "enquiry-postcode": { "type": "postcode" },
-        "enquiry-notes": { "type": "notes" },
-        "enquiry-marketing": { "type": "marketing" }
+        "enquiry-first-name": {
+          "type": "first_name",
+          "settings": {}
+        },
+        "enquiry-last-name": {
+          "type": "last_name",
+          "settings": {}
+        },
+        "enquiry-email": {
+          "type": "email",
+          "settings": {}
+        },
+        "enquiry-company": {
+          "type": "company",
+          "settings": {}
+        },
+        "enquiry-phone": {
+          "type": "phone",
+          "settings": {}
+        },
+        "enquiry-address": {
+          "type": "address",
+          "settings": {}
+        },
+        "enquiry-country": {
+          "type": "country",
+          "settings": {}
+        },
+        "enquiry-postcode": {
+          "type": "postcode",
+          "settings": {}
+        },
+        "enquiry-notes": {
+          "type": "notes",
+          "settings": {}
+        },
+        "enquiry-marketing": {
+          "type": "marketing",
+          "settings": {}
+        }
       },
       "block_order": [
         "enquiry-first-name",

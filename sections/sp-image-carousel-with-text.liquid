@@ -46,7 +46,10 @@
     }
 
     #shopify-section-{{ section.id }} .sp-carousel__dots {
-      margin-block-start: 1rem;
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
   </style>
 
@@ -117,6 +120,9 @@
                   {{- block.settings.content -}}
                 </div>
               {%- endif -%}
+
+            {%- when 'link' -%}
+              <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="link" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</a>
 
             {%- when 'sp-link' -%}
               {%- if block.settings.text != blank -%}
@@ -367,6 +373,23 @@
           "id": "content",
           "label": "t:global.text.content",
           "default": "<p>Use this text to share information about your brand with your customers.</p>"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "name": "t:sections.image_with_text.blocks.link.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:global.text.text",
+          "default": "Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:global.text.link"
         }
       ]
     },
