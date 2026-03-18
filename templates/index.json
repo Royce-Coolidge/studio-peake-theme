@@ -519,6 +519,9 @@
         "link_cNKae8"
       ],
       "name": "Have a project in mind?",
+      "custom_css": [
+        ".prose { text-align: center; }"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,

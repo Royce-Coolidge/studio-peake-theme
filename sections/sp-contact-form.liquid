@@ -1,0 +1,250 @@
+{%- if section.settings.anchor_id != blank -%}
+  <div id="{{ section.settings.anchor_id | handleize }}" class="section-anchor"></div>
+{%- endif -%}
+
+{%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
+
+<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}">
+  <div class="sp-contact-layout">
+    {%- comment -%}--- IMAGE PANEL ---{%- endcomment -%}
+    <div class="sp-contact-layout__image">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: section.settings.image.width | image_tag: sizes: '(max-width: 699px) 100vw, 40vw', widths: '400,600,800,1000,1200,1400,1600', loading: 'lazy' }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' }}
+      {%- endif -%}
+    </div>
+
+    {%- comment -%}--- FORM PANEL ---{%- endcomment -%}
+    <div class="sp-contact-layout__form">
+      <div class="sp-contact-form">
+        {%- if section.settings.heading != blank -%}
+          <h1 class="h1 sp-contact-form__heading">{{ section.settings.heading }}</h1>
+        {%- endif -%}
+
+        {%- form 'contact', class: 'sp-contact-form__fields' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="sp-contact-form__success">{{ section.settings.success_message }}</p>
+          {%- endif -%}
+
+          {%- if form.errors -%}
+            <div class="sp-contact-form__errors">
+              {{ form.errors | default_errors }}
+            </div>
+          {%- endif -%}
+
+          <input type="hidden" name="contact[tags]" value="contact-page">
+
+          {%- comment -%}--- Row: First Name / Last Name ---{%- endcomment -%}
+          <div class="sp-contact-form__row sp-contact-form__row--half">
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[first_name]" id="contact-first-name" class="sp-contact-form__input" placeholder="{{ section.settings.first_name_label }}" required>
+            </div>
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[last_name]" id="contact-last-name" class="sp-contact-form__input" placeholder="{{ section.settings.last_name_label }}" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- Project Address ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[project_address]" id="contact-project-address" class="sp-contact-form__input" placeholder="{{ section.settings.project_address_label }}" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- Property Type (select) ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <select name="contact[property_type]" id="contact-property-type" class="sp-contact-form__select" required>
+                <option value="" disabled selected>{{ section.settings.property_type_label }}</option>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Townhouse">Townhouse</option>
+                <option value="Villa">Villa</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          {%- comment -%}--- Approximate Square Footage ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[square_footage]" id="contact-square-footage" class="sp-contact-form__input" placeholder="{{ section.settings.square_footage_label }}" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- Architect ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[architect]" id="contact-architect" class="sp-contact-form__input" placeholder="{{ section.settings.architect_label }}" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- Row: Estimated Timeline / Estimated Budget ---{%- endcomment -%}
+          <div class="sp-contact-form__row sp-contact-form__row--half">
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[timeline]" id="contact-timeline" class="sp-contact-form__input" placeholder="{{ section.settings.timeline_label }}" required>
+            </div>
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[budget]" id="contact-budget" class="sp-contact-form__input" placeholder="{{ section.settings.budget_label }}" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- Other Key Information ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <input type="text" name="contact[other_info]" id="contact-other-info" class="sp-contact-form__input" placeholder="{{ section.settings.other_info_label }}" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- How Did You Hear About Us (select) ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <select name="contact[referral_source]" id="contact-referral" class="sp-contact-form__select" required>
+                <option value="" disabled selected>{{ section.settings.referral_label }}</option>
+                <option value="Google">Google</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Word of mouth">Word of mouth</option>
+                <option value="Press">Press</option>
+                <option value="Referral">Referral</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          {%- comment -%}--- Email (hidden visually but required by Shopify contact form) ---{%- endcomment -%}
+          <div class="sp-contact-form__row">
+            <div class="sp-contact-form__field">
+              <input type="email" name="contact[email]" id="contact-email" class="sp-contact-form__input" placeholder="EMAIL ADDRESS*" required>
+            </div>
+          </div>
+
+          {%- comment -%}--- Submit ---{%- endcomment -%}
+          <div class="sp-contact-form__row sp-contact-form__row--submit">
+            <button type="submit" class="button button--outline sp-contact-form__submit">{{ section.settings.submit_label }}</button>
+          </div>
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "SP Contact Form",
+  "class": "shopify-section--sp-contact-form",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "custom.overlay"
+    ]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Let's discuss your project"
+    },
+    {
+      "type": "header",
+      "content": "Field labels"
+    },
+    {
+      "type": "text",
+      "id": "first_name_label",
+      "label": "First name",
+      "default": "FIRST NAME*"
+    },
+    {
+      "type": "text",
+      "id": "last_name_label",
+      "label": "Last name",
+      "default": "LAST NAME*"
+    },
+    {
+      "type": "text",
+      "id": "project_address_label",
+      "label": "Project address",
+      "default": "PROJECT ADDRESS*"
+    },
+    {
+      "type": "text",
+      "id": "property_type_label",
+      "label": "Property type",
+      "default": "PROPERTY TYPE*"
+    },
+    {
+      "type": "text",
+      "id": "square_footage_label",
+      "label": "Square footage",
+      "default": "APPROXIMATE SQUARE FOOTAGE*"
+    },
+    {
+      "type": "text",
+      "id": "architect_label",
+      "label": "Architect",
+      "default": "HAVE YOU APPOINTED AN ARCHITECT? IF YES, PLEASE PROVIDE NAME*"
+    },
+    {
+      "type": "text",
+      "id": "timeline_label",
+      "label": "Timeline",
+      "default": "ESTIMATED TIMELINE*"
+    },
+    {
+      "type": "text",
+      "id": "budget_label",
+      "label": "Budget",
+      "default": "ESTIMATED BUDGET*"
+    },
+    {
+      "type": "text",
+      "id": "other_info_label",
+      "label": "Other info",
+      "default": "OTHER KEY INFORMATION ON PROJECT*"
+    },
+    {
+      "type": "text",
+      "id": "referral_label",
+      "label": "Referral source",
+      "default": "HOW DID YOU HEAR ABOUT US?*"
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "Submit button text",
+      "default": "SUBMIT FORM"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thank you for your enquiry. We will be in touch shortly."
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor link ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SP Contact Form"
+    }
+  ]
+}
+{% endschema %}

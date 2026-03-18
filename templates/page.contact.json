@@ -1,1 +1,48 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"contact-form":{"type":"contact","settings":{}}},"order":["main","contact-form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": false,
+        "page_width": "xs",
+        "anchor_id": ""
+      }
+    },
+    "sp_contact_form": {
+      "type": "sp-contact-form",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/studiopeake-contact-surrey-arts-and-craft-desktop.jpg",
+        "heading": "Let's discuss your project",
+        "first_name_label": "FIRST NAME*",
+        "last_name_label": "LAST NAME*",
+        "project_address_label": "PROJECT ADDRESS*",
+        "property_type_label": "PROPERTY TYPE*",
+        "square_footage_label": "APPROXIMATE SQUARE FOOTAGE*",
+        "architect_label": "HAVE YOU APPOINTED AN ARCHITECT? IF YES, PLEASE PROVIDE NAME*",
+        "timeline_label": "ESTIMATED TIMELINE*",
+        "budget_label": "ESTIMATED BUDGET*",
+        "other_info_label": "OTHER KEY INFORMATION ON PROJECT*",
+        "referral_label": "HOW DID YOU HEAR ABOUT US?*",
+        "submit_label": "SUBMIT FORM",
+        "success_message": "Thank you for your enquiry. We will be in touch shortly.",
+        "anchor_id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sp_contact_form"
+  ]
+}

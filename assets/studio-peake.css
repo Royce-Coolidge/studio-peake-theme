@@ -400,3 +400,133 @@
     display: none;
   }
 }
+
+/* === SP Contact Form Section === */
+
+.sp-contact-layout {
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  min-height: 100vh;
+}
+
+.sp-contact-layout__image {
+  overflow: hidden;
+  position: relative;
+}
+
+.sp-contact-layout__image img,
+.sp-contact-layout__image .placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sp-contact-layout__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.sp-contact-form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.sp-contact-form__heading {
+  margin-bottom: 2.5rem;
+}
+
+.sp-contact-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sp-contact-form__row {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sp-contact-form__row--half {
+  grid-template-columns: 1fr 1fr;
+}
+
+.sp-contact-form__input,
+.sp-contact-form__select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgb(var(--text-color) / .3);
+  border-radius: 0;
+  background: transparent;
+  padding: 0.75rem 0;
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--text-xs);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: uppercase;
+  color: currentColor;
+  outline: none;
+  appearance: none;
+}
+
+.sp-contact-form__input::placeholder {
+  color: currentColor;
+  opacity: 0.7;
+}
+
+.sp-contact-form__input:focus,
+.sp-contact-form__select:focus {
+  border-bottom-color: currentColor;
+}
+
+.sp-contact-form__select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='currentColor' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 12px;
+  padding-right: 1.5rem;
+}
+
+.sp-contact-form__select option {
+  color: #000;
+}
+
+.sp-contact-form__submit {
+  padding: 0.875rem 2.5rem;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.sp-contact-form__success {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--text-font-family);
+}
+
+.sp-contact-form__errors {
+  margin-bottom: 1rem;
+  color: #c00;
+}
+
+@media screen and (max-width: 699px) {
+  .sp-contact-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .sp-contact-layout__image {
+    aspect-ratio: 3 / 4;
+    max-height: 60vh;
+  }
+
+  .sp-contact-layout__form {
+    padding: 2rem 1.5rem;
+  }
+
+  .sp-contact-form__row--half {
+    grid-template-columns: 1fr;
+  }
+}
