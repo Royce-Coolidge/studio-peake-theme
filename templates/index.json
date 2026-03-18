@@ -16,11 +16,12 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/studiopeake-home-surrey-arts-and-craft-desktop.jpg",
+            "logo_image": "shopify://shop_images/Studio_Peake_Logo_Clotted_Cream.svg",
             "subheading": "",
-            "title": "Studio Peake",
+            "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
-            "content_max_width": 780,
+            "content_max_width": 100,
             "button_1_text": "",
             "button_1_link": "",
             "button_1_style": "solid",
@@ -234,30 +235,31 @@
         "sp_link_group_GE8CYD",
         "button_etmkqJ"
       ],
-      "name": "Studio Section",
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": false,
+        "separate_section_with_border": true,
         "image": "shopify://shop_images/studiopeake-home-the-studio.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
-        "content_width": "lg",
+        "content_width": "sm",
         "content_alignment": "start",
         "remove_vertical_spacing": false,
-        "anchor_id": "studio"
+        "anchor_id": ""
       }
     },
-    "slideshow_EmgQzJ": {
+    "slideshow_d6TD8w": {
       "type": "slideshow",
       "blocks": {
-        "image_qWPQYz": {
+        "image_XadhxV": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/studiopeake-home-image-divider-schemes.jpg",
             "subheading": "Design Philosophy",
             "title": "Creativity in collaboration and craftsmanship, tailored to the client.",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 400,
+            "content_max_width": 55,
             "button_1_text": "",
             "button_1_link": "",
             "button_1_style": "solid",
@@ -274,36 +276,10 @@
             "border_color": "",
             "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
-        },
-        "image_tKjheW": {
-          "type": "image",
-          "settings": {
-            "subheading": "Tell your story",
-            "title": "Slide 2",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 780,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2) 0%, rgba(4, 4, 4, 0.65) 100%)"
-          }
         }
       },
       "block_order": [
-        "image_qWPQYz",
-        "image_tKjheW"
+        "image_XadhxV"
       ],
       "name": "Banner Section",
       "settings": {
@@ -318,6 +294,55 @@
         "controls_color": "#ffffff",
         "anchor_id": ""
       }
+    },
+    "tabs_7DqCmK": {
+      "type": "tabs",
+      "blocks": {
+        "tab_Ki8JGc": {
+          "type": "tab",
+          "settings": {
+            "title": "Interior Design",
+            "image": "shopify://shop_images/studiopeake-home-interior-design.jpg",
+            "content": "<p>We always start by getting to know the client. </p><p>We want to create homes that feel intuitive, warm and deeply personal. They also need to be practical – spaces must ‘work’, they must support the flow of life. We don’t stop at what our clients love – we need to know how they live. What turns a house into a home is purpose. Each room is tailored in both form and function. </p><p>When it comes to finishing touches, we’re just getting started. We know that the secret to really great design is detail. We pay attention. </p><p>Our job is to turn the personality and style of our client into a beautiful, truly tailored home: an eloquent and timeless expression of who they are and how they live.</p>",
+            "page": "",
+            "open_on_mobile": true
+          }
+        },
+        "tab_qk6j9N": {
+          "type": "tab",
+          "settings": {
+            "title": "Architectural Design",
+            "image": "shopify://shop_images/studiopeake-home-architectural-design.jpg",
+            "content": "<p>Design is holistic.</p><p>Every building has a back story – its architectural ‘bones’. You cannot design out of context – the interior must respond to the architecture of the building, its history and style. </p><p>Interior architectural design is a key part of what we do, working with architects and contractors from the very start of a project. We focus on how the structural elements impact on the interior design – creativity loves constraints – and conversely how the interior design can, and should, steer the structure. </p><p>Architectural proportions play a key role in setting the tone of a space. The flow of a building, how each space leads to the next, is all-important. We pride ourselves on seeing a project from all angles.  </p>",
+            "page": "",
+            "open_on_mobile": false
+          }
+        },
+        "tab_HWaEg6": {
+          "type": "tab",
+          "settings": {
+            "title": "Craftsmanship",
+            "image": "shopify://shop_images/studiopeake-home-craftsmanship.jpg",
+            "content": "<p>A commitment to craftsmanship sits at the heart of everything we do. </p><p>We bring our designs to life in perspective sketches. We work painstakingly with artisans, makers and specialist workshops to create true masterpieces. Our clients are involved in our process every step of the way. </p><p>Over the years we have developed our own little black book of specialists in a number of fields, from carpenters and stone masons to embroiderers and leather workers. For all of us at the studio, this is our favourite part of the job – seeing something go from inspiration to real life work of art.</p><p></p><p><a href=\"/about\" title=\"/about\">LEARN MORE</a></p>",
+            "page": "",
+            "open_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_Ki8JGc",
+        "tab_qk6j9N",
+        "tab_HWaEg6"
+      ],
+      "name": "t:sections.tabs.presets.tab.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "subheading": "",
+        "title": "our approach",
+        "text_alignment": "start",
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -325,6 +350,7 @@
     "multi_column_F7XhFW",
     "collection_list_TG3AKw",
     "image_with_text_DcpmQg",
-    "slideshow_EmgQzJ"
+    "slideshow_d6TD8w",
+    "tabs_7DqCmK"
   ]
 }
