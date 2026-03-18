@@ -244,7 +244,7 @@
         "content_width": "lg",
         "content_alignment": "start",
         "remove_vertical_spacing": false,
-        "anchor_id": ""
+        "anchor_id": "studio-section"
       }
     }
   },
