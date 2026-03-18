@@ -15,11 +15,13 @@
         "image_Pm9fiT": {
           "type": "image",
           "settings": {
-            "subheading": "Welcome to",
-            "title": "<strong>Pyramid Glass</strong>",
+            "image": "shopify://shop_images/studiopeake-the-studio-hero-desktop.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-the-studio-hero-mobile.jpg",
+            "subheading": "",
+            "title": "Inventive interiors that draw the eye",
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
-            "content_max_width": 720,
+            "content_max_width": 400,
             "button_1_text": "",
             "button_1_link": "",
             "button_1_style": "solid",
@@ -63,10 +65,58 @@
         "page_width": "xs",
         "anchor_id": ""
       }
+    },
+    "sp_image_carousel_with_text_i6FwJb": {
+      "type": "sp-image-carousel-with-text",
+      "blocks": {
+        "carousel_image_q8WCxU": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-studio-the-dairy-boot-room-sketch.jpg"
+          }
+        },
+        "carousel_image_8rtY3C": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-studio-the-dairy-kitchen-sketch.jpg"
+          }
+        },
+        "carousel_image_wqRAj4": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-studio-the-dairy-boot-room-sketch.jpg"
+          }
+        },
+        "richtext_zpJdAc": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Studio Peake is an interior design and interior architecture studio creating high-end residential and commercial spaces worldwide. Defined by a philosophy that places the client at the heart of the design, every Studio Peake project involves an orchestra of creative input, with clients, designers, architects and makers working in harmony to create something truly unique – a reflection of who the client is and how they live. </p><p>Founded by Sarah Peake, the studio is based in London but its work ranges across the globe. Recent and ongoing projects include a Georgian townhouse in London, a Grade II listed Arts & Crafts house in Surrey and an architecturally ambitious villa on the water just outside Stockholm.</p><p>Studio Peake is guided by a deep respect for craftsmanship, architectural integrity and close collaboration with artisans and specialist workshops. But the client comes first. Everything we do is tailored to what the client needs. For our residential projects, we spend a great deal of time working with the client to understand how they and their family are going to live in the space. We need to know what the future might hold – just as we evolve over time, so should our homes.  </p><p>The best interiors are richly layered – conflict is the source of all energy in a room. We are particularly known for our use of colour and contrast, interweaving the traditional and the contemporary to create inventive interiors that draw the eye. </p><p>We like to think that every project is a journey. From the first perspective sketch to the last doorknob, we’re living the project with the client, bringing together a diverse array of creative input to deliver a beautiful, tailored and timeless space.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "carousel_image_q8WCxU",
+        "carousel_image_8rtY3C",
+        "carousel_image_wqRAj4",
+        "richtext_zpJdAc"
+      ],
+      "name": "SP Carousel with text",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "md",
+        "remove_vertical_spacing": false,
+        "autoplay": false,
+        "cycle_speed": 5,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "slideshow_nLKQ96",
-    "main"
+    "main",
+    "sp_image_carousel_with_text_i6FwJb"
   ]
 }
