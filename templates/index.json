@@ -16,10 +16,11 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/studiopeake-home-surrey-arts-and-craft-desktop.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-projects-residential-parsons-green-12.jpg",
             "logo_image": "shopify://shop_images/Studio_Peake_Logo_Clotted_Cream.svg",
             "subheading": "",
             "title": "",
-            "mobile_text_position": "place-self-center text-center",
+            "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "content_max_width": 100,
             "button_1_text": "",
@@ -78,7 +79,7 @@
             "title": "",
             "heading_tag": "h3",
             "content": "<p>The root of all creativity is collaboration. Truly great design comes from dialogue – from clients, designers and makers working in partnership, each bringing their own perspective. Design is a process. A home is never truly finished – it is an expression of who we are. Just as we evolve and change over time, so should our home. We create ambitious, innovative and highly tailored spaces that embody the personality of the client and support the everyday flow of life. </p>",
-            "link_url": "",
+            "link_url": "shopify://pages/about",
             "link_text": "Learn more"
           }
         }
@@ -87,12 +88,12 @@
         "image_with_text_rtntb8",
         "image_with_text_Vp7UF9"
       ],
-      "name": "t:sections.multi_column.presets.multi_column.name",
+      "name": "Intro Section",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
         "columns_per_row": 2,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "overlap_image": false,
         "content_alignment": "start",
         "text_alignment": "start",
@@ -341,7 +342,7 @@
         "subheading": "",
         "title": "our approach",
         "text_alignment": "start",
-        "anchor_id": ""
+        "anchor_id": "approach"
       }
     },
     "slideshow_HYjBrn": {
