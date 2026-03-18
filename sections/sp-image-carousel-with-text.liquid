@@ -23,6 +23,24 @@
       padding-inline: {{ section.settings.media_padding_inline }}%;
     }
 
+    #shopify-section-{{ section.id }} .sp-carousel-media .sp-carousel__slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    /* First slide always stays relative to hold container height */
+    #shopify-section-{{ section.id }} .sp-carousel-media .sp-carousel__slide:first-child {
+      position: relative;
+    }
+
+    #shopify-section-{{ section.id }} .sp-carousel-media img,
+    #shopify-section-{{ section.id }} .sp-carousel-media svg {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
     #shopify-section-{{ section.id }} .sp-carousel__dots {
       position: absolute;
       bottom: 1rem;
@@ -38,11 +56,11 @@
       {%- comment -%}--- CAROUSEL COLUMN ---{%- endcomment -%}
       <div class="sp-carousel-media">
         {%- if image_blocks.size > 0 -%}
-          <effect-carousel id="{{ carousel_id }}" allow-swipe cell-selector=".sp-carousel__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %}>
+          <sp-fade-carousel id="{{ carousel_id }}" allow-swipe cell-selector=".sp-carousel__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %}>
             {%- assign sp_img_index = 0 -%}
             {%- for block in section.blocks -%}
               {%- if block.type == 'carousel_image' -%}
-                <div class="sp-carousel__slide" {{ block.shopify_attributes }}>
+                <div class="sp-carousel__slide {% if sp_img_index == 0 %}is-selected{% endif %}" {% if sp_img_index == 0 %}style="opacity: 1"{% endif %} {{ block.shopify_attributes }}>
                   {%- if block.settings.image != blank -%}
                     {%- assign sizes = '(max-width: 699px) 100vw, 50vw' -%}
                     {%- if sp_img_index == 0 -%}
@@ -58,7 +76,7 @@
                 {%- assign sp_img_index = sp_img_index | plus: 1 -%}
               {%- endif -%}
             {%- endfor -%}
-          </effect-carousel>
+          </sp-fade-carousel>
 
           {%- if image_blocks.size > 1 -%}
             <carousel-navigation aria-controls="{{ carousel_id }}" class="page-dots sp-carousel__dots">
@@ -136,7 +154,31 @@
     </image-with-text>
   </div>
 
+  <script type="module">
+    await customElements.whenDefined('effect-carousel');
 
+    if (!customElements.get('sp-fade-carousel')) {
+      const EffectCarouselClass = customElements.get('effect-carousel');
+
+      customElements.define('sp-fade-carousel', class extends EffectCarouselClass {
+        createOnChangeAnimationControls(fromSlide, toSlide, { direction } = {}) {
+          const fromAnim = fromSlide.animate(
+            [{ opacity: 1 }, { opacity: 0 }],
+            { duration: 1000, easing: 'ease-in-out', fill: 'forwards' }
+          );
+          toSlide.classList.add('is-selected');
+          const toAnim = toSlide.animate(
+            [{ opacity: 0 }, { opacity: 1 }],
+            { duration: 1000, easing: 'ease-in-out', fill: 'forwards', delay: 300 }
+          );
+          return {
+            finished: Promise.all([fromAnim.finished, toAnim.finished]),
+            finish: () => { fromAnim.finish(); toAnim.finish(); }
+          };
+        }
+      });
+    }
+  </script>
 {%- endif -%}
 
 {% schema %}
