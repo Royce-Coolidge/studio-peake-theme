@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow_WRWAkr": {
@@ -6,6 +15,7 @@
         "image_qBF3yC": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-09.jpg",
             "subheading": "",
             "title": "Surrey Arts and Craft Home",
             "mobile_text_position": "place-self-center text-center",
@@ -41,7 +51,8 @@
         "autoplay_pause_on_video": true,
         "cycle_speed": 5,
         "background": "#000000",
-        "controls_color": "#ffffff"
+        "controls_color": "#ffffff",
+        "anchor_id": ""
       }
     },
     "media_grid_sp": {
@@ -223,7 +234,8 @@
         "sp_masonry_style": "landscape_thirds",
         "subheading": "",
         "title": "",
-        "content": ""
+        "content": "",
+        "anchor_id": ""
       }
     }
   },
