@@ -44,7 +44,7 @@
         {{- 'image' | placeholder_svg_tag: 'placeholder' -}}
       {%- endif -%}
 
-      <div class="prose text-center sm:text-{{ section.settings.content_alignment | default: 'start' }}">
+      <div class="prose text-start sm:text-{{ section.settings.content_alignment | default: 'start' }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'subheading' -%}
