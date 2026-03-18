@@ -16,7 +16,7 @@ may have important consequence on the section itself.
   <slideshow-carousel id="{{ carousel_id }}" class="slideshow" allow-swipe {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %} cell-selector=".slideshow__slide" {% if section.settings.autoplay %}autoplay="{{ section.settings.cycle_speed }}"{% endif %} {% if section.settings.autoplay and section.settings.autoplay_pause_on_video %}autoplay-pause-on-video{% endif %} role="region" style="{% render 'surface', background: section.settings.background %}">
     {%- for block in section.blocks -%}
       {%- capture slide -%}
-        <div class="content-over-media content-over-media--{{ section.settings.media_size }}" style="--content-over-media-content-max-width: 100vw; --content-over-media-gradient-overlay: {{ block.settings.gradient_overlay }}">
+        <div class="content-over-media content-over-media--{{ section.settings.media_size }}" style="--content-over-media-content-max-width: {{ block.settings.content_max_width }}vw; --content-over-media-gradient-overlay: {{ block.settings.gradient_overlay }}">
           {%- comment -%}---------------- MEDIA ----------------{%- endcomment -%}
           {%- if block.type == 'image' -%}
             {%- if block.settings.image != blank -%}
@@ -438,11 +438,11 @@ may have important consequence on the section itself.
           "type": "range",
           "id": "content_max_width",
           "label": "t:sections.slideshow.blocks.image.content_maximum_width",
-          "min": 400,
-          "max": 1200,
-          "step": 20,
-          "unit": "px",
-          "default": 780
+          "min": 40,
+          "max": 100,
+          "step": 5,
+          "unit": "vw",
+          "default": 100
         },
         {
           "type": "header",
@@ -703,11 +703,11 @@ may have important consequence on the section itself.
           "type": "range",
           "id": "content_max_width",
           "label": "t:sections.slideshow.blocks.image.content_maximum_width",
-          "min": 400,
-          "max": 1200,
-          "step": 20,
-          "unit": "px",
-          "default": 780
+          "min": 40,
+          "max": 100,
+          "step": 5,
+          "unit": "vw",
+          "default": 100
         },
         {
           "type": "header",
