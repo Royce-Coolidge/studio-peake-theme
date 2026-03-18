@@ -20,7 +20,7 @@
     #shopify-section-{{ section.id }} .sp-carousel-media {
       position: relative;
       width: 100%;
-      padding-inline: 10%;
+      padding-inline: {{ section.settings.media_padding_inline }}%;
     }
 
     #shopify-section-{{ section.id }} .sp-carousel-media .sp-carousel__slide {
@@ -260,6 +260,16 @@
       "id": "autoplay",
       "label": "t:global.video.autoplay",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "media_padding_inline",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "%",
+      "label": "Media padding inline",
+      "default": 10
     },
     {
       "type": "range",
