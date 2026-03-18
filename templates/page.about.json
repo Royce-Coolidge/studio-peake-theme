@@ -113,43 +113,55 @@
         "anchor_id": ""
       }
     },
-    "image_with_text_WqHdVt": {
-      "type": "image-with-text",
+    "sp_image_carousel_with_text_9iMFhR": {
+      "type": "sp-image-carousel-with-text",
       "blocks": {
-        "subheading_TjdbzG": {
-          "type": "subheading",
+        "carousel_image_zCK66V": {
+          "type": "carousel_image",
           "settings": {
-            "text": "Subheading"
+            "image": "shopify://shop_images/studiopeake-the-studio-our-process-room-scheme-01.jpg"
           }
         },
-        "heading_7TeYz7": {
+        "heading_AyqRJw": {
           "type": "heading",
           "settings": {
-            "text": "Image with text",
+            "text": "Project title",
             "heading_tag": "h1"
           }
         },
-        "richtext_zFGkgn": {
+        "richtext_N9Pnfz": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "<p>Use this text to share information about your brand with your customers.</p>"
+          }
+        },
+        "button_bqTn6p": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "text": "Button text",
+            "url": "",
+            "background": "",
+            "text_color": ""
           }
         }
       },
       "block_order": [
-        "subheading_TjdbzG",
-        "heading_7TeYz7",
-        "richtext_zFGkgn"
+        "carousel_image_zCK66V",
+        "heading_AyqRJw",
+        "richtext_N9Pnfz",
+        "button_bqTn6p"
       ],
-      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "name": "SP Carousel with text",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-ed3c746e-2171-49ad-9711-2a0e8616f021",
         "separate_section_with_border": true,
         "reveal_on_scroll": true,
         "image_position": "start",
-        "content_width": "sm",
-        "content_alignment": "start",
+        "content_width": "md",
         "remove_vertical_spacing": true,
+        "autoplay": false,
+        "cycle_speed": 5,
         "anchor_id": ""
       }
     }
@@ -158,6 +170,6 @@
     "slideshow_nLKQ96",
     "main",
     "sp_image_carousel_with_text_i6FwJb",
-    "image_with_text_WqHdVt"
+    "sp_image_carousel_with_text_9iMFhR"
   ]
 }
