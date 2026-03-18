@@ -3,6 +3,8 @@
 :root {
   --sp-gradient-top: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 46.76%, rgba(71, 60, 60, 0.40) 100%);
   --sp-gradient-bottom: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.9%, rgba(60, 53, 53, 0.40) 100%);
+  --button-font-family: "proxima-nova", "Nunito Sans", sans-serif;
+  --button-font-weight: 500;
 }
 
 .sp-gradient-overlay {
@@ -173,10 +175,7 @@
   transition: none;
 }
 
-.sp-link-row__text {
-  flex: 1;
-  min-width: 0;
-}
+
 
 .sp-link-row svg {
   flex-shrink: 0;
@@ -209,6 +208,50 @@
 /* First link in group gets a top keyline (static) */
 .sp-link-group .sp-link-row:first-child {
   border-top: 1px solid rgb(var(--text-color) / 0.15);
+}
+
+/* === Footer block list — centre on mobile === */
+@media screen and (max-width: 699px) {
+  .footer__block-list {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* === Footer links block === */
+.footer__block--links {
+  max-width: none;
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .footer-links--row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.tabs__panel-with-image {
+  align-items: center;
+}
+
+/* === Blog post carousel — full-width cards on mobile === */
+@media screen and (max-width: 699px) {
+  .blog-post-list--carousel {
+    grid: auto / auto-flow 100vw;
+  }
 }
 
 /* === Product Enquiry Modal === */
