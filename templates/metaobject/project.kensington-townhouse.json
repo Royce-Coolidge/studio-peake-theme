@@ -15,6 +15,7 @@
         "image_qBF3yC": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/studiopeake-projects-residential-kensington-townhouse-02.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -58,29 +59,23 @@
     "sp_image_carousel_with_text_bXbecL": {
       "type": "sp-image-carousel-with-text",
       "blocks": {
-        "carousel_image_QGTmTQ": {
-          "type": "carousel_image",
-          "settings": {}
-        },
-        "carousel_image_cYXQFn": {
-          "type": "carousel_image",
-          "settings": {}
-        },
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-projects-residential-kensington-townhouse-sketch_45545de6-287a-4ac6-a5b5-390cb0d39f68.jpg"
+          }
         },
         "heading_Efre63": {
           "type": "heading",
           "settings": {
-            "text": "Project title",
+            "text": "{{ metaobject.title.value }}",
             "heading_tag": "h1"
           }
         },
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers.</p>"
+            "content": "<p>Studio Peake was commissioned to bring refined comfort and personality to a beautifully proportioned Kensington townhouse, following an architectural renovation led by Neal Newland of Peek Architecture. With the structure complete, our role focused on elevating the interiors through thoughtful decoration, bespoke furnishings, and subtle architectural additions to create cohesion, warmth, and character.</p><p>Working with the existing fhis Arts and Crafts country house is a bucolic period property that, over the course of two years, was sensitively and comprehensively restored and renovated. In need of significant attention, the house was carefully reconfigured to support the needs of a modern, dynamic family, while a deep respect for the original architecture guided every decision.</p><p>Studio Peake led the creative direction across the entire project, shaping the aesthetic of each space in close collaboration with a team of architects, lighting designers, and specialist contractors. Antiques were sourced throughout to anchor the interiors in their setting, while layered textiles, colour, and texture were used to create rooms that feel warm, characterful, and deeply personal. ramework, we introduced key details including a new fireplace and tailored joinery to strengthen focal points. The decorative scheme centred on a calm, harmonious palette layered with texture, bespoke and collected furniture, and carefully chosen art, lighting, and textiles, resulting in a composed yet welcoming home for modern living.</p>"
           }
         },
         "sp_link_tY3j7r": {
@@ -92,8 +87,6 @@
         }
       },
       "block_order": [
-        "carousel_image_QGTmTQ",
-        "carousel_image_cYXQFn",
         "carousel_image_N9aQYx",
         "heading_Efre63",
         "richtext_BiJLfL",
@@ -106,7 +99,7 @@
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "md",
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "autoplay": false,
         "cycle_speed": 5,
         "anchor_id": ""
