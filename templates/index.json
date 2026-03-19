@@ -70,7 +70,8 @@
             "heading_tag": "h3",
             "content": "",
             "link_url": "",
-            "link_text": ""
+            "link_text": "",
+            "compact_text": false
           }
         },
         "image_with_text_Vp7UF9": {
@@ -80,7 +81,8 @@
             "heading_tag": "h3",
             "content": "<p>The root of all creativity is collaboration. Truly great design comes from dialogue – from clients, designers and makers working in partnership, each bringing their own perspective. Design is a process. A home is never truly finished – it is an expression of who we are. Just as we evolve and change over time, so should our home. We create ambitious, innovative and highly tailored spaces that embody the personality of the client and support the everyday flow of life. </p>",
             "link_url": "shopify://pages/about",
-            "link_text": "Learn more"
+            "link_text": "Learn more",
+            "compact_text": false
           }
         }
       },
@@ -239,7 +241,7 @@
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "image": "shopify://shop_images/studiopeake-home-the-studio.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
