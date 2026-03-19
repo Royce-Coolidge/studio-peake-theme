@@ -309,6 +309,12 @@
   }
 }
 
+@media screen and (min-width: 700px) {
+  .image-with-text > .prose {
+    margin-inline: auto;
+  }
+}
+
 .prose--compact > p {
   margin-block-start: 0 !important;
 }
