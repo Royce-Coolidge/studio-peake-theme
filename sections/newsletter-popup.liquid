@@ -9,7 +9,7 @@
       {%- endform -%}
     {%- endcapture -%}
 
-    <newsletter-popup class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events>
+    <newsletter-popup id="newsletter-popup" class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events>
       <dialog-close-button class="contents">
         <button class="pop-in__close-button tap-area">
           <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
@@ -18,10 +18,16 @@
       </dialog-close-button>
 
       <div class="v-stack gap-8">
-        {%- if section.settings.title != blank or section.settings.content != blank -%}
+        {%- if section.settings.title != blank or section.settings.logo_image != blank or section.settings.content != blank -%}
           <div class="v-stack gap-4 text-center">
             {%- if section.settings.title != blank -%}
               <p class="h4">{{ section.settings.title }}</p>
+            {%- endif -%}
+
+            {%- if section.settings.logo_image != blank -%}
+              <div class="newsletter-popup__logo">
+                {{ section.settings.logo_image | image_url: width: 300 | image_tag: loading: 'lazy', class: 'newsletter-popup__logo-img' }}
+              </div>
             {%- endif -%}
 
             {%- if section.settings.content != blank -%}
@@ -72,12 +78,28 @@
                 {%- render 'input', type: 'email', name: 'contact[email]', label: label, value: customer.email, required: true, autocomplete: 'email' -%}
               </div>
 
+              <div class="newsletter-popup__consent checkbox-control">
+                <input id="newsletter-consent-{{ section.id }}" class="checkbox" type="checkbox" name="contact[note]" value="Privacy policy consent" required>
+                <label for="newsletter-consent-{{ section.id }}">{{ section.settings.consent_label }}</label>
+              </div>
+
               {%- render 'button', content: section.settings.button_text, type: 'submit' -%}
             {%- endif -%}
           {%- endform -%}
         {%- endif -%}
       </div>
     </newsletter-popup>
+
+    <script>
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href="#newsletter-popup"]');
+        if (link) {
+          e.preventDefault();
+          var popup = document.getElementById('newsletter-popup');
+          if (popup) popup.show();
+        }
+      });
+    </script>
   {%- endunless -%}
 {%- endunless -%}
 
@@ -137,6 +159,12 @@
       "default": "Signup for our newsletter"
     },
     {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo image",
+      "info": "Displayed beneath the heading"
+    },
+    {
       "type": "inline_richtext",
       "id": "content",
       "label": "t:global.text.content",
@@ -147,6 +175,12 @@
       "id": "button_text",
       "label": "t:global.text.button_text",
       "default": "Subscribe"
+    },
+    {
+      "type": "richtext",
+      "id": "consent_label",
+      "label": "Consent label",
+      "default": "<p>I consent to the <a href=\"/policies/privacy-policy\">Privacy Policies</a></p>"
     },
     {
   "type": "text",

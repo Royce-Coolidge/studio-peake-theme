@@ -483,6 +483,7 @@
         "posts_count": 3,
         "stack_on_mobile": false,
         "full_width": true,
+        "remove_bottom_padding": false,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
@@ -518,16 +519,16 @@
         "heading_BGQEEr",
         "link_cNKae8"
       ],
-      "name": "Have a project in mind?",
       "custom_css": [
-        ".prose { text-align: center; }"
+        ".prose {text-align: center;}"
       ],
+      "name": "Have a project in mind?",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "anchor_id": ""
       }
     }

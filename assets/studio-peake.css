@@ -752,3 +752,41 @@
     padding: 10px 8px;
   }
 }
+
+/* ============================================================
+   Newsletter Popup — centred overlay
+   ============================================================ */
+
+.newsletter-popup {
+  inset: 0 !important;
+  margin: auto;
+  width: calc(100% - 2rem);
+  max-width: 380px;
+  border: 4px solid #EDE2D1;
+  height: fit-content;
+  padding: 2.5rem 2rem;
+}
+
+.newsletter-popup__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-popup__logo-img {
+  max-width: 36px;
+  height: auto;
+}
+
+.newsletter-popup__consent {
+  margin-top: 0.5rem;
+}
+
+.newsletter-popup__consent label {
+  font-size: 0.85rem;
+}
+
+.newsletter-popup__consent label a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
