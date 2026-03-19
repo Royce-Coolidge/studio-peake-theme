@@ -31,7 +31,7 @@
             "show_below_gallery": false,
             "icon": "none",
             "title": "Specifications",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "content": "<p>{{ product.metafields.custom.specifications | metafield_tag }}</p>",
             "liquid": "",
             "page": ""
           }
@@ -42,7 +42,7 @@
             "show_below_gallery": false,
             "icon": "none",
             "title": "Materials",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "content": "<p>{{ product.metafields.custom.materials | metafield_tag }}</p>",
             "liquid": "",
             "page": ""
           }
@@ -53,7 +53,7 @@
             "show_below_gallery": false,
             "icon": "none",
             "title": "Lead Time & Shipping",
-            "content": "<p>Share some content to your customers about your products.</p>",
+            "content": "<p>{{ product.metafields.custom.lead_time | metafield_tag }}</p>",
             "liquid": "",
             "page": ""
           }
@@ -107,8 +107,9 @@
         "image_3URgVK": {
           "type": "image",
           "settings": {
-            "subheading": "Tell your story",
-            "title": "Slide 1",
+            "image": "{{ product.metafields.custom.landscape.value }}",
+            "subheading": "",
+            "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 100,
@@ -126,7 +127,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2) 0%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         },
         "image_UtEpHc": {
@@ -179,36 +180,44 @@
         "subheading_Bh4bnB": {
           "type": "subheading",
           "settings": {
-            "text": "Subheading"
+            "text": "Meet The Maker"
           }
         },
         "heading_9wF3CP": {
           "type": "heading",
           "settings": {
-            "text": "Image with text",
+            "text": "{{ product.metafields.custom.the_design.value.the_maker.value }}",
             "heading_tag": "h1"
+          }
+        },
+        "image_3rHHtt": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.the_design.value.right_image_smaller.value }}"
           }
         },
         "richtext_wFtfey": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "<p>{{ product.metafields.custom.the_design.value.maker_bio | metafield_tag }}</p>"
           }
         }
       },
       "block_order": [
         "subheading_Bh4bnB",
         "heading_9wF3CP",
+        "image_3rHHtt",
         "richtext_wFtfey"
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1f3e3275-c7f4-4736-948b-ec7297152781",
         "separate_section_with_border": true,
+        "image": "{{ product.metafields.custom.the_design.value.image.value }}",
         "reveal_on_scroll": true,
-        "image_position": "end",
+        "image_position": "start",
         "content_width": "sm",
-        "content_alignment": "start",
+        "content_alignment": "center",
         "remove_vertical_spacing": true,
         "anchor_id": ""
       }
