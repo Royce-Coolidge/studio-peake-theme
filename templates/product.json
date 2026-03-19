@@ -134,11 +134,11 @@
       "block_order": [
         "image_3URgVK"
       ],
-      "name": "t:sections.slideshow.presets.slideshow.name",
+      "name": "Landscape ",
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": true,
-        "media_size": "md",
+        "media_size": "auto",
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
