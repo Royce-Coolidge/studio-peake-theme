@@ -1,0 +1,314 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_nLKQ96": {
+      "type": "slideshow",
+      "blocks": {
+        "image_Pm9fiT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-workshop-hero-desktop.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-the-workshop-hero-mobile.jpg",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "content_max_width": 100,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_Pm9fiT"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": true,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": false,
+        "page_width": "xs",
+        "anchor_id": ""
+      }
+    },
+    "multi_column_eH7ykr": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_AbQNzU": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Everyday objects as works of art",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "link_text": ""
+          }
+        },
+        "image_with_text_HcYgW6": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "heading_tag": "h3",
+            "content": "<p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p><p>The Workshop grew from Sarah’s deep love of working with the remarkable artisans we partner with across our projects. It celebrates the joy of taking an idea from initial sketch to a finished object designed to be used and loved every day. Each piece is born from months – and sometimes years – of creative dialogue, as vision combines with craft to create something totally original.  </p>",
+            "link_url": "",
+            "link_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_AbQNzU",
+        "image_with_text_HcYgW6"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "columns_per_row": 2,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": ""
+      }
+    },
+    "image_with_text_Qf66Y9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UTDz6P": {
+          "type": "heading",
+          "settings": {
+            "text": "the creative process",
+            "heading_tag": "h1"
+          }
+        },
+        "image_bUbRyY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-the-workshop-the-creative-process-elowen-chandelier-sketch.jpg"
+          }
+        },
+        "richtext_dygGWG": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Ideas evolve organically, through the course of long conversations (sometimes about something completely different) with makers. The creative process is iterative and playful, involving many meetings over many months. </p>"
+          }
+        },
+        "link_CjnwAy": {
+          "type": "link",
+          "settings": {
+            "text": "explore the collection",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UTDz6P",
+        "image_bUbRyY",
+        "richtext_dygGWG",
+        "link_CjnwAy"
+      ],
+      "custom_css": [
+        ".color-scheme {background-color: #eee6db;}"
+      ],
+      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "image": "shopify://shop_images/studiopeake-the-workshop-the-creative-process-elowen-chandelier.jpg",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "content_alignment": "center",
+        "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
+    },
+    "blog_posts_about": {
+      "type": "blog-posts",
+      "name": "Meet our makers",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "blog": "news",
+        "posts_count": 3,
+        "stack_on_mobile": false,
+        "full_width": true,
+        "remove_bottom_padding": true,
+        "card_color_scheme": "",
+        "show_category": true,
+        "show_date": false,
+        "show_excerpt": true,
+        "show_read_more": true,
+        "subheading": "",
+        "title": "Meet our makers",
+        "content": "<p>The Workshop by Studio Peake exists to honour the wonderful craft we encounter in those we work with. Creativity comes from collaboration, from dialogue. Our relationships with our makers are nurtured over years of working together on projects and we would be nowhere without them. Our Workshop products may begin as ideas in Sarah’s head, but these ideas only fizz and form into beautiful works of art in the course of months of creative dialogue. Here are some of our key makers.</p>",
+        "button_link": "",
+        "button_text": "READ MORE",
+        "anchor_id": ""
+      }
+    },
+    "slideshow_FXDx3m": {
+      "type": "slideshow",
+      "blocks": {
+        "video_K83wqB": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/studiopeake-workshop-product.mp4",
+            "allow_sound": true,
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 100,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "video_K83wqB"
+      ],
+      "name": "Video",
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "anchor_id": ""
+      }
+    },
+    "featured_collections_iVWe9A": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_8JhACB": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "products_count": 8,
+            "title": "",
+            "link_url": "",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_8JhACB"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "hide_product_information": true,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "anchor_id": ""
+      }
+    },
+    "rich_text_about_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_about_cta": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind?",
+            "heading_tag": "h1"
+          }
+        },
+        "link_about_cta": {
+          "type": "link",
+          "settings": {
+            "text": "Tell Us About Your Project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_about_cta",
+        "link_about_cta"
+      ],
+      "custom_css": [
+        ".prose {text-align: center;}"
+      ],
+      "name": "Have a project in mind?",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
+    }
+  },
+  "order": [
+    "slideshow_nLKQ96",
+    "main",
+    "multi_column_eH7ykr",
+    "image_with_text_Qf66Y9",
+    "blog_posts_about",
+    "slideshow_FXDx3m",
+    "featured_collections_iVWe9A",
+    "rich_text_about_cta"
+  ]
+}

@@ -24,9 +24,9 @@
       {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
       <div class="section-stack">
-        <div class="v-stack justify-self-center gap-4 text-center sm:gap-5">
+        <div class="v-stack gap-4 text-center sm:text-start sm:gap-5">
           {%- if section.settings.subheading != blank -%}
-            <p class="h6 text-center">{{- section.settings.subheading -}}</p>
+            <p class="h6">{{- section.settings.subheading -}}</p>
           {%- endif -%}
 
           {%- if section.blocks.size > 1 -%}

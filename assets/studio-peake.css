@@ -247,6 +247,21 @@
   align-items: center;
 }
 
+/* === Image-with-text inline image: respond to sm: content alignment === */
+@media screen and (min-width: 700px) {
+  .sm\:text-start .image-with-text__inline-image {
+    margin-inline: 0 auto;
+  }
+
+  .sm\:text-center .image-with-text__inline-image {
+    margin-inline: auto;
+  }
+
+  .sm\:text-end .image-with-text__inline-image {
+    margin-inline: auto 0;
+  }
+}
+
 /* === Team Grid (liquid block) === */
 
 .sp-team-grid {
