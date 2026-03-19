@@ -170,7 +170,7 @@
         "separate_section_with_border": false,
         "blog": "news",
         "posts_count": 3,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "full_width": true,
         "remove_bottom_padding": true,
         "card_color_scheme": "",
@@ -242,9 +242,9 @@
           "settings": {
             "collection": "",
             "products_count": 8,
-            "title": "",
+            "title": "explore collection",
             "link_url": "",
-            "link_text": "View all"
+            "link_text": "View all projects"
           }
         }
       },
