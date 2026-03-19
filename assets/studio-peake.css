@@ -326,6 +326,31 @@
   }
 }
 
+/* === Product button group: stack on mobile === */
+@media screen and (max-width: 699px) {
+  .product-button-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Main Product: flush gallery, padded info === */
+.shopify-section--main-product .product-info {
+  padding-block-end: var(--section-vertical-spacing-tight);
+}
+
+@media screen and (max-width: 999px) {
+  .shopify-section--main-product .product-info,
+  .shopify-section--main-product .product-content-below-gallery {
+    padding-inline: var(--container-gutter);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .shopify-section--main-product > div > .container {
+    margin-inline-start: 0;
+  }
+}
+
 /* === Product Enquiry Modal === */
 /* Modal gets moved to <body> by DialogElement, so selectors target the element directly */
 

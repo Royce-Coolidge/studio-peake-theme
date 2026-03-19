@@ -42,11 +42,7 @@ Supported parameters
           <span>{{ title }}</span>
         {%- endif -%}
 
-        {%- if show_arrow -%}
-          {%- render 'icon' with 'chevron-down', class: 'group-expanded:rotate' -%}
-        {%- else -%}
-          <span class="animated-plus group-expanded:rotate" aria-hidden="true"></span>
-        {%- endif -%}
+        {%- render 'icon' with 'chevron-down', class: 'group-expanded:rotate' -%}
       </span>
     </summary>
 

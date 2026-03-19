@@ -43,7 +43,8 @@
 {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 {%- capture product_form_id -%}product-form-main-{{ product.id }}-{{ section.id }}{%- endcapture -%}
 
-<div class="section-spacing section-spacing--tight color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}"
+<div class="color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }}"
+     {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}
      {%- if product != blank -%}
      data-enquiry-product-title="{{ product.title | escape }}"
      data-enquiry-image-url="{{ product.featured_media | image_url: width: 1200 }}"
@@ -189,6 +190,13 @@ quick buy information in a template, that will be extracted in JS, which ensures
   "class": "shopify-section--main-product",
   "tag": "section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "allow_transparent_header",
+      "label": "t:global.section.allow_transparent_header",
+      "info": "t:global.section.allow_transparent_header_info",
+      "default": false
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",

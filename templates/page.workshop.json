@@ -240,7 +240,7 @@
         "collection_8JhACB": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "residential",
             "products_count": 8,
             "title": "explore collection",
             "link_url": "",
