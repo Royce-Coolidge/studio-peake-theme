@@ -127,6 +127,38 @@
                   {%- endif -%}
                 {%- endif -%}
 
+                {%- if block.type == 'image' -%}
+                  {%- for hi in (1..4) -%}
+                    {%- capture prod_key -%}product_hotspot_{{ hi }}{%- endcapture -%}
+                    {%- capture horiz_key -%}hotspot_{{ hi }}_horizontal{%- endcapture -%}
+                    {%- capture vert_key -%}hotspot_{{ hi }}_vertical{%- endcapture -%}
+                    {%- assign hs_product = block.settings[prod_key] -%}
+                    {%- if hs_product != blank -%}
+                      {%- capture color_key -%}hotspot_{{ hi }}_color{%- endcapture -%}
+                      {%- assign hs_color = block.settings[color_key] | default: section.settings.tooltip_footer_color -%}
+                      <div class="sp-hotspot-wrap" style="--sp-hotspot-top: {{ block.settings[vert_key] }}%; --sp-hotspot-left: {{ block.settings[horiz_key] }}%;">
+                        <button class="sp-hotspot"
+                          data-tooltip-id="sp-tooltip-{{ block.id }}-{{ hi }}"
+                          aria-label="View product {{ hi }}"
+                          type="button">
+                        </button>
+                        <div class="sp-tooltip" id="sp-tooltip-{{ block.id }}-{{ hi }}"
+                             style="--sp-tooltip-footer-bg: {{ hs_color }};">
+                          <div class="sp-tooltip__image">
+                            {%- if hs_product.featured_image -%}
+                              {{ hs_product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+                            {%- endif -%}
+                          </div>
+                          <div class="sp-tooltip__footer">
+                            <p class="sp-tooltip__title">{{ hs_product.title }}</p>
+                            <a href="{{ hs_product.url }}" class="sp-tooltip__link">Explore Product</a>
+                          </div>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
                 {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
                   <div class="prose prose--tight {{ block.settings.text_position }}">
                     <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
@@ -141,7 +173,15 @@
               </div>
             {%- endcapture -%}
 
-            {%- if block.settings.link_url -%}
+            {%- comment -%}SP: Check if block has hotspots — if so, skip <a> wrapper to avoid click conflicts{%- endcomment -%}
+            {%- assign sp_has_hotspots = false -%}
+            {%- if block.type == 'image' -%}
+              {%- if block.settings.product_hotspot_1 != blank or block.settings.product_hotspot_2 != blank or block.settings.product_hotspot_3 != blank or block.settings.product_hotspot_4 != blank -%}
+                {%- assign sp_has_hotspots = true -%}
+              {%- endif -%}
+            {%- endif -%}
+
+            {%- if block.settings.link_url and sp_has_hotspots == false -%}
               <a href="{{ block.settings.link_url }}" class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}" {{ block.shopify_attributes }}>
                 {{- block_content -}}
               </a>
@@ -156,6 +196,47 @@
     </div>
   </div>
 {%- endif -%}
+
+<script>
+  (function() {
+    var section = document.getElementById('shopify-section-{{ section.id }}');
+    if (!section) return;
+
+    function closeAll(except) {
+      section.querySelectorAll('.sp-tooltip.is-visible').forEach(function(t) {
+        if (t !== except) t.classList.remove('is-visible');
+      });
+      section.querySelectorAll('.media-grid__item[style*="z-index"]').forEach(function(gi) {
+        if (!except || !gi.contains(except)) gi.style.removeProperty('z-index');
+      });
+    }
+
+    section.addEventListener('click', function(e) {
+      var hotspot = e.target.closest('.sp-hotspot');
+      if (hotspot) {
+        e.preventDefault();
+        e.stopPropagation();
+        var tooltip = hotspot.nextElementSibling;
+        if (!tooltip) return;
+
+        var isOpen = tooltip.classList.contains('is-visible');
+        closeAll();
+        if (!isOpen) {
+          tooltip.classList.add('is-visible');
+          var gridItem = hotspot.closest('.media-grid__item');
+          if (gridItem) gridItem.style.zIndex = '10';
+        }
+        return;
+      }
+
+      if (!e.target.closest('.sp-tooltip')) {
+        closeAll();
+      }
+    }, true);
+
+    window.addEventListener('resize', function() { closeAll(); });
+  })();
+</script>
 
 {% schema %}
 {
@@ -326,6 +407,16 @@
       "id": "anchor_id",
       "label": "Anchor link ID",
       "info": "Enter a unique ID (e.g. \"our-studio\") to create a link target. Use in menu URLs as #our-studio"
+    },
+    {
+      "type": "header",
+      "content": "Hotspot tooltips"
+    },
+    {
+      "type": "color",
+      "id": "tooltip_footer_color",
+      "label": "Hotspot tooltip footer colour",
+      "default": "#7a8450"
     }
   ],
   "blocks": [
@@ -522,6 +613,146 @@
           "step": 1,
           "unit": "%",
           "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Hotspot 1"
+        },
+        {
+          "type": "product",
+          "id": "product_hotspot_1",
+          "label": "Product"
+        },
+        {
+          "type": "range",
+          "id": "hotspot_1_horizontal",
+          "label": "Horizontal position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 30
+        },
+        {
+          "type": "range",
+          "id": "hotspot_1_vertical",
+          "label": "Vertical position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 30
+        },
+        {
+          "type": "color",
+          "id": "hotspot_1_color",
+          "label": "Footer colour",
+          "default": "#7a8450"
+        },
+        {
+          "type": "header",
+          "content": "Hotspot 2"
+        },
+        {
+          "type": "product",
+          "id": "product_hotspot_2",
+          "label": "Product"
+        },
+        {
+          "type": "range",
+          "id": "hotspot_2_horizontal",
+          "label": "Horizontal position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 60
+        },
+        {
+          "type": "range",
+          "id": "hotspot_2_vertical",
+          "label": "Vertical position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "color",
+          "id": "hotspot_2_color",
+          "label": "Footer colour",
+          "default": "#7a8450"
+        },
+        {
+          "type": "header",
+          "content": "Hotspot 3"
+        },
+        {
+          "type": "product",
+          "id": "product_hotspot_3",
+          "label": "Product"
+        },
+        {
+          "type": "range",
+          "id": "hotspot_3_horizontal",
+          "label": "Horizontal position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "hotspot_3_vertical",
+          "label": "Vertical position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 40
+        },
+        {
+          "type": "color",
+          "id": "hotspot_3_color",
+          "label": "Footer colour",
+          "default": "#7a8450"
+        },
+        {
+          "type": "header",
+          "content": "Hotspot 4"
+        },
+        {
+          "type": "product",
+          "id": "product_hotspot_4",
+          "label": "Product"
+        },
+        {
+          "type": "range",
+          "id": "hotspot_4_horizontal",
+          "label": "Horizontal position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "hotspot_4_vertical",
+          "label": "Vertical position",
+          "min": 5,
+          "max": 95,
+          "step": 1,
+          "unit": "%",
+          "default": 70
+        },
+        {
+          "type": "color",
+          "id": "hotspot_4_color",
+          "label": "Footer colour",
+          "default": "#7a8450"
         }
       ]
     },
