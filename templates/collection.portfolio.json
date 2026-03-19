@@ -25,7 +25,8 @@
         "show_breadcrumb": true,
         "content_width": "xs",
         "overlay_color": "#000000",
-        "overlay_opacity": 35
+        "overlay_opacity": 35,
+        "anchor_id": ""
       }
     },
     "media_grid_9CQdYc": {
@@ -38,7 +39,7 @@
             "image": "{{ metaobjects.project[\"kensington-townhouse\"].hero_image.value }}",
             "column_count": "6",
             "row_count": 2,
-            "title": "Admin API{{ metaobjects.project[\"kensington-townhouse\"].title.value }}",
+            "title": "{{ metaobjects.project[\"kensington-townhouse\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
             "link_text": "Explore Project",
@@ -46,7 +47,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "image_JJwb4L": {
@@ -63,7 +80,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         }
       },
@@ -79,9 +112,13 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "none",
+        "sp_use_metaobject_gallery": false,
+        "sp_masonry_style": "custom",
         "subheading": "",
         "title": "",
-        "content": ""
+        "content": "",
+        "anchor_id": "",
+        "tooltip_footer_color": "#7a8450"
       }
     },
     "main": {
@@ -102,7 +139,8 @@
         "show_results_count": true,
         "show_filter_group_name": false,
         "show_filter_values_count": true,
-        "open_filters_by_default": true
+        "open_filters_by_default": true,
+        "anchor_id": ""
       }
     }
   },
