@@ -24,21 +24,32 @@
       {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
       <div class="section-stack">
-        <div class="v-stack gap-4 text-center sm:text-start sm:gap-5">
-          {%- if section.settings.subheading != blank -%}
-            <p class="h6">{{- section.settings.subheading -}}</p>
-          {%- endif -%}
+        <div class="featured-collections-header">
+          <div class="v-stack gap-4 text-start sm:gap-5">
+            {%- if section.settings.subheading != blank -%}
+              <p class="h6">{{- section.settings.subheading -}}</p>
+            {%- endif -%}
 
-          {%- if section.blocks.size > 1 -%}
-            <carousel-navigation align-selected class="featured-collections-navigation scroll-area bleed" aria-controls="{{ wrapper_carousel_id }}">
-              {%- for block in section.blocks -%}
-                <button class="h2" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
-                  {{- block.settings.title | default: block.settings.collection.title | default: 'Collection' -}}
-                </button>
-              {%- endfor -%}
-            </carousel-navigation>
-          {%- else -%}
-            <h2 class="h2">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
+            {%- if section.blocks.size > 1 -%}
+              <carousel-navigation align-selected class="featured-collections-navigation scroll-area bleed" aria-controls="{{ wrapper_carousel_id }}">
+                {%- for block in section.blocks -%}
+                  <button class="h2" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+                    {{- block.settings.title | default: block.settings.collection.title | default: 'Collection' -}}
+                  </button>
+                {%- endfor -%}
+              </carousel-navigation>
+            {%- else -%}
+              <h2 class="h2">{{ section.blocks.first.settings.title | default: section.blocks.first.settings.collection.title | default: 'Collection' }}</h2>
+            {%- endif -%}
+          </div>
+
+          {%- assign first_block = section.blocks.first -%}
+          {%- if first_block.settings.link_text != blank -%}
+            {%- assign header_button_link = first_block.settings.link_url | default: first_block.settings.collection.url | default: '#' -%}
+            <a href="{{ header_button_link }}" class="featured-collections-header__link link">
+              {{- first_block.settings.link_text | escape -}}
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" class="featured-collections-header__arrow" style="overflow: visible;"><path d="M9 9L2.75923 8.6152L2.84366 8.02916L6.7299 7.36969L-3.28459e-08 0.761444C0.47573 0.229793 0.511911 0.24067 0.80137 -3.63151e-07L7.39324 6.69799L7.87835 2.87581L8.62076 2.86221L9 9Z" fill="currentColor"/></svg>
+            </a>
           {%- endif -%}
         </div>
 
@@ -89,13 +100,6 @@
                 </product-list>
               {%- endif -%}
 
-              {%- if block.settings.link_text != blank -%}
-                {%- assign button_link = block.settings.link_url | default: block.settings.collection.url | default: '#' -%}
-
-                <div class="justify-self-center">
-                  {%- render 'button', href: button_link, content: block.settings.link_text -%}
-                </div>
-              {%- endif -%}
             </div>
           {%- endfor -%}
         </featured-collections-carousel>

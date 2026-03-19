@@ -247,6 +247,29 @@
   align-items: center;
 }
 
+/* === Featured Collections header: title left, button right === */
+.featured-collections-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.featured-collections-header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 700px) {
+  .featured-collections-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
 /* === Image-with-text inline image: respond to sm: content alignment === */
 @media screen and (min-width: 700px) {
   .sm\:text-start .image-with-text__inline-image {
