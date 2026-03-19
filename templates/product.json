@@ -138,7 +138,7 @@
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": true,
-        "media_size": "auto",
+        "media_size": "md",
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
