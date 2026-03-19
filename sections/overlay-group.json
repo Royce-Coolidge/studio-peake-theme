@@ -90,7 +90,9 @@
         },
         "enquiry-marketing": {
           "type": "marketing",
-          "settings": {}
+          "settings": {
+            "disclaimer_text": "<p>I agree to receive marketing communications from Studio Peake.</p>"
+          }
         }
       },
       "block_order": [
@@ -105,7 +107,9 @@
         "enquiry-notes",
         "enquiry-marketing"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
   "order": [

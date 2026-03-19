@@ -1,5 +1,6 @@
-<x-modal id="enquiry-modal"
-  class="modal enquiry-modal color-scheme color-scheme--{{ section.settings.color_scheme.id }}"
+<x-drawer id="enquiry-modal"
+  class="drawer enquiry-modal color-scheme color-scheme--{{ section.settings.color_scheme.id }}"
+  open-from="right"
   handle-editor-events
   aria-label="Product Enquiry">
   <div class="enquiry-modal__layout">
@@ -170,12 +171,29 @@
       </div>
     </div>
   </div>
-</x-modal>
+</x-drawer>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('enquiry-modal');
     if (!modal) return;
+
+    /* Slow the drawer animation from 0.3s to 0.5s */
+    const dur = 500;
+    const ease = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
+    const openFrom = modal.getAttribute('open-from') || 'right';
+    const translateOut = `translateX(${openFrom === 'right' ? '100%' : '-100%'})`;
+
+    modal.createEnterAnimationControls = function () {
+      this.getShadowPartByName('content').style.marginInlineStart = openFrom === 'right' ? 'auto' : '0';
+      this.getShadowPartByName('overlay').animate([{ opacity: 0 }, { opacity: 1 }], { duration: dur, easing: ease, fill: 'forwards' });
+      return this.getShadowPartByName('content').animate([{ transform: translateOut }, { transform: 'translateX(0)' }], { duration: dur, easing: ease, fill: 'forwards' });
+    };
+
+    modal.createLeaveAnimationControls = function () {
+      this.getShadowPartByName('overlay').animate([{ opacity: 1 }, { opacity: 0 }], { duration: dur, easing: ease, fill: 'forwards' });
+      return this.getShadowPartByName('content').animate([{ transform: 'translateX(0)' }, { transform: translateOut }], { duration: dur, easing: ease, fill: 'forwards' });
+    };
 
     // Product data bridge — read from main-product section data attributes
     const productSource = document.querySelector('[data-enquiry-product-title]');
