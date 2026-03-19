@@ -129,36 +129,10 @@
             "border_color": "",
             "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
-        },
-        "image_UtEpHc": {
-          "type": "image",
-          "settings": {
-            "subheading": "Tell your story",
-            "title": "Slide 2",
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 100,
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_1_style": "solid",
-            "button_1_background": "#ffffff",
-            "button_1_text_color": "#000000",
-            "button_2_text": "",
-            "button_2_link": "",
-            "button_2_style": "outline",
-            "button_2_background": "#ffffff",
-            "button_2_text_color": "#000000",
-            "background": "",
-            "background_opacity": 50,
-            "text_color": "#ffffff",
-            "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2) 0%, rgba(4, 4, 4, 0.65) 100%)"
-          }
         }
       },
       "block_order": [
-        "image_3URgVK",
-        "image_UtEpHc"
+        "image_3URgVK"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
@@ -171,54 +145,6 @@
         "cycle_speed": 5,
         "background": "#000000",
         "controls_color": "#ffffff",
-        "anchor_id": ""
-      }
-    },
-    "image_with_text_tXeDzF": {
-      "type": "image-with-text",
-      "blocks": {
-        "subheading_Bh4bnB": {
-          "type": "subheading",
-          "settings": {
-            "text": "Meet The Maker"
-          }
-        },
-        "heading_9wF3CP": {
-          "type": "heading",
-          "settings": {
-            "text": "{{ product.metafields.custom.the_design.value.the_maker.value }}",
-            "heading_tag": "h1"
-          }
-        },
-        "image_3rHHtt": {
-          "type": "image",
-          "settings": {
-            "image": "{{ product.metafields.custom.the_design.value.right_image_smaller.value }}"
-          }
-        },
-        "richtext_wFtfey": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>{{ product.metafields.custom.the_design.value.maker_bio | metafield_tag }}</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_Bh4bnB",
-        "heading_9wF3CP",
-        "image_3rHHtt",
-        "richtext_wFtfey"
-      ],
-      "name": "t:sections.image_with_text.presets.image_with_text.name",
-      "settings": {
-        "color_scheme": "scheme-1f3e3275-c7f4-4736-948b-ec7297152781",
-        "separate_section_with_border": true,
-        "image": "{{ product.metafields.custom.the_design.value.image.value }}",
-        "reveal_on_scroll": true,
-        "image_position": "start",
-        "content_width": "sm",
-        "content_alignment": "center",
-        "remove_vertical_spacing": true,
         "anchor_id": ""
       }
     },
@@ -262,6 +188,54 @@
         "anchor_id": ""
       }
     },
+    "image_with_text_tXeDzF": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_Bh4bnB": {
+          "type": "subheading",
+          "settings": {
+            "text": "Meet The Maker"
+          }
+        },
+        "heading_9wF3CP": {
+          "type": "heading",
+          "settings": {
+            "text": "{{ product.metafields.custom.the_design.value.the_maker.value }}",
+            "heading_tag": "h1"
+          }
+        },
+        "image_3rHHtt": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.the_design.value.right_image_smaller.value }}"
+          }
+        },
+        "richtext_wFtfey": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.the_design.value.maker_bio | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Bh4bnB",
+        "heading_9wF3CP",
+        "image_3rHHtt",
+        "richtext_wFtfey"
+      ],
+      "name": "Meet The Maker",
+      "settings": {
+        "color_scheme": "scheme-1f3e3275-c7f4-4736-948b-ec7297152781",
+        "separate_section_with_border": true,
+        "image": "{{ product.metafields.custom.the_design.value.image.value }}",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "sm",
+        "content_alignment": "center",
+        "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
+    },
     "featured_collections_Q7PmtQ": {
       "type": "featured-collections",
       "blocks": {
@@ -297,8 +271,8 @@
   "order": [
     "main",
     "slideshow_NGKhVb",
-    "image_with_text_tXeDzF",
     "image_with_text_g8cCRy",
+    "image_with_text_tXeDzF",
     "featured_collections_Q7PmtQ"
   ]
 }
