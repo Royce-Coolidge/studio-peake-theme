@@ -303,6 +303,19 @@
   margin-block: 0 !important;
 }
 
+.product-card__info .price-list {
+  display: none;
+}
+
+.product-title {
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  font-style: var(--heading-font-style);
+  font-size: var(--h5-font-size, 0.875rem);
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: var(--heading-text-transform);
+}
+
 @media screen and (min-width: 700px) {
   .product-gallery__thumbnail-list {
     display: none;
