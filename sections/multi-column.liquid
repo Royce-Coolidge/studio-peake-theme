@@ -97,7 +97,7 @@
                   {%- endfor -%}
                 </div>
               {%- elsif block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
-                <div class="prose text-{{ section.settings.text_alignment }}">
+                <div class="prose text-{{ section.settings.text_alignment }}{% if block.settings.compact_text %} prose--compact{% endif %}">
                   {%- if block.settings.title != blank -%}
                     <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
                   {%- endif -%}
@@ -317,6 +317,13 @@
           "type": "text",
           "id": "link_text",
           "label": "t:global.text.link_text"
+        },
+        {
+          "type": "checkbox",
+          "id": "compact_text",
+          "label": "Compact text spacing",
+          "info": "Remove gaps between paragraphs (useful for addresses)",
+          "default": false
         }
       ]
     },

@@ -22,7 +22,7 @@
     "sp_contact_form": {
       "type": "sp-contact-form",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "image": "shopify://shop_images/studiopeake-contact-surrey-arts-and-craft-desktop.jpg",
         "heading": "Let's discuss your project",
         "first_name_label": "FIRST NAME*",
@@ -39,10 +39,93 @@
         "success_message": "Thank you for your enquiry. We will be in touch shortly.",
         "anchor_id": ""
       }
+    },
+    "multi_column_UxUVyj": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_LRMAjQ": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "general enquiries",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        },
+        "image_with_text_p7KWGm": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        },
+        "image_with_text_UCbyJX": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Visit",
+            "heading_tag": "h3",
+            "content": "<p>Studio Peake First Floor,                              </p><p>Unit 6 Glenthorne Mews </p><p>115a Glenthorne Road </p><p>London, W6 0LJ</p>",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": true
+          }
+        },
+        "image_with_text_diFdKQ": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "telephone",
+            "heading_tag": "h3",
+            "content": "<p>020 7736 7409</p><p></p><h5>Opening times </h5><p>9am – 5.30pm <br/>Monday - Friday</p>",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        },
+        "image_with_text_PxEDq9": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "email",
+            "heading_tag": "h3",
+            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_LRMAjQ",
+        "image_with_text_p7KWGm",
+        "image_with_text_UCbyJX",
+        "image_with_text_diFdKQ",
+        "image_with_text_PxEDq9"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
+        "separate_section_with_border": true,
+        "columns_per_row": 5,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "md",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "main",
-    "sp_contact_form"
+    "sp_contact_form",
+    "multi_column_UxUVyj"
   ]
 }
