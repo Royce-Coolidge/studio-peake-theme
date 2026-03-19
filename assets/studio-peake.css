@@ -303,6 +303,13 @@
   margin-block: 0 !important;
 }
 
+.blog-post-card__read-more {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  text-transform: var(--button-text-transform, uppercase);
+}
+
 /* === Blog post carousel — full-width cards on mobile === */
 @media screen and (max-width: 699px) {
   .shopify-section--blog-posts .blog-posts-header {
@@ -314,7 +321,7 @@
   }
 
   .blog-post-list--carousel {
-    grid: auto / auto-flow 100vw;
+    grid: auto / auto-flow 100%;
   }
 
   /* Stack on mobile: switch from horizontal scroll to vertical stack */
@@ -323,6 +330,15 @@
     row-gap: 0;
     overflow-x: visible;
     scroll-snap-type: none;
+  }
+
+  .blog-post-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .blog-post-card__info {
+    min-height: 280px;
   }
 }
 
