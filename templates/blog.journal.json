@@ -1,1 +1,59 @@
-{"sections":{"main":{"type":"main-blog","settings":{"color_scheme":"","show_blog_title":true,"show_rss_feed":false,"show_tags":true,"posts_per_page":12,"feature_first_blog_post":true,"featured_blog_post_color_scheme":"","show_category":true,"show_date":true,"show_excerpt":true,"show_read_more":true}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_blog_title": true,
+        "show_rss_feed": false,
+        "show_tags": true,
+        "posts_per_page": 12,
+        "feature_first_blog_post": true,
+        "featured_blog_post_color_scheme": "",
+        "card_color_scheme": "",
+        "show_category": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_read_more": true,
+        "anchor_id": ""
+      }
+    },
+    "blog_posts_z3GxbJ": {
+      "type": "blog-posts",
+      "name": "t:sections.blog_posts.presets.blog_posts.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "blog": "news",
+        "posts_count": 3,
+        "stack_on_mobile": false,
+        "full_width": true,
+        "card_color_scheme": "",
+        "show_category": true,
+        "show_date": false,
+        "show_excerpt": true,
+        "show_read_more": true,
+        "subheading": "",
+        "title": "Blog posts",
+        "content": "",
+        "button_link": "",
+        "button_text": "View all",
+        "anchor_id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "blog_posts_z3GxbJ"
+  ]
+}
