@@ -303,6 +303,14 @@
   margin-block: 0 !important;
 }
 
+.collection-toolbar__button {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  text-transform: var(--button-text-transform, uppercase);
+  letter-spacing: var(--button-letter-spacing, 0.06em);
+}
+
 .product-card__info .price-list {
   display: none;
 }
