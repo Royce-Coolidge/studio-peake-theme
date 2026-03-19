@@ -154,14 +154,8 @@
         "heading_eWxyjr": {
           "type": "heading",
           "settings": {
-            "text": "Image with text",
+            "text": "The Design",
             "heading_tag": "h1"
-          }
-        },
-        "image_V47qLP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/studio-peake-elowen-chandelier-meet-the-maker-01.jpg"
           }
         },
         "richtext_PQjGDw": {
@@ -173,15 +167,14 @@
       },
       "block_order": [
         "heading_eWxyjr",
-        "image_V47qLP",
         "richtext_PQjGDw"
       ],
-      "name": "Meet the Artist",
+      "name": "The Design",
       "settings": {
-        "color_scheme": "scheme-ed3c746e-2171-49ad-9711-2a0e8616f021",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "reveal_on_scroll": true,
-        "image_position": "start",
+        "image_position": "end",
         "content_width": "sm",
         "content_alignment": "start",
         "remove_vertical_spacing": true,
