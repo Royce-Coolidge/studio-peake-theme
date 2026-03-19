@@ -1,1 +1,106 @@
-{"sections":{"collection-banner":{"type":"collection-banner","settings":{"color_scheme":"scheme-4","image":"{{ collection.image }}","image_size":"md","allow_transparent_header":true,"reveal":false,"enable_parallax":false,"show_image":true,"show_collection_title":true,"show_collection_description":true,"show_breadcrumb":true,"content_width":"xs","overlay_color":"#000000","overlay_opacity":35}},"main":{"type":"main-collection","settings":{"color_scheme":"","hide_product_information":false,"products_per_page":24,"products_per_row_mobile":"2","products_size_desktop":"medium","show_grid_mode_selector":true,"horizontal_spacing_factor":1,"vertical_spacing_factor":1,"filter_layout":"sidebar","quick_links_menu":"","show_sort_by":true,"show_filters":true,"show_results_count":true,"show_filter_group_name":false,"show_filter_values_count":true,"open_filters_by_default":true}}},"order":["collection-banner","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image": "shopify://shop_images/studiopeake-workshop-product-gallery-hero-desktop.jpg",
+        "mobile_image": "shopify://shop_images/studiopeake-workshop-product-gallery-hero-mobile.jpg",
+        "image_size": "auto",
+        "allow_transparent_header": true,
+        "reveal": false,
+        "enable_parallax": false,
+        "show_image": true,
+        "show_collection_title": false,
+        "show_collection_description": false,
+        "show_breadcrumb": true,
+        "content_width": "xs",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "anchor_id": ""
+      }
+    },
+    "multi_column_GzhpBQ": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_b9Wxq8": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "the workshop",
+            "heading_tag": "h3",
+            "content": "<p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p>",
+            "link_url": "",
+            "link_text": "learn more",
+            "compact_text": false
+          }
+        },
+        "image_with_text_LNbTNg": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_b9Wxq8",
+        "image_with_text_LNbTNg"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "columns_per_row": 2,
+        "stack_on_mobile": false,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "md",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "color_scheme": "",
+        "hide_product_information": false,
+        "products_per_page": 24,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "sidebar",
+        "quick_links_menu": "",
+        "show_sort_by": true,
+        "show_filters": true,
+        "show_results_count": true,
+        "show_filter_group_name": false,
+        "show_filter_values_count": true,
+        "open_filters_by_default": true,
+        "anchor_id": ""
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "multi_column_GzhpBQ",
+    "main"
+  ]
+}
