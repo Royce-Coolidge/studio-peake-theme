@@ -44,7 +44,7 @@
 
               {%- liquid
                 capture media_content
-                  if block.type == 'image_with_text' and block.settings.image != blank
+                  if block.settings.image != blank
                     assign loading_strategy = nil
 
                     if forloop.index > 2 or section.location == 'footer'
@@ -76,7 +76,27 @@
                 {%- endif -%}
               {%- endif -%}
 
-              {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
+              {%- if block.type == 'sp_link_group_with_image' -%}
+                {%- if block.settings.title != blank -%}
+                  <div class="prose text-{{ section.settings.text_alignment }}">
+                    <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
+                  </div>
+                {%- endif -%}
+                <div class="sp-link-group" {{ block.shopify_attributes }}>
+                  {%- for i in (1..5) -%}
+                    {%- assign text_key = 'link_text_' | append: i -%}
+                    {%- assign url_key = 'link_url_' | append: i -%}
+                    {%- assign link_text = block.settings[text_key] -%}
+                    {%- assign link_url = block.settings[url_key] -%}
+                    {%- if link_text != blank -%}
+                      <a {% if link_url != blank %}href="{{ link_url }}"{% endif %} class="sp-link-row">
+                        <span class="sp-link-row__text">{{ link_text | escape }}</span>
+                        {%- render 'icon' with 'arrow-down-right', width: 14 -%}
+                      </a>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              {%- elsif block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
                 <div class="prose text-{{ section.settings.text_alignment }}">
                   {%- if block.settings.title != blank -%}
                     <p class="{{ block.settings.heading_tag }}">{{ block.settings.title }}</p>
@@ -297,6 +317,106 @@
           "type": "text",
           "id": "link_text",
           "label": "t:global.text.link_text"
+        }
+      ]
+    },
+    {
+      "type": "sp_link_group_with_image",
+      "name": "SP Link group with image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:global.image.image",
+          "info": "t:sections.multi_column.blocks.image_with_text.image_size_recommendation"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "t:global.text.heading",
+          "default": "Column title"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "t:global.text.heading_style",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ],
+          "default": "h3"
+        },
+        {
+          "type": "text",
+          "id": "link_text_1",
+          "label": "Link 1 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_1",
+          "label": "Link 1 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_2",
+          "label": "Link 2 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_2",
+          "label": "Link 2 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_3",
+          "label": "Link 3 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_3",
+          "label": "Link 3 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_4",
+          "label": "Link 4 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_4",
+          "label": "Link 4 URL"
+        },
+        {
+          "type": "text",
+          "id": "link_text_5",
+          "label": "Link 5 text"
+        },
+        {
+          "type": "url",
+          "id": "link_url_5",
+          "label": "Link 5 URL"
         }
       ]
     },
