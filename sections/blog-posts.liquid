@@ -57,7 +57,7 @@ LIQUID
       {%- endif -%}
 
       {%- assign carousel_id = 'blog-carousel-' | append: section.id -%}
-      <scroll-carousel id="{{ carousel_id }}" class="blog-post-list {% unless section.settings.stack_on_mobile %}blog-post-list--carousel scroll-area snap-x {% if section.settings.full_width %}full-bleed{% else %}bleed{% endif %}{% endunless %}">
+      <scroll-carousel id="{{ carousel_id }}" class="blog-post-list blog-post-list--carousel {% unless section.settings.stack_on_mobile %}scroll-area snap-x{% endunless %} {% if section.settings.full_width %}full-bleed{% else %}bleed{% endif %} {% if section.settings.stack_on_mobile %}blog-post-list--stack-mobile{% endif %}">
         {%- capture sizes -%}(max-width: 699px) 100vw, (max-width: 1149px) calc(100vw / 2), calc((80rem - (5rem * ({{ section.settings.blog.articles_count | default: 3 | at_most: 3 }} - 1) / 3){%- endcapture -%}
 
         {%- for article in section.settings.blog.articles limit: section.settings.posts_count -%}

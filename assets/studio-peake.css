@@ -267,8 +267,20 @@
 
 /* === Blog post carousel — full-width cards on mobile === */
 @media screen and (max-width: 699px) {
+  .shopify-section--blog-posts > .section-spacing > .container {
+    margin-inline: 0;
+  }
+
   .blog-post-list--carousel {
     grid: auto / auto-flow 100vw;
+  }
+
+  /* Stack on mobile: switch from horizontal scroll to vertical stack */
+  .blog-post-list--stack-mobile {
+    grid: auto / 1fr;
+    row-gap: 0;
+    overflow-x: visible;
+    scroll-snap-type: none;
   }
 }
 
