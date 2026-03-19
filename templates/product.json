@@ -85,7 +85,7 @@
         "button_group_GqrLNK"
       ],
       "settings": {
-        "allow_transparent_header": false,
+        "allow_transparent_header": true,
         "color_scheme": "scheme-2",
         "container_size": "full",
         "product_info_size": 40,
