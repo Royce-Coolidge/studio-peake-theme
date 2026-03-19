@@ -161,7 +161,7 @@
         "richtext_PQjGDw": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "{{ product.metafields.custom.design_section.value.body_copy | metafield_tag }}"
           }
         }
       },
@@ -173,11 +173,12 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": false,
+        "image": "{{ product.metafields.custom.design_section.value.image_sketch.value }}",
         "reveal_on_scroll": true,
         "image_position": "end",
         "content_width": "sm",
         "content_alignment": "start",
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "anchor_id": ""
       }
     },
