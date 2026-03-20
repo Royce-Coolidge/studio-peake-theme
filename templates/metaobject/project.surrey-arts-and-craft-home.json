@@ -61,7 +61,7 @@
         "carousel_image_QGTmTQ": {
           "type": "carousel_image",
           "settings": {
-            "image": "{{ metaobject.sketch_image.value }}"
+            "image": "{{ shop.metaobjects.project['surrey-arts-and-craft-home'].sketch_image.value }}"
           }
         },
         "carousel_image_cYXQFn": {
@@ -75,7 +75,7 @@
         "heading_Efre63": {
           "type": "heading",
           "settings": {
-            "text": "{{ metaobject.title.value }}",
+            "text": "Surrey Arts and Craft Home",
             "heading_tag": "h1"
           }
         },

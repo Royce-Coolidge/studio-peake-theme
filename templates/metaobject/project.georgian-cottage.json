@@ -50,7 +50,7 @@
         "carousel_image_QGTmTQ": {
           "type": "carousel_image",
           "settings": {
-            "image": "{{ metaobject.sketch_image.value }}"
+            "image": "{{ shop.metaobjects.project['georgian-cottage'].sketch_image.value }}"
           }
         },
         "carousel_image_cYXQFn": {
@@ -64,7 +64,7 @@
         "heading_Efre63": {
           "type": "heading",
           "settings": {
-            "text": "{{ metaobject.title.value }}",
+            "text": "Georgian Cottage",
             "heading_tag": "h1"
           }
         },
