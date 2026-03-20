@@ -60,7 +60,9 @@
       "blocks": {
         "carousel_image_QGTmTQ": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "{{ metaobject.sketch_image.value }}"
+          }
         },
         "carousel_image_cYXQFn": {
           "type": "carousel_image",
