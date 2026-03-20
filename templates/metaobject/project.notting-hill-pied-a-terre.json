@@ -82,7 +82,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>A full refurbishment and reconfiguration of this Grade II listed lateral apartment in the heart of Notting Hill created the opportunity to pair historic character with a confident, contemporary interior. The brief was to preserve the building's charm while introducing a scheme that feels expressive, layered, and personal, using colour, craft, and texture to bring energy and depth to the rooms.</p><p>Bespoke joinery, hand selected fabrics, and carefully judged finishes were used throughout to strengthen the architecture and improve flow and function. Layered textiles, characterful furniture, and curated details add warmth and individuality. The result is a vibrant yet intimate home that balances heritage and modern living in a distinctly London setting.</p>"
+            "content": "{{ shop.metaobjects.project['notting-hill-pied-a-terre'].description.value }}"
           }
         },
         "sp_link_tY3j7r": {

@@ -80,7 +80,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>A young family with a love of clean lines and fresh pattern invited Studio Peake to step in after the structural and architectural phase of their renovation was complete. The house offered a true blank canvas: carefully finished, light filled, and minimal, but lacking warmth and personality. Our brief was to transform it into a layered, welcoming home that could support busy daily life while still feeling calm and considered.</p><p>The scheme focused on depth and atmosphere through texture, colour, and material contrast. Soft furnishings, bespoke joinery, and curated artwork were introduced to build character and visual rhythm across the rooms. Each space was tailored to how the family lives and gathers, balancing contemporary clarity with comfort and individuality, so the finished house feels settled, expressive, and genuinely lived in.</p>"
+            "content": "{{ shop.metaobjects.project['parsons-green-house'].description.value }}"
           }
         },
         "sp_link_tY3j7r": {

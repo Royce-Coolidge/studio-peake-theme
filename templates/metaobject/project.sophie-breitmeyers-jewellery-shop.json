@@ -80,7 +80,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Situated in the heart of Notting Hill, the Sophie Breitmeyer studio is an eclectic, welcoming space where jewellery, art, and personal collections sit side by side. The studio was designed as a home from home, soft, warm, and layered with colour, reflecting Sophie's eye and the objects she has gathered through travel and work.</p><p>Comfort and intimacy guide the interiors, with contemporary art, books, and collected pieces creating a relaxed, inspiring setting. Jewellery is integrated naturally throughout, encouraging clients to explore and make thoughtful bespoke decisions. A wall of client photographs adds a personal note, celebrating milestones and stories, while every detail supports connection, creativity, and ease.</p>"
+            "content": "{{ shop.metaobjects.project['sophie-breitmeyers-jewellery-shop'].description.value }}"
           }
         },
         "sp_link_tY3j7r": {

@@ -82,7 +82,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>This Georgian cottage in Vauxhall was Studio Peake's first full house project and remains especially meaningful. Rich in period detail and draped in wisteria, it offered a strong architectural base, approached with careful restoration and respect for original features. The building's character guided the design, with updates made to support modern family life without losing charm.</p><p>Reclaimed and antique furniture was layered with selected contemporary pieces to create a timeless, lived in feel. The client's art collection shaped the schemes, informing colour and texture throughout. Designed for a young family, the house balances practicality with warmth and personality, and began a long running creative collaboration.</p>"
+            "content": "{{ shop.metaobjects.project['georgian-cottage'].description.value }}"
           }
         },
         "sp_link_tY3j7r": {

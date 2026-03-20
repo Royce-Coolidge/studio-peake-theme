@@ -82,7 +82,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Studio Peake was commissioned to bring refined comfort and personality to a beautifully proportioned Kensington townhouse, following an architectural renovation led by Neal Newland of Peek Architecture. With the structure complete, our role was to elevate the interiors through thoughtful decoration, bespoke furnishings, and subtle architectural interventions to add coherence, warmth, and character.</p><p>Working with the existing framework, we introduced key details including a new fireplace and tailored joinery to strengthen focal points, then built a layered decorative scheme with a harmonious palette, varied textures, bespoke and collected furniture, and carefully chosen art, lighting, and textiles, creating a composed yet inviting backdrop for modern living.</p>"
+            "content": "{{ shop.metaobjects.project['chelsea-townhouse'].description.value }}"
           }
         },
         "sp_link_tY3j7r": {
