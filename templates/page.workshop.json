@@ -73,10 +73,11 @@
           "type": "image_with_text",
           "settings": {
             "title": "Everyday objects as works of art",
-            "heading_tag": "h3",
+            "heading_tag": "h1",
             "content": "",
             "link_url": "",
-            "link_text": ""
+            "link_text": "",
+            "compact_text": false
           }
         },
         "image_with_text_HcYgW6": {
@@ -86,7 +87,8 @@
             "heading_tag": "h3",
             "content": "<p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p><p>The Workshop grew from Sarah’s deep love of working with the remarkable artisans we partner with across our projects. It celebrates the joy of taking an idea from initial sketch to a finished object designed to be used and loved every day. Each piece is born from months – and sometimes years – of creative dialogue, as vision combines with craft to create something totally original.  </p>",
             "link_url": "",
-            "link_text": ""
+            "link_text": "",
+            "compact_text": false
           }
         }
       },
