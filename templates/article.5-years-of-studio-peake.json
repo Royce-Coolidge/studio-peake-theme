@@ -314,7 +314,7 @@
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": true,
-        "show_next_section_button": true,
+        "show_next_section_button": false,
         "media_size": "auto",
         "show_initial_transition": false,
         "autoplay": true,
@@ -360,7 +360,7 @@
         "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
         "separate_section_with_border": true,
         "columns_per_row": 2,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "overlap_image": false,
         "content_alignment": "start",
         "text_alignment": "start",
