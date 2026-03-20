@@ -37,7 +37,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-4",
         "enable_sticky": true,
         "hide_on_scroll": true,
         "show_separation_border": false,
@@ -53,6 +53,10 @@
         "sidebar_text_font": "body",
         "sidebar_show_dividers": false,
         "sidebar_open_second_level_menus": false,
+        "sidebar_contact_title": "CONTACT",
+        "sidebar_contact_text": "<p><a href=\"mailto:info@studiopeake.com\">info@studiopeake.com</a></p>",
+        "sidebar_visit_title": "VISIT",
+        "sidebar_visit_text": "<p>First Floor, Unit 6 Glenthorne Mews<br/>115a Glenthorne Road, London, W6 0LJ</p>",
         "layout": "logo_left_navigation_inline",
         "show_icons": false,
         "show_country_selector": false,

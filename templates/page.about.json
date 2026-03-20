@@ -481,7 +481,7 @@
         "content_width": "sm",
         "content_alignment": "start",
         "remove_vertical_spacing": true,
-        "anchor_id": ""
+        "anchor_id": "team"
       }
     },
     "blog_posts_about": {
