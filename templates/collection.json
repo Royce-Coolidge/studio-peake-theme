@@ -13,7 +13,6 @@
       "type": "collection-banner",
       "settings": {
         "color_scheme": "scheme-4",
-        "image": "{{ collection.image }}",
         "image_size": "sm",
         "allow_transparent_header": true,
         "reveal": false,
