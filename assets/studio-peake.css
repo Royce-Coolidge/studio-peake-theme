@@ -726,8 +726,8 @@
   }
 
   .sp-contact-layout__image {
-    aspect-ratio: 3 / 4;
-    max-height: 60vh;
+    width: 100%;
+    height: 60vh;
   }
 
   .sp-contact-layout__form {
