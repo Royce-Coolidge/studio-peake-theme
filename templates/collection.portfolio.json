@@ -138,12 +138,13 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "{{ metaobjects.project[\"parsons-green-house\"].hero_image.value }}",
             "column_count": "4",
             "row_count": 2,
-            "title": "",
+            "title": "{{ metaobjects.project[\"parsons-green-house\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
-            "link_text": "",
+            "link_text": "explore the project",
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -167,16 +168,17 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_AQhwb7": {
+        "image_P3FWqn": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-notting-hill-pied-a-terre-11.jpg",
             "column_count": "4",
             "row_count": 2,
-            "title": "",
+            "title": "{{ metaobjects.project[\"notting-hill-pied-a-terre\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
-            "link_text": "",
+            "link_text": "explore the project",
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -200,16 +202,17 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_fnmw7n": {
+        "image_RcqdqP": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "{{ metaobjects.project[\"chelsea-townhouse\"].hero_image.value }}",
             "column_count": "4",
             "row_count": 2,
-            "title": "",
+            "title": "{{ metaobjects.project[\"chelsea-townhouse\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
-            "link_text": "",
+            "link_text": "explore the project",
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -239,8 +242,8 @@
         "image_BWqP4E",
         "image_PVrEBX",
         "image_7xPVTr",
-        "image_AQhwb7",
-        "image_fnmw7n"
+        "image_P3FWqn",
+        "image_RcqdqP"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
