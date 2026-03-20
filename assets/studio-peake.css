@@ -107,6 +107,34 @@
   }
 }
 
+/* === Header Nav Hover === */
+/* Remove default underline pseudo-element on nav items */
+.header__primary-nav-item:before {
+  display: none;
+}
+
+/* Remove link underline hover on header nav items */
+@media screen and (pointer: fine) {
+  .header__primary-nav-item .link:hover,
+  .header__primary-nav-item summary.link:hover {
+    background-size: 0 1px;
+  }
+}
+
+/* Reduce opacity on hover instead */
+@media screen and (pointer: fine) {
+  .header__primary-nav-item:hover > a,
+  .header__primary-nav-item:hover > * > summary {
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.header__primary-nav-item > a,
+.header__primary-nav-item > * > summary {
+  transition: opacity 0.2s ease-in-out;
+}
+
 /* === Header Dropdown Overrides (Scheme 4) === */
 /* Remove borders and box-shadow on dropdown menus */
 .header__dropdown-menu {
