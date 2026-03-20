@@ -86,7 +86,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>The result is a welcoming family home that honours its Arts and Crafts heritage while embracing comfort, individuality, and contemporary living.</p>"
+            "content": "<p>{{ metaobject.description | metafield_tag }}</p>"
           }
         },
         "sp_link_tY3j7r": {
@@ -114,7 +114,7 @@
         "content_width": "md",
         "remove_vertical_spacing": false,
         "autoplay": false,
-        "media_padding_inline": 10,
+        "media_padding_inline": 11,
         "cycle_speed": 5,
         "dots_color": "",
         "anchor_id": ""
@@ -127,8 +127,9 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-01.jpg",
             "column_count": "8",
-            "row_count": 2,
+            "row_count": 3,
             "title": "",
             "heading_tag": "h4",
             "content": "",
@@ -138,6 +139,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -160,8 +162,9 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-02.jpg",
             "column_count": "4",
-            "row_count": 2,
+            "row_count": 3,
             "title": "",
             "heading_tag": "h4",
             "content": "",
@@ -171,6 +174,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -204,6 +208,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -237,6 +242,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -270,6 +276,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -303,6 +310,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -336,6 +344,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -369,6 +378,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -402,6 +412,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -433,6 +444,7 @@
         "img_9"
       ],
       "settings": {
+        "allow_transparent_header": true,
         "color_scheme": "",
         "separate_section_with_border": false,
         "desktop_row_height": 290,
