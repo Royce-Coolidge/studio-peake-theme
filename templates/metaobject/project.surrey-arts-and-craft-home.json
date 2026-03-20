@@ -66,11 +66,15 @@
         },
         "carousel_image_cYXQFn": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-02.jpg"
+          }
         },
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-03.jpg"
+          }
         },
         "heading_Efre63": {
           "type": "heading",
@@ -82,7 +86,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "{{ shop.metaobjects.project['surrey-arts-and-craft-home'].description.value }}"
+            "content": "<p>The result is a welcoming family home that honours its Arts and Crafts heritage while embracing comfort, individuality, and contemporary living.</p>"
           }
         },
         "sp_link_tY3j7r": {
@@ -133,7 +137,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_2": {
@@ -150,7 +170,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_3": {
@@ -167,7 +203,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_4": {
@@ -184,7 +236,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_5": {
@@ -201,7 +269,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_6": {
@@ -218,7 +302,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_7": {
@@ -235,7 +335,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_8": {
@@ -252,7 +368,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "img_9": {
@@ -269,7 +401,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         }
       },
@@ -296,7 +444,8 @@
         "subheading": "",
         "title": "",
         "content": "",
-        "anchor_id": ""
+        "anchor_id": "",
+        "tooltip_footer_color": "#7a8450"
       }
     }
   },
