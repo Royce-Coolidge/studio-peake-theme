@@ -77,7 +77,8 @@
             "heading_tag": "h3",
             "content": "",
             "link_url": "",
-            "link_text": ""
+            "link_text": "",
+            "compact_text": false
           }
         },
         "sp_link_group_with_image_KQJmbf": {
@@ -124,10 +125,11 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
-        "blog": "news",
+        "blog": "articles",
         "posts_count": 3,
         "stack_on_mobile": false,
         "full_width": true,
+        "remove_bottom_padding": false,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
