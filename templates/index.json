@@ -137,7 +137,7 @@
             "subheading": "Shop the Collection",
             "title": "THE WORKSHOP",
             "button_text": "",
-            "button_link": "shopify://pages/the-workshop",
+            "button_link": "shopify://collections/workshop",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 30
