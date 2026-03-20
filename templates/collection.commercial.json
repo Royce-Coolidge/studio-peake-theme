@@ -1,0 +1,144 @@
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image": "{{ collection.image }}",
+        "image_size": "md",
+        "allow_transparent_header": true,
+        "reveal": false,
+        "enable_parallax": false,
+        "show_image": true,
+        "show_collection_title": true,
+        "show_collection_description": true,
+        "show_breadcrumb": true,
+        "content_width": "xs",
+        "overlay_color": "#000000",
+        "overlay_opacity": 35,
+        "anchor_id": ""
+      }
+    },
+    "media_grid_commercial": {
+      "type": "media-grid",
+      "blocks": {
+        "image_glenthorne": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "{{ metaobjects.project[\"glenthorne-studio\"].hero_image.value }}",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "{{ metaobjects.project[\"glenthorne-studio\"].title.value }}",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "Explore Project",
+            "link_url": "shopify://metaobjects/project/glenthorne-studio",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_sophie": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "image": "{{ metaobjects.project[\"sophie-breitmeyers-jewellery-shop\"].hero_image.value }}",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "{{ metaobjects.project[\"sophie-breitmeyers-jewellery-shop\"].title.value }}",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "Explore Project",
+            "link_url": "shopify://metaobjects/project/sophie-breitmeyers-jewellery-shop",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        }
+      },
+      "block_order": [
+        "image_glenthorne",
+        "image_sophie"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 180,
+        "section_width": "full",
+        "spacing": "none",
+        "sp_use_metaobject_gallery": false,
+        "sp_masonry_style": "custom",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": "",
+        "tooltip_footer_color": "#7a8450"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "hide_product_information": false,
+        "products_per_page": 48,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": false,
+        "horizontal_spacing_factor": 0.2,
+        "vertical_spacing_factor": 1,
+        "filter_layout": "drawer",
+        "quick_links_menu": "",
+        "show_sort_by": false,
+        "show_filters": false,
+        "show_results_count": false,
+        "show_filter_group_name": false,
+        "show_filter_values_count": false,
+        "open_filters_by_default": false,
+        "anchor_id": ""
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "media_grid_commercial",
+    "main"
+  ]
+}
