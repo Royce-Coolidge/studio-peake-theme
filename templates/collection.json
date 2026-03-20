@@ -15,7 +15,7 @@
         "color_scheme": "scheme-4",
         "image_size": "sm",
         "allow_transparent_header": true,
-        "reveal": false,
+        "reveal": true,
         "enable_parallax": false,
         "show_image": true,
         "show_collection_title": true,
