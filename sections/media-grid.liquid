@@ -94,7 +94,7 @@
             {%- endif -%}
 
             {%- capture block_content -%}
-              <div class="content-over-media sp-gradient-overlay color-scheme color-scheme--{{ block.settings.color_scheme.id }} group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
+              <div class="content-over-media {% if block.settings.sp_gradient_overlay %}sp-gradient-overlay{% endif %} color-scheme color-scheme--{{ block.settings.color_scheme.id }} group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
                 {%- if block.type == 'image' -%}
                   {%- if sp_block_image -%}
                     {%- if section.settings.section_width == 'full' -%}
@@ -622,6 +622,13 @@
           "default": 0
         },
         {
+          "type": "checkbox",
+          "id": "sp_gradient_overlay",
+          "label": "SP gradient overlay",
+          "info": "Applies a subtle top and bottom gradient over the image",
+          "default": true
+        },
+        {
           "type": "header",
           "content": "Hotspot 1"
         },
@@ -968,6 +975,13 @@
           "step": 1,
           "unit": "%",
           "default": 0
+        },
+        {
+          "type": "checkbox",
+          "id": "sp_gradient_overlay",
+          "label": "SP gradient overlay",
+          "info": "Applies a subtle top and bottom gradient over the image",
+          "default": true
         }
       ]
     }
