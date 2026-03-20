@@ -6875,6 +6875,12 @@ product-rerender {
   --section-vertical-spacing-block-start-compensation: 1.5625rem;
 }
 
+@media screen and (max-width: 699px) {
+  .slideshow .content-over-media > :not(img, video, iframe, svg, video-media, picture, image-parallax) {
+    max-width: 85vw;
+  }
+}
+
 @media screen and (min-width: 700px) {
   .slideshow:has(.page-dots, .slideshow__volume-control) {
     --content-over-media-row-gap: 5rem;
