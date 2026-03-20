@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-09.jpg",
             "subheading": "",
-            "title": "Surrey Arts and Craft Home",
+            "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "content_max_width": 100,
@@ -88,7 +88,7 @@
         "sp_link_tY3j7r": {
           "type": "sp-link",
           "settings": {
-            "text": "View project",
+            "text": "View press release",
             "url": ""
           }
         }
