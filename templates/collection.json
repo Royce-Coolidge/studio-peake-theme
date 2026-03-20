@@ -23,7 +23,7 @@
         "show_breadcrumb": true,
         "content_width": "xs",
         "overlay_color": "#000000",
-        "overlay_opacity": 0,
+        "overlay_opacity": 16,
         "anchor_id": ""
       }
     },
