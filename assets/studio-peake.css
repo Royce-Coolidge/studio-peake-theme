@@ -107,6 +107,31 @@
   }
 }
 
+/* === Header Dropdown Overrides (Scheme 4) === */
+/* Remove borders and box-shadow on dropdown menus */
+.color-scheme--scheme-4 .header__dropdown-menu {
+  border-width: 0;
+  box-shadow: none;
+}
+
+.color-scheme--scheme-4 .header__dropdown-menu:before {
+  display: none;
+}
+
+.color-scheme--scheme-4 .header__dropdown-menu .header__dropdown-menu {
+  border-width: 0;
+}
+
+/* Apply button link styles to dropdown items */
+.color-scheme--scheme-4 .header__dropdown-menu :is(a, summary) {
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-style: var(--button-font-style);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+  font-size: var(--text-sm);
+}
+
 /* === Close Icon Rotation (INTR-07) === */
 
 /* Regular close buttons (newsletter popup, privacy banner, quick-buy, active facets) */
