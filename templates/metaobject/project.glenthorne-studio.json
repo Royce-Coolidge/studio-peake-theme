@@ -44,6 +44,65 @@
         "controls_color": "#ffffff"
       }
     },
+    "sp_image_carousel_with_text_bXbecL": {
+      "type": "sp-image-carousel-with-text",
+      "blocks": {
+        "carousel_image_QGTmTQ": {
+          "type": "carousel_image",
+          "settings": {}
+        },
+        "carousel_image_cYXQFn": {
+          "type": "carousel_image",
+          "settings": {}
+        },
+        "carousel_image_N9aQYx": {
+          "type": "carousel_image",
+          "settings": {}
+        },
+        "heading_Efre63": {
+          "type": "heading",
+          "settings": {
+            "text": "{{ metaobject.title.value }}",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_BiJLfL": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Housed within a former Victorian bakery, our Hammersmith studio sits in a converted industrial mews at the centre of a lively creative community. The space was sensitively reworked to reflect our values of craft, collaboration, and creativity, while retaining its workshop character and material honesty. Original features were preserved where possible and paired with practical, well made additions to support daily studio life.</p><p>Working closely with local makers and specialist workshops, we shaped a light filled, welcoming environment that encourages conversation and experimentation. It functions as both a working studio and a meeting place, designed to support collaboration with clients, artisans, and creative partners in a warm and considered setting.</p>"
+          }
+        },
+        "sp_link_tY3j7r": {
+          "type": "sp-link",
+          "settings": {
+            "text": "View project",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "carousel_image_QGTmTQ",
+        "carousel_image_cYXQFn",
+        "carousel_image_N9aQYx",
+        "heading_Efre63",
+        "richtext_BiJLfL",
+        "sp_link_tY3j7r"
+      ],
+      "name": "SP Carousel with text",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "md",
+        "remove_vertical_spacing": true,
+        "autoplay": false,
+        "media_padding_inline": 10,
+        "cycle_speed": 5,
+        "dots_color": "",
+        "anchor_id": ""
+      }
+    },
     "media_grid_sp": {
       "type": "media-grid",
       "blocks": {
@@ -229,6 +288,7 @@
   },
   "order": [
     "slideshow_WRWAkr",
+    "sp_image_carousel_with_text_bXbecL",
     "media_grid_sp"
   ]
 }
