@@ -172,7 +172,7 @@
         "richtext_N9Pnfz",
         "link_eiw6Y3"
       ],
-      "name": "SP Carousel with text",
+      "name": "Our Process",
       "settings": {
         "color_scheme": "scheme-ed3c746e-2171-49ad-9711-2a0e8616f021",
         "separate_section_with_border": false,
@@ -184,7 +184,7 @@
         "media_padding_inline": 0,
         "cycle_speed": 5,
         "dots_color": "",
-        "anchor_id": ""
+        "anchor_id": "process"
       }
     },
     "slideshow_FXDx3m": {
@@ -244,7 +244,8 @@
             "heading_tag": "h3",
             "content": "",
             "link_url": "",
-            "link_text": ""
+            "link_text": "",
+            "compact_text": false
           }
         },
         "image_with_text_HcYgW6": {
@@ -254,7 +255,8 @@
             "heading_tag": "h3",
             "content": "<p>Housed in a former Victorian bakery, our Hammersmith studio lies in a converted industrial mews, remodelled by us in close collaboration with skilled local artisans and workshops. Light-filled and welcoming, the space embodies our values of craft, collaboration and creativity.</p>",
             "link_url": "",
-            "link_text": ""
+            "link_text": "",
+            "compact_text": false
           }
         }
       },
@@ -296,7 +298,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "image_FJDFer": {
@@ -314,7 +332,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "image_jhieqY": {
@@ -332,7 +366,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         },
         "image_YnJMdr": {
@@ -350,7 +400,23 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 0,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
           }
         }
       },
@@ -373,7 +439,8 @@
         "subheading": "",
         "title": "",
         "content": "",
-        "anchor_id": ""
+        "anchor_id": "",
+        "tooltip_footer_color": "#7a8450"
       }
     },
     "image_with_text_MAgbqL": {
@@ -427,6 +494,7 @@
         "posts_count": 3,
         "stack_on_mobile": false,
         "full_width": true,
+        "remove_bottom_padding": false,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
@@ -462,10 +530,10 @@
         "heading_about_cta",
         "link_about_cta"
       ],
-      "name": "Have a project in mind?",
       "custom_css": [
-        ".prose { text-align: center; }"
+        ".prose {text-align: center;}"
       ],
+      "name": "Have a project in mind?",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
