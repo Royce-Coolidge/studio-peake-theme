@@ -135,6 +135,13 @@
   transition: opacity 0.2s ease-in-out;
 }
 
+/* === Image with Text Inline Image === */
+@media screen and (max-width: 699px) {
+  .image-with-text__inline-image {
+    max-width: none;
+  }
+}
+
 /* === Header Dropdown Overrides (Scheme 4) === */
 /* Remove borders and box-shadow on dropdown menus */
 .header__dropdown-menu {
