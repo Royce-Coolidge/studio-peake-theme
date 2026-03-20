@@ -109,6 +109,10 @@
 
 /* === Header Dropdown Overrides (Scheme 4) === */
 /* Remove borders and box-shadow on dropdown menus */
+.header__dropdown-menu {
+  padding-top: 0;
+}
+
 .color-scheme--scheme-4 .header__dropdown-menu {
   border-width: 0;
   box-shadow: none;
