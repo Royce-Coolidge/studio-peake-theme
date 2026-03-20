@@ -1,5 +1,11 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
+@media screen and (max-width: 699px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 :root {
   --sp-gradient-top: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 46.76%, rgba(71, 60, 60, 0.40) 100%);
   --sp-gradient-bottom: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.9%, rgba(60, 53, 53, 0.40) 100%);
@@ -105,6 +111,12 @@
   .prose a:not(.h1, .h2, .h3, .h4, .h5, .h6, .button, .link-faded, .link-faded-reverse, :has(img)):hover {
     background-size: 100% 1px;
   }
+}
+
+/* === Header Transparent Blend Mode === */
+/* Apply difference blend mode when header is transparent so links are visible on any background */
+:has(.shopify-section:first-child [allow-transparent-header]):not(:has(.shopify-section--header ~ .shopify-section-group-header-group)) .header:not(:hover, .is-solid, :has(.header__primary-nav [open], .header__secondary-nav [open], .header-search[open])) {
+  mix-blend-mode: difference;
 }
 
 /* === Header Nav Hover === */
