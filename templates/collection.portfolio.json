@@ -38,7 +38,7 @@
             "color_scheme": "",
             "image": "{{ metaobjects.project[\"kensington-townhouse\"].hero_image.value }}",
             "column_count": "6",
-            "row_count": 3,
+            "row_count": 2,
             "title": "{{ metaobjects.project[\"kensington-townhouse\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
@@ -72,7 +72,7 @@
             "color_scheme": "",
             "image": "{{ metaobjects.project[\"grade-ii-listed-historic-house\"].hero_image.value }}",
             "column_count": "6",
-            "row_count": 3,
+            "row_count": 2,
             "title": "{{ metaobjects.project[\"grade-ii-listed-historic-house\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
@@ -102,12 +102,11 @@
         },
         "image_PVrEBX": {
           "type": "image",
-          "name": "Surrey",
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-09.jpg",
             "column_count": "12",
-            "row_count": 3,
+            "row_count": 2,
             "title": "{{ metaobjects.project[\"surrey-arts-and-craft-home\"].title.value }}",
             "heading_tag": "h4",
             "content": "",
@@ -139,13 +138,12 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "{{ metaobjects.project[\"parsons-green-house\"].hero_image.value }}",
             "column_count": "4",
             "row_count": 2,
-            "title": "{{ metaobjects.project[\"parsons-green-house\"].title.value }}",
+            "title": "",
             "heading_tag": "h4",
             "content": "",
-            "link_text": "explore the project",
+            "link_text": "",
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -169,17 +167,16 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_P3FWqn": {
+        "image_AQhwb7": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-residential-notting-hill-pied-a-terre-11.jpg",
             "column_count": "4",
             "row_count": 2,
-            "title": "{{ metaobjects.project[\"notting-hill-pied-a-terre\"].title.value }}",
+            "title": "",
             "heading_tag": "h4",
             "content": "",
-            "link_text": "explore the project",
+            "link_text": "",
             "link_url": "",
             "link_style": "link",
             "text_position": "place-self-center text-center",
@@ -203,121 +200,17 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_RcqdqP": {
+        "image_fnmw7n": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "{{ metaobjects.project[\"chelsea-townhouse\"].hero_image.value }}",
             "column_count": "4",
             "row_count": 2,
-            "title": "{{ metaobjects.project[\"chelsea-townhouse\"].title.value }}",
+            "title": "",
             "heading_tag": "h4",
             "content": "",
-            "link_text": "explore the project",
+            "link_text": "",
             "link_url": "",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_chGf9g": {
-          "type": "image",
-          "name": "Surrey",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-09.jpg",
-            "column_count": "12",
-            "row_count": 3,
-            "title": "Glenthorne Studio",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "EXPLORE PROJECT",
-            "link_url": "shopify://metaobjects/project/glenthorne-studio",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_4K6c8x": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-18.jpg",
-            "column_count": "6",
-            "row_count": 3,
-            "title": "georgian cottage",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "explore project",
-            "link_url": "shopify://metaobjects/project/georgian-cottage",
-            "link_style": "link",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_z9rfPq": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-03.jpg",
-            "column_count": "6",
-            "row_count": 3,
-            "title": "sophie breitmeyers jewellry shop",
-            "heading_tag": "h3",
-            "content": "",
-            "link_text": "explore project",
-            "link_url": "shopify://metaobjects/project/sophie-breitmeyers-jewellery-shop",
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
@@ -346,15 +239,11 @@
         "image_BWqP4E",
         "image_PVrEBX",
         "image_7xPVTr",
-        "image_P3FWqn",
-        "image_RcqdqP",
-        "image_chGf9g",
-        "image_4K6c8x",
-        "image_z9rfPq"
+        "image_AQhwb7",
+        "image_fnmw7n"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
-        "allow_transparent_header": true,
         "color_scheme": "",
         "separate_section_with_border": false,
         "desktop_row_height": 290,
@@ -372,7 +261,6 @@
     },
     "main": {
       "type": "main-collection",
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "hide_product_information": false,
@@ -392,44 +280,11 @@
         "open_filters_by_default": true,
         "anchor_id": ""
       }
-    },
-    "rich_text_4AXFPL": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_QtgnWD": {
-          "type": "heading",
-          "settings": {
-            "text": "have a project in mind?",
-            "heading_tag": "h1"
-          }
-        },
-        "link_gNzDkA": {
-          "type": "link",
-          "settings": {
-            "text": "tell us about your project",
-            "url": "shopify://pages/contact"
-          }
-        }
-      },
-      "block_order": [
-        "heading_QtgnWD",
-        "link_gNzDkA"
-      ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "content_width": "sm",
-        "text_position": "center",
-        "remove_vertical_spacing": false,
-        "anchor_id": ""
-      }
     }
   },
   "order": [
     "collection-banner",
     "media_grid_9CQdYc",
-    "main",
-    "rich_text_4AXFPL"
+    "main"
   ]
 }
