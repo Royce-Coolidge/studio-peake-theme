@@ -137,7 +137,7 @@
             "subheading": "Shop the Collection",
             "title": "THE WORKSHOP",
             "button_text": "",
-            "button_link": "",
+            "button_link": "shopify://pages/the-workshop",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -148,13 +148,13 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/studiopeake-home-the-workshop.jpg",
+            "image": "shopify://shop_images/studiopeake-home-commercial.jpg",
             "expand_collection": false,
             "content_position": "place-self-center text-center",
             "subheading": "Interior & Architectural Design",
             "title": "COMMERCIAL",
             "button_text": "",
-            "button_link": "",
+            "button_link": "shopify://collections/commercial",
             "button_style": "solid",
             "overlay_color": "#000000",
             "overlay_opacity": 30
