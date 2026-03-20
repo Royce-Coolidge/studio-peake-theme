@@ -82,7 +82,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "{{ shop.metaobjects.project['chelsea-townhouse'].description.value }}"
+            "content": "<p>Studio Peake was commissioned to bring refined comfort and personality to a beautifully proportioned Kensington townhouse, following an architectural renovation led by Neal Newland of Peek Architecture. With the structure complete, our role was to elevate the interiors through thoughtful decoration, bespoke furnishings, and subtle architectural interventions to add coherence, warmth, and character.</p><p>Working with the existing framework, we introduced key details including a new fireplace and tailored joinery to strengthen focal points, then built a layered decorative scheme with a harmonious palette, varied textures, bespoke and collected furniture, and carefully chosen art, lighting, and textiles, creating a composed yet inviting backdrop for modern living.</p>"
           }
         },
         "sp_link_tY3j7r": {
@@ -123,6 +123,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-chelsea-townhouse-01.jpg",
             "column_count": "8",
             "row_count": 2,
             "title": "",
@@ -134,6 +135,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -167,6 +169,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -200,6 +203,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -233,6 +237,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -266,6 +271,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -299,6 +305,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -332,6 +339,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -365,6 +373,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -398,6 +407,7 @@
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
@@ -429,6 +439,7 @@
         "img_9"
       ],
       "settings": {
+        "allow_transparent_header": true,
         "color_scheme": "",
         "separate_section_with_border": false,
         "desktop_row_height": 290,
