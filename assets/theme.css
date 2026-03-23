@@ -6809,6 +6809,7 @@ product-rerender {
   background: rgb(var(--slideshow-background));
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
 .slideshow .page-dots {
