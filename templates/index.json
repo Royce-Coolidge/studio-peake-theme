@@ -479,6 +479,7 @@
     },
     "blog_posts_JHAxiV": {
       "type": "blog-posts",
+      "disabled": true,
       "name": "News and Views",
       "settings": {
         "color_scheme": "",
