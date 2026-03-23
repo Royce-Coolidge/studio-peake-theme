@@ -205,6 +205,16 @@
             "content": "<p>Studio Peake is an interior design and interior architecture studio creating high-end residential and commercial spaces worldwide. Defined by a philosophy that places the client at the heart of the design, every Studio Peake project involves an orchestra of creative input, with clients, designers, architects and makers working in harmony to create something truly unique – a reflection of who the client is and how they live. <br/><br/>Founded by Sarah Peake, the studio is based in London but its work ranges across the globe. Recent and ongoing projects include a Georgian townhouse in London, a Grade II listed Arts & Crafts house in Surrey and an architecturally ambitious villa on the water just outside Stockholm.</p>"
           }
         },
+        "button_etmkqJ": {
+          "type": "button",
+          "settings": {
+            "style": "link",
+            "text": "Learn more",
+            "url": "shopify://pages/press",
+            "background": "",
+            "text_color": ""
+          }
+        },
         "sp_link_group_GE8CYD": {
           "type": "sp-link-group",
           "settings": {
@@ -219,27 +229,16 @@
             "link_text_5": "",
             "link_url_5": ""
           }
-        },
-        "button_etmkqJ": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "style": "outline",
-            "text": "Learn more",
-            "url": "",
-            "background": "",
-            "text_color": ""
-          }
         }
       },
       "block_order": [
         "subheading_aTMnEm",
         "heading_C68e6m",
         "richtext_YJmEKU",
-        "sp_link_group_GE8CYD",
-        "button_etmkqJ"
+        "button_etmkqJ",
+        "sp_link_group_GE8CYD"
       ],
-      "name": "t:sections.image_with_text.presets.image_with_text.name",
+      "name": "The Studio",
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
