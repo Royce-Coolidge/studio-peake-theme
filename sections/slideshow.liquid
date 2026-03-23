@@ -106,7 +106,7 @@ may have important consequence on the section itself.
                   height="{{ block.settings.logo_image.height }}"
                   alt="{{ block.settings.logo_image.alt | escape }}"
                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
-                  style="width: 100vw; height: auto;"
+                  style="width: 100%; height: auto;"
                 >
               {%- endif -%}
 
