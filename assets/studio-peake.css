@@ -336,6 +336,11 @@
   align-items: center;
 }
 
+/* === Collection list — 2px gap between blocks === */
+.collection-list {
+  --collection-list-gap: 2px;
+}
+
 /* === Featured Collections header: title left, button right === */
 .featured-collections-header {
   display: flex;
