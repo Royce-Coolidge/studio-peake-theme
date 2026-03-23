@@ -44,6 +44,7 @@
       "block_order": [
         "image_h44VDq"
       ],
+      "disabled": true,
       "custom_css": [
         ".content-over-media {max-height: 100vh;}"
       ],
@@ -483,8 +484,8 @@
         "separate_section_with_border": true,
         "blog": "news",
         "posts_count": 3,
-        "stack_on_mobile": false,
-        "full_width": true,
+        "stack_on_mobile": true,
+        "full_width": false,
         "remove_bottom_padding": false,
         "card_color_scheme": "",
         "show_category": true,
