@@ -45,7 +45,8 @@
         "image_h44VDq"
       ],
       "custom_css": [
-        ".content-over-media {max-height: 100vh;}"
+        ".content-over-media {max-height: 100vh;}",
+        ".sp-slideshow-logo {width: 100vw;}"
       ],
       "settings": {
         "allow_transparent_header": true,
