@@ -1,5 +1,16 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
+.sp-slideshow-logo {
+  width: 100vw;
+  height: auto;
+}
+
+@media screen and (max-width: 699px) {
+  .sp-slideshow-logo {
+    width: 100%;
+  }
+}
+
 :root {
   --sp-gradient-top: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 46.76%, rgba(71, 60, 60, 0.40) 100%);
   --sp-gradient-bottom: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.9%, rgba(60, 53, 53, 0.40) 100%);
