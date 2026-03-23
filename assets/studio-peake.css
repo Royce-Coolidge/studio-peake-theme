@@ -1,13 +1,6 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
-body {
-  overflow-x: hidden;
-}
 
-.sp-slideshow-logo {
-  width: 100vw;
-  height: auto;
-}
 
 @media screen and (max-width: 699px) {
   .sp-slideshow-logo {
