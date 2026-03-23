@@ -1,5 +1,11 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
+/* === Slideshow Dots — bottom left === */
+.slideshow .page-dots {
+  inset-inline-end: unset;
+  inset-inline-start: var(--slideshow-controls-spacing);
+}
+
 
 
 @media screen and (max-width: 699px) {
@@ -319,6 +325,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+}
+
+/* === Footer aside — hidden === */
+.footer__aside {
+  display: none;
 }
 
 .tabs__panel-with-image {

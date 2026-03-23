@@ -4730,7 +4730,7 @@ product-rerender {
   background: rgb(var(--background));
   background-image: var(--background-gradient);
   color: rgb(var(--text-color));
-  padding-block-start: var(--section-vertical-spacing);
+  padding-block-start: min(var(--section-vertical-spacing), 3rem);
   padding-block-end: min(var(--section-vertical-spacing), 3rem);
 }
 
