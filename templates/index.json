@@ -462,6 +462,7 @@
         "image_block3",
         "image_block4"
       ],
+      "disabled": true,
       "name": "Project Carousel",
       "settings": {
         "allow_transparent_header": true,
