@@ -431,10 +431,6 @@
     padding-inline: var(--container-gutter);
   }
 
-  .shopify-section--blog-posts > .section-spacing > .container {
-    margin-inline: 0;
-  }
-
   .blog-post-list--carousel {
     grid: auto / auto-flow 100%;
   }
