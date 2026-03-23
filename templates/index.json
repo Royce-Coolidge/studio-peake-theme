@@ -44,7 +44,6 @@
       "block_order": [
         "image_h44VDq"
       ],
-      "disabled": true,
       "custom_css": [
         ".content-over-media {max-height: 100vh;}"
       ],
