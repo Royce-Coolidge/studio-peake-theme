@@ -484,7 +484,7 @@
         "blog": "news",
         "posts_count": 3,
         "stack_on_mobile": true,
-        "full_width": false,
+        "full_width": true,
         "remove_bottom_padding": false,
         "card_color_scheme": "",
         "show_category": true,
