@@ -14,6 +14,11 @@
   }
 }
 
+.header__dropdown-menu :is(a,summary) 
+{
+  padding: 0px !important;
+}
+
 :root {
   --sp-gradient-top: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 46.76%, rgba(71, 60, 60, 0.40) 100%);
   --sp-gradient-bottom: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.9%, rgba(60, 53, 53, 0.40) 100%);
