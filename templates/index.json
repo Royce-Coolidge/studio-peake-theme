@@ -44,7 +44,6 @@
       "block_order": [
         "image_h44VDq"
       ],
-      "disabled": true,
       "custom_css": [
         ".content-over-media {max-height: 100vh;}"
       ],
@@ -462,7 +461,6 @@
         "image_block3",
         "image_block4"
       ],
-      "disabled": true,
       "name": "Project Carousel",
       "settings": {
         "allow_transparent_header": true,
