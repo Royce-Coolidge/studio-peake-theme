@@ -22,6 +22,17 @@
       {%- endif -%}
     }
 
+    #shopify-section-{{ section.id }} .content-over-media {
+      aspect-ratio: 2 / 3;
+      min-height: unset;
+    }
+
+    #shopify-section-{{ section.id }} .content-over-media > :is(img, video, iframe, svg, video-media),
+    #shopify-section-{{ section.id }} .content-over-media > picture img,
+    #shopify-section-{{ section.id }} .content-over-media > image-parallax img {
+      height: 100%;
+    }
+
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} {
         {%- if section.settings.stack_collections -%}

@@ -5098,6 +5098,12 @@ product-rerender {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .header__primary-nav {
+    column-gap: 60px;
+  }
+}
+
 .header__secondary-nav {
   flex-wrap: wrap;
   grid-area: secondary-nav;
@@ -8162,7 +8168,7 @@ product-rerender {
 
 @media screen and (min-width: 1150px) {
   .h1, :where(.prose h1) {
-    line-height: 1.3;
+    line-height: 1.1;
   }
 
   .h2, :where(.prose h2) {
