@@ -98,16 +98,26 @@ may have important consequence on the section itself.
           <div class="slideshow__slide-content {% if is_boxed %}slideshow__slide-content--boxed{% endif %} {% if has_border %}slideshow__slide-content--with-border{% endif %} {% if has_inside_offset %}slideshow__slide-content--with-border-offset{% endif %} {{ block.settings.mobile_text_position }} {{ block.settings.desktop_text_position }}" style="{% render 'surface', background: block.settings.background, background_opacity: block.settings.background_opacity, text_color: block.settings.text_color, border_color: block.settings.border_color %}">
             <div class="prose">
               {%- if block.settings.logo_image != blank -%}
-                <img
-                  src="{{ block.settings.logo_image | image_url: width: 3200 }}"
-                  srcset="{{ block.settings.logo_image | image_url: width: 400 }} 400w, {{ block.settings.logo_image | image_url: width: 600 }} 600w, {{ block.settings.logo_image | image_url: width: 800 }} 800w, {{ block.settings.logo_image | image_url: width: 1000 }} 1000w, {{ block.settings.logo_image | image_url: width: 1400 }} 1400w, {{ block.settings.logo_image | image_url: width: 1800 }} 1800w, {{ block.settings.logo_image | image_url: width: 2400 }} 2400w, {{ block.settings.logo_image | image_url: width: 3200 }} 3200w"
-                  sizes="100vw"
-                  width="{{ block.settings.logo_image.width }}"
-                  height="{{ block.settings.logo_image.height }}"
-                  alt="{{ block.settings.logo_image.alt | escape }}"
-                  loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
-                  class="sp-slideshow-logo"
-                >
+                <picture>
+                  {%- if block.settings.mobile_logo_image != blank -%}
+                    <source
+                      media="(max-width: 699px)"
+                      srcset="{{ block.settings.mobile_logo_image | image_url: width: 400 }} 400w, {{ block.settings.mobile_logo_image | image_url: width: 600 }} 600w, {{ block.settings.mobile_logo_image | image_url: width: 800 }} 800w, {{ block.settings.mobile_logo_image | image_url: width: 1000 }} 1000w"
+                      width="{{ block.settings.mobile_logo_image.width }}"
+                      height="{{ block.settings.mobile_logo_image.height }}"
+                    >
+                  {%- endif -%}
+                  <img
+                    src="{{ block.settings.logo_image | image_url: width: 3200 }}"
+                    srcset="{{ block.settings.logo_image | image_url: width: 400 }} 400w, {{ block.settings.logo_image | image_url: width: 600 }} 600w, {{ block.settings.logo_image | image_url: width: 800 }} 800w, {{ block.settings.logo_image | image_url: width: 1000 }} 1000w, {{ block.settings.logo_image | image_url: width: 1400 }} 1400w, {{ block.settings.logo_image | image_url: width: 1800 }} 1800w, {{ block.settings.logo_image | image_url: width: 2400 }} 2400w, {{ block.settings.logo_image | image_url: width: 3200 }} 3200w"
+                    sizes="100vw"
+                    width="{{ block.settings.logo_image.width }}"
+                    height="{{ block.settings.logo_image.height }}"
+                    alt="{{ block.settings.logo_image.alt | escape }}"
+                    loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                    class="sp-slideshow-logo"
+                  >
+                </picture>
               {%- endif -%}
 
               {%- if block.settings.subheading != blank -%}
@@ -329,6 +339,12 @@ may have important consequence on the section itself.
           "id": "logo_image",
           "label": "Logo image",
           "info": "Displayed at full viewport width, scaling to fit the screen."
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_logo_image",
+          "label": "Mobile logo image",
+          "info": "Overrides the logo image on mobile devices."
         },
         {
           "type": "header",
@@ -570,7 +586,7 @@ may have important consequence on the section itself.
           "type": "color_background",
           "id": "gradient_overlay",
           "label": "t:global.colors.gradient_overlay",
-          "default": "linear-gradient(180deg, rgba(54, 54, 54, 0.2) 0%, rgba(4, 4, 4, 0.65) 100%)",
+          "default": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)",
           "info": "t:sections.slideshow.blocks.image.gradient_overlay_info"
         }
       ]
@@ -835,7 +851,7 @@ may have important consequence on the section itself.
           "type": "color_background",
           "id": "gradient_overlay",
           "label": "t:global.colors.gradient_overlay",
-          "default": "linear-gradient(180deg, rgba(54, 54, 54, 0.2) 0%, rgba(4, 4, 4, 0.65) 100%)",
+          "default": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)",
           "info": "t:sections.slideshow.blocks.image.gradient_overlay_info"
         }
       ]
