@@ -273,7 +273,8 @@
       "icon_category": "Icône",
       "icon_thickness": "Epaisseur des icônes",
       "section_spacing_category": "Espacement des sections",
-      "vertical_space_between_sections": "Espace vertical entre les sections",
+      "vertical_space_between_sections": "Espace vertical entre les sections (bureau)",
+      "vertical_space_between_sections_mobile": "Espace vertical entre les sections (mobile)",
       "rounding_category": "Arrondis",
       "button_border_radius": "Arrondi des boutons",
       "input_border_radius": "Arrondi des champs de formulaire"

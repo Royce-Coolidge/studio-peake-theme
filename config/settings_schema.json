@@ -57,6 +57,34 @@
         "default": "md"
       },
       {
+        "type": "select",
+        "id": "section_vertical_spacing_mobile",
+        "label": "t:theme_settings.appearance.vertical_space_between_sections_mobile",
+        "options": [
+          {
+            "value": "xs",
+            "label": "t:global.sizes.x_small"
+          },
+          {
+            "value": "sm",
+            "label": "t:global.sizes.small"
+          },
+          {
+            "value": "md",
+            "label": "t:global.sizes.medium"
+          },
+          {
+            "value": "lg",
+            "label": "t:global.sizes.large"
+          },
+          {
+            "value": "xl",
+            "label": "t:global.sizes.x_large"
+          }
+        ],
+        "default": "md"
+      },
+      {
         "type": "header",
         "content": "t:theme_settings.appearance.rounding_category"
       },

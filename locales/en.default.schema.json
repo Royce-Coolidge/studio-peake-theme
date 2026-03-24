@@ -273,7 +273,8 @@
       "icon_category": "Icon",
       "icon_thickness": "Icon thickness",
       "section_spacing_category": "Section spacing",
-      "vertical_space_between_sections": "Vertical space between sections",
+      "vertical_space_between_sections": "Vertical space between sections (desktop)",
+      "vertical_space_between_sections_mobile": "Vertical space between sections (mobile)",
       "rounding_category": "Rounding",
       "button_border_radius": "Button corner radius",
       "input_border_radius": "Form input corner radius"
