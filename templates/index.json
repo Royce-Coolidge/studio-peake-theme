@@ -18,6 +18,7 @@
             "image": "shopify://shop_images/studiopeake-home-hero-parsons-green.jpg",
             "mobile_image": "shopify://shop_images/studiopeake-projects-residential-parsons-green-12.jpg",
             "logo_image": "shopify://shop_images/Studio_Peake_Logo_Clotted_Cream.svg",
+            "mobile_logo_image": "shopify://shop_images/Studio_Peake_Stacked_Logo_Clotted_Cream.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-end-center text-center",
@@ -37,7 +38,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
@@ -239,8 +240,8 @@
         "sp_link_group_GE8CYD"
       ],
       "custom_css": [
-        "picture { padding: var(--container-gutter); }",
-        "picture img { border-radius: 0; }"
+        "picture {padding: var(--container-gutter);}",
+        "picture img {border-radius: 0;}"
       ],
       "name": "The Studio",
       "settings": {
