@@ -19,6 +19,12 @@
     }
   }
 
+  @media screen and (min-width: 1440px) {
+    #shopify-section-{{ section.id }} {
+      --header-padding-block: 1.5rem;
+    }
+  }
+
   @media screen and (min-width: 1000px) {
     #shopify-section-{{ section.id }} {
       {%- case section.settings.layout -%}
@@ -56,6 +62,7 @@
       }
     }
   {%- endif -%}
+
 </style>
 
 <height-observer variable="header">

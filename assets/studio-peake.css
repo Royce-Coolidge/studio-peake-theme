@@ -126,12 +126,6 @@
   }
 }
 
-/* === Header Transparent Blend Mode === */
-/* Apply difference blend mode when header is transparent so links are visible on any background */
-:has(.shopify-section:first-child [allow-transparent-header]):not(:has(.shopify-section--header ~ .shopify-section-group-header-group)) .header:not(:hover, .is-solid, :has(.header__primary-nav [open], .header__secondary-nav [open], .header-search[open])) {
-  mix-blend-mode: difference;
-}
-
 /* === Header Nav Hover === */
 /* Remove default underline pseudo-element on nav items */
 .header__primary-nav-item:before {
@@ -632,7 +626,7 @@
 
 .sp-contact-layout {
   display: grid;
-  grid-template-columns: 40fr 60fr;
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
 }
 
