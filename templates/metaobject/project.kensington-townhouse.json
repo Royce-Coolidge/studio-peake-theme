@@ -338,13 +338,42 @@
         "title": "",
         "content": "",
         "anchor_id": "",
-        "tooltip_footer_color": "#7a8450"
+        "tooltip_footer_color": "#7a8450",
+        "sp_enable_image_zoom": false
+      }
+    },
+    "sp_featured_collection": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_block_1": {
+          "type": "collection",
+          "settings": {
+            "products_count": 8,
+            "title": "Explore Collection",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 1,
+        "vertical_spacing_factor": 1,
+        "subheading": ""
       }
     }
   },
   "order": [
     "slideshow_WRWAkr",
     "sp_image_carousel_with_text_bXbecL",
-    "media_grid_sp"
+    "media_grid_sp",
+    "sp_featured_collection"
   ]
 }

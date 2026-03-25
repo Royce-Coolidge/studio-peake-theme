@@ -112,18 +112,31 @@
                         assign loading_strategy = 'lazy'
                       endif
 
-                      echo sp_block_image | image_url: width: sp_block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: 'zoom-image group-hover:zoom'
+                      assign sp_zoom_class = 'zoom-image group-hover:zoom'
+                      if section.settings.sp_enable_image_zoom == false
+                        assign sp_zoom_class = ''
+                      endif
+
+                      echo sp_block_image | image_url: width: sp_block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: sp_zoom_class
                     -%}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
-                    {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
+                    {%- if section.settings.sp_enable_image_zoom -%}
+                      {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
+                    {%- else -%}
+                      {{- collection_image | placeholder_svg_tag: 'placeholder' -}}
+                    {%- endif -%}
                   {%- endif -%}
                 {%- else -%}
                   {%- if block.settings.video -%}
                     {%- render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: true, controls: block.settings.show_controls -%}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
-                    {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
+                    {%- if section.settings.sp_enable_image_zoom -%}
+                      {{- collection_image | placeholder_svg_tag: 'placeholder zoom-image group-hover:zoom' -}}
+                    {%- else -%}
+                      {{- collection_image | placeholder_svg_tag: 'placeholder' -}}
+                    {%- endif -%}
                   {%- endif -%}
                 {%- endif -%}
 
@@ -351,6 +364,12 @@
         }
       ],
       "default": "md"
+    },
+    {
+      "type": "checkbox",
+      "id": "sp_enable_image_zoom",
+      "label": "Enable image hover zoom",
+      "default": true
     },
     {
       "type": "header",
