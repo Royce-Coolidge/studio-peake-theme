@@ -43,7 +43,7 @@
         "show_separation_border": false,
         "reduce_padding": true,
         "logo": "shopify://shop_images/Studio_Peake_Emblem_Clotted_Cream.png",
-        "logo_max_width": 20,
+        "logo_max_width": 25,
         "logo_mobile_max_width": 20,
         "menu": "main-menu",
         "sidebar_menu": "",
