@@ -15,12 +15,11 @@
         "image_qBF3yC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-09.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 1200,
+            "content_max_width": 100,
             "button_1_text": "",
             "button_1_link": "",
             "button_1_style": "solid",
@@ -35,7 +34,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
@@ -51,8 +50,7 @@
         "autoplay_pause_on_video": true,
         "cycle_speed": 5,
         "background": "#000000",
-        "controls_color": "#ffffff",
-        "anchor_id": ""
+        "controls_color": "#ffffff"
       }
     },
     "sp_image_carousel_with_text_bXbecL": {
@@ -82,7 +80,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "{{ shop.metaobjects.project['glenthorne-studio'].description.value }}"
+            "content": "<p>Housed within a former Victorian bakery, our Hammersmith studio sits in a converted industrial mews at the centre of a lively creative community. The space was sensitively reworked to reflect our values of craft, collaboration, and creativity, while retaining its workshop character and material honesty. Original features were preserved where possible and paired with practical, well made additions to support daily studio life.</p><p>Working closely with local makers and specialist workshops, we shaped a light filled, welcoming environment that encourages conversation and experimentation. It functions as both a working studio and a meeting place, designed to support collaboration with clients, artisans, and creative partners in a warm and considered setting.</p>"
           }
         },
         "sp_link_tY3j7r": {
@@ -133,23 +131,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_2": {
@@ -166,23 +148,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_3": {
@@ -199,23 +165,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_4": {
@@ -232,23 +182,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_5": {
@@ -265,23 +199,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_6": {
@@ -298,23 +216,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_7": {
@@ -331,23 +233,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_8": {
@@ -364,23 +250,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         },
         "img_9": {
@@ -397,23 +267,7 @@
             "link_style": "link",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
+            "overlay_opacity": 0
           }
         }
       },
@@ -439,9 +293,7 @@
         "sp_masonry_style": "landscape_thirds",
         "subheading": "",
         "title": "",
-        "content": "",
-        "anchor_id": "",
-        "tooltip_footer_color": "#7a8450"
+        "content": ""
       }
     }
   },

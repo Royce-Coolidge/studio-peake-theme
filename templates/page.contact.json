@@ -22,8 +22,9 @@
     "sp_contact_form": {
       "type": "sp-contact-form",
       "settings": {
+        "allow_transparent_header": true,
         "color_scheme": "scheme-2",
-        "image": "shopify://shop_images/studiopeake-contact-surrey-arts-and-craft-desktop.jpg",
+        "image": "shopify://shop_images/studio-peake-elowen-chandelier-02.jpg",
         "heading": "Let's discuss your project",
         "first_name_label": "FIRST NAME*",
         "last_name_label": "LAST NAME*",

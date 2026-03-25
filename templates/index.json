@@ -245,7 +245,7 @@
       ],
       "name": "The Studio",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/studiopeake-home-the-studio.jpg",
         "reveal_on_scroll": true,
@@ -293,7 +293,7 @@
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": false,
-        "media_size": "auto",
+        "media_size": "lg",
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
@@ -378,7 +378,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         },
         "image_block2": {
@@ -404,7 +404,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         },
         "image_block3": {
@@ -430,7 +430,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         },
         "image_block4": {
@@ -456,7 +456,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },

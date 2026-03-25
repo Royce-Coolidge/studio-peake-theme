@@ -19,7 +19,7 @@
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "content_max_width": 1200,
+            "content_max_width": 100,
             "button_1_text": "",
             "button_1_link": "",
             "button_1_style": "solid",
@@ -34,7 +34,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(54, 54, 54, 0.2), rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
@@ -80,7 +80,7 @@
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "{{ shop.metaobjects.project['parsons-green-house'].description.value }}"
+            "content": "<p>A young family with a love of clean lines and fresh pattern invited Studio Peake to step in after the structural and architectural phase of their renovation was complete. The house offered a true blank canvas: carefully finished, light filled, and minimal, but lacking warmth and personality. Our brief was to transform it into a layered, welcoming home that could support busy daily life while still feeling calm and considered.</p><p>The scheme focused on depth and atmosphere through texture, colour, and material contrast. Soft furnishings, bespoke joinery, and curated artwork were introduced to build character and visual rhythm across the rooms. Each space was tailored to how the family lives and gathers, balancing contemporary clarity with comfort and individuality, so the finished house feels settled, expressive, and genuinely lived in.</p>"
           }
         },
         "sp_link_tY3j7r": {
