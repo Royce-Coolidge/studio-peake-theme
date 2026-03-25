@@ -104,8 +104,8 @@
         "media_padding_inline": 10,
         "cycle_speed": 5,
         "dots_color": "",
-        "anchor_id": "",
-        "dots_position": "underneath"
+        "dots_position": "underneath",
+        "anchor_id": ""
       }
     },
     "media_grid_sp": {
@@ -149,6 +149,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-kensington-townhouse-01.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -332,14 +333,14 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "xs",
+        "sp_enable_image_zoom": false,
         "sp_use_metaobject_gallery": true,
         "sp_masonry_style": "custom",
         "subheading": "",
         "title": "",
         "content": "",
         "anchor_id": "",
-        "tooltip_footer_color": "#7a8450",
-        "sp_enable_image_zoom": false
+        "tooltip_footer_color": "#7a8450"
       }
     },
     "sp_featured_collection": {
@@ -348,8 +349,10 @@
         "collection_block_1": {
           "type": "collection",
           "settings": {
+            "collection": "",
             "products_count": 8,
             "title": "Explore Collection",
+            "link_url": "",
             "link_text": "View all"
           }
         }
@@ -366,7 +369,8 @@
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": ""
+        "subheading": "",
+        "anchor_id": ""
       }
     }
   },
