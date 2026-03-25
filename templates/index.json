@@ -101,7 +101,7 @@
         "overlap_image": false,
         "content_alignment": "start",
         "text_alignment": "start",
-        "spacing": "md",
+        "spacing": "sm",
         "subheading": "",
         "title": "",
         "content": "",
