@@ -126,6 +126,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-01.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -160,6 +161,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-02.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -194,6 +196,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-03.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -228,6 +231,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-04.jpg",
             "column_count": "6",
             "row_count": 2,
             "title": "",
@@ -262,6 +266,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-05.jpg",
             "column_count": "6",
             "row_count": 2,
             "title": "",
@@ -292,11 +297,82 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_zeGcdn": {
+        "image_rn88A3": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "column_count": "12",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-07.jpg",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_iqUzM8": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-08.jpg",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_MjnPxb": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-10.jpg",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -333,7 +409,9 @@
         "img_9",
         "image_gEQn9x",
         "image_tyDnVz",
-        "image_zeGcdn"
+        "image_rn88A3",
+        "image_iqUzM8",
+        "image_MjnPxb"
       ],
       "settings": {
         "allow_transparent_header": true,
@@ -359,7 +437,7 @@
         "collection_block_1": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "all-projects",
             "products_count": 8,
             "title": "Explore Collection",
             "link_url": "",
