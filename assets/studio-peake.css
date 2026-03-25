@@ -131,6 +131,12 @@
   }
 }
 
+/* === Header Nav Font Size === */
+.header__primary-nav {
+  --text-sm: 0.875rem;
+  font-size: 0.875rem;
+}
+
 /* === Header Nav Hover === */
 /* Remove default underline pseudo-element on nav items */
 .header__primary-nav-item:before {
