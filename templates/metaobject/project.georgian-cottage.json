@@ -652,7 +652,7 @@
           "type": "collection",
           "settings": {
             "collection": "all-projects",
-            "products_count": 8,
+            "products_count": 4,
             "title": "Explore Collection",
             "link_url": "",
             "link_text": "View all"
