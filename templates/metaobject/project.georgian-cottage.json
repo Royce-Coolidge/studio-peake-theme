@@ -664,7 +664,8 @@
       ],
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
+        "sp_add_vertical_spacing": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
