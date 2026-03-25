@@ -15,6 +15,7 @@
         "image_qBF3yC": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-20.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -34,7 +35,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 41.11%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 41.11%)"
           }
         }
       },
@@ -44,13 +45,14 @@
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": false,
-        "media_size": "auto",
+        "media_size": "xs",
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
         "cycle_speed": 5,
         "background": "#000000",
-        "controls_color": "#ffffff"
+        "controls_color": "#ffffff",
+        "anchor_id": ""
       }
     },
     "sp_image_carousel_with_text_bXbecL": {
@@ -111,8 +113,8 @@
         "media_padding_inline": 10,
         "cycle_speed": 5,
         "dots_color": "",
-        "anchor_id": "",
-        "dots_position": "underneath"
+        "dots_position": "underneath",
+        "anchor_id": ""
       }
     },
     "media_grid_sp": {
@@ -122,6 +124,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-01.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -156,6 +159,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-02.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -190,6 +194,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-03.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -224,6 +229,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-12.jpg",
             "column_count": "6",
             "row_count": 2,
             "title": "",
@@ -258,6 +264,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-01.jpg",
             "column_count": "6",
             "row_count": 2,
             "title": "",
@@ -292,6 +299,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-14.jpg",
             "column_count": "12",
             "row_count": 2,
             "title": "",
@@ -339,14 +347,14 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "xs",
+        "sp_enable_image_zoom": false,
         "sp_use_metaobject_gallery": true,
         "sp_masonry_style": "custom",
         "subheading": "",
         "title": "",
         "content": "",
         "anchor_id": "",
-        "tooltip_footer_color": "#7a8450",
-        "sp_enable_image_zoom": false
+        "tooltip_footer_color": "#7a8450"
       }
     },
     "sp_featured_collection": {
@@ -355,8 +363,10 @@
         "collection_block_1": {
           "type": "collection",
           "settings": {
+            "collection": "all-projects",
             "products_count": 8,
             "title": "Explore Collection",
+            "link_url": "",
             "link_text": "View all"
           }
         }
@@ -366,14 +376,16 @@
       ],
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
+        "sp_add_vertical_spacing": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 1,
         "vertical_spacing_factor": 1,
-        "subheading": ""
+        "subheading": "",
+        "anchor_id": ""
       }
     }
   },
