@@ -111,7 +111,8 @@
         "media_padding_inline": 10,
         "cycle_speed": 5,
         "dots_color": "",
-        "anchor_id": ""
+        "anchor_id": "",
+        "dots_position": "underneath"
       }
     },
     "media_grid_sp": {

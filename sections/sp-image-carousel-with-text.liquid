@@ -46,6 +46,16 @@
       height: 100%;
     }
 
+    @media screen and (max-width: 699px) {
+      #shopify-section-{{ section.id }} .sp-carousel-media {
+        order: 2;
+      }
+
+      #shopify-section-{{ section.id }} .image-with-text > .prose {
+        order: 1;
+      }
+    }
+
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} .image-with-text--reverse .sp-carousel-media {
         order: 9999;
@@ -58,10 +68,16 @@
     }
 
     #shopify-section-{{ section.id }} .sp-carousel__dots {
-      position: absolute;
-      bottom: 1rem;
       left: 50%;
       transform: translateX(-50%);
+      {%- if section.settings.dots_position == 'underneath' -%}
+        position: relative;
+        bottom: auto;
+        margin-top: 20px;
+      {%- else -%}
+        position: absolute;
+        bottom: 1rem;
+      {%- endif -%}
     }
   </style>
 
@@ -113,7 +129,7 @@
       </div>
 
       {%- comment -%}--- TEXT COLUMN ---{%- endcomment -%}
-      <div class="prose text-center sm:text-start">
+      <div class="prose text-start sm:text-start">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'subheading' -%}
@@ -303,6 +319,22 @@
       "type": "color",
       "id": "dots_color",
       "label": "Dots color"
+    },
+    {
+      "type": "select",
+      "id": "dots_position",
+      "label": "Dots position",
+      "options": [
+        {
+          "value": "overlay",
+          "label": "Overlay image"
+        },
+        {
+          "value": "underneath",
+          "label": "Underneath image"
+        }
+      ],
+      "default": "overlay"
     },
     {
       "type": "text",

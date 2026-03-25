@@ -252,13 +252,18 @@
   text-transform: none;
   font-size: var(--text-base);
   border-bottom: 1px solid transparent;
-  background: linear-gradient(currentColor, currentColor) bottom left / 0% 1px no-repeat;
+  background: linear-gradient(rgb(var(--text-color)), rgb(var(--text-color))) bottom left / 0% 1px no-repeat;
   background-origin: border-box;
   background-clip: border-box;
   transition: none;
 }
 
-
+/* Override theme .prose a background that conflicts with keyline draw-on */
+@supports (height: 1lh) {
+  .prose a.sp-link-row {
+    background: linear-gradient(rgb(var(--text-color)), rgb(var(--text-color))) bottom left / 0% 1px no-repeat;
+  }
+}
 
 .sp-link-row svg {
   flex-shrink: 0;
@@ -283,7 +288,8 @@
 .sp-link-group.sp-is-visible .sp-link-row:nth-child(5) { transition-delay: 0.6s; }
 
 /* Standalone sp-link (not in group) */
-.sp-link-row.sp-is-visible {
+.sp-link-row.sp-is-visible,
+.prose a.sp-link-row.sp-is-visible {
   background-size: 100% 1px;
   transition: background-size 0.6s ease-out;
 }
