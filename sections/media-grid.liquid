@@ -181,12 +181,19 @@
               {%- endif -%}
             {%- endif -%}
 
+            {%- comment -%}SP: Aspect ratio based on column width{%- endcomment -%}
+            {%- if effective_col == '12' -%}
+              {%- assign sp_aspect = '16 / 9' -%}
+            {%- else -%}
+              {%- assign sp_aspect = '2 / 3' -%}
+            {%- endif -%}
+
             {%- if block.settings.link_url and sp_has_hotspots == false -%}
-              <a href="{{ block.settings.link_url }}" class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.link_url }}" class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}; --sp-aspect: {{ sp_aspect }}" {{ block.shopify_attributes }}>
                 {{- block_content -}}
               </a>
             {%- else -%}
-              <div class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}" {{ block.shopify_attributes }}>
+              <div class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}; --sp-aspect: {{ sp_aspect }}" {{ block.shopify_attributes }}>
                 {{- block_content -}}
               </div>
             {%- endif -%}

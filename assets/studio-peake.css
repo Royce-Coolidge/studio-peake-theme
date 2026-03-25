@@ -753,6 +753,43 @@
 }
 
 /* ============================================================
+   Media Grid — Aspect-ratio layout (replaces row-height sizing)
+   ============================================================ */
+
+.shopify-section--media-grid .media-grid {
+  grid-auto-rows: auto;
+  gap: 2px;
+}
+
+.shopify-section--media-grid .media-grid__item {
+  grid-area: span 1 / span 2;
+  aspect-ratio: var(--sp-aspect, 2 / 3);
+  height: auto;
+  overflow: hidden;
+}
+
+.shopify-section--media-grid .media-grid__item > .content-over-media {
+  height: 100%;
+}
+
+.shopify-section--media-grid .media-grid__item img,
+.shopify-section--media-grid .media-grid__item .placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 700px) {
+  .shopify-section--media-grid .media-grid {
+    gap: 2px;
+  }
+
+  .shopify-section--media-grid .media-grid__item {
+    grid-area: span 1 / span var(--media-grid-item-column-span);
+  }
+}
+
+/* ============================================================
    Media Grid Hotspot Tooltips
    ============================================================ */
 
