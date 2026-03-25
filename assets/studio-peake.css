@@ -133,7 +133,6 @@
 
 /* === Header Nav Font Size === */
 .header__primary-nav {
-  --text-sm: 0.875rem;
   font-size: 0.875rem;
 }
 
