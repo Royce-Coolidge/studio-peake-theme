@@ -10,6 +10,13 @@
       --product-list-vertical-spacing-factor: {{ section.settings.vertical_spacing_factor }};
     }
 
+    {%- if section.settings.sp_add_vertical_spacing -%}
+      #shopify-section-{{ section.id }} > .section-spacing {
+        padding-block-start: var(--section-vertical-spacing);
+        padding-block-end: var(--section-vertical-spacing);
+      }
+    {%- endif -%}
+
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} {
         --product-list-items-per-row: {{ section.settings.products_per_row_desktop }};
@@ -19,11 +26,11 @@
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
-  <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
-    <div class="container">
-      {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
+  <div class="{% if section.settings.sp_add_vertical_spacing %}section-spacing{% endif %} color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
+    {%- assign wrapper_carousel_id = 'featured-collections-carousel-' | append: section.id -%}
 
-      <div class="section-stack">
+    <div class="section-stack">
+      <div class="container">
         <div class="featured-collections-header">
           <div class="v-stack gap-4 text-start sm:gap-5">
             {%- if section.settings.subheading != blank -%}
@@ -52,8 +59,9 @@
             </a>
           {%- endif -%}
         </div>
+      </div>
 
-        <featured-collections-carousel id="{{ wrapper_carousel_id }}" class="featured-collections-carousel">
+      <featured-collections-carousel id="{{ wrapper_carousel_id }}" class="featured-collections-carousel">
           {%- for block in section.blocks -%}
             <div class="featured-collections-carousel__item {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }}>
               {%- capture product_list -%}
@@ -87,7 +95,7 @@
                     </button>
                   </carousel-prev-button>
 
-                  <scroll-carousel id="{{ product_carousel_id }}" group-cells allow-drag class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} product-list--carousel scroll-area bleed">
+                  <scroll-carousel id="{{ product_carousel_id }}" group-cells allow-drag class="product-list {% if section.settings.hide_product_information %}product-list--compact{% endif %} product-list--carousel scroll-area full-bleed">
                     {{- product_list -}}
                   </scroll-carousel>
                   
@@ -103,7 +111,6 @@
             </div>
           {%- endfor -%}
         </featured-collections-carousel>
-      </div>
     </div>
   </div>
 {%- endif -%}
@@ -135,6 +142,12 @@
       "id": "separate_section_with_border",
       "label": "t:global.section.separate_section_with_border",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sp_add_vertical_spacing",
+      "label": "Add vertical spacing",
+      "default": false
     },
     {
       "type": "checkbox",
