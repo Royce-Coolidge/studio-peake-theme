@@ -506,7 +506,7 @@
         "collection_block_1": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "all-projects",
             "products_count": 8,
             "title": "Explore Collection",
             "link_url": "",
@@ -519,7 +519,8 @@
       ],
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
+        "sp_add_vertical_spacing": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
