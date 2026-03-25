@@ -46,7 +46,7 @@
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": true,
-        "show_next_section_button": true,
+        "show_next_section_button": false,
         "media_size": "md",
         "show_initial_transition": false,
         "autoplay": true,

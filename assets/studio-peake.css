@@ -1,5 +1,10 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
+/* === Body text line-height === */
+.prose {
+  line-height: 1.25;
+}
+
 /* === Slideshow Dots — bottom left === */
 .slideshow .page-dots {
   inset-inline-end: unset;
