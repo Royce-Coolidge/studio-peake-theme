@@ -1,8 +1,14 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
-/* === Transparent header text color — contact page === */
+/* === Header text color — contact page === */
 .template-page-contact .header {
   --header-transparent-header-text-color: 74 38 43;
+  --text-color: 74 38 43;
+}
+
+/* === Active nav item — subtle opacity === */
+.header__primary-nav a[aria-current="page"] {
+  opacity: 0.5;
 }
 
 /* === Body text line-height === */
