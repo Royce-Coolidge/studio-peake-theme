@@ -519,6 +519,12 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 699px) {
+  .blog-post-card__category {
+    font-size: 16px;
+  }
+}
+
 .blog-post-card__read-more {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
