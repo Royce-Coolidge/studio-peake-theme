@@ -103,6 +103,7 @@
             {%- capture block_content -%}
               <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group{% if sp_has_hotspots %} sp-has-hotspots{% endif %}" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
                 {%- if block.type == 'image' -%}
+                  {%- if sp_has_hotspots -%}<div class="sp-hotspot-image-outer"><div class="sp-hotspot-image-wrap" style="--sp-image-aspect: {{ sp_block_image.aspect_ratio }};">{%- endif -%}
                   {%- if sp_block_image -%}
                     {%- if section.settings.section_width == 'full' -%}
                       {%- capture sizes_attribute -%}(max-width: 699px) 100vw, {{ 100.0 | divided_by: 12.0 | times: effective_col | round }}vw{%- endcapture -%}
@@ -134,6 +135,40 @@
                       {{- collection_image | placeholder_svg_tag: 'placeholder' -}}
                     {%- endif -%}
                   {%- endif -%}
+
+                  {%- if sp_has_hotspots -%}
+                    {%- for hi in (1..4) -%}
+                      {%- capture prod_key -%}product_hotspot_{{ hi }}{%- endcapture -%}
+                      {%- capture horiz_key -%}hotspot_{{ hi }}_horizontal{%- endcapture -%}
+                      {%- capture vert_key -%}hotspot_{{ hi }}_vertical{%- endcapture -%}
+                      {%- assign hs_product = block.settings[prod_key] -%}
+                      {%- if hs_product != blank -%}
+                        {%- capture color_key -%}hotspot_{{ hi }}_color{%- endcapture -%}
+                        {%- assign hs_color = block.settings[color_key] | default: section.settings.tooltip_footer_color -%}
+                        <div class="sp-hotspot-wrap" style="--sp-hotspot-top: {{ block.settings[vert_key] }}%; --sp-hotspot-left: {{ block.settings[horiz_key] }}%;">
+                          <button class="sp-hotspot"
+                            data-tooltip-id="sp-tooltip-{{ block.id }}-{{ hi }}"
+                            aria-label="View product {{ hi }}"
+                            type="button">
+                          </button>
+                          <div class="sp-tooltip" id="sp-tooltip-{{ block.id }}-{{ hi }}"
+                               style="--sp-tooltip-footer-bg: {{ hs_color }};">
+                            <div class="sp-tooltip__image">
+                              {%- if hs_product.featured_image -%}
+                                {{ hs_product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+                              {%- endif -%}
+                            </div>
+                            <div class="sp-tooltip__footer">
+                              <p class="sp-tooltip__title">{{ hs_product.title }}</p>
+                              <a href="{{ hs_product.url }}" class="sp-tooltip__link">Explore Product</a>
+                            </div>
+                          </div>
+                        </div>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div></div>
+                  {%- endif -%}
+
                 {%- else -%}
                   {%- if block.settings.video -%}
                     {%- render 'media', media: block.settings.video, autoplay: block.settings.autoplay, loop: true, controls: block.settings.show_controls -%}
@@ -145,38 +180,6 @@
                       {{- collection_image | placeholder_svg_tag: 'placeholder' -}}
                     {%- endif -%}
                   {%- endif -%}
-                {%- endif -%}
-
-                {%- if block.type == 'image' -%}
-                  {%- for hi in (1..4) -%}
-                    {%- capture prod_key -%}product_hotspot_{{ hi }}{%- endcapture -%}
-                    {%- capture horiz_key -%}hotspot_{{ hi }}_horizontal{%- endcapture -%}
-                    {%- capture vert_key -%}hotspot_{{ hi }}_vertical{%- endcapture -%}
-                    {%- assign hs_product = block.settings[prod_key] -%}
-                    {%- if hs_product != blank -%}
-                      {%- capture color_key -%}hotspot_{{ hi }}_color{%- endcapture -%}
-                      {%- assign hs_color = block.settings[color_key] | default: section.settings.tooltip_footer_color -%}
-                      <div class="sp-hotspot-wrap" style="--sp-hotspot-top: {{ block.settings[vert_key] }}%; --sp-hotspot-left: {{ block.settings[horiz_key] }}%;">
-                        <button class="sp-hotspot"
-                          data-tooltip-id="sp-tooltip-{{ block.id }}-{{ hi }}"
-                          aria-label="View product {{ hi }}"
-                          type="button">
-                        </button>
-                        <div class="sp-tooltip" id="sp-tooltip-{{ block.id }}-{{ hi }}"
-                             style="--sp-tooltip-footer-bg: {{ hs_color }};">
-                          <div class="sp-tooltip__image">
-                            {%- if hs_product.featured_image -%}
-                              {{ hs_product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
-                            {%- endif -%}
-                          </div>
-                          <div class="sp-tooltip__footer">
-                            <p class="sp-tooltip__title">{{ hs_product.title }}</p>
-                            <a href="{{ hs_product.url }}" class="sp-tooltip__link">Explore Product</a>
-                          </div>
-                        </div>
-                      </div>
-                    {%- endif -%}
-                  {%- endfor -%}
                 {%- endif -%}
 
                 {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
