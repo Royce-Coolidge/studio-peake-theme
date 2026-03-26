@@ -283,6 +283,7 @@ height-observer {
 .blog-post-card__image-wrap {
   overflow: hidden;
   position: relative;
+  aspect-ratio: 2 / 3;
 }
 
 .blog-post-card__image-wrap a {

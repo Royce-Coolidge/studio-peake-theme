@@ -54,6 +54,27 @@
   z-index: 2;
 }
 
+/* === Site-wide image hover overlay === */
+@media screen and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .group > .overflow-hidden {
+    position: relative;
+  }
+
+  .group > .overflow-hidden::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: rgb(0 0 0 / 0);
+    transition: background 1.2s cubic-bezier(.4, .0, .2, 1);
+  }
+
+  .group:hover > .overflow-hidden::after {
+    background: rgb(0 0 0 / 0.2);
+  }
+}
+
 /* === Focal-Point Image Container (VISF-02) === */
 
 .sp-focal-image {
