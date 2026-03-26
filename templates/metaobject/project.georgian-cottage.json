@@ -16,6 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-02.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-gerogian-cottage-mobile.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
