@@ -381,7 +381,7 @@
 
 @media screen and (max-width: 699px) {
   .footer-links {
-    gap: 2px;
+    gap: 1rem;
   }
 }
 
