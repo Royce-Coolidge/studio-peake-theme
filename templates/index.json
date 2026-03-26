@@ -92,6 +92,9 @@
         "image_with_text_rtntb8",
         "image_with_text_Vp7UF9"
       ],
+      "custom_css": [
+        ".h1 {text-wrap: balance;}"
+      ],
       "name": "Intro Section",
       "settings": {
         "color_scheme": "",
