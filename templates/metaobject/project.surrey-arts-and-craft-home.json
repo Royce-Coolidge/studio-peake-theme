@@ -117,8 +117,8 @@
         "media_padding_inline": 11,
         "cycle_speed": 5,
         "dots_color": "",
-        "anchor_id": "",
-        "dots_position": "underneath"
+        "dots_position": "underneath",
+        "anchor_id": ""
       }
     },
     "media_grid_arJNyr": {
@@ -128,7 +128,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "column_count": "4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-01.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -162,7 +163,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "column_count": "4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-02.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -196,6 +198,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-03.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -230,7 +233,43 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "column_count": "6",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-04.jpg",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_e8LmYY": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-05.jpg",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -264,6 +303,42 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-06.jpg",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_Uyh7d9": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-07.jpg",
             "column_count": "6",
             "row_count": 2,
             "title": "",
@@ -298,6 +373,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-09.jpg",
             "column_count": "12",
             "row_count": 2,
             "title": "",
@@ -334,7 +410,9 @@
         "img_8",
         "img_9",
         "image_gEQn9x",
+        "image_e8LmYY",
         "image_tyDnVz",
+        "image_Uyh7d9",
         "image_zeGcdn"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
@@ -346,14 +424,14 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "xs",
+        "sp_enable_image_zoom": false,
         "sp_use_metaobject_gallery": true,
         "sp_masonry_style": "custom",
         "subheading": "",
         "title": "",
         "content": "",
         "anchor_id": "",
-        "tooltip_footer_color": "#7a8450",
-        "sp_enable_image_zoom": false
+        "tooltip_footer_color": "#7a8450"
       }
     },
     "sp_featured_collection": {
@@ -362,8 +440,10 @@
         "collection_block_1": {
           "type": "collection",
           "settings": {
+            "collection": "all-projects",
             "products_count": 8,
             "title": "Explore Collection",
+            "link_url": "",
             "link_text": "View all"
           }
         }
@@ -373,14 +453,16 @@
       ],
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
+        "sp_add_vertical_spacing": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 0,
         "vertical_spacing_factor": 1,
-        "subheading": ""
+        "subheading": "",
+        "anchor_id": ""
       }
     }
   },
