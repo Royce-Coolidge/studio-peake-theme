@@ -504,6 +504,11 @@
   margin-block-start: 0 !important;
 }
 
+.blog-posts-header__arrows .prev-next-button[disabled] {
+  opacity: 0.3;
+  visibility: visible;
+}
+
 .blog-post-card__read-more {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
