@@ -156,7 +156,7 @@
         "color_scheme": "",
         "separate_section_with_border": false,
         "image": "shopify://shop_images/studiopeake-the-workshop-the-creative-process-elowen-chandelier.jpg",
-        "reveal_on_scroll": true,
+        "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "sm",
         "content_alignment": "center",
@@ -257,6 +257,7 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
+        "sp_add_vertical_spacing": false,
         "hide_product_information": true,
         "stack_products": false,
         "products_per_row_mobile": "2",
