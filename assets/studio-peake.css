@@ -515,6 +515,10 @@
   visibility: visible;
 }
 
+.blog-post-card__category {
+  font-size: 20px;
+}
+
 .blog-post-card__read-more {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
