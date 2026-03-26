@@ -236,7 +236,7 @@
         "collection_T97ycn": {
           "type": "collection",
           "settings": {
-            "collection": "all-projects",
+            "collection": "",
             "products_count": 8,
             "title": "",
             "link_url": "",
@@ -251,14 +251,13 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
-        "sp_add_vertical_spacing": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "horizontal_spacing_factor": 0,
         "vertical_spacing_factor": 1,
-        "subheading": "",
+        "subheading": "Featured collection",
         "anchor_id": ""
       }
     }

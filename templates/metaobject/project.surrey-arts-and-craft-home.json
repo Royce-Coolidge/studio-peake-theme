@@ -683,6 +683,76 @@
             "hotspot_4_vertical": 70,
             "hotspot_4_color": "#7a8450"
           }
+        },
+        "image_XcJ6VP": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-32.jpg",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "peridot-lamp-4-piece",
+            "hotspot_1_horizontal": 68,
+            "hotspot_1_vertical": 41,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_HYqHz3": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-28.jpg",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "peridot-lamp-4-piece",
+            "hotspot_1_horizontal": 39,
+            "hotspot_1_vertical": 41,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
         }
       },
       "block_order": [
@@ -701,7 +771,9 @@
         "image_HXBL8U",
         "image_yWAg3n",
         "image_NaJWhW",
-        "image_48q6qD"
+        "image_48q6qD",
+        "image_XcJ6VP",
+        "image_HYqHz3"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
