@@ -15,6 +15,7 @@
         "image_qBF3yC": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-09.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -448,6 +449,7 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": true,
+        "sp_add_vertical_spacing": false,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
