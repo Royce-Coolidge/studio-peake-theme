@@ -34,6 +34,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-hero_f1277e28-fdb9-40a3-8e97-725ed9f97be6.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -53,7 +54,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
@@ -243,6 +244,7 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "none",
+        "sp_enable_image_zoom": true,
         "sp_use_metaobject_gallery": false,
         "sp_masonry_style": "uniform",
         "subheading": "",
@@ -494,6 +496,7 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "none",
+        "sp_enable_image_zoom": true,
         "sp_use_metaobject_gallery": false,
         "sp_masonry_style": "uniform",
         "subheading": "",
