@@ -1,7 +1,11 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
-/* === Header text color — contact page === */
-.template-page-contact .header {
+/* === Header text color — per template === */
+.template-page-contact .header,
+.template-product .header,
+.template-page-press-and-accolades .header,
+.template-page-terms-and-conditions .header,
+.template-page-privacy-policy .header {
   --header-transparent-header-text-color: 74 38 43;
   --text-color: 74 38 43;
 }
@@ -14,6 +18,13 @@
 /* === Rich text — tighter heading-to-CTA spacing === */
 .shopify-section--rich-text .prose .link {
   margin-block-start: 0.625rem;
+}
+
+/* === Disable reveal-on-scroll animation === */
+[reveal-on-scroll] {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
 }
 
 /* === Body text line-height === */
