@@ -10,7 +10,7 @@
 {
   "current": {
     "icon_stroke_width": 1,
-    "section_vertical_spacing": "xl",
+    "section_vertical_spacing": "lg",
     "section_vertical_spacing_mobile": "xl",
     "button_border_radius": 0,
     "default_color_scheme": "",
