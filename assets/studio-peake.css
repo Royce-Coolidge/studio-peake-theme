@@ -665,7 +665,8 @@
 
 .sp-contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 35% 1fr;
+  gap: 2.5rem;
   min-height: 100vh;
 }
 
@@ -684,9 +685,9 @@
 
 .sp-contact-layout__form {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 3rem;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: calc(var(--section-vertical-spacing) + 4rem) 3rem 4rem;
 }
 
 .sp-contact-form {
@@ -696,6 +697,13 @@
 
 .sp-contact-form__heading {
   margin-bottom: 2.5rem;
+  text-wrap: balance;
+}
+
+@media screen and (min-width: 700px) {
+  .sp-contact-form__heading {
+    max-width: 300px;
+  }
 }
 
 .sp-contact-form__fields {
