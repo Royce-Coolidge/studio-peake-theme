@@ -326,6 +326,9 @@
   flex-direction: column;
   gap: 2.25rem;
   text-align: center;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 700px) {
