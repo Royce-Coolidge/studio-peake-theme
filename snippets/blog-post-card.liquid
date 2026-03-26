@@ -94,7 +94,7 @@ Supported parameters
       {%- if show_read_more -%}
         {%- assign sp_btn_text = article.metafields.custom.button_text.value | default: 'Read more' -%}
         {%- assign sp_btn_link = article.metafields.custom.button_link.value | default: article.url | default: '#' -%}
-        <a href="{{ sp_btn_link }}" class="blog-post-card__read-more smallcaps-text bold">{{ sp_btn_text }}</a>
+        <a href="{{ sp_btn_link }}" class="blog-post-card__read-more link">{{ sp_btn_text }}</a>
       {%- endif -%}
     </div>
   </div>

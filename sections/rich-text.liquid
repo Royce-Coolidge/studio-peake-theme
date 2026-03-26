@@ -70,7 +70,7 @@
               {%- endif -%}
 
             {%- when 'link' -%}
-              <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="link" {{ block.shopify_attributes }}>{{ block.settings.text | escape }}</a>
+              <a {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %} class="link" style="display: inline-flex; align-items: center; gap: 0.5rem; white-space: nowrap;" {{ block.shopify_attributes }}>{{ block.settings.text | escape }} <span style="padding-top: 0.2em;">{%- render 'icon' with 'arrow-down-right', width: 14 -%}</span></a>
 
             {%- when 'button' -%}
               {%- if block.settings.text != blank -%}

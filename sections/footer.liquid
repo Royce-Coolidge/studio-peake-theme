@@ -71,7 +71,7 @@
                       <ul class="footer-links {% if block.settings.layout == 'row' %}footer-links--row{% endif %} unstyled-list" role="list">
                         {%- for link in menu.links -%}
                           <li>
-                            <a href="{{ link.url }}" class="link-faded">{{ link.title }}</a>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
                           </li>
                         {%- endfor -%}
                       </ul>

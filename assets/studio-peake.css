@@ -11,6 +11,11 @@
   opacity: 0.5;
 }
 
+/* === Rich text — tighter heading-to-CTA spacing === */
+.shopify-section--rich-text .prose .link {
+  margin-block-start: 0.625rem;
+}
+
 /* === Body text line-height === */
 .prose {
   line-height: 1.25;
@@ -361,6 +366,7 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 700px) {
