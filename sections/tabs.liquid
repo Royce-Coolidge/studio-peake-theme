@@ -5,53 +5,132 @@
   {%- endif -%}
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
 
+  <style>
+    .tabs-layout {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .tabs-layout__left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tabs-layout__right {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .tabs-layout__image[hidden] {
+      display: none;
+    }
+
+    .tabs__panel-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media screen and (min-width: 700px) {
+      .content-tabs--stacked {
+        margin-block-start: 1.5rem;
+      }
+    }
+
+    .content-tabs--stacked::part(tab-list) {
+      grid-auto-flow: row;
+      border-block-end: none;
+      gap: 0.25rem;
+      margin-block-end: 1.5rem;
+    }
+
+    .content-tabs--stacked [role="tab"] {
+      text-align: start;
+      width: fit-content;
+    }
+  </style>
+
   <div class="section-spacing color-scheme color-scheme--{{ section.settings.color_scheme.id }} color-scheme--bg-{{ color_scheme_hash }} {% if section.settings.separate_section_with_border %}bordered-section{% endif %}">
     <div class="container {% if section.settings.text_alignment == 'center' %}container--xl{% endif %}">
       <div class="section-stack">
-        {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
 
         <!-- DESKTOP LAYOUT -->
 
-        <x-tabs class="content-tabs {% if section.settings.text_alignment == 'center' %}content-tabs--center{% endif %} hidden sm:block">
-          <template shadowrootmode="open">
-            <slot role="tablist" part="tab-list" name="title"></slot>
-            <slot part="tab-panel-list" name="content"></slot>
-          </template>
+        <div class="tabs-layout hidden sm:grid">
+          <div class="tabs-layout__left">
+            {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
+            <x-tabs class="content-tabs content-tabs--stacked">
+              <template shadowrootmode="open">
+                <slot role="tablist" part="tab-list" name="title"></slot>
+                <slot part="tab-panel-list" name="content"></slot>
+              </template>
 
-          {%- for block in section.blocks -%}
-            {%- liquid
-              assign title = block.settings.page.title | default: block.settings.title
+              {%- for block in section.blocks -%}
+                {%- liquid
+                  assign title = block.settings.page.title | default: block.settings.title
 
-              if block.type == 'tab'
-                assign content = block.settings.page.content | default: block.settings.content
-              elsif block.type == 'liquid'
-                assign content = block.settings.liquid
-              endif
-            -%}
+                  if block.type == 'tab'
+                    assign content = block.settings.page.content | default: block.settings.content
+                  elsif block.type == 'liquid'
+                    assign content = block.settings.liquid
+                  endif
+                -%}
 
-            {%- if title != blank and content != blank -%}
-              <button class="tabs__title" type="button" role="tab" slot="title" {{ block.shopify_attributes }}>{{ title }}</button>
+                {%- if title != blank and content != blank -%}
+                  <button class="tabs__title" type="button" role="tab" slot="title" {{ block.shopify_attributes }}>{{ title }}</button>
 
-              <div role="tabpanel" slot="content" {% cycle '', 'hidden', 'hidden', 'hidden', 'hidden' %}>
-                {%- if block.settings.image != blank -%}
-                  <div class="tabs__panel-with-image">
+                  <div role="tabpanel" slot="content" {% cycle '', 'hidden', 'hidden', 'hidden', 'hidden' %}>
                     <div class="prose">
                       {{- content -}}
                     </div>
-                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: '(max-width: 699px) 100vw, 50vw', widths: '300,400,500,600,800,1000,1200,1400,1600', class: 'tabs__panel-image' -}}
-                  </div>
-                {%- else -%}
-                  <div class="prose">
-                    {{- content -}}
                   </div>
                 {%- endif -%}
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
-        </x-tabs>
+              {%- endfor -%}
+            </x-tabs>
+          </div>
+
+          <div class="tabs-layout__right">
+            {%- for block in section.blocks -%}
+              {%- if block.settings.image != blank -%}
+                <div class="tabs-layout__image" data-tab-index="{{ forloop.index0 }}" {% if forloop.index0 > 0 %}hidden{% endif %}>
+                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: '50vw', widths: '300,400,500,600,800,1000,1200,1400,1600', class: 'tabs__panel-image' -}}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <script>
+          (function() {
+            const layout = document.querySelector('#shopify-section-{{ section.id }} .tabs-layout');
+            if (!layout) return;
+            const tabs = layout.querySelector('x-tabs');
+            const images = layout.querySelectorAll('.tabs-layout__image');
+
+            new MutationObserver(function() {
+              const index = tabs.selectedIndex || 0;
+              images.forEach(function(img) {
+                img.hidden = parseInt(img.dataset.tabIndex) !== index;
+              });
+            }).observe(tabs, { attributes: true, subtree: true });
+
+            tabs.addEventListener('click', function() {
+              requestAnimationFrame(function() {
+                const index = tabs.selectedIndex || 0;
+                images.forEach(function(img) {
+                  img.hidden = parseInt(img.dataset.tabIndex) !== index;
+                });
+              });
+            });
+          })();
+        </script>
 
         <!-- MOBILE LAYOUT -->
 
+        <div class="sm:hidden">
+          {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
+        </div>
         <div class="accordion-group sm:hidden">
           {%- for block in section.blocks -%}
             {%- liquid
