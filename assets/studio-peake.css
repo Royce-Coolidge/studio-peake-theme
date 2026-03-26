@@ -293,7 +293,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding-block: 0.75rem;
+  padding-block: 0.4rem;
   text-decoration: none;
   color: currentColor;
   font-family: var(--text-font-family);
@@ -390,6 +390,16 @@
 /* === Footer aside — hidden === */
 .footer__aside {
   display: none;
+}
+
+@media screen and (max-width: 699px) {
+  .shopify-section--tabs .accordion-group .accordion:first-child {
+    border-block-start-width: 0;
+  }
+}
+
+.content-tabs [role="tab"] {
+  padding-block-end: 0.15rem;
 }
 
 .tabs__panel-with-image {
