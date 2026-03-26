@@ -36,7 +36,7 @@
         "products_per_row_mobile": "2",
         "products_size_desktop": "medium",
         "show_grid_mode_selector": false,
-        "horizontal_spacing_factor": 0.2,
+        "horizontal_spacing_factor": 0,
         "vertical_spacing_factor": 1,
         "filter_layout": "drawer",
         "quick_links_menu": "",

@@ -2472,7 +2472,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   --product-list-default-row-gap: 2.1875rem;
   --product-list-default-column-gap: .625rem;
   --product-list-calculated-row-gap: clamp(var(--section-vertical-spacing) / 4, var(--product-list-default-row-gap) * var(--product-list-vertical-spacing-factor, 1), var(--section-vertical-spacing) * 2);
-  --product-list-calculated-column-gap: clamp(var(--container-gutter) / 4, var(--product-list-default-column-gap) * var(--product-list-horizontal-spacing-factor, 1), var(--container-gutter) * 2);
+  --product-list-calculated-column-gap: clamp(2px, var(--product-list-default-column-gap) * var(--product-list-horizontal-spacing-factor, 1), var(--container-gutter) * 2);
   --product-list-card-width: calc(100% / var(--product-list-calculated-items-per-row)  - var(--product-list-calculated-column-gap, 0px) * (var(--product-list-calculated-items-per-row)  - 1) / var(--product-list-calculated-items-per-row));
   grid: auto / repeat(auto-fit, var(--product-list-card-width));
   align-items: start;
