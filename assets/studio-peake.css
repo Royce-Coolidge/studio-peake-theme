@@ -659,6 +659,12 @@
   border-bottom-color: currentColor;
 }
 
+/* Enquiry form: marketing checkbox — circular */
+
+.enquiry-modal__marketing .checkbox {
+  border-radius: 50%;
+}
+
 /* Enquiry form: marketing opt-in block */
 
 .enquiry-modal__marketing label {
