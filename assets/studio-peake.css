@@ -3,7 +3,6 @@
 /* === Header text color — per template === */
 .template-page-contact .header,
 .template-product .header,
-.template-page-press-and-accolades .header,
 .template-page-terms-and-conditions .header,
 .template-page-privacy-policy .header {
   --header-transparent-header-text-color: 74 38 43;
