@@ -38,6 +38,7 @@
         "logo_image": "shopify://shop_images/Studio_Peake_Emblem_Clotted_Cream.svg",
         "content": "for the latest from Studio Peake and the Workshop, sharing new work, craft collaborations, events, and design thinking.",
         "button_text": "Subscribe",
+        "consent_label": "<p>I consent to the <a href=\"/policies/privacy-policy\">Privacy Policies</a></p>",
         "discount_code": "WELCOME10"
       }
     },
@@ -109,7 +110,7 @@
         "enquiry-marketing"
       ],
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "scheme-2"
       }
     }
   },
