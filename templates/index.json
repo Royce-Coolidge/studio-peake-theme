@@ -223,9 +223,9 @@
           "type": "sp-link-group",
           "settings": {
             "link_text_1": "House and Garden Top 100 2025 ",
-            "link_url_1": "",
-            "link_text_2": "Country & Townhouse Top 50 2024",
-            "link_url_2": "",
+            "link_url_1": "shopify://blogs/articles/house-garden-column",
+            "link_text_2": "Wall Street Journal",
+            "link_url_2": "shopify://blogs/articles/wall-street-journal",
             "link_text_3": "AD (Germany) Top 100 2022",
             "link_url_3": "",
             "link_text_4": "AD (Germany) Top 100 2022",

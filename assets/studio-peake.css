@@ -298,9 +298,9 @@
   transition: background-size 0.6s ease-out;
 }
 
-/* First link in group gets a top keyline (static) */
+/* First link in group — no top keyline */
 .sp-link-group .sp-link-row:first-child {
-  border-top: 1px solid rgb(var(--text-color) / 0.15);
+  border-top: none;
 }
 
 /* === Footer block list — centre on mobile === */
