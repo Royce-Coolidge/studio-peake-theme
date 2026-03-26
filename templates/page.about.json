@@ -112,6 +112,7 @@
         "media_padding_inline": 14,
         "cycle_speed": 5,
         "dots_color": "",
+        "dots_position": "underneath",
         "anchor_id": ""
       }
     },
@@ -184,6 +185,7 @@
         "media_padding_inline": 0,
         "cycle_speed": 5,
         "dots_color": "",
+        "dots_position": "overlay",
         "anchor_id": "process"
       }
     },
