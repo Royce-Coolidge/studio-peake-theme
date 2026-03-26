@@ -23,7 +23,7 @@
             "title": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
-            "content_max_width": 1200,
+            "content_max_width": 1440,
             "button_1_text": "",
             "button_1_link": "",
             "button_1_style": "solid",
@@ -128,7 +128,7 @@
             "button_link": "shopify://collections/residential",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_JW7TW9": {
@@ -145,7 +145,7 @@
             "button_link": "shopify://collections/workshop",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_FHzYKT": {
@@ -162,7 +162,7 @@
             "button_link": "shopify://collections/commercial",
             "button_style": "solid",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         }
       },

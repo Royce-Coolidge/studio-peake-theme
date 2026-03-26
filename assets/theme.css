@@ -7223,11 +7223,11 @@ product-rerender {
 @media screen and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .features--zoom-image .zoom-image {
     transform-origin: center;
-    transition: scale 8s cubic-bezier(.25, .46, .45, .94);
+    transition: scale 3.5s cubic-bezier(.55, .0, .24, 1);
   }
 
   .features--zoom-image .group:hover .group-hover\:zoom {
-    scale: 1.2;
+    scale: 1.08;
   }
 }
 
