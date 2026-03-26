@@ -867,6 +867,10 @@
   overflow: visible;
 }
 
+.shopify-section--media-grid .media-grid__item .sp-has-hotspots img {
+  object-fit: contain;
+}
+
 @keyframes sp-hotspot-ping {
   75%, 100% {
     transform: scale(2);

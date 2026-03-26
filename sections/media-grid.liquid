@@ -93,8 +93,15 @@
               {%- assign effective_row = block.settings.row_count -%}
             {%- endif -%}
 
+            {%- assign sp_has_hotspots = false -%}
+            {%- if block.type == 'image' -%}
+              {%- if block.settings.product_hotspot_1 != blank or block.settings.product_hotspot_2 != blank or block.settings.product_hotspot_3 != blank or block.settings.product_hotspot_4 != blank -%}
+                {%- assign sp_has_hotspots = true -%}
+              {%- endif -%}
+            {%- endif -%}
+
             {%- capture block_content -%}
-              <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
+              <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group{% if sp_has_hotspots %} sp-has-hotspots{% endif %}" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
                 {%- if block.type == 'image' -%}
                   {%- if sp_block_image -%}
                     {%- if section.settings.section_width == 'full' -%}
@@ -185,14 +192,6 @@
                 {%- endif -%}
               </div>
             {%- endcapture -%}
-
-            {%- comment -%}SP: Check if block has hotspots — if so, skip <a> wrapper to avoid click conflicts{%- endcomment -%}
-            {%- assign sp_has_hotspots = false -%}
-            {%- if block.type == 'image' -%}
-              {%- if block.settings.product_hotspot_1 != blank or block.settings.product_hotspot_2 != blank or block.settings.product_hotspot_3 != blank or block.settings.product_hotspot_4 != blank -%}
-                {%- assign sp_has_hotspots = true -%}
-              {%- endif -%}
-            {%- endif -%}
 
             {%- comment -%}SP: Aspect ratio based on column width{%- endcomment -%}
             {%- if effective_col == '12' -%}
