@@ -153,7 +153,8 @@
       "desktop_layout_options": {
         "sidebar": "Barre latérale",
         "horizontal": "Horizontal",
-        "drawer": "Drawer"
+        "drawer": "Drawer",
+        "dropdown": "Menu déroulant"
       },
       "show_sort_by": "Afficher le tri",
       "show_filters": "Afficher les filtres",

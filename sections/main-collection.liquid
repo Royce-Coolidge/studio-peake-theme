@@ -129,11 +129,70 @@ LIQUID
           <height-observer variable="collection-toolbar" class="collection-toolbar full-bleed">
             <div class="collection-toolbar__button-list">
               {%- if show_filters -%}
+                {%- if section.settings.filter_layout == 'dropdown' -%}
+                  <div class="collection-toolbar__button-container sp-filter-dropdown">
+                    <button type="button" class="collection-toolbar__button heading text-xxs w-full sp-filter-dropdown__trigger" aria-controls="filter-dropdown-popover" aria-expanded="false">
+                      <span class="text-with-icon justify-center">
+                        {{- 'collection.faceting.filter_button' | t }} {% if active_values_count > 0 %}({{ active_values_count }}){% endif -%}
+                        <svg class="sp-filter-dropdown__chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                    </button>
+
+                    <div id="filter-dropdown-popover" class="sp-filter-dropdown__popover" hidden>
+                      <facets-form update-on-change section-id="{{ section.id }}">
+                        <form id="FacetFiltersFormDropdown" method="GET" action="{{ request.path }}">
+                          <input type="hidden" name="page" value="1">
+                          {%- for filter in collection.filters -%}
+                            {%- if filter.type == 'list' -%}
+                              <div class="sp-filter-dropdown__group">
+                                <p class="sp-filter-dropdown__group-label">{{ filter.label | upcase }}</p>
+                                <ul class="sp-filter-dropdown__options" role="listbox">
+                                  {%- for value in filter.values -%}
+                                    <li>
+                                      <label class="sp-filter-dropdown__label">
+                                        <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" {% if value.active %}checked{% endif %} class="visually-hidden">
+                                        <span class="sp-filter-dropdown__radio-circle"></span>
+                                        <span class="sp-filter-dropdown__text">{{ value.label | upcase }}</span>
+                                        <span class="sp-filter-dropdown__count">({{ value.count }})</span>
+                                      </label>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              </div>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </form>
+                      </facets-form>
+                    </div>
+                  </div>
+
+                  <script>
+                    (function() {
+                      var wrapper = document.querySelector('.sp-filter-dropdown');
+                      if (!wrapper) return;
+                      var trigger = wrapper.querySelector('.sp-filter-dropdown__trigger');
+                      var popover = wrapper.querySelector('.sp-filter-dropdown__popover');
+                      trigger.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+                        trigger.setAttribute('aria-expanded', !isOpen);
+                        popover.hidden = isOpen;
+                      });
+                      document.addEventListener('click', function(e) {
+                        if (!wrapper.contains(e.target)) {
+                          trigger.setAttribute('aria-expanded', 'false');
+                          popover.hidden = true;
+                        }
+                      });
+                    })();
+                  </script>
+                {%- else -%}
                 <div class="collection-toolbar__button-container {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
                   <button type="button" aria-controls="facets-drawer" class="collection-toolbar__button heading text-xxs w-full">
                     {{- 'collection.faceting.filter_button' | t }} {% if active_values_count > 0 %}({{ active_values_count }}){% endif -%}
                   </button>
                 </div>
+                {%- endif -%}
               {%- endif -%}
 
               {%- if section.settings.show_sort_by -%}
@@ -188,7 +247,7 @@ LIQUID
         <div class="collection">
           {%- paginate collection.products by section.settings.products_per_page -%}
             {%- if show_filters -%}
-              <facets-drawer id="facets-drawer" class="facets-drawer drawer drawer--sm color-scheme color-scheme--dialog {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}">
+              <facets-drawer id="facets-drawer" class="facets-drawer drawer drawer--sm color-scheme color-scheme--dialog {% if section.settings.filter_layout == 'sidebar' %}md:hidden{% endif %}" {% if section.settings.filter_layout == 'dropdown' %}hidden{% endif %}>
                 <p class="h4" slot="header">{{ 'collection.faceting.filters' | t }}</p>
 
                 {%- render 'facets', results: collection, show_filters: section.settings.show_filters, open_filters_by_default: section.settings.open_filters_by_default, update_on_change: false, quick_links_menu: section.settings.quick_links_menu, context: 'drawer' -%}
@@ -355,6 +414,10 @@ LIQUID
         {
           "value": "drawer",
           "label": "t:global.faceting.desktop_layout_options.drawer"
+        },
+        {
+          "value": "dropdown",
+          "label": "t:global.faceting.desktop_layout_options.dropdown"
         }
       ],
       "default": "sidebar"
