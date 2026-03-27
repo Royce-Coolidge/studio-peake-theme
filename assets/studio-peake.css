@@ -500,11 +500,6 @@
   }
 }
 
-@media screen and (min-width: 700px) {
-  .image-with-text > .prose {
-    margin-inline: auto;
-  }
-}
 
 .prose--compact > p {
   margin-block-start: 0 !important;
@@ -1102,4 +1097,10 @@
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+@media screen and (min-width: 700px) {
+  [role="tabpanel"] .prose {
+    max-width: 550px !important;
+  }
 }
