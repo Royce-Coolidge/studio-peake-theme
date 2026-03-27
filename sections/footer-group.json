@@ -98,6 +98,9 @@
         "image_iXmxPQ",
         "links"
       ],
+      "custom_css": [
+        ".footer {padding-left: 51px; padding-right: 51px;}"
+      ],
       "settings": {
         "color_scheme": "scheme-e6df9bf7-5811-4d32-beb4-97cf89c548bf",
         "separate_section_with_border": false,
