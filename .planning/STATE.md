@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 Phase: 4 of 5 (Trigger Wiring) — COMPLETE
 Plan: 1 of 1 in current phase — COMPLETE
 Status: Phase 4 complete, ready for Phase 5 (Keyline Animation System)
-Last activity: 2026-03-17 — Trigger wiring verified end-to-end, all TRIG requirements met
+Last activity: 2026-03-27 - Completed quick task 1: Add dropdown desktop layout option for collection page Filters and sorting
 
 Progress: [████████░░] 80%
 
@@ -79,6 +79,12 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | Add dropdown desktop layout option for collection page Filters and sorting | 2026-03-27 | 58886a5 | [1-add-dropdown-desktop-layout-option-for-c](./quick/1-add-dropdown-desktop-layout-option-for-c/) |
 
 ### Blockers/Concerns
 
