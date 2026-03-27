@@ -28,6 +28,16 @@
         --media-grid-gap: {% if section.settings.spacing == 'xs' %}0.75rem{% elsif section.settings.spacing == 'sm' %}1.25rem{% elsif section.settings.spacing == 'md' %}1.875rem{% elsif section.settings.spacing == 'lg' %}2.5rem{% else %}0rem{% endif %};
       }
     }
+
+    @media screen and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+      #shopify-section-{{ section.id }} .content-over-media--has-content::before {
+        transition: background 1.2s cubic-bezier(.4, .0, .2, 1);
+      }
+
+      #shopify-section-{{ section.id }} .group.content-over-media--has-content:hover::before {
+        background: rgb(0 0 0 / 0.3);
+      }
+    }
   </style>
 
   {%- assign color_scheme_hash = section.settings.color_scheme.settings.background_gradient | default: section.settings.color_scheme.settings.background | md5 -%}
@@ -100,8 +110,13 @@
               {%- endif -%}
             {%- endif -%}
 
+            {%- assign sp_has_content = false -%}
+            {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
+              {%- assign sp_has_content = true -%}
+            {%- endif -%}
+
             {%- capture block_content -%}
-              <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group{% if sp_has_hotspots %} sp-has-hotspots{% endif %}" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
+              <div class="content-over-media color-scheme color-scheme--{{ block.settings.color_scheme.id }} group{% if sp_has_hotspots %} sp-has-hotspots{% endif %}{% if sp_has_content %} content-over-media--has-content{% endif %}" reveal-on-scroll="true" style="--content-over-media-overlay: {{ block.settings.overlay_color.rgb }} / {{ block.settings.overlay_opacity | divided_by: 100.0 }};">
                 {%- if block.type == 'image' -%}
                   {%- if sp_has_hotspots -%}<div class="sp-hotspot-image-outer"><div class="sp-hotspot-image-wrap" style="--sp-image-aspect: {{ sp_block_image.aspect_ratio }};">{%- endif -%}
                   {%- if sp_block_image -%}
@@ -647,7 +662,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "default": 0
+          "default": 9
         },
         {
           "type": "checkbox",
@@ -1002,7 +1017,7 @@
           "max": 100,
           "step": 1,
           "unit": "%",
-          "default": 0
+          "default": 9
         },
         {
           "type": "checkbox",
