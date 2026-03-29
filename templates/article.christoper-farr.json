@@ -86,7 +86,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_n7hUh6": {
@@ -97,7 +98,8 @@
             "content": "{{ article.content }}",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -338,7 +340,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_nWU4Db": {
@@ -349,7 +352,8 @@
             "content": "<p>In the end, we developed five colourways, all of which were sampled. Matt and Dorothy selected two designs for the final collection, and we are now continuing to explore additional combinations as bespoke options for upcoming projects.</p><p>This collaboration has been such a fun, creative, and rewarding experience. I’ve loved every minute!</p><p>A heartfelt thank you to Matt, Dorothy, and the entire team at Christopher Farr Cloth, and of course to the incredibly talented weavers in Afghanistan, whose extraordinary craftsmanship brought these designs to life.</p><p>It’s a true pleasure to see the rugs here in the studio, and to celebrate everyone who made them possible.</p>",
             "link_url": "shopify://collections/rugs",
             "link_text": "view the element rugs",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -518,6 +522,38 @@
         "show_excerpt": true,
         "show_read_more": true
       }
+    },
+    "rich_text_MQMkkC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9YgUeb": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind",
+            "heading_tag": "h1"
+          }
+        },
+        "link_cDN4Jn": {
+          "type": "link",
+          "settings": {
+            "text": "Tell us about your project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9YgUeb",
+        "link_cDN4Jn"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "lg",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -529,6 +565,7 @@
     "slideshow_nUgUFX",
     "multi_column_DPbJLw",
     "media_grid_DzP8bU",
-    "prev-next-blog-posts"
+    "prev-next-blog-posts",
+    "rich_text_MQMkkC"
   ]
 }
