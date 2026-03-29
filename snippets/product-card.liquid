@@ -83,7 +83,11 @@ Supported variables
             assign next_media = product.media[product.featured_media.position] | default: product.media[1]
 
             if next_media != blank
-             echo next_media | image_url: width: next_media.width | image_tag: class: 'product-card__image product-card__image--secondary', loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false'
+             assign secondary_image_classes = 'product-card__image product-card__image--secondary'
+              if settings.product_image_aspect_ratio contains 'crop'
+                assign secondary_image_classes = secondary_image_classes | append: ' object-cover'
+              endif
+              echo next_media | image_url: width: next_media.width | image_tag: class: secondary_image_classes, loading: 'lazy', fetchpriority: 'low', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false'
             endif
           endif
         -%}
