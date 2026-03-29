@@ -37,7 +37,14 @@
 
         <multi-column class="multi-column {% unless section.settings.stack_on_mobile %}scroll-area snap-x bleed md:unbleed{% endunless %}">
           {%- for block in section.blocks -%}
-            <div class="multi-column__item {% if section.settings.overlap_image and block.settings.title != blank %}multi-column__item--overlap{% endif %} snap-center group" {{ block.shopify_attributes }}>
+            {%- liquid
+              assign span = block.settings.column_span | default: 1
+              assign max_span = section.settings.columns_per_row
+              if span > max_span
+                assign span = max_span
+              endif
+            -%}
+            <div class="multi-column__item {% if section.settings.overlap_image and block.settings.title != blank %}multi-column__item--overlap{% endif %} snap-center group" {% if span > 1 %}style="grid-column: span {{ span }}"{% endif %} {{ block.shopify_attributes }}>
               {%- capture sizes_attribute -%}
                 (max-width: 699px) 53vw, (max-width: 999px) 38vw, calc((100vw - 3rem * 2) / {{ section.settings.columns_per_row }})
               {%- endcapture -%}
@@ -324,6 +331,16 @@
           "label": "Compact text spacing",
           "info": "Remove gaps between paragraphs (useful for addresses)",
           "default": false
+        },
+        {
+          "type": "range",
+          "id": "column_span",
+          "label": "Column span",
+          "info": "Number of columns this block spans (capped by columns per row)",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 1
         }
       ]
     },
@@ -424,6 +441,16 @@
           "type": "url",
           "id": "link_url_5",
           "label": "Link 5 URL"
+        },
+        {
+          "type": "range",
+          "id": "column_span",
+          "label": "Column span",
+          "info": "Number of columns this block spans (capped by columns per row)",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 1
         }
       ]
     },
@@ -508,6 +535,16 @@
           "type": "text",
           "id": "link_text",
           "label": "t:global.text.link_text"
+        },
+        {
+          "type": "range",
+          "id": "column_span",
+          "label": "Column span",
+          "info": "Number of columns this block spans (capped by columns per row)",
+          "min": 1,
+          "max": 6,
+          "step": 1,
+          "default": 1
         }
       ]
     }
