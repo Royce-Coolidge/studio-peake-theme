@@ -522,6 +522,38 @@
         "show_excerpt": true,
         "show_read_more": true
       }
+    },
+    "rich_text_hUD9WR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bdGbXY": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind",
+            "heading_tag": "h1"
+          }
+        },
+        "link_JgrqyL": {
+          "type": "link",
+          "settings": {
+            "text": "Tell us about your project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_bdGbXY",
+        "link_JgrqyL"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "lg",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -533,6 +565,7 @@
     "slideshow_nUgUFX",
     "multi_column_DPbJLw",
     "media_grid_DzP8bU",
-    "prev-next-blog-posts"
+    "prev-next-blog-posts",
+    "rich_text_hUD9WR"
   ]
 }
