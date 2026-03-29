@@ -47,7 +47,8 @@
       ],
       "custom_css": [
         ".content-over-media {max-height: 100vh;}",
-        ".sp-slideshow-logo {width: 100vw;}"
+        ".sp-slideshow-logo {width: 100vw;}",
+        ".content-over-media {row-gap: 2rem; }"
       ],
       "settings": {
         "allow_transparent_header": true,
@@ -73,7 +74,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": true
+            "compact_text": true,
+            "column_span": 1
           }
         },
         "image_with_text_Vp7UF9": {
@@ -84,7 +86,8 @@
             "content": "<p>The root of all creativity is collaboration. Truly great design comes from dialogue – from clients, designers and makers working in partnership, each bringing their own perspective. Design is a process. A home is never truly finished – it is an expression of who we are. Just as we evolve and change over time, so should our home. We create ambitious, innovative and highly tailored spaces that embody the personality of the client and support the everyday flow of life. </p>",
             "link_url": "shopify://pages/about",
             "link_text": "Learn more",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -245,7 +248,7 @@
       "custom_css": [
         "picture {padding: var(--container-gutter);}",
         "picture img {border-radius: 0;}",
-        "@media screen and (min-width: 700px) {picture img {min-height: 58.5625rem; width: 45.8125rem; object-fit: cover;}}"
+        "@media screen and (min-width: 700px) {picture img {min-height: 58.5625rem; width: 45.8125rem; object-fit: cover; }}"
       ],
       "name": "The Studio",
       "settings": {
@@ -347,7 +350,7 @@
         "tab_HWaEg6"
       ],
       "custom_css": [
-        "@media screen and (min-width: 700px) {.tabs__panel-image {min-height: 58.5625rem; width: 45.8125rem; object-fit: cover;}}"
+        "@media screen and (min-width: 700px) {.tabs__panel-image {min-height: 58.5625rem; width: 45.8125rem; object-fit: cover; }}"
       ],
       "name": "t:sections.tabs.presets.tab.name",
       "settings": {
