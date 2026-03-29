@@ -30,7 +30,7 @@
       "settings": {
         "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
         "apparition_delay": 5,
-        "show_only_on_index": false,
+        "show_only_on_index": true,
         "hide_for_account_holders": true,
         "show_only_once": true,
         "show_newsletter_form": true,
