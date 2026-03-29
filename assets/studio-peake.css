@@ -39,6 +39,25 @@
   }
 }
 
+/* Slideshow dots repositioned to bottom-left */
+.slideshow .page-dots {
+  inset-inline-end: auto;
+  inset-inline-start: var(--slideshow-controls-spacing);
+  gap: 0.375rem;
+  padding: 0;
+}
+
+/* Extra bottom padding for slide content to avoid overlapping dots */
+.slideshow .content-over-media {
+  --content-over-media-row-gap: calc(var(--slideshow-controls-spacing) + 1rem);
+}
+
+@media screen and (min-width: 700px) {
+  .slideshow .content-over-media {
+    --content-over-media-row-gap: calc(var(--slideshow-controls-spacing) + 1.5rem);
+  }
+}
+
 .header__dropdown-menu :is(a,summary) 
 {
   padding: 0px !important;
@@ -406,6 +425,7 @@
 
 .content-tabs [role="tab"] {
   padding-block-end: 0.15rem;
+  box-shadow: none;
 }
 
 .tabs__panel-with-image {
