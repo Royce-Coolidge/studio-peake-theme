@@ -36,7 +36,7 @@
           "type": "image_with_text",
           "settings": {
             "title": "the workshop",
-            "heading_tag": "h3",
+            "heading_tag": "h1",
             "content": "<p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p>",
             "link_url": "shopify://pages/the-workshop",
             "link_text": "learn more",
@@ -86,7 +86,7 @@
         "show_grid_mode_selector": false,
         "horizontal_spacing_factor": 0.2,
         "vertical_spacing_factor": 0.2,
-        "filter_layout": "drawer",
+        "filter_layout": "dropdown",
         "quick_links_menu": "",
         "show_sort_by": false,
         "show_filters": true,
