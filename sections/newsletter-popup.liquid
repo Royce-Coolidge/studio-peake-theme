@@ -1,7 +1,13 @@
-{%- unless request.page_type == 'captcha' or section.settings.show_only_on_index and template != 'index' -%}
+{%- unless request.page_type == 'captcha' -%}
   {%- unless section.settings.show_only_for_visitors and customer -%}
     {%- assign posted_successfully = false -%}
     {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
+
+    {%- comment -%}Only auto-show popup on workshop page; footer subscribe link works on all pages{%- endcomment -%}
+    {%- assign is_workshop_page = false -%}
+    {%- if request.path contains '/pages/the-workshop' -%}
+      {%- assign is_workshop_page = true -%}
+    {%- endif -%}
 
     {%- capture _temporary -%}
       {%- form 'customer', id: newsletter_id, class: 'form' -%}
@@ -9,7 +15,7 @@
       {%- endform -%}
     {%- endcapture -%}
 
-    <newsletter-popup id="newsletter-popup" class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} handle-editor-events>
+    <newsletter-popup id="newsletter-popup" class="pop-in newsletter-popup color-scheme color-scheme--{{ section.settings.color_scheme.id }}" title="Newsletter popup" {% if section.settings.show_only_once %}only-once{% endif %} apparition-delay="{{ section.settings.apparition_delay }}" {% if posted_successfully %}open{% endif %} {% unless is_workshop_page %}no-auto-show{% endunless %} handle-editor-events>
       <dialog-close-button class="contents">
         <button class="pop-in__close-button tap-area">
           <span class="sr-only">{{ 'general.accessibility.close' | t }}</span>
@@ -91,6 +97,18 @@
     </newsletter-popup>
 
     <script>
+      // Prevent auto-show on non-workshop pages (footer subscribe link still works)
+      (function() {
+        var el = document.getElementById('newsletter-popup');
+        if (el && el.hasAttribute('no-auto-show')) {
+          Object.defineProperty(el, 'shouldAppearAutomatically', {
+            get: function() { return false; },
+            configurable: true
+          });
+          if (el.open) el.hide();
+        }
+      })();
+
       document.addEventListener('click', function(e) {
         var link = e.target.closest('a[href="#newsletter-popup"]');
         if (link) {
@@ -129,10 +147,8 @@
       "default": 5
     },
     {
-      "type": "checkbox",
-      "id": "show_only_on_index",
-      "label": "t:sections.newsletter_popup.show_only_on_home_page",
-      "default": true
+      "type": "paragraph",
+      "content": "Auto-shows on the workshop page only. Can also be triggered via footer subscribe link on any page."
     },
     {
       "type": "checkbox",
