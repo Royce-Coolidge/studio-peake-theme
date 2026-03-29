@@ -84,7 +84,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_n7hUh6": {
@@ -95,7 +96,8 @@
             "content": "{{ article.content }}",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -239,6 +241,7 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "none",
+        "sp_enable_image_zoom": true,
         "sp_use_metaobject_gallery": false,
         "sp_masonry_style": "uniform",
         "subheading": "",
@@ -371,7 +374,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_nWU4Db": {
@@ -382,7 +386,8 @@
             "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_url": "",
             "link_text": "VIEW product",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -526,6 +531,7 @@
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "none",
+        "sp_enable_image_zoom": true,
         "sp_use_metaobject_gallery": false,
         "sp_masonry_style": "uniform",
         "subheading": "",
@@ -547,6 +553,38 @@
         "show_excerpt": true,
         "show_read_more": true
       }
+    },
+    "rich_text_taFBM4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HAXPPt": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind",
+            "heading_tag": "h1"
+          }
+        },
+        "link_cNnqRm": {
+          "type": "link",
+          "settings": {
+            "text": "Tell us about your project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HAXPPt",
+        "link_cNnqRm"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "lg",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -558,6 +596,7 @@
     "slideshow_nUgUFX",
     "multi_column_DPbJLw",
     "media_grid_DzP8bU",
-    "prev-next-blog-posts"
+    "prev-next-blog-posts",
+    "rich_text_taFBM4"
   ]
 }
