@@ -1137,6 +1137,13 @@
   font-style: var(--button-font-style);
   font-size: var(--text-sm);
   letter-spacing: var(--button-letter-spacing);
+  color: rgb(var(--text-color));
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.sp-filter-dropdown__trigger:hover {
+  opacity: 0.5;
 }
 
 .sp-filter-dropdown__chevron {
