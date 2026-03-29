@@ -276,7 +276,7 @@
         "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-07_1b3ada4e-6fa7-40bf-97fd-d84d1b2ce3aa.jpg",
         "reveal_on_scroll": true,
         "image_position": "end",
-        "content_width": "sm",
+        "content_width": "md",
         "content_alignment": "start",
         "remove_vertical_spacing": true,
         "anchor_id": ""
