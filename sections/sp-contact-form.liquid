@@ -52,18 +52,29 @@
             </div>
           </div>
 
-          {%- comment -%}--- Property Type (select) ---{%- endcomment -%}
+          {%- comment -%}--- Property Type (radio dropdown) ---{%- endcomment -%}
           <div class="sp-contact-form__row">
             <div class="sp-contact-form__field">
-              <select name="contact[property_type]" id="contact-property-type" class="sp-contact-form__select" required>
-                <option value="" disabled selected>{{ section.settings.property_type_label }}</option>
-                <option value="House">House</option>
-                <option value="Apartment">Apartment</option>
-                <option value="Townhouse">Townhouse</option>
-                <option value="Villa">Villa</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Other">Other</option>
-              </select>
+              <div class="sp-contact-radio-dropdown">
+                <button type="button" class="sp-contact-radio-dropdown__trigger" aria-expanded="false">
+                  <span class="sp-contact-radio-dropdown__label">{{ section.settings.property_type_label }}</span>
+                  <svg class="sp-contact-radio-dropdown__chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="sp-contact-radio-dropdown__popover" hidden>
+                  <ul class="sp-contact-form__radio-group">
+                    {%- assign property_types = 'House,Apartment,Townhouse,Villa,Commercial,Other' | split: ',' -%}
+                    {%- for type in property_types -%}
+                      <li>
+                        <label class="sp-contact-form__radio-label">
+                          <input type="radio" name="contact[property_type]" value="{{ type }}" required class="visually-hidden">
+                          <span class="sp-contact-form__radio-circle"></span>
+                          <span class="sp-contact-form__radio-text">{{ type | upcase }}</span>
+                        </label>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -98,18 +109,29 @@
             </div>
           </div>
 
-          {%- comment -%}--- How Did You Hear About Us (select) ---{%- endcomment -%}
+          {%- comment -%}--- How Did You Hear About Us (radio dropdown) ---{%- endcomment -%}
           <div class="sp-contact-form__row">
             <div class="sp-contact-form__field">
-              <select name="contact[referral_source]" id="contact-referral" class="sp-contact-form__select" required>
-                <option value="" disabled selected>{{ section.settings.referral_label }}</option>
-                <option value="Google">Google</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Word of mouth">Word of mouth</option>
-                <option value="Press">Press</option>
-                <option value="Referral">Referral</option>
-                <option value="Other">Other</option>
-              </select>
+              <div class="sp-contact-radio-dropdown">
+                <button type="button" class="sp-contact-radio-dropdown__trigger" aria-expanded="false">
+                  <span class="sp-contact-radio-dropdown__label">{{ section.settings.referral_label }}</span>
+                  <svg class="sp-contact-radio-dropdown__chevron" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="sp-contact-radio-dropdown__popover" hidden>
+                  <ul class="sp-contact-form__radio-group">
+                    {%- assign referral_sources = 'Google,Instagram,Word of mouth,Press,Referral,Other' | split: ',' -%}
+                    {%- for source in referral_sources -%}
+                      <li>
+                        <label class="sp-contact-form__radio-label">
+                          <input type="radio" name="contact[referral_source]" value="{{ source }}" required class="visually-hidden">
+                          <span class="sp-contact-form__radio-circle"></span>
+                          <span class="sp-contact-form__radio-text">{{ source | upcase }}</span>
+                        </label>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -129,6 +151,45 @@
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    document.addEventListener('click', function(e) {
+      var trigger = e.target.closest('.sp-contact-radio-dropdown__trigger');
+      if (trigger) {
+        e.preventDefault();
+        var dropdown = trigger.closest('.sp-contact-radio-dropdown');
+        var popover = dropdown.querySelector('.sp-contact-radio-dropdown__popover');
+        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.sp-contact-radio-dropdown__trigger[aria-expanded="true"]').forEach(function(t) {
+          if (t !== trigger) {
+            t.setAttribute('aria-expanded', 'false');
+            t.closest('.sp-contact-radio-dropdown').querySelector('.sp-contact-radio-dropdown__popover').hidden = true;
+          }
+        });
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        popover.hidden = isOpen;
+        return;
+      }
+      if (!e.target.closest('.sp-contact-radio-dropdown')) {
+        document.querySelectorAll('.sp-contact-radio-dropdown__trigger[aria-expanded="true"]').forEach(function(t) {
+          t.setAttribute('aria-expanded', 'false');
+          t.closest('.sp-contact-radio-dropdown').querySelector('.sp-contact-radio-dropdown__popover').hidden = true;
+        });
+      }
+    });
+
+    document.addEventListener('change', function(e) {
+      var radio = e.target;
+      if (radio.type !== 'radio' || !radio.closest('.sp-contact-radio-dropdown')) return;
+      var dropdown = radio.closest('.sp-contact-radio-dropdown');
+      var trigger = dropdown.querySelector('.sp-contact-radio-dropdown__trigger');
+      var label = trigger.querySelector('.sp-contact-radio-dropdown__label');
+      label.textContent = radio.value.toUpperCase();
+      trigger.classList.add('sp-contact-radio-dropdown__trigger--selected');
+    });
+  })();
+</script>
 
 {% schema %}
 {
