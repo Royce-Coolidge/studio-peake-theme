@@ -33,7 +33,7 @@
             "button_2_background": "#ffffff",
             "button_2_text_color": "#000000",
             "background": "",
-            "background_opacity": 50,
+            "background_opacity": 0,
             "text_color": "#ffffff",
             "border_color": "",
             "gradient_overlay": ""
@@ -77,7 +77,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_HcYgW6": {
@@ -88,7 +89,8 @@
             "content": "<p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p><p>The Workshop grew from Sarah’s deep love of working with the remarkable artisans we partner with across our projects. It celebrates the joy of taking an idea from initial sketch to a finished object designed to be used and loved every day. Each piece is born from months – and sometimes years – of creative dialogue, as vision combines with craft to create something totally original.  </p>",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },

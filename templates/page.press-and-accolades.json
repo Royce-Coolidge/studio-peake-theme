@@ -74,11 +74,12 @@
           "type": "image_with_text",
           "settings": {
             "title": "press & accolades",
-            "heading_tag": "h3",
+            "heading_tag": "h1",
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "sp_link_group_with_image_KQJmbf": {
@@ -95,7 +96,8 @@
             "link_text_4": "House & Garden 30 Up & Coming Interior Designers",
             "link_url_4": "",
             "link_text_5": "",
-            "link_url_5": ""
+            "link_url_5": "",
+            "column_span": 1
           }
         }
       },
