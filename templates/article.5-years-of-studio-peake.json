@@ -82,11 +82,12 @@
           "type": "image_with_text",
           "settings": {
             "title": "{{ article.title }}",
-            "heading_tag": "h3",
+            "heading_tag": "h1",
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_n7hUh6": {
@@ -97,7 +98,8 @@
             "content": "<p>Last night we celebrated five years of Studio Peake, and it was one of those evenings that felt genuinely special—full of familiar faces, brilliant conversation, and a room filled with the people who have helped shape the studio into what it is today.</p><p>We hosted a party with our suppliers, supporters and friends, and it was such a joy to have everyone together in one place. It felt like a rare moment to pause, reflect, and properly appreciate just how much has gone into building the studio over the last five years.</p>",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -338,7 +340,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_nWU4Db": {
@@ -349,7 +352,8 @@
             "content": "<p>And of course, behind the scenes, there is always Ed—my husband—who somehow manages to also be head of legal, head of PR, and head of founder therapy at 11pm most nights.</p><p>But most of all, this milestone belongs to the Studio Peake team, past and present. They are the heart of the studio, and everything we do is built on their dedication, talent and care. It was important to take the time to celebrate them properly.</p><p>Five years in, we feel incredibly proud—and incredibly grateful. Last night was a reminder that Studio Peake is, and always has been, a collaboration.</p><p>And we couldn’t be more excited for what comes next.</p>",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
