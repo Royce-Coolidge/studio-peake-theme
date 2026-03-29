@@ -48,7 +48,7 @@
           "type": "image_with_text",
           "settings": {
             "title": "general enquiries",
-            "heading_tag": "h3",
+            "heading_tag": "h2",
             "content": "",
             "link_url": "",
             "link_text": "",
@@ -122,11 +122,58 @@
         "content": "",
         "anchor_id": ""
       }
+    },
+    "multi_column_qxPMr8": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_zPBd9H": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "we are hiring",
+            "heading_tag": "h2",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        },
+        "image_with_text_Hq9EVa": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "heading_tag": "h3",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_zPBd9H",
+        "image_with_text_Hq9EVa"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "columns_per_row": 5,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "md",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "main",
     "sp_contact_form",
-    "multi_column_UxUVyj"
+    "multi_column_UxUVyj",
+    "multi_column_qxPMr8"
   ]
 }
