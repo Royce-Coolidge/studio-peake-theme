@@ -758,7 +758,7 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
 }
 
 .sp-has-hotspots {
-   grid-area: unset !impoirtant;
+   display: block;
 }
 
 .content-over-media:has( > .prose):not(:has( > .prose .button:last-child)) {
