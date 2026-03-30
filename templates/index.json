@@ -246,8 +246,8 @@
         "sp_link_group_GE8CYD"
       ],
       "custom_css": [
-        "picture {padding: var(--container-gutter);}",
-        "picture img {border-radius: 0;}",
+        "picture img {border-radius: 0; object-fit: contain;}",
+        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; padding: 100px 96px; } .image-with-text .prose {padding-inline-start: 0px; }}",
         "@media screen and (min-width: 700px) {picture img {min-height: 58.5625rem; width: 45.8125rem; object-fit: cover; }}"
       ],
       "name": "The Studio",
@@ -484,7 +484,7 @@
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
-        "cycle_speed": 5,
+        "cycle_speed": 6,
         "background": "#000000",
         "controls_color": "#ffffff",
         "anchor_id": ""
