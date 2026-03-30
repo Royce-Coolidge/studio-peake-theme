@@ -480,7 +480,8 @@
         "image_block4"
       ],
       "custom_css": [
-        ".h1 {text-wrap: balance; max-width: 300px}"
+        ".h1 {text-wrap: balance; max-width: 300px;}",
+        "@media screen and (min-width: 1000px) {.prose:not(.prose--tight) :where(:not(meta,span)+*) {margin-block-start: 0.25rem; }}"
       ],
       "name": "Project Carousel",
       "settings": {
