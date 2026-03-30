@@ -1135,8 +1135,7 @@
 
 .shopify-section--media-grid .media-grid__item {
   grid-area: span 1 / span 2;
-  aspect-ratio: var(--sp-aspect, 2 / 3);
-  height: auto;
+
   overflow: hidden;
 }
 
