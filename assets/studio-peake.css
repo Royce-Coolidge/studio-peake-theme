@@ -470,6 +470,13 @@
   align-items: center;
 }
 
+/* === Image with text — vertical spacing on mobile only === */
+@media screen and (min-width: 700px) {
+  .shopify-section--image-with-text .section-spacing {
+    padding-block: 0;
+  }
+}
+
 /* === Collection list — 2px gap between blocks === */
 .collection-list {
   --collection-list-gap: 2px;
