@@ -21,6 +21,19 @@
   }
 }
 
+/* === "Have a project in mind" — vertical padding === */
+#have-a-project-in-mind + .shopify-section--rich-text .section-spacing,
+.section-anchor#have-a-project-in-mind ~ .section-spacing {
+  padding-block: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  #have-a-project-in-mind + .shopify-section--rich-text .section-spacing,
+  .section-anchor#have-a-project-in-mind ~ .section-spacing {
+    padding-block: 60px;
+  }
+}
+
 /* === Rich text — tighter heading-to-CTA spacing === */
 .shopify-section--rich-text .prose .link {
   margin-block-start: 0.625rem;
