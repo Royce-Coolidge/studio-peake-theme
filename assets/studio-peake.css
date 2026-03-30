@@ -40,10 +40,8 @@
 
 
 
-@media screen and (max-width: 699px) {
-  .sp-slideshow-logo {
-    width: 100%;
-  }
+.sp-slideshow-logo {
+  width: 100%;
 }
 
 /* Slideshow dots repositioned to bottom-left */
@@ -374,6 +372,26 @@
 /* First link in group — no top keyline */
 .sp-link-group .sp-link-row:first-child {
   border-top: none;
+}
+
+/* === Header & Footer — 51px horizontal padding on desktop === */
+@media screen and (min-width: 700px) {
+  .header {
+    padding-inline: 51px !important;
+  }
+
+  .footer {
+    padding-inline: 51px !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .shopify-section--slideshow .slideshow__slide-content {
+    grid-column: full;
+    padding-inline: 51px;
+  }
+
+
 }
 
 /* === Footer block list — centre on mobile === */
@@ -791,6 +809,24 @@
   display: block;
 }
 
+.sp-contact-layout__image--desktop {
+  display: block;
+}
+
+.sp-contact-layout__image--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 699px) {
+  .sp-contact-layout__image--desktop {
+    display: none;
+  }
+
+  .sp-contact-layout__image--mobile {
+    display: block;
+  }
+}
+
 .sp-contact-layout__form {
   display: flex;
   align-items: flex-end;
@@ -841,14 +877,14 @@
   font-size: var(--text-xs);
   letter-spacing: var(--button-letter-spacing);
   text-transform: uppercase;
-  color: currentColor;
+  color: rgb(var(--text-color));
   outline: none;
   appearance: none;
 }
 
 .sp-contact-form__input::placeholder {
-  color: currentColor;
-  opacity: 0.7;
+  color: rgb(var(--text-color));
+  opacity: 1;
 }
 
 .sp-contact-form__input:focus,
