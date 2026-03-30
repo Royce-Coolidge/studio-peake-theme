@@ -37,10 +37,11 @@
           "settings": {
             "title": "the workshop",
             "heading_tag": "h1",
-            "content": "<p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p>",
+            "content": "<p></p><p></p><p>The Workshop by Studio Peake is a collection of beautiful, timeless pieces rooted in the belief that even the most everyday objects can be works of art. Collaboration sits at the heart of everything we do. We partner with some of the finest makers in Britain and beyond to create truly exceptional, one-of-a-kind pieces for the home.</p>",
             "link_url": "shopify://pages/the-workshop",
             "link_text": "learn more",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_LNbTNg": {
@@ -51,7 +52,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
@@ -59,6 +61,7 @@
         "image_with_text_b9Wxq8",
         "image_with_text_LNbTNg"
       ],
+      "custom_css": [],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "",

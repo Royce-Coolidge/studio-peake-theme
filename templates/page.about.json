@@ -478,7 +478,7 @@
         "liquid_team_grid": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"sp-team-grid\"><div><p class=\"h5\">SARAH PEAKE</p><p>Founder and Creative Director</p></div><div><p class=\"h5\">SOPHY TOLLER</p><p>Head of Design</p></div><div><p class=\"h5\">DIDO CONNELLY</p><p>Senior Designer</p></div><div><p class=\"h5\">TILLY LASSETER</p><p>Senior Designer</p></div><div><p class=\"h5\">ELIZA ALTON</p><p>Mid Level Designer</p></div><div><p class=\"h5\">LOUKA PANAYIDES</p><p>Mid Level Designer</p></div><div><p class=\"h5\">GITA VADUKUL</p><p>Junior Designer</p></div><div><p class=\"h5\">BELLA ABREY</p><p>Studio Manager</p></div></div>"
+            "liquid": "<div class=\"sp-team-grid\"><div><span class=\"h5\">SARAH PEAKE</p><p>Founder and Creative Director</span></div><div><p class=\"h5\">SOPHY TOLLER</p><p>Head of Design</p></div><div><p class=\"h5\">DIDO CONNELLY</p><p>Senior Designer</p></div><div><p class=\"h5\">TILLY LASSETER</p><p>Senior Designer</p></div><div><p class=\"h5\">ELIZA ALTON</p><p>Mid Level Designer</p></div><div><p class=\"h5\">LOUKA PANAYIDES</p><p>Mid Level Designer</p></div><div><p class=\"h5\">GITA VADUKUL</p><p>Junior Designer</p></div><div><p class=\"h5\">BELLA ABREY</p><p>Studio Manager</p></div></div>"
           }
         }
       },
