@@ -296,6 +296,9 @@
       "block_order": [
         "image_XadhxV"
       ],
+      "custom_css": [
+        ".h1 {text-wrap: balance;}"
+      ],
       "name": "Banner Section",
       "settings": {
         "allow_transparent_header": true,
