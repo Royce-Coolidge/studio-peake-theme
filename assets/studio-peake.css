@@ -552,6 +552,12 @@
   }
 }
 
+@media (pointer: fine) {                                                                   
+    .blog-post-card:hover .blog-post-card__image {                         
+      transform: none;                   
+    }
+  }
+
 .blog-post-card__read-more {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
