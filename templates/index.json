@@ -504,6 +504,9 @@
     },
     "blog_posts_JHAxiV": {
       "type": "blog-posts",
+      "custom_css": [
+        ".h4 {text-wrap: balance; max-width: 250px;}"
+      ],
       "name": "News and Views",
       "settings": {
         "color_scheme": "",
