@@ -224,14 +224,7 @@ note that this may have impact on different places.
       --background-without-opacity: {{ color_scheme.settings.background.rgb }};
       --background-gradient: {{ color_scheme.settings.background_gradient }};
 
-      {%- if color_scheme.settings.background_gradient != blank -%}
-        --border-color: {{ color_scheme.settings.text_color.rgb }} / 0.15;
-      {%- elsif color_scheme.settings.background == 'rgba(0,0,0,0)' -%}
-        --border-color: {{ color_scheme.settings.text_color.rgb }};
-      {%- else -%}
-        {%- assign border_color = color_scheme.settings.text_color | color_mix: color_scheme.settings.background, 15 -%}
-        --border-color: {{ border_color.rgb }};
-      {%- endif -%}
+      --border-color: {{ color_scheme.settings.text_color.rgb }};
 
       /* Button colors */
       --button-background: {{ color_scheme.settings.primary_button_background.rgb }};
@@ -263,14 +256,7 @@ note that this may have impact on different places.
       --background-without-opacity: {{ color_scheme.settings.background.rgb }};
       --background-gradient: {{ color_scheme.settings.background_gradient }};
 
-      {%- if color_scheme.settings.background_gradient != blank -%}
-        --border-color: {{ color_scheme.settings.text_color.rgb }} / 0.15;
-      {%- elsif color_scheme.settings.background == 'rgba(0,0,0,0)' -%}
-        --border-color: {{ color_scheme.settings.text_color.rgb }};
-      {%- else -%}
-        {%- assign border_color = color_scheme.settings.text_color | color_mix: color_scheme.settings.background, 15 -%}
-        --border-color: {{ border_color.rgb }};
-      {%- endif -%}
+      --border-color: {{ color_scheme.settings.text_color.rgb }};
 
       /* Button colors */
       --button-background: {{ color_scheme.settings.primary_button_background.rgb }};

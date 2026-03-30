@@ -145,7 +145,15 @@
             -%}
 
             {%- if title != blank and content != blank -%}
-              {%- render 'accordion', title: title, content: content, open: block.settings.open_on_mobile, prose_content: true -%}
+              {%- capture mobile_content -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="tabs-mobile__image">
+                    {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: sizes: '100vw', widths: '400,600,800,1000', loading: 'lazy', class: 'tabs__panel-image' -}}
+                  </div>
+                {%- endif -%}
+                {{- content -}}
+              {%- endcapture -%}
+              {%- render 'accordion', title: title, content: mobile_content, open: block.settings.open_on_mobile, prose_content: true -%}
             {%- endif -%}
           {%- endfor -%}
         </div>

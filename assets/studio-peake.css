@@ -483,6 +483,25 @@
   align-items: center;
 }
 
+.accordion__disclosure {
+  border-color: rgb(var(--text-color));
+}
+
+.accordion__disclosure summary {
+  border-color: rgb(var(--text-color));
+}
+
+
+@media screen and (max-width: 699px) {
+  .shopify-section--tabs .accordion__content {
+    padding-inline-end: 0;
+  }
+
+  .shopify-section--tabs .section-stack {
+    gap: 0;
+  }
+}
+
 /* === Image with text — vertical spacing on mobile only === */
 @media screen and (max-width: 699px) {
   .image-with-text {
