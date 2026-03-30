@@ -541,6 +541,18 @@
   --collection-list-gap: 2px;
 }
 
+/* === Featured Collections — desktop vertical spacing === */
+@media screen and (min-width: 700px) {
+  .shopify-section--featured-collections .section-spacing {
+    --section-vertical-spacing: 3.75rem;
+  }
+
+  .shopify-section--featured-collections .container {
+    margin-inline-start: 51px;
+    margin-inline-end: 51px;
+  }
+}
+
 /* === Featured Collections header: title left, button right === */
 .featured-collections-header {
   display: flex;
