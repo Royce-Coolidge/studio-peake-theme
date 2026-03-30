@@ -481,7 +481,8 @@
       ],
       "custom_css": [
         ".h1 {text-wrap: balance; max-width: 300px;}",
-        "@media screen and (min-width: 1000px) {.prose:not(.prose--tight) :where(:not(meta,span)+*) {margin-block-start: 0.25rem; }}"
+        "@media screen and (min-width: 1000px) {.prose {margin-block-start: 0.25rem; }}",
+        ".prose {margin-block-start: 0rem;}"
       ],
       "name": "Project Carousel",
       "settings": {
