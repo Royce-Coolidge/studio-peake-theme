@@ -2644,9 +2644,9 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   margin-block-end: 0 !important;
 }
 
-/* .prose :where(:not(meta, span) + *) {
+.prose :where(:not(meta, span) + *) {
   margin-block-start: 1rem;
-} */
+}
 
 .prose :where(* + span:not(:empty, .metafield-multi_line_text_field)), .prose :is(.link, img) {
   display: inline-block;
