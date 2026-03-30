@@ -479,6 +479,9 @@
         "image_block3",
         "image_block4"
       ],
+      "custom_css": [
+        ".h1 {text-wrap: balance; max-width: 300px}"
+      ],
       "name": "Project Carousel",
       "settings": {
         "allow_transparent_header": true,
