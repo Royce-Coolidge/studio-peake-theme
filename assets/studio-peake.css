@@ -72,6 +72,16 @@
   padding: 0;
 }
 
+@media screen and (max-width: 699px) {
+  .slideshow .page-dots {
+    padding-bottom: 1.5rem;
+  }
+
+  .slideshow .slideshow__slide-content {
+    padding-bottom: 1.5rem;
+  }
+}
+
 /* Extra bottom padding for slide content to avoid overlapping dots */
 .slideshow .content-over-media {
   --content-over-media-row-gap: calc(var(--slideshow-controls-spacing) + 1rem);
