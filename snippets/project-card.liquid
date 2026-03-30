@@ -3,7 +3,15 @@
 PROJECT CARD COMPONENT
 ----------------------------------------------------------------------------------------------------------------------
 
-Renders a project metaobject as a card. Mirrors product-card markup for CSS reuse.
+Renders a project metaobject as a card. Identical markup to product-card for CSS reuse,
+but reads from metaobject fields instead of product fields.
+
+Field mapping:
+  product.url                    → project.system.url
+  product.featured_media         → project.sketch_image.value
+  product.title                  → project.title.value (fallback: project.system.display_name)
+  product.vendor                 → (not used)
+  product.media.size > 1         → (no secondary image)
 
 ********************************************
 Supported variables
@@ -12,7 +20,7 @@ Supported variables
 * project: the project metaobject to render
 * reveal: if set to true, the card will be revealed on scroll through animation
 * position: the position of the card in the list. Used for eager/lazy loading logic
-* hide_product_information: if set to true, all content (title, category) are not rendered, to create image-based grid
+* hide_product_information: if set to true, all content (title) is not rendered
 {%- endcomment -%}
 
 {%- liquid
@@ -27,13 +35,9 @@ Supported variables
     assign text_class = 'h6'
   endif
 
-  capture main_image_classes
-    echo 'product-card__image product-card__image--primary'
-    if settings.product_image_aspect_ratio contains 'crop'
-      echo ' object-cover'
-    endif
-    echo ' aspect-' | append: settings.product_image_aspect_ratio | split: '_' | first
-  endcapture
+  assign project_image = project.hero_image.value
+  assign project_title = project.title.value | default: project.system.display_name
+  assign project_url = project.system.url
 -%}
 
 <product-card class="product-card" {% if reveal %}reveal-on-scroll="true"{% endif %}>
@@ -43,15 +47,14 @@ Supported variables
   --------------------------------------------------------------------------------------------------------------------
   {%- endcomment -%}
 
-  <div class="product-card__figure">
-    <a href="{{ project.system.url }}" class="product-card__media" draggable="false">
-      {%- if project.featured_image != blank -%}
-        {{- project.featured_image | image_url: width: project.featured_image.width | image_tag: loading: main_media_loading_strategy, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', class: main_image_classes -}}
-      {%- else -%}
-        {{- 'image' | placeholder_svg_tag: main_image_classes | append: ' placeholder' -}}
-      {%- endif -%}
-    </a>
-  </div>
+  {%- if project_image != blank -%}
+    <div class="product-card__figure">
+      <a href="{{ project_url }}" class="product-card__media" draggable="false">
+        {%- capture main_image_classes -%}product-card__image product-card__image--primary {% if settings.product_image_aspect_ratio contains 'crop' %}object-cover{% endif %} aspect-{{ settings.product_image_aspect_ratio | split: '_' | first }}{%- endcapture -%}
+        {{- project_image | image_url: width: project_image.width | image_tag: loading: main_media_loading_strategy, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800', draggable: 'false', class: main_image_classes -}}
+      </a>
+    </div>
+  {%- endif -%}
 
   {%- comment -%}
   --------------------------------------------------------------------------------------------------------------------
@@ -62,14 +65,9 @@ Supported variables
   {%- unless hide_product_information -%}
     <div class="product-card__info empty:hidden">
       <div class="v-stack justify-items-center gap-2">
-        {%- if project.category != blank and project.category.value != blank -%}
-          {%- capture category_class -%}smallcaps {% if settings.product_card_text_font == 'heading' %}heading{% endif %}{%- endcapture -%}
-          <span class="{{ category_class }}">{{ project.category.value.title }}</span>
-        {%- endif -%}
-
         <div class="v-stack justify-items-center gap-1">
-          <a href="{{ project.system.url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %}>
-            {{- project.system.display_name -}}
+          <a href="{{ project_url }}" class="product-title {% if text_class != blank %}{{ text_class }}{% endif %} {% if settings.product_title_max_lines > 0 %}line-clamp{% endif %}" {% if settings.product_title_max_lines > 0 %}style="--line-clamp-count: {{ settings.product_title_max_lines }}"{% endif %}>
+            {{- project_title -}}
           </a>
         </div>
       </div>

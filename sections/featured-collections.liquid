@@ -72,7 +72,7 @@
                 {%- endif -%}
 
                 {%- if block.type == 'project' -%}
-                  {%- for project_ref in block.settings.projects -%}
+                  {%- for project_ref in metaobjects.project.values -%}
                     {%- render 'project-card', project: project_ref, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information -%}
                   {%- else -%}
                     {%- for i in (1..4) -%}
@@ -282,13 +282,6 @@
       "type": "project",
       "name": "Project",
       "settings": [
-        {
-          "type": "list.metaobject_reference",
-          "metaobject_type": "project",
-          "id": "projects",
-          "label": "Projects",
-          "info": "Select project metaobjects to display"
-        },
         {
           "type": "inline_richtext",
           "id": "title",
