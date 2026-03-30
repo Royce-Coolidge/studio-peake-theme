@@ -48,7 +48,7 @@
       "custom_css": [
         ".content-over-media {max-height: 100vh;}",
         ".sp-slideshow-logo {width: 100vw;}",
-        ".content-over-media {row-gap: 2rem; column-gap: 4rem;}"
+        ".content-over-media {row-gap: 2rem;}"
       ],
       "settings": {
         "allow_transparent_header": true,
