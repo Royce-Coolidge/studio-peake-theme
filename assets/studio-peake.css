@@ -744,6 +744,11 @@
 }
 
 /* === Main Product: flush gallery, padded info === */
+.shopify-section--main-product .product-info__block-list.container {
+  margin-inline-start: 0;
+  padding-block-start: 3rem;
+}
+
 .shopify-section--main-product .product-info {
   padding-block-end: var(--section-vertical-spacing-tight);
 }
