@@ -455,9 +455,9 @@ height-observer {
   display: none;
 }
 
-.blog-post-list--carousel {
+/* .blog-post-list--carousel {
   grid: auto / auto-flow 85vw;
-}
+} */
 
 @media screen and (min-width: 700px) {
   .blog-post-list--carousel {
