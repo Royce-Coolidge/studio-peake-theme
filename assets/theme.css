@@ -757,7 +757,7 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
   position: relative;
 }
 
-.sp-hotspot-image-wrap {
+.sp-has-hotspots {
    grid-area: unset !impoirtant;
 }
 
