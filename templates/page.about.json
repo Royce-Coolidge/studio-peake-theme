@@ -174,7 +174,7 @@
         "link_eiw6Y3"
       ],
       "custom_css": [
-        ".sp-carousel__dots {bottom: 2rem}"
+        ".sp-carousel__dots {bottom: 3rem;}"
       ],
       "name": "Our Process",
       "settings": {
@@ -187,7 +187,7 @@
         "autoplay": true,
         "media_padding_inline": 0,
         "cycle_speed": 5,
-        "dots_color": "",
+        "dots_color": "#f7f1eb",
         "dots_position": "overlay",
         "anchor_id": "process"
       }
