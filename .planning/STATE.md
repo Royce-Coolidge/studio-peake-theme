@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 Phase: 4 of 5 (Trigger Wiring) — COMPLETE
 Plan: 1 of 1 in current phase — COMPLETE
 Status: Phase 4 complete, ready for Phase 5 (Keyline Animation System)
-Last activity: 2026-03-27 - Completed quick task 1: Add dropdown desktop layout option for collection page Filters and sorting
+Last activity: 2026-03-30 - Completed quick task 3: Add project metaobject block type to featured-collections section
 
 Progress: [████████░░] 80%
 
@@ -85,6 +85,7 @@ None yet.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 1 | Add dropdown desktop layout option for collection page Filters and sorting | 2026-03-27 | 58886a5 | [1-add-dropdown-desktop-layout-option-for-c](./quick/1-add-dropdown-desktop-layout-option-for-c/) |
+| 3 | Add project metaobject block type to featured-collections section | 2026-03-30 | 3dadf31 | [3-add-project-metaobject-block-type-to-fea](./quick/3-add-project-metaobject-block-type-to-fea/) |
 
 ### Blockers/Concerns
 
