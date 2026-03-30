@@ -84,10 +84,10 @@ Supported parameters
       {%- if show_excerpt -%}
         {%- if article -%}
           {%- unless article.excerpt_or_content == blank -%}
-            <p class="blog-post-card__excerpt">{{ article.excerpt_or_content | strip_html | truncate: 200 }}</p>
+            <p class="prose">{{ article.excerpt_or_content | strip_html | truncate: 200 }}</p>
           {%- endunless -%}
         {%- else -%}
-          <p class="blog-post-card__excerpt">{{ 'general.on_boarding.blog_post_excerpt' | t }}</p>
+          <p class="prose">{{ 'general.on_boarding.blog_post_excerpt' | t }}</p>
         {%- endif -%}
       {%- endif -%}
 
