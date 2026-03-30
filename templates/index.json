@@ -374,7 +374,7 @@
             "image": "shopify://shop_images/studiopeake-projects-residential-kensington-townhouse-02.jpg",
             "subheading": "",
             "title": "Kensington Townhouse",
-            "mobile_text_position": "place-self-end-start text-start",
+            "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "content_max_width": 1200,
             "button_1_text": "Explore the project",
