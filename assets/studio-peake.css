@@ -536,10 +536,12 @@
   text-transform: var(--heading-text-transform);
 }
 
-@media screen and (min-width: 700px) {
-  .product-gallery__thumbnail-list {
-    display: none;
-  }
+.product-gallery {
+  --product-gallery-gap: 2px;
+}
+
+.product-gallery__thumbnail-list {
+  display: none;
 }
 
 
