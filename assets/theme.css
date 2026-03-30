@@ -753,7 +753,7 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
   max-width: var(--content-over-media-content-max-width, 48rem);
   z-index: 1;
   text-shadow: 0 1px rgb(var(--content-over-media-text-shadow) / 50%);
-  grid-area: content-start / content-start / content-end / content-end;
+  /* grid-area: content-start / content-start / content-end / content-end; */
   position: relative;
 }
 
