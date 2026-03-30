@@ -105,7 +105,7 @@
       "name": "SP Carousel with text",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "md",
