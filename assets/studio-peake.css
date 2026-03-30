@@ -1,5 +1,12 @@
 /* Studio Peake Custom Theme Layer — .sp-* namespace */
 
+/* === Remove vertical spacing on mobile only === */
+@media screen and (max-width: 699px) {
+  .sp-remove-spacing-mobile {
+    padding-block: 0;
+  }
+}
+
 /* === Header text color — per template === */
 .template-page-contact .header,
 .template-product .header,

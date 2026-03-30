@@ -107,7 +107,7 @@
         "reveal_on_scroll": true,
         "image_position": "start",
         "content_width": "md",
-        "remove_vertical_spacing": false,
+        "remove_vertical_spacing": true,
         "autoplay": false,
         "media_padding_inline": 14,
         "cycle_speed": 5,
