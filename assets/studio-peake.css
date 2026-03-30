@@ -514,6 +514,13 @@
   border: none;
 }
 
+@media screen and (min-width: 700px) {
+  .shopify-section--main-collection .product-list {
+    column-gap: 2px !important;
+    row-gap: 14px !important;
+  }
+}
+
 .collection-toolbar__button {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
