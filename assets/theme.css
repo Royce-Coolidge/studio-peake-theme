@@ -344,6 +344,7 @@ height-observer {
 .blog-post-card__title {
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  text-wrap: balance;
 }
 
 .blog-post-card__info a {
