@@ -248,7 +248,7 @@
       "custom_css": [
         "picture img {border-radius: 0; object-fit: cover;}",
         "@media (min-width: 600px) {.image-with-text {gap: 96px !important; padding: 100px 96px; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}",
-        "@media screen and (min-width: 700px) {picture img {min-height: 58.5625rem; width: 45.8125rem; object-fit: cover; }}"
+        "@media screen and (min-width: 700px) {picture img {width: 45.8125rem; object-fit: cover; }}"
       ],
       "name": "The Studio",
       "settings": {
