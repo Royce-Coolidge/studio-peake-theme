@@ -287,11 +287,11 @@ height-observer {
   aspect-ratio: 3 / 2;
 }
 
-@media screen and (min-width: 700px) {
+/* @media screen and (min-width: 700px) {
   .blog-post-card__image-wrap {
     aspect-ratio: 2 / 3;
   }
-}
+} */
 
 .blog-post-card__image-wrap a {
   display: block;
