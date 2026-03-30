@@ -445,7 +445,7 @@
         "allow_transparent_header": true,
         "color_scheme": "",
         "separate_section_with_border": false,
-        "desktop_row_height": 330,
+        "desktop_row_height": 370,
         "mobile_row_height": 180,
         "section_width": "full",
         "spacing": "none",
