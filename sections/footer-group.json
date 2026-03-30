@@ -99,7 +99,8 @@
         "links"
       ],
       "custom_css": [
-        ".footer {padding-block-start: 36px; padding-block-end: 36px;}"
+        ".footer {padding-block-start: 36px; padding-block-end: 36px;}",
+        " .footer .footer__inner {margin-inline-start: 51px; margin-inline-end: 51px; }"
       ],
       "settings": {
         "color_scheme": "scheme-e6df9bf7-5811-4d32-beb4-97cf89c548bf",
