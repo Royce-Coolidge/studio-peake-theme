@@ -147,11 +147,45 @@
         "open_filters_by_default": false,
         "anchor_id": ""
       }
+    },
+    "rich_text_ftBdPw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jHtJre": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind?",
+            "heading_tag": "h1"
+          }
+        },
+        "link_LzNjh9": {
+          "type": "link",
+          "settings": {
+            "text": "Tell Us About Your Project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jHtJre",
+        "link_LzNjh9"
+      ],
+      "custom_css": [],
+      "name": "Have a project in mind?",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "content_width": "xs",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "collection-banner",
     "media_grid_commercial",
-    "main"
+    "main",
+    "rich_text_ftBdPw"
   ]
 }
