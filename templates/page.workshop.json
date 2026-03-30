@@ -151,7 +151,8 @@
         "link_CjnwAy"
       ],
       "custom_css": [
-        ".color-scheme {background-color: #eee6db;}"
+        ".color-scheme {background-color: #eee6db;}",
+        "p {max-width: 400px; margin: auto; text-align: left;}"
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
