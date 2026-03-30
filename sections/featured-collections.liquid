@@ -71,13 +71,23 @@
                   {%- assign should_reveal = true -%}
                 {%- endif -%}
 
-                {%- for product in block.settings.collection.products limit: block.settings.products_count -%}
-                  {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block -%}
-                {%- else -%}
-                  {%- for i in (1..block.settings.products_count) -%}
-                    {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
+                {%- if block.type == 'project' -%}
+                  {%- for project_ref in block.settings.projects -%}
+                    {%- render 'project-card', project: project_ref, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information -%}
+                  {%- else -%}
+                    {%- for i in (1..4) -%}
+                      {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
+                    {%- endfor -%}
                   {%- endfor -%}
-                {%- endfor -%}
+                {%- else -%}
+                  {%- for product in block.settings.collection.products limit: block.settings.products_count -%}
+                    {%- render 'product-card', product: product, reveal: should_reveal, position: forloop.index, hide_product_information: section.settings.hide_product_information, block: block -%}
+                  {%- else -%}
+                    {%- for i in (1..block.settings.products_count) -%}
+                      {%- render 'product-card-placeholder', reveal: should_reveal, loop_index: forloop.index0, hide_product_information: section.settings.hide_product_information -%}
+                    {%- endfor -%}
+                  {%- endfor -%}
+                {%- endif -%}
               {%- endcapture -%}
 
               {%- if section.settings.stack_products -%}
@@ -259,6 +269,36 @@
           "id": "link_url",
           "label": "t:global.text.link_url",
           "info": "t:sections.featured_collections.blocks.collection.default_link_url"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "t:global.text.link_text",
+          "default": "View all"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "name": "Project",
+      "settings": [
+        {
+          "type": "list.metaobject_reference",
+          "metaobject_type": "project",
+          "id": "projects",
+          "label": "Projects",
+          "info": "Select project metaobjects to display"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "t:global.text.heading",
+          "info": "If empty, defaults to 'Projects'"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "t:global.text.link_url"
         },
         {
           "type": "text",
