@@ -160,7 +160,7 @@
           "type": "link",
           "settings": {
             "text": "LEARN MORE",
-            "url": ""
+            "url": "#approach"
           }
         }
       },
@@ -247,7 +247,8 @@
             "content": "",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         },
         "image_with_text_HcYgW6": {
@@ -258,7 +259,8 @@
             "content": "<p>Housed in a former Victorian bakery, our Hammersmith studio lies in a converted industrial mews, remodelled by us in close collaboration with skilled local artisans and workshops. Light-filled and welcoming, the space embodies our values of craft, collaboration and creativity.</p>",
             "link_url": "",
             "link_text": "",
-            "compact_text": false
+            "compact_text": false,
+            "column_span": 1
           }
         }
       },
