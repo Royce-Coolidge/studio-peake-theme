@@ -4776,7 +4776,7 @@ product-rerender {
 
   .footer__block--links, .footer__block--image {
     flex-grow: 0;
-    max-width: 14rem;
+    
   }
 
   .footer__block--newsletter, .footer__block--app {

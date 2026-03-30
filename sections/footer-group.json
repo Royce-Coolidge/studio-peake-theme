@@ -79,7 +79,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Studio_Peake_Logo_Clotted_Cream.svg",
-            "image_width": 300,
+            "image_width": 280,
             "link": ""
           }
         },
