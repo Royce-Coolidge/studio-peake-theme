@@ -62,7 +62,8 @@
         "image_with_text_LNbTNg"
       ],
       "custom_css": [
-        "@media screen and (min-width: 700px) {p {margin-block-start: 1.875rem;} }"
+        "@media screen and (min-width: 700px) {p {margin-block-start: 1.875rem; }}",
+        "p {margin-block-start: 1rem; }"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
