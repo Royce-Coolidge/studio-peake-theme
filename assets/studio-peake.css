@@ -644,11 +644,11 @@
   border: none;
 }
 
-@media screen and (min-width: 700px) {
+
   .shopify-section--main-collection .product-list {
     row-gap: 38px !important;
   }
-}
+
 
 .collection-toolbar__button {
   font-family: var(--button-font-family);
