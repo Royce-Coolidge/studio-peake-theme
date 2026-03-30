@@ -461,13 +461,13 @@ height-observer {
 
 @media screen and (min-width: 700px) {
   .blog-post-list--carousel {
-    grid: auto / auto-flow 60vw;
+    grid: auto / auto-flow 58vw;
   }
 }
 
 @media screen and (min-width: 1150px) {
   .blog-post-list--carousel {
-    grid: auto / auto-flow 65vw;
+    grid: auto / auto-flow 58vw;
   }
 }
 
