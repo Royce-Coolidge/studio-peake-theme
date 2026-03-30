@@ -468,19 +468,17 @@
     "sp_featured_collection": {
       "type": "featured-collections",
       "blocks": {
-        "collection_block_1": {
-          "type": "collection",
+        "project_block_1": {
+          "type": "project",
           "settings": {
-            "collection": "all-projects",
-            "products_count": 8,
-            "title": "Explore Collection",
-            "link_url": "shopify://collections/all",
-            "link_text": "View all"
+            "title": "Explore Projects",
+            "link_url": "",
+            "link_text": "View all projects"
           }
         }
       },
       "block_order": [
-        "collection_block_1"
+        "project_block_1"
       ],
       "settings": {
         "color_scheme": "",
