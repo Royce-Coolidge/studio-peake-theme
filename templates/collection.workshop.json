@@ -23,7 +23,7 @@
         "show_collection_title": false,
         "show_collection_description": false,
         "show_breadcrumb": true,
-        "content_width": "xs",
+        "content_width": "lg",
         "overlay_color": "#000000",
         "overlay_opacity": 0,
         "anchor_id": ""
@@ -63,7 +63,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 700px) {p {margin-block-start: 1.875rem; }}",
-        "p {margin-block-start: 1rem; }"
+        "p {margin-block-start: 1rem;}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
