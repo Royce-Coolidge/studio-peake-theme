@@ -461,7 +461,7 @@ height-observer {
 
 @media screen and (min-width: 700px) {
   .blog-post-list--carousel {
-    grid: auto / auto-flow 70vw;
+    grid: auto / auto-flow 60vw;
   }
 }
 
