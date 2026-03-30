@@ -324,7 +324,7 @@ height-observer {
 
 @media screen and (min-width: 1150px) {
   .blog-post-card__info {
-    padding: 5rem 4rem;
+    padding: 5rem 3rem;
   }
 }
 
