@@ -483,6 +483,12 @@
   gap: 2rem 3rem;
 }
 
+   
+  @media screen and (max-width: 699px) {                                           
+  .sp-team-grid {
+    grid-template-columns: 1fr
+  }        
+
 .sp-team-grid > * {
   margin-top: 1rem;
   margin-block-start: 0 !important;
