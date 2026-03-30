@@ -9,6 +9,10 @@
   .image-with-text:has(.sp-carousel-media) > .prose {
     margin-block: 0;
   }
+
+  .multi-column {
+    row-gap: 0;
+  }
 }
 
 /* === Header text color — per template === */
