@@ -486,7 +486,8 @@
    
   @media screen and (max-width: 699px) {                                           
   .sp-team-grid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    gap: 0.5rem
   }        
 
 .sp-team-grid > * {
