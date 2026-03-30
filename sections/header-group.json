@@ -36,6 +36,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        ".header {column-gap: 0rem; }"
+      ],
       "settings": {
         "color_scheme": "scheme-4",
         "enable_sticky": true,
