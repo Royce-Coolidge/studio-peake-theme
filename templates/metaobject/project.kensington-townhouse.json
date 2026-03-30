@@ -607,7 +607,7 @@
         "collection_block_1": {
           "type": "collection",
           "settings": {
-            "collection": "all-projects",
+            "collection": "",
             "products_count": 8,
             "title": "Explore Collection",
             "link_url": "",
