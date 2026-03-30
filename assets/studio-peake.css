@@ -1163,7 +1163,7 @@
 .sp-tooltip__title {
   margin: 0 0 4px;
   font-family: var(--heading-font-family);
-  text-transform: normal;
+  text-transform: lowercase;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.03em;
