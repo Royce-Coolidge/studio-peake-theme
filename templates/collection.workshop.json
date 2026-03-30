@@ -61,7 +61,9 @@
         "image_with_text_b9Wxq8",
         "image_with_text_LNbTNg"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 700px) {p {margin-block-start: 1.875rem;} }"
+      ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "",
