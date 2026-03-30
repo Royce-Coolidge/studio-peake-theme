@@ -249,7 +249,7 @@
         "picture img {border-radius: 0; object-fit: fill;}",
         "@media (min-width: 600px) {.image-with-text {gap: 96px !important; padding: 100px 96px; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}",
         "@media screen and (min-width: 700px) {picture img {width: 45.8125rem; object-fit: cover; }}",
-        "@media screen and (max-width: 699px) {.image-with-text img {padding: 20px} }"
+        "@media screen and (max-width: 699px) {.image-with-text img {padding: 20px; }}"
       ],
       "name": "The Studio",
       "settings": {
@@ -260,7 +260,7 @@
         "image_position": "start",
         "content_width": "lg",
         "content_alignment": "start",
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "anchor_id": ""
       }
     },
