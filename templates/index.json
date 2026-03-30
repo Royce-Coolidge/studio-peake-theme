@@ -481,7 +481,8 @@
       ],
       "custom_css": [
         ".h1 {text-wrap: balance; max-width: 300px;}",
-        ".button-group {margin-block-start: 0.3rem !important;}"
+        ".button-group {margin-block-start: 0.3rem !important;}",
+        " @media screen and (max-width: 699px) {/* mobile-only styles */ }"
       ],
       "name": "Project Carousel",
       "settings": {
