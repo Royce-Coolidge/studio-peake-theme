@@ -442,9 +442,9 @@
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
-        "allow_transparent_header": true,
-        "color_scheme": "",
-        "separate_section_with_border": false,
+        "allow_transparent_header": false,
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
         "desktop_row_height": 370,
         "mobile_row_height": 180,
         "section_width": "full",
