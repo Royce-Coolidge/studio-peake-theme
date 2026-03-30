@@ -642,8 +642,7 @@
 
 @media screen and (min-width: 700px) {
   .shopify-section--main-collection .product-list {
-    column-gap: 2px !important;
-    row-gap: 14px !important;
+    row-gap: 38px !important;
   }
 }
 

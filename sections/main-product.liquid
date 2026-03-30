@@ -49,7 +49,7 @@
      data-enquiry-product-title="{{ product.title | escape }}"
      data-enquiry-image-url="{{ product.featured_media | image_url: width: 1200 }}"
      {%- endif -%}>
-  <div class="container {% unless section.settings.container_size == 'full' %}container--{{ section.settings.container_size }}{% endunless %}">
+  <div class=" {% unless section.settings.container_size == 'full' %}container--{{ section.settings.container_size }}{% endunless %}">
     <product-rerender id="product-info-{{ product.id }}-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
       <div class="product">
         {%- if product.media.size > 0 -%}
