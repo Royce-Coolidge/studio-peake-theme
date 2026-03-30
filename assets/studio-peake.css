@@ -16,7 +16,7 @@
 
 /* === Restore .prose sibling spacing on mobile (commented out in theme.css) === */
 @media screen and (max-width: 999px) {
-  .prose :where(:not(meta, span) + *) {
+  .prose:not(.prose--tight) :where(:not(meta, span) + *) {
     margin-block-start: 1rem;
   }
 }
@@ -487,7 +487,6 @@
 .sp-team-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 50%;
   padding-top: 2rem;
   gap: 1rem;
 }
@@ -1012,6 +1011,10 @@
   .sp-contact-form__row--half {
     grid-template-columns: 1fr;
   }
+}
+
+.shopify-section--media-grid .prose--tight * {
+  margin-block-start: 0 !important;
 }
 
 /* ============================================================
