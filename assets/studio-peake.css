@@ -14,6 +14,13 @@
   opacity: 0.5;
 }
 
+/* === Restore .prose sibling spacing on mobile (commented out in theme.css) === */
+@media screen and (max-width: 999px) {
+  .prose :where(:not(meta, span) + *) {
+    margin-block-start: 1rem;
+  }
+}
+
 /* === Rich text — tighter heading-to-CTA spacing === */
 .shopify-section--rich-text .prose .link {
   margin-block-start: 0.625rem;
