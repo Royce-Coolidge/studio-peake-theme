@@ -257,7 +257,7 @@
         "image": "shopify://shop_images/studiopeake-home-the-studio.jpg",
         "reveal_on_scroll": false,
         "image_position": "start",
-        "content_width": "md",
+        "content_width": "lg",
         "content_alignment": "start",
         "remove_vertical_spacing": false,
         "anchor_id": ""
