@@ -249,7 +249,7 @@
           "type": "image_with_text",
           "settings": {
             "title": "The Studio",
-            "heading_tag": "h3",
+            "heading_tag": "h1",
             "content": "",
             "link_url": "",
             "link_text": "",
