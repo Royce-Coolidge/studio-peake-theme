@@ -561,9 +561,7 @@
 
 /* === Blog post carousel — full-width cards on mobile === */
 @media screen and (max-width: 699px) {
-  .shopify-section--blog-posts .blog-posts-header {
-    padding-inline: var(--container-gutter);
-  }
+
 
   .blog-post-list--carousel {
     grid: auto / auto-flow 100%;
