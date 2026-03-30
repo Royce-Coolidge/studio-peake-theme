@@ -41,6 +41,17 @@
   }
 }
 
+/* === H3 line-height === */
+.h3, :where(.prose h3) {
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 699px) {
+  .h3, :where(.prose h3) {
+    line-height: 1.1;
+  }
+}
+
 /* === Rich text — tighter heading-to-CTA spacing === */
 .shopify-section--rich-text .prose .link {
   margin-block-start: 0.625rem;
