@@ -487,6 +487,9 @@
         "richtext_LDMBxi",
         "liquid_team_grid"
       ],
+      "custom_css": [
+        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}"
+      ],
       "name": "The Team",
       "settings": {
         "color_scheme": "scheme-1f3e3275-c7f4-4736-948b-ec7297152781",
