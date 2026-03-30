@@ -488,7 +488,7 @@
         "liquid_team_grid"
       ],
       "custom_css": [
-        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; } }"
+        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}"
       ],
       "name": "The Team",
       "settings": {
@@ -497,7 +497,7 @@
         "image": "shopify://shop_images/studiopeake-the-studio-the-team.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
-        "content_width": "md",
+        "content_width": "sm",
         "content_alignment": "start",
         "remove_vertical_spacing": true,
         "anchor_id": "team"
