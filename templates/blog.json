@@ -84,7 +84,7 @@
         "separate_section_with_border": false,
         "blog": "news",
         "posts_count": 3,
-        "stack_on_mobile": true,
+        "stack_on_mobile": false,
         "full_width": true,
         "remove_bottom_padding": true,
         "card_color_scheme": "",
