@@ -5591,14 +5591,14 @@ getSlideEnteringSequence_fn = function(slide) {
   const slideContent = slide.querySelector(".slideshow__slide-content");
   if (slideContent.classList.contains("slideshow__slide-content--boxed")) {
     return [
-      [slide, { opacity: [0, 1] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] }],
-      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
+      [slide, { opacity: [0, 1] }, { duration: 0.8, delay: 0.15, easing: [0.25, 0.46, 0.45, 0.94] }],
+      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, delay: 0.15, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
       [slideContent, { opacity: [0, 1], transform: ["translateY(30px)", "translateY(0)"] }, { duration: 0.6, at: "-0.4", easing: [0.215, 0.61, 0.355, 1] }]
     ];
   } else {
     return [
-      [slide, { opacity: [0, 1] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] }],
-      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
+      [slide, { opacity: [0, 1] }, { duration: 0.8, delay: 0.15, easing: [0.25, 0.46, 0.45, 0.94] }],
+      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, delay: 0.15, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
       [slideContent.querySelector(".prose"), { opacity: [0, 1], transform: ["translateY(30px)", "translateY(0)"] }, { duration: 0.6, at: "-0.4", easing: [0.215, 0.61, 0.355, 1] }],
       [slideContent.querySelector(".button-group"), { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, { duration: 0.6, at: "-0.4", easing: [0.215, 0.61, 0.355, 1] }]
     ];
