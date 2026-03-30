@@ -70,9 +70,7 @@ Supported parameters
       {%- if article_subheading != blank -%}
         <p class="blog-post-card__category">{{ article_subheading }}</p>
       {%- elsif show_category and article.tags.size > 0 -%}
-        <p class="blog-post-card__category">
-          <a href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}" class="link-faded">{{ article.tags | first }}</a>
-        </p>
+          <p class="blog-post-card__category">{{ article.tags | first }}</p>
       {%- endif -%}
 
       {%- if show_date -%}
