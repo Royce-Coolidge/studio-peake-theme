@@ -448,7 +448,7 @@
 .featured-collections-header__link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 4px;
   padding-bottom: 0.25rem;
 }
 
