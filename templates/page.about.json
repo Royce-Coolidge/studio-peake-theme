@@ -173,6 +173,9 @@
         "richtext_N9Pnfz",
         "link_eiw6Y3"
       ],
+      "custom_css": [
+        ".sp-carousel__dots {bottom: 2rem}"
+      ],
       "name": "Our Process",
       "settings": {
         "color_scheme": "scheme-ed3c746e-2171-49ad-9711-2a0e8616f021",
