@@ -557,15 +557,14 @@
       transform: none;                   
     }
   }
-  
- .blog-post-card__read-more.link {                                                          
-    display: inline;                                                       
-  }     
+
+   
 .blog-post-card__read-more {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
   font-style: var(--button-font-style);
   text-transform: var(--button-text-transform, uppercase);
+   display: inline;   
 }
 
 /* === Blog post carousel — full-width cards on mobile === */
