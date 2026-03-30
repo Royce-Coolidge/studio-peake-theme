@@ -401,8 +401,14 @@
 
   #carousel-template--28306258854222__slideshow .slideshow__slide-content {
     grid-column: full;
-
+    max-width: 100%;
   }
+
+  #carousel-template--28306258854222__slideshow .slideshow__slide-content .prose {
+    max-width: 100%;
+    padding-inline: 51px;
+  }
+
 
 
 }
