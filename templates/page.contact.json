@@ -85,7 +85,7 @@
           "settings": {
             "title": "telephone",
             "heading_tag": "h4",
-            "content": "<p>020 7736 7409</p><p></p><h5>Opening times </h5><p>9am – 5.30pm <br/>Monday - Friday</p>",
+            "content": "<p>020 7736 7409</p><p></p><h4>Opening times </h4><p>9am – 5.30pm <br/>Monday - Friday</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
@@ -96,11 +96,11 @@
           "type": "image_with_text",
           "settings": {
             "title": "email",
-            "heading_tag": "h3",
+            "heading_tag": "h4",
             "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
             "link_url": "",
             "link_text": "",
-            "compact_text": false,
+            "compact_text": true,
             "column_span": 1
           }
         }
