@@ -444,7 +444,7 @@
       "settings": {
         "allow_transparent_header": false,
         "color_scheme": "scheme-2",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "desktop_row_height": 370,
         "mobile_row_height": 180,
         "section_width": "full",
@@ -490,7 +490,7 @@
       "name": "The Team",
       "settings": {
         "color_scheme": "scheme-1f3e3275-c7f4-4736-948b-ec7297152781",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "image": "shopify://shop_images/studiopeake-the-studio-the-team.jpg",
         "reveal_on_scroll": true,
         "image_position": "start",
