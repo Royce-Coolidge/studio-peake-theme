@@ -358,7 +358,7 @@
       ],
       "name": "t:sections.tabs.presets.tab.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "subheading": "",
         "title": "our approach",
