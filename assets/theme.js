@@ -5558,9 +5558,23 @@ var SlideshowCarousel = class extends EffectCarousel {
       video.currentTime = 0;
       video.play();
     });
+    toSlide.style.opacity = "0";
+    toSlide.style.position = "absolute";
+    toSlide.style.inset = "0";
+    toSlide.style.zIndex = "2";
+    toSlide.classList.add("is-selected");
+    fromSlide.style.zIndex = "1";
+    const enterAnimation = timeline14(__privateMethod(this, _SlideshowCarousel_instances, getSlideEnteringSequence_fn).call(this, toSlide));
     return {
-      leaveControls: () => timeline14(__privateMethod(this, _SlideshowCarousel_instances, getSlideLeavingSequence_fn).call(this, fromSlide)),
-      enterControls: () => timeline14(__privateMethod(this, _SlideshowCarousel_instances, getSlideEnteringSequence_fn).call(this, toSlide))
+      finish: () => enterAnimation.finish(),
+      finished: enterAnimation.finished.then(() => {
+        fromSlide.classList.remove("is-selected");
+        toSlide.style.opacity = "";
+        toSlide.style.position = "";
+        toSlide.style.inset = "";
+        toSlide.style.zIndex = "";
+        fromSlide.style.zIndex = "";
+      })
     };
   }
 };
@@ -5578,13 +5592,13 @@ getSlideEnteringSequence_fn = function(slide) {
   if (slideContent.classList.contains("slideshow__slide-content--boxed")) {
     return [
       [slide, { opacity: [0, 1] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] }],
-      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.2)", "scale(1)"] }, { duration: 0.8, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
+      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
       [slideContent, { opacity: [0, 1], transform: ["translateY(30px)", "translateY(0)"] }, { duration: 0.6, at: "-0.4", easing: [0.215, 0.61, 0.355, 1] }]
     ];
   } else {
     return [
       [slide, { opacity: [0, 1] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] }],
-      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.2)", "scale(1)"] }, { duration: 0.8, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
+      [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }],
       [slideContent.querySelector(".prose"), { opacity: [0, 1], transform: ["translateY(30px)", "translateY(0)"] }, { duration: 0.6, at: "-0.4", easing: [0.215, 0.61, 0.355, 1] }],
       [slideContent.querySelector(".button-group"), { opacity: [0, 1], transform: ["translateY(20px)", "translateY(0)"] }, { duration: 0.6, at: "-0.4", easing: [0.215, 0.61, 0.355, 1] }]
     ];
