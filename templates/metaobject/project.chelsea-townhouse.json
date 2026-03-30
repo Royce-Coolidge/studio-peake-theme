@@ -520,7 +520,7 @@
       "name": "Have a project in mind?",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "content_width": "xs",
         "text_position": "center",
         "remove_vertical_spacing": false,
