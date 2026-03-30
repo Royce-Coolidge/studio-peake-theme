@@ -198,13 +198,15 @@
                 {%- endif -%}
 
                 {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
-                  <div class="prose prose--tight {{ block.settings.text_position }}">
-                    <p class="{{ block.settings.heading_tag }}" style="text-wrap: balance; max-inline-size: 15ch;">{{ block.settings.title }}</p>
+                  <div class="prose prose--tight text-start sm:text-center {{ block.settings.mobile_text_position }} {{ block.settings.text_position }}">
+                    <p class="{{ block.settings.heading_tag }} text-start sm:text-center" style="text-wrap: balance; max-inline-size: 15ch;">{{ block.settings.title }}</p>
 
                     {{- block.settings.content -}}
 
                     {%- if block.settings.link_text != blank -%}
-                      {%- render 'button', content: block.settings.link_text, style: block.settings.link_style -%}
+                      <div style="display: flex;" class="justify-start sm:justify-center">
+                        {%- render 'button', content: block.settings.link_text, style: block.settings.link_style -%}
+                      </div>
                     {%- endif -%}
                   </div>
                 {%- endif -%}
@@ -602,8 +604,8 @@
         },
         {
           "type": "select",
-          "id": "text_position",
-          "label": "t:global.position.content_position",
+          "id": "mobile_text_position",
+          "label": "t:global.position.mobile_content_position",
           "options": [
             {
               "value": "place-self-start text-start",
@@ -642,7 +644,51 @@
               "label": "t:global.position.bottom_right"
             }
           ],
-          "default": "place-self-center text-center"
+          "default": "place-self-end-start text-start"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "t:global.position.desktop_content_position",
+          "options": [
+            {
+              "value": "sm:place-self-start sm:text-start",
+              "label": "t:global.position.top_left"
+            },
+            {
+              "value": "sm:place-self-start-center sm:text-center",
+              "label": "t:global.position.top_center"
+            },
+            {
+              "value": "sm:place-self-start-end sm:text-end",
+              "label": "t:global.position.top_right"
+            },
+            {
+              "value": "sm:place-self-center-start sm:text-start",
+              "label": "t:global.position.middle_left"
+            },
+            {
+              "value": "sm:place-self-center sm:text-center",
+              "label": "t:global.position.middle_center"
+            },
+            {
+              "value": "sm:place-self-center-end sm:text-end",
+              "label": "t:global.position.middle_right"
+            },
+            {
+              "value": "sm:place-self-end-start sm:text-start",
+              "label": "t:global.position.bottom_left"
+            },
+            {
+              "value": "sm:place-self-end-center sm:text-center",
+              "label": "t:global.position.bottom_center"
+            },
+            {
+              "value": "sm:place-self-end sm:text-end",
+              "label": "t:global.position.bottom_right"
+            }
+          ],
+          "default": "sm:place-self-center sm:text-center"
         },
         {
           "type": "header",
@@ -957,8 +1003,8 @@
         },
         {
           "type": "select",
-          "id": "text_position",
-          "label": "t:global.position.content_position",
+          "id": "mobile_text_position",
+          "label": "t:global.position.mobile_content_position",
           "options": [
             {
               "value": "place-self-start text-start",
@@ -997,7 +1043,51 @@
               "label": "t:global.position.bottom_right"
             }
           ],
-          "default": "place-self-center text-center"
+          "default": "place-self-end-start text-start"
+        },
+        {
+          "type": "select",
+          "id": "text_position",
+          "label": "t:global.position.desktop_content_position",
+          "options": [
+            {
+              "value": "sm:place-self-start sm:text-start",
+              "label": "t:global.position.top_left"
+            },
+            {
+              "value": "sm:place-self-start-center sm:text-center",
+              "label": "t:global.position.top_center"
+            },
+            {
+              "value": "sm:place-self-start-end sm:text-end",
+              "label": "t:global.position.top_right"
+            },
+            {
+              "value": "sm:place-self-center-start sm:text-start",
+              "label": "t:global.position.middle_left"
+            },
+            {
+              "value": "sm:place-self-center sm:text-center",
+              "label": "t:global.position.middle_center"
+            },
+            {
+              "value": "sm:place-self-center-end sm:text-end",
+              "label": "t:global.position.middle_right"
+            },
+            {
+              "value": "sm:place-self-end-start sm:text-start",
+              "label": "t:global.position.bottom_left"
+            },
+            {
+              "value": "sm:place-self-end-center sm:text-center",
+              "label": "t:global.position.bottom_center"
+            },
+            {
+              "value": "sm:place-self-end sm:text-end",
+              "label": "t:global.position.bottom_right"
+            }
+          ],
+          "default": "sm:place-self-center sm:text-center"
         },
         {
           "type": "header",

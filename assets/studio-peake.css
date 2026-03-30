@@ -1135,6 +1135,11 @@
   margin-block-start: 0 !important;
 }
 
+/* Project card title — use heading font */
+.product-title {
+  font-family: var(--heading-font-family);
+}
+
 /* ============================================================
    Media Grid — Aspect-ratio layout (replaces row-height sizing)
    ============================================================ */
@@ -1152,6 +1157,12 @@
 
 .shopify-section--media-grid .media-grid__item > .content-over-media {
   height: 100%;
+}
+
+@media screen and (max-width: 699px) {
+  .shopify-section--media-grid .media-grid__item .prose {
+    padding: 1.25rem;
+  }
 }
 
 .shopify-section--media-grid .media-grid__item img,
