@@ -488,7 +488,7 @@
         "liquid_team_grid"
       ],
       "custom_css": [
-        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; } .prose {margin-block-start: 0rem !important; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}",
+        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; } .prose :first-child {margin-block-start: 1.2rem !important; } .prose {margin-block-start: 0rem !important; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}",
         "@media screen and (max-width: 699px) {.sp-team-grid {margin-top: 1rem; }}"
       ],
       "name": "The Team",
