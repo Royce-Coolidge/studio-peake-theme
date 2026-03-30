@@ -97,7 +97,7 @@
           "settings": {
             "title": "email",
             "heading_tag": "h4",
-            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
+            "content": "<p>info@studiopeake.com</p><h4>The Workshop</h4><p>workshop@studiopeake.com </p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
