@@ -515,7 +515,7 @@
         "posts_count": 3,
         "stack_on_mobile": false,
         "full_width": true,
-        "remove_bottom_padding": false,
+        "remove_bottom_padding": true,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
