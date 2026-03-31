@@ -232,7 +232,7 @@ height-observer {
 }
 
 .accordion + .accordion {
-  border-block-start-width: 0;
+  border-block-start-width: 1px;
 }
 
 .accordion__toggle {
@@ -521,7 +521,7 @@ height-observer {
   justify-content: center;
   align-items: center;
   column-gap: 1.125rem;
-  padding: .65rem 1.75rem;
+  padding: 0.91rem 1.75rem;
   transition: background-color 1.5s cubic-bezier(.785, .135, .15, .86), color 1.5s cubic-bezier(.785, .135, .15, .86), border 1.5s cubic-bezier(.785, .135, .15, .86);
   display: inline-flex;
   position: relative;
@@ -5688,7 +5688,7 @@ product-rerender {
 }
 
 .image-with-text__inline-image {
-  max-width: 250px;
+  max-width: 290px;
 }
 
 .text-start .image-with-text__inline-image {
