@@ -172,7 +172,7 @@
     "blog_posts_about": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-posts-header__arrows {justify-content: end; align-items: end;}"
+        ".blog-posts-header__controls {justify-content: end !important;}"
       ],
       "name": "Meet our makers",
       "settings": {
