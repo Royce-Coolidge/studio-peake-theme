@@ -925,6 +925,7 @@
 @media screen and (max-width: 699px) {
   .enquiry-modal__form-content {
     padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -1029,6 +1030,7 @@
 @media screen and (max-width: 749px) {
   .enquiry-modal__layout {
     grid-template-columns: 1fr;
+    height: auto;
   }
 
   .enquiry-modal__image-panel {
@@ -1041,6 +1043,7 @@
 
   .enquiry-modal__form-content .button--outline {
     width: 100%;
+    max-width: none;
   }
 }
 
