@@ -571,7 +571,7 @@
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
-        "remove_vertical_spacing": false,
+        "remove_vertical_spacing": true,
         "anchor_id": "have-a-project-in-mind"
       }
     }
