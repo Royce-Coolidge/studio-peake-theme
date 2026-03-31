@@ -121,12 +121,12 @@
     "media_grid_sp": {
       "type": "media-grid",
       "blocks": {
-        "img_1": {
+        "image_gEQn9x": {
           "type": "image",
           "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-the-studio-glenthorne-mews-01.jpg",
-            "column_count": "4",
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-04.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -142,6 +142,42 @@
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "the-elowen-chandelier",
+            "hotspot_2_horizontal": 72,
+            "hotspot_2_vertical": 8,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_tyDnVz": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-05.jpg",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "the-elowen-chandelier",
+            "hotspot_1_horizontal": 10,
+            "hotspot_1_vertical": 33,
             "hotspot_1_color": "#7a8450",
             "product_hotspot_2": "",
             "hotspot_2_horizontal": 60,
@@ -229,12 +265,12 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_gEQn9x": {
+        "image_f89ftd": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-04.jpg",
-            "column_count": "6",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-07.jpg",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -250,42 +286,6 @@
             "product_hotspot_1": "",
             "hotspot_1_horizontal": 30,
             "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "the-elowen-chandelier",
-            "hotspot_2_horizontal": 72,
-            "hotspot_2_vertical": 8,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_tyDnVz": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-05.jpg",
-            "column_count": "6",
-            "row_count": 2,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "place-self-center text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "the-elowen-chandelier",
-            "hotspot_1_horizontal": 10,
-            "hotspot_1_vertical": 33,
             "hotspot_1_color": "#7a8450",
             "product_hotspot_2": "",
             "hotspot_2_horizontal": 60,
@@ -337,12 +337,12 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_f89ftd": {
+        "image_hiGYUC": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-07.jpg",
-            "column_count": "6",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-08.jpg",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -373,12 +373,12 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_hiGYUC": {
+        "img_1": {
           "type": "image",
           "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-08.jpg",
-            "column_count": "6",
+            "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-the-studio-glenthorne-mews-01.jpg",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -408,17 +408,54 @@
             "hotspot_4_vertical": 70,
             "hotspot_4_color": "#7a8450"
           }
+        },
+        "image_8gkdwm": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-01.jpg",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "sm:place-self-center sm:text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 9,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
         }
       },
       "block_order": [
-        "img_1",
-        "img_8",
-        "img_9",
         "image_gEQn9x",
         "image_tyDnVz",
-        "image_93Tyar",
+        "img_8",
+        "img_9",
         "image_f89ftd",
-        "image_hiGYUC"
+        "image_93Tyar",
+        "image_hiGYUC",
+        "img_1",
+        "image_8gkdwm"
       ],
       "settings": {
         "allow_transparent_header": true,
