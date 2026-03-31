@@ -143,6 +143,10 @@
   --button-font-weight: 500;
 }
 
+.button, .shopify-challenge__button, .shopify-payment-button__button--unbranded {
+  padding: 0.91rem 1.75rem;
+}
+
 .sp-gradient-overlay {
   position: relative;
 }
