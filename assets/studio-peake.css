@@ -1043,7 +1043,6 @@
 @media screen and (max-width: 749px) {
   .enquiry-modal__layout {
     grid-template-columns: 1fr;
-    height: auto;
   }
 
   .enquiry-modal__image-panel {
