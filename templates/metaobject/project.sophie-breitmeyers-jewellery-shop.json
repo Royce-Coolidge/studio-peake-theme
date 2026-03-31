@@ -364,7 +364,7 @@
           "type": "project",
           "settings": {
             "title": "Explore Projects",
-            "link_url": "",
+            "link_url": "/collections/all-projects",
             "link_text": "View all projects"
           }
         }

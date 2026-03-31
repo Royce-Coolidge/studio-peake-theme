@@ -487,6 +487,11 @@
 
 }
 
+/* === Have a project in mind CTA — always centred === */
+#have-a-project-in-mind ~ .section-spacing .prose {
+  text-align: center;
+}
+
 /* === Footer block list — centre on mobile === */
 @media screen and (max-width: 699px) {
   .footer__block-list {
