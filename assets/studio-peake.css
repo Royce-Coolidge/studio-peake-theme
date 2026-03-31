@@ -13,6 +13,10 @@
   .multi-column {
     row-gap: 1.5rem;
   }
+
+  .image-with-text.image-with-text--reverse {
+    padding-bottom: 0;
+  }
 }
 
 /* === Header text color — per template === */
