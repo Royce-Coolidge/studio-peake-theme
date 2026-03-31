@@ -218,6 +218,9 @@
         "image_3rHHtt",
         "richtext_wFtfey"
       ],
+      "custom_css": [
+        ".section-spacing {padding-block-end: 0px !important;}"
+      ],
       "name": "Meet The Maker",
       "settings": {
         "color_scheme": "scheme-bf3577da-2951-40ec-9421-5091ed6dd682",
@@ -227,7 +230,7 @@
         "image_position": "start",
         "content_width": "lg",
         "content_alignment": "center",
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "anchor_id": ""
       }
     },
