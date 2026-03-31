@@ -219,7 +219,7 @@
         "richtext_wFtfey"
       ],
       "custom_css": [
-        ".section-spacing {padding-block-end: 0px !important;}"
+        "section-spacing color-scheme color-scheme--scheme-2 color-scheme--bg-bffa5248dd44b60966750fac9edcee2f {padding-block-end: 0px !important;}"
       ],
       "name": "Meet The Maker",
       "settings": {
