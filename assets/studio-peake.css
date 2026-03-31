@@ -704,7 +704,7 @@
   }
 
   .image-with-text__inline-image {
-    margin-block-start: 3rem;
+    margin-block-start: 3rem !important;
     margin-block-end: 3rem;
   }
 }
