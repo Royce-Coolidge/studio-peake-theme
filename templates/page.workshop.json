@@ -152,7 +152,8 @@
       ],
       "custom_css": [
         ".color-scheme {background-color: #eee6db;}",
-        "p {max-width: 400px; margin: auto; text-align: center;}"
+        "p {max-width: 400px; margin: auto; text-align: center;}",
+        ".image-with-text__inline-image{max-width: 462px;}"
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
@@ -261,6 +262,7 @@
         "color_scheme": "",
         "separate_section_with_border": false,
         "sp_add_vertical_spacing": true,
+        "sp_remove_bottom_padding": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
