@@ -578,12 +578,12 @@
   }
 }
 
-/* === Image with text — vertical spacing on mobile only === */
+/* === Image with text — vertical spacing on mobile only ===
 @media screen and (max-width: 699px) {
   .image-with-text {
     padding-block: 60px;
   }
-}
+} */
 
 @media screen and (min-width: 700px) {
   .image-with-text {
