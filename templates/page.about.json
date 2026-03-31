@@ -19,7 +19,7 @@
             "mobile_image": "shopify://shop_images/studiopeake-the-studio-hero-mobile.jpg",
             "subheading": "",
             "title": "Inventive interiors that draw the eye",
-            "mobile_text_position": "place-self-start-center text-center",
+            "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "content_max_width": 480,
             "button_1_text": "",
@@ -36,7 +36,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(0deg, rgba(255, 255, 255, 0.00) 46.76%, rgba(71, 60, 60, 0.40) 100%)"
+            "gradient_overlay": "linear-gradient(0deg, rgba(255, 255, 255, 0) 46.76%, rgba(71, 60, 60, 0.4) 100%)"
           }
         }
       },
