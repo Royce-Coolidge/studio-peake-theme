@@ -744,6 +744,7 @@
 
   .shopify-section--main-collection .product-list {
     row-gap: 38px !important;
+    column-gap: 2px !important;
   }
 
 
