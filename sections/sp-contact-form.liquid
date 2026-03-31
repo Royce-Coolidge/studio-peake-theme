@@ -141,7 +141,7 @@
           {%- comment -%}--- Email (hidden visually but required by Shopify contact form) ---{%- endcomment -%}
           <div class="sp-contact-form__row">
             <div class="sp-contact-form__field">
-              <input type="email" name="contact[email]" id="contact-email" class="sp-contact-form__input" placeholder="EMAIL ADDRESS*" required>
+              <input type="email" name="contact[email]" id="contact-email" class="sp-contact-form__input" placeholder="{{ section.settings.email_label }}" required>
             </div>
           </div>
 
@@ -298,6 +298,12 @@
       "id": "referral_label",
       "label": "Referral source",
       "default": "How did you hear about us?*"
+    },
+    {
+      "type": "text",
+      "id": "email_label",
+      "label": "Email address",
+      "default": "Email address*"
     },
     {
       "type": "text",
