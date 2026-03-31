@@ -220,7 +220,7 @@
       ],
       "name": "Meet The Maker",
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-bf3577da-2951-40ec-9421-5091ed6dd682",
         "separate_section_with_border": false,
         "image": "{{ product.metafields.custom.the_design.value.image.value }}",
         "reveal_on_scroll": true,
