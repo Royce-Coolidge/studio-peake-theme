@@ -174,7 +174,10 @@
         "link_eiw6Y3"
       ],
       "custom_css": [
-        ".sp-carousel__dots {bottom: 3rem;}"
+        ".sp-carousel__dots {bottom: 3rem;}",
+        ".section-spacing {padding-block-start: 0px;}",
+        "@media screen and (min-width: 700px) {.section-spacing {padding-block-start: 0px; padding-block-end: 0px; }}",
+        ".sp-carousel-media {order: 1;}"
       ],
       "name": "Our Process",
       "settings": {
