@@ -500,7 +500,7 @@
       ],
       "custom_css": [
         "image-with-text {margin-top: 2px;}",
-        "@media (min-width: 600px) {.image-with-text {gap: 96px !important; } .prose :first-child {margin-block-start: 1.2rem !important; } .prose {margin-block-start: 0rem !important; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}",
+        "@media (min-width: 600px) {.prose :first-child {margin-block-start: 1.2rem !important; } .prose {margin-block-start: 0rem !important; } .image-with-text .prose {padding-inline-start: 0px; padding-inline-end: 0px; }}",
         "@media screen and (max-width: 699px) {.sp-team-grid {padding-top: 1rem; }}"
       ],
       "name": "The Team",
