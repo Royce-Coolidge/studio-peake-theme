@@ -244,7 +244,7 @@
             "collection": "all-projects",
             "products_count": 8,
             "title": "explore collection",
-            "link_url": "shopify://collections/all",
+            "link_url": "shopify://collections/workshop",
             "link_text": "View all"
           }
         }
