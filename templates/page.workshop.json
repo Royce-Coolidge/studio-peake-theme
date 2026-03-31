@@ -171,6 +171,9 @@
     },
     "blog_posts_about": {
       "type": "blog-posts",
+      "custom_css": [
+        ".blog-posts-header__arrows {justify-content: end;}"
+      ],
       "name": "Meet our makers",
       "settings": {
         "color_scheme": "",
