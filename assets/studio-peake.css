@@ -309,8 +309,15 @@
 @media screen and (max-width: 699px) {
   .image-with-text__inline-image {
     max-width: none;
+    margin-block: 3.75rem 1.5rem;
   }
+
+.image-with-text > .prose {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
 }
+}
+
 
 /* === Header Dropdown Overrides (Scheme 4) === */
 /* Remove borders and box-shadow on dropdown menus */
