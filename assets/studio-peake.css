@@ -707,6 +707,12 @@
   --product-gallery-gap: 2px;
 }
 
+@media screen and (min-width: 700px) {
+  .product-gallery__carousel {
+    gap: 2px;
+  }
+}
+
 .product-gallery__thumbnail-list {
   display: none;
 }
