@@ -43,6 +43,9 @@
       "block_order": [
         "image_Pm9fiT"
       ],
+      "custom_css": [
+        ".slideshow__slide-content{padding-bottom: 0px;}"
+      ],
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": false,
@@ -177,7 +180,7 @@
         ".sp-carousel__dots {bottom: 3rem;}",
         ".section-spacing {padding-block-start: 0px;}",
         ".image-with-text {gap: 60px;}",
-        "@media screen and (min-width: 700px) {.image-with-text {gap: 0px;} .section-spacing {padding-block-start: 0px; padding-block-end: 0px; }}",
+        "@media screen and (min-width: 700px) {.image-with-text {gap: 0px; } .section-spacing {padding-block-start: 0px; padding-block-end: 0px; }}",
         ".sp-carousel-media {order: 1;}"
       ],
       "name": "Our Process",
