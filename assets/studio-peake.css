@@ -563,6 +563,18 @@
   border-bottom: 1px solid rgb(var(--text-color));
 }
 
+.prose span.metafield-multi_line_text_field {
+  text-align: left !important;
+  display: block;
+}
+
+@media screen and (min-width: 700px) {
+  .prose span.metafield-multi_line_text_field {
+    max-width: 65%;
+    margin: auto;
+  }
+}
+
 .accordion__toggle {
   padding-block: 0.625rem;
 }
