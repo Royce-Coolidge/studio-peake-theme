@@ -531,8 +531,28 @@
   border-color: rgb(var(--text-color));
 }
 
+.accordion {
+  border-block-width: 0;
+}
+
+.accordion-group .product-info__block-item:not(:first-child) {
+  border-top: 1px solid rgb(var(--text-color));
+}
+
 .accordion__disclosure summary {
   border-color: rgb(var(--text-color));
+}
+
+.accordion-group {
+  padding-bottom: 1.875rem;
+}
+
+.accordion-group .product-info__block-item:last-child {
+  border-bottom: 1px solid rgb(var(--text-color));
+}
+
+.accordion__toggle {
+  padding-block: 0.625rem;
 }
 
 
