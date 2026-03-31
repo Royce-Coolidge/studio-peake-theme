@@ -526,7 +526,7 @@
         "posts_count": 3,
         "stack_on_mobile": false,
         "full_width": true,
-        "remove_bottom_padding": false,
+        "remove_bottom_padding": true,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
@@ -571,7 +571,7 @@
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "center",
-        "remove_vertical_spacing": true,
+        "remove_vertical_spacing": false,
         "anchor_id": "have-a-project-in-mind"
       }
     }
