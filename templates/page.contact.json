@@ -39,6 +39,7 @@
         "budget_label": "Estimated Budget",
         "other_info_label": "Other key information on project*",
         "referral_label": "How did you hear about us?*",
+        "email_label": "Email address*",
         "submit_label": "SUBMIT FORM",
         "success_message": "Thank you for your enquiry. We will be in touch shortly.",
         "anchor_id": ""
@@ -75,7 +76,7 @@
           "type": "image_with_text",
           "settings": {
             "title": "Visit",
-            "heading_tag": "h3",
+            "heading_tag": "h5",
             "content": "<p>Studio Peake First Floor,                              </p><p>Unit 6 Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
             "link_url": "",
             "link_text": "",
@@ -87,11 +88,11 @@
           "type": "image_with_text",
           "settings": {
             "title": "telephone",
-            "heading_tag": "h4",
-            "content": "<p>020 7736 7409</p><p></p><p></p><p>Opening times </p><p>9am – 5.30pm <br/>Monday - Friday</p>",
+            "heading_tag": "h5",
+            "content": "<p>020 7736 7409</p><p>Opening times </p><p>9am – 5.30pm <br/>Monday - Friday</p>",
             "link_url": "",
             "link_text": "",
-            "compact_text": false,
+            "compact_text": true,
             "column_span": 1
           }
         },
@@ -99,8 +100,8 @@
           "type": "image_with_text",
           "settings": {
             "title": "email",
-            "heading_tag": "h4",
-            "content": "<p>info@studiopeake.com</p><h4>The Workshop</h4><p>workshop@studiopeake.com </p>",
+            "heading_tag": "h5",
+            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
