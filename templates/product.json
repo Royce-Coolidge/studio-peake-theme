@@ -182,7 +182,7 @@
         "image_position": "end",
         "content_width": "lg",
         "content_alignment": "start",
-        "remove_vertical_spacing": false,
+        "remove_vertical_spacing": true,
         "anchor_id": ""
       }
     },
