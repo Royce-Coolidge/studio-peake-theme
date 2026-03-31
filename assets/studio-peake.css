@@ -25,6 +25,10 @@
   .shopify-section--main-product .product-info__block-list.container {
     padding-block-start: 1.5rem !important;
   }
+
+  .shopify-section--main-product .page-dots {
+    transform: translateY(-2rem);
+  }
 }
 
 /* === Header text color — per template === */
