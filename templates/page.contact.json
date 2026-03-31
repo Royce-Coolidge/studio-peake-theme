@@ -21,6 +21,9 @@
     },
     "sp_contact_form": {
       "type": "sp-contact-form",
+      "custom_css": [
+        ".sp-contact-form__row--submit{max-width: 277px;}"
+      ],
       "settings": {
         "allow_transparent_header": true,
         "color_scheme": "scheme-2",
