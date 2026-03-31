@@ -262,6 +262,29 @@
         "subheading": "",
         "anchor_id": ""
       }
+    },
+    "rich_text_NpgVXP": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_eyCNQ9": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_eyCNQ9"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -269,6 +292,7 @@
     "slideshow_NGKhVb",
     "image_with_text_g8cCRy",
     "image_with_text_tXeDzF",
-    "featured_collections_Q7PmtQ"
+    "featured_collections_Q7PmtQ",
+    "rich_text_NpgVXP"
   ]
 }
