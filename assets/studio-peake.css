@@ -787,7 +787,12 @@
 .shopify-section--main-product .product-info__block-list.container {
   margin-inline-start: 0;
   padding-block-start: 6rem;
-  margin-inline-end: 0;
+}
+
+@media screen and (max-width: 699px) {
+  .shopify-section--main-product .product-info__block-list.container {
+    margin-inline-end: 0;
+  }
 }
 
 .shopify-section--main-product .product-info {
