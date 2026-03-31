@@ -116,12 +116,15 @@
         "image_with_text_diFdKQ",
         "image_with_text_PxEDq9"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1;} }"
+      ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
         "separate_section_with_border": true,
         "columns_per_row": 6,
-        "stack_on_mobile": false,
+        "stack_on_mobile": true,
         "overlap_image": false,
         "content_alignment": "start",
         "text_alignment": "start",
