@@ -225,7 +225,7 @@
         "image": "{{ product.metafields.custom.the_design.value.image.value }}",
         "reveal_on_scroll": true,
         "image_position": "start",
-        "content_width": "sm",
+        "content_width": "lg",
         "content_alignment": "center",
         "remove_vertical_spacing": true,
         "anchor_id": ""
