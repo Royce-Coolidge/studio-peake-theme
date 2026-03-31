@@ -1036,6 +1036,10 @@
   .enquiry-modal__form-panel {
     padding: 1rem;
   }
+
+  .enquiry-modal__form-content .button--outline {
+    width: 100%;
+  }
 }
 
 /* === SP Contact Form Section === */
