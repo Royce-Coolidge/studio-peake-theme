@@ -21,6 +21,10 @@
   #shopify-section-template--28419099001166__image_with_text_Qf66Y9 .image-with-text {
     padding-top: 0;
   }
+
+  .shopify-section--main-product .product-info__block-list.container {
+    padding-block-start: 1.5rem !important;
+  }
 }
 
 /* === Header text color — per template === */
