@@ -276,6 +276,29 @@
         "subheading": "",
         "anchor_id": ""
       }
+    },
+    "rich_text_npjeGN": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_6h3gdC": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_6h3gdC"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -285,6 +308,7 @@
     "image_with_text_Qf66Y9",
     "blog_posts_about",
     "slideshow_FXDx3m",
-    "featured_collections_iVWe9A"
+    "featured_collections_iVWe9A",
+    "rich_text_npjeGN"
   ]
 }
