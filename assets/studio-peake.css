@@ -1147,7 +1147,7 @@
 .sp-contact-form__select {
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgb(var(--text-color) / .3);
+  border-bottom: 1px solid currentColor;
   border-radius: 0;
   background: transparent;
   padding: 0.75rem 0;
@@ -1155,13 +1155,13 @@
   font-weight: var(--button-font-weight);
   font-size: var(--text-xs);
   text-transform: none;
-  color: rgb(var(--text-color));
+  color: inherit;
   outline: none;
   appearance: none;
 }
 
 .sp-contact-form__input::placeholder {
-  color: rgb(var(--text-color));
+  color: inherit;
   opacity: 1;
 }
 
@@ -1180,17 +1180,15 @@
   justify-content: space-between;
   width: 100%;
   border: none;
-  border-bottom: 1px solid rgb(var(--text-color) / .3);
+  border-bottom: 1px solid currentColor;
   border-radius: 0;
   background: transparent;
   padding: 0.75rem 0;
-  font-family: var(--button-font-family);
+  font-family: var(--body-font-family);
   font-weight: var(--button-font-weight);
-  font-style: var(--button-font-style);
   font-size: var(--text-xs);
-  letter-spacing: var(--button-letter-spacing);
-  text-transform: uppercase;
-  color: currentColor;
+  text-transform: none;
+  color: inherit;
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
@@ -1222,7 +1220,7 @@
   right: 0;
   z-index: 10;
   background: rgb(var(--background));
-  border: 1px solid rgb(var(--text-color));
+  border: 1px solid currentColor;
   border-radius: 0;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);

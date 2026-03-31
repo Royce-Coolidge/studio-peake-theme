@@ -71,7 +71,7 @@
                         <label class="sp-contact-form__radio-label">
                           <input type="radio" name="contact[property_type]" value="{{ type }}" required class="visually-hidden">
                           <span class="sp-contact-form__radio-circle"></span>
-                          <span class="sp-contact-form__radio-text">{{ type | upcase }}</span>
+                          <span class="sp-contact-form__radio-text">{{ type }}</span>
                         </label>
                       </li>
                     {%- endfor -%}
@@ -128,7 +128,7 @@
                         <label class="sp-contact-form__radio-label">
                           <input type="radio" name="contact[referral_source]" value="{{ source }}" required class="visually-hidden">
                           <span class="sp-contact-form__radio-circle"></span>
-                          <span class="sp-contact-form__radio-text">{{ source | upcase }}</span>
+                          <span class="sp-contact-form__radio-text">{{ source }}</span>
                         </label>
                       </li>
                     {%- endfor -%}
@@ -188,7 +188,7 @@
       var dropdown = radio.closest('.sp-contact-radio-dropdown');
       var trigger = dropdown.querySelector('.sp-contact-radio-dropdown__trigger');
       var label = trigger.querySelector('.sp-contact-radio-dropdown__label');
-      label.textContent = radio.value.toUpperCase();
+      label.textContent = radio.value;
       trigger.classList.add('sp-contact-radio-dropdown__trigger--selected');
     });
   })();
@@ -243,67 +243,67 @@
       "type": "text",
       "id": "first_name_label",
       "label": "First name",
-      "default": "FIRST NAME*"
+      "default": "First name*"
     },
     {
       "type": "text",
       "id": "last_name_label",
       "label": "Last name",
-      "default": "LAST NAME*"
+      "default": "Last name*"
     },
     {
       "type": "text",
       "id": "project_address_label",
       "label": "Project address",
-      "default": "PROJECT ADDRESS*"
+      "default": "Project address*"
     },
     {
       "type": "text",
       "id": "property_type_label",
       "label": "Property type",
-      "default": "PROPERTY TYPE*"
+      "default": "Property type*"
     },
     {
       "type": "text",
       "id": "square_footage_label",
       "label": "Square footage",
-      "default": "APPROXIMATE SQUARE FOOTAGE*"
+      "default": "Approximate square footage*"
     },
     {
       "type": "text",
       "id": "architect_label",
       "label": "Architect",
-      "default": "HAVE YOU APPOINTED AN ARCHITECT? IF YES, PLEASE PROVIDE NAME*"
+      "default": "Have you appointed an architect? If yes, please provide name*"
     },
     {
       "type": "text",
       "id": "timeline_label",
       "label": "Timeline",
-      "default": "ESTIMATED TIMELINE*"
+      "default": "Estimated timeline*"
     },
     {
       "type": "text",
       "id": "budget_label",
       "label": "Budget",
-      "default": "ESTIMATED BUDGET*"
+      "default": "Estimated budget*"
     },
     {
       "type": "text",
       "id": "other_info_label",
       "label": "Other info",
-      "default": "OTHER KEY INFORMATION ON PROJECT*"
+      "default": "Other key information on project*"
     },
     {
       "type": "text",
       "id": "referral_label",
       "label": "Referral source",
-      "default": "HOW DID YOU HEAR ABOUT US?*"
+      "default": "How did you hear about us?*"
     },
     {
       "type": "text",
       "id": "submit_label",
       "label": "Submit button text",
-      "default": "SUBMIT FORM"
+      "default": "Submit form"
     },
     {
       "type": "text",
