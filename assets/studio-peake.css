@@ -598,7 +598,7 @@
 
 @media screen and (min-width: 700px) {
   .prose span.metafield-multi_line_text_field {
-    max-width: 75%;
+    max-width: 460px;
     margin: auto;
   }
 }
@@ -689,6 +689,11 @@
 
   .sm\:text-end .image-with-text__inline-image {
     margin-inline: auto 0;
+  }
+
+  .image-with-text__inline-image {
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
   }
 }
 
