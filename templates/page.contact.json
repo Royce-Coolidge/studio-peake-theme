@@ -22,7 +22,8 @@
     "sp_contact_form": {
       "type": "sp-contact-form",
       "custom_css": [
-        ".sp-contact-form__row--submit {max-width: 277px;}"
+        ".sp-contact-form__row--submit {max-width: 277px;}",
+        "@media screen and (max-width: 699px) {.sp-contact-form__row--submit {max-width: none;} }"
       ],
       "settings": {
         "allow_transparent_header": true,
@@ -117,7 +118,7 @@
         "image_with_text_PxEDq9"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1;} }"
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; }}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
