@@ -221,7 +221,9 @@
         "image_3rHHtt",
         "richtext_wFtfey"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".h1 {margin-block-start: 2px;}"
+      ],
       "name": "Meet The Maker",
       "settings": {
         "color_scheme": "scheme-bf3577da-2951-40ec-9421-5091ed6dd682",
@@ -257,6 +259,7 @@
         "color_scheme": "",
         "separate_section_with_border": false,
         "sp_add_vertical_spacing": true,
+        "sp_remove_bottom_padding": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
