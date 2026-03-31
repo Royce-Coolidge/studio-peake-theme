@@ -1131,7 +1131,7 @@
 .sp-contact-form__fields {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .sp-contact-form__row {
@@ -1151,11 +1151,10 @@
   border-radius: 0;
   background: transparent;
   padding: 0.75rem 0;
-  font-family: var(--button-font-family);
+  font-family: var(--body-font-family);
   font-weight: var(--button-font-weight);
   font-size: var(--text-xs);
-  letter-spacing: var(--button-letter-spacing);
-  text-transform: uppercase;
+  text-transform: none;
   color: rgb(var(--text-color));
   outline: none;
   appearance: none;
