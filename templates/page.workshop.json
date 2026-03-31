@@ -152,7 +152,7 @@
       ],
       "custom_css": [
         ".color-scheme {background-color: #eee6db;}",
-        "p {max-width: 400px; margin: auto; text-align: left;}"
+        "p {max-width: 400px; margin: auto; text-align: center;}"
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
@@ -177,7 +177,7 @@
         "posts_count": 3,
         "stack_on_mobile": false,
         "full_width": true,
-        "remove_bottom_padding": true,
+        "remove_bottom_padding": false,
         "card_color_scheme": "",
         "show_category": true,
         "show_date": false,
