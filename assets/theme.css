@@ -336,7 +336,7 @@ height-observer {
 .blog-post-card__info-top {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .blog-post-card__info-bottom {
