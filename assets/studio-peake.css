@@ -789,16 +789,18 @@
   font-size: 18px;
 }
 
-@media screen and (max-width: 699px) {
-  .blog-post-card__category {
-    font-size: 16px;
-  }
-
   .blog-post-card__title {
     line-height: 110%;
     max-width: 260px;
     -webkit-line-clamp: 2;
   }
+
+@media screen and (max-width: 699px) {
+  .blog-post-card__category {
+    font-size: 16px;
+  }
+
+
 }
 
 @media (pointer: fine) {                                                                   
