@@ -30,13 +30,12 @@
       "settings": {
         "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
         "apparition_delay": 5,
-        "show_only_on_index": true,
         "hide_for_account_holders": true,
         "show_only_once": true,
         "show_newsletter_form": true,
-        "title": "Signup for our newsletter",
+        "title": "Sign Up for our newsletter",
         "logo_image": "shopify://shop_images/Studio_Peake_Emblem_Clotted_Cream.svg",
-        "content": "for the latest from Studio Peake and the Workshop, sharing new work, craft collaborations, events, and design thinking.",
+        "content": "For the latest from Studio Peake and the Workshop, sharing new work, craft collaborations, events, and design thinking.",
         "button_text": "Subscribe",
         "consent_label": "<p>I consent to the <a href=\"/policies/privacy-policy\">Privacy Policies</a></p>",
         "discount_code": "WELCOME10"
