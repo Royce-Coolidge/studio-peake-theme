@@ -105,7 +105,7 @@
         "image_with_text_PxEDq9"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; } p {white-space: wrap;}}",
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; } p {white-space: unset; }}",
         "multi-column > *:first-child {width: 42%; flex: none;}",
         ".multi-column > *:not(:first-child) {flex: 1 1 0%;}",
         ".h2 {overflow-wrap: break-word;}",
@@ -160,10 +160,13 @@
         "image_with_text_n4taaH",
         "image_with_text_DcVbqr"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; } p {white-space: unset; }}"
+      ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "columns_per_row": 5,
         "stack_on_mobile": true,
         "overlap_image": false,
