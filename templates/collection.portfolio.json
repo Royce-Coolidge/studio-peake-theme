@@ -153,7 +153,7 @@
             "heading_tag": "h3",
             "content": "",
             "link_text": "explore the project",
-            "link_url": "",
+            "link_url": "shopify://metaobjects/project/parsons-green-house",
             "link_style": "link",
             "mobile_text_position": "place-self-end-start text-start",
             "text_position": "sm:place-self-center sm:text-center",
