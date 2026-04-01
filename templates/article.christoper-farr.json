@@ -498,7 +498,7 @@
         "image_7E6f8V"
       ],
       "custom_css": [
-        ".media-grid{border-bottom: 2px solid rgb(var(--color-background));}"
+        ".media-grid {border-bottom: 2px solid #F7F1EB;}"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
