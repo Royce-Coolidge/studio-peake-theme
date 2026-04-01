@@ -107,7 +107,7 @@
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
-        "reveal_on_scroll": true,
+        "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "md",
         "remove_vertical_spacing": false,
@@ -187,7 +187,7 @@
       "settings": {
         "color_scheme": "scheme-ed3c746e-2171-49ad-9711-2a0e8616f021",
         "separate_section_with_border": false,
-        "reveal_on_scroll": true,
+        "reveal_on_scroll": false,
         "image_position": "end",
         "content_width": "md",
         "remove_vertical_spacing": false,
