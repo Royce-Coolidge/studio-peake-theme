@@ -618,6 +618,10 @@
     margin: auto;
     
   }
+
+  .accordion__content p span {
+    margin: unset;
+  }
 }
 
 .accordion__toggle {
