@@ -73,18 +73,6 @@
             "column_span": 1
           }
         },
-        "image_with_text_PxEDq9": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "email",
-            "heading_tag": "h5",
-            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
-            "link_url": "",
-            "link_text": "",
-            "compact_text": true,
-            "column_span": 1
-          }
-        },
         "image_with_text_diFdKQ": {
           "type": "image_with_text",
           "settings": {
@@ -96,20 +84,33 @@
             "compact_text": true,
             "column_span": 1
           }
+        },
+        "image_with_text_PxEDq9": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "email",
+            "heading_tag": "h5",
+            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": true,
+            "column_span": 1
+          }
         }
       },
       "block_order": [
         "image_with_text_LRMAjQ",
         "image_with_text_UCbyJX",
-        "image_with_text_PxEDq9",
-        "image_with_text_diFdKQ"
+        "image_with_text_diFdKQ",
+        "image_with_text_PxEDq9"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; }}",
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; } p {white-space: wrap;}}",
         "multi-column > *:first-child {width: 42%; flex: none;}",
         ".multi-column > *:not(:first-child) {flex: 1 1 0%;}",
         ".h2 {overflow-wrap: break-word;}",
-        ".multi-column {align-items: flex-start; justify-content: flex-start;}"
+        ".multi-column {align-items: flex-start; justify-content: flex-start;}",
+        "p {white-space: nowrap;}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
