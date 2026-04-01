@@ -1128,6 +1128,18 @@
   width: 100%;
 }
 
+ .sp-contact-layout__image--mobile {
+    display: none;                                          
+  }
+                                                            
+  @media screen and (max-width: 699px) {                  
+    .sp-contact-layout__image--mobile {
+      display: block;
+    }
+    .sp-contact-layout__image--desktop {
+      display: none;                                        
+    }
+  }   
 
 
 .sp-contact-form__heading {
