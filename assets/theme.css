@@ -4426,7 +4426,9 @@ product-rerender {
   z-index: 2;
   
   display: flex;
-  position: relative;
+  position: relative !important;
+    transition: none !important;                            
+    inset-block-start: unset !important; 
   inset-block-start: var(--sticky-area-height);
   inset-inline-start: 0;
 }
