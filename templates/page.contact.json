@@ -23,7 +23,7 @@
       "type": "sp-contact-form",
       "custom_css": [
         ".sp-contact-form__row--submit {max-width: 277px;}",
-        "@media screen and (max-width: 699px) {.sp-contact-form__row--submit {max-width: none;} }"
+        "@media screen and (max-width: 699px) {.sp-contact-form__row--submit {max-width: none; }}"
       ],
       "settings": {
         "allow_transparent_header": true,
@@ -59,18 +59,6 @@
             "link_text": "",
             "compact_text": false,
             "column_span": 2
-          }
-        },
-        "image_with_text_p7KWGm": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "",
-            "heading_tag": "h3",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "compact_text": false,
-            "column_span": 1
           }
         },
         "image_with_text_UCbyJX": {
@@ -112,24 +100,25 @@
       },
       "block_order": [
         "image_with_text_LRMAjQ",
-        "image_with_text_p7KWGm",
         "image_with_text_UCbyJX",
         "image_with_text_diFdKQ",
         "image_with_text_PxEDq9"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; }}"
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; }}",
+        "multi-column > *:first-child {width: 42%;}",
+        ".multi-column > *:not(:first-child) {flex: 1;}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
         "separate_section_with_border": true,
-        "columns_per_row": 6,
+        "columns_per_row": 5,
         "stack_on_mobile": true,
         "overlap_image": false,
-        "content_alignment": "start",
+        "content_alignment": "end",
         "text_alignment": "start",
-        "spacing": "md",
+        "spacing": "xs",
         "subheading": "",
         "title": "",
         "content": "",
