@@ -1123,7 +1123,8 @@
 }
 
 .sp-contact-form__heading {
-  margin-bottom: 2.5rem;
+  
+  margin-bottom: 30px;
   text-wrap: balance;
   line-height: 111%;
 }
@@ -1131,6 +1132,7 @@
 @media screen and (min-width: 700px) {
   .sp-contact-form__heading {
     max-width: 300px;
+    margin-bottom: 2.5rem;
   }
 }
 
