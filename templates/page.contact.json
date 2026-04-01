@@ -152,7 +152,7 @@
             "link_url": "",
             "link_text": "",
             "compact_text": false,
-            "column_span": 3
+            "column_span": 1
           }
         }
       },
@@ -161,7 +161,12 @@
         "image_with_text_DcVbqr"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; } p {white-space: unset; }}"
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1; } p {white-space: wrap !important; }}",
+        "multi-column > *:first-child {width: 42%; flex: none;}",
+        ".multi-column > *:not(:first-child) {flex: 1 1 0%;}",
+        ".h2 {overflow-wrap: break-word;}",
+        ".multi-column {align-items: flex-start; justify-content: flex-start;}",
+        "p {white-space: nowrap;}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
