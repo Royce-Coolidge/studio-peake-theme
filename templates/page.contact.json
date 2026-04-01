@@ -29,6 +29,7 @@
         "allow_transparent_header": true,
         "color_scheme": "scheme-2",
         "image": "shopify://shop_images/studiopeake-contact-surrey-arts-and-craft-desktop_9c36954b-dd24-4b4a-91bb-8cb8b4726f8a.jpg",
+        "mobile_image": "shopify://shop_images/studiopeake-contact-surrey-arts-and-craft-mobile.jpg",
         "heading": "Let's discuss your project",
         "first_name_label": "First Name",
         "last_name_label": "Last Name",
