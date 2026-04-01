@@ -14,6 +14,10 @@
     row-gap: 1.5rem;
   }
 
+  .multi-column .h1 {
+     max-width: 380px
+  }
+
   .image-with-text.image-with-text--reverse {
     padding-bottom: 0;
   }
