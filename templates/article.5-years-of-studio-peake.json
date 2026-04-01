@@ -272,10 +272,13 @@
       "block_order": [
         "richtext_8djb6F"
       ],
+      "custom_css": [
+        ".image-with-text {border-top: 2px solid #f7f1eb;}"
+      ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-7b22112a-e5d0-4011-8d76-009305168e80",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-07_1b3ada4e-6fa7-40bf-97fd-d84d1b2ce3aa.jpg",
         "reveal_on_scroll": true,
         "image_position": "end",
