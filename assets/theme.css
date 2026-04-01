@@ -4424,7 +4424,7 @@ product-rerender {
   box-shadow: 0 1px rgb(var(--border-color)), 0 -1px rgb(var(--border-color));
   background-color: rgb(var(--background));
   z-index: 2;
-  transition: inset-block-start .15s ease-in-out;
+  
   display: flex;
   position: relative;
   inset-block-start: var(--sticky-area-height);
