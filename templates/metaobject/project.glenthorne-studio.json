@@ -65,18 +65,10 @@
             "image": "{{ shop.metaobjects.project['glenthorne-studio'].sketch_image.value }}"
           }
         },
-        "carousel_image_cYXQFn": {
-          "type": "carousel_image",
-          "settings": {}
-        },
-        "carousel_image_N9aQYx": {
-          "type": "carousel_image",
-          "settings": {}
-        },
         "heading_Efre63": {
           "type": "heading",
           "settings": {
-            "text": "Glenthorne Studio",
+            "text": "Glenthorne Mews",
             "heading_tag": "h1"
           }
         },
@@ -96,8 +88,6 @@
       },
       "block_order": [
         "carousel_image_QGTmTQ",
-        "carousel_image_cYXQFn",
-        "carousel_image_N9aQYx",
         "heading_Efre63",
         "richtext_BiJLfL",
         "sp_link_tY3j7r"
