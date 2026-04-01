@@ -497,6 +497,9 @@
         "image_y7FyLd",
         "image_7E6f8V"
       ],
+      "custom_css": [
+        ".media-grid{border-bottom: 2px solid rgb(var(--color-background));}"
+      ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
         "allow_transparent_header": true,
@@ -528,38 +531,6 @@
         "show_excerpt": true,
         "show_read_more": true
       }
-    },
-    "rich_text_MQMkkC": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9YgUeb": {
-          "type": "heading",
-          "settings": {
-            "text": "have a project in mind",
-            "heading_tag": "h1"
-          }
-        },
-        "link_cDN4Jn": {
-          "type": "link",
-          "settings": {
-            "text": "Tell us about your project",
-            "url": "shopify://pages/contact"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9YgUeb",
-        "link_cDN4Jn"
-      ],
-      "name": "t:sections.rich_text.presets.rich_text.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": true,
-        "content_width": "lg",
-        "text_position": "center",
-        "remove_vertical_spacing": false,
-        "anchor_id": "have-a-project-in-mind"
-      }
     }
   },
   "order": [
@@ -571,7 +542,6 @@
     "slideshow_nUgUFX",
     "multi_column_DPbJLw",
     "media_grid_DzP8bU",
-    "prev-next-blog-posts",
-    "rich_text_MQMkkC"
+    "prev-next-blog-posts"
   ]
 }
