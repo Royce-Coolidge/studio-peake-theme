@@ -1115,7 +1115,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: calc(var(--section-vertical-spacing) + 4rem) 3rem 4rem;
+
 }
 
 .sp-contact-form {
