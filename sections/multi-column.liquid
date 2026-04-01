@@ -9,6 +9,7 @@
       --multi-column-column-width: {% if section.settings.stack_on_mobile %}100%{% else %}53vw{% endif %};
       --multi-column-grid: {% if section.settings.stack_on_mobile %}auto / repeat(auto-fit, var(--multi-column-column-width)){% else %}auto / auto-flow var(--multi-column-column-width){% endif %};
       --multi-column-content-alignment: safe {{ section.settings.content_alignment }};
+      --multi-column-heading-max-width: 200px;
     }
 
     @media screen and (min-width: 700px) {
@@ -24,6 +25,7 @@
         --multi-column-columns-per-row: {{ section.settings.columns_per_row }};
         --multi-column-column-width: calc(100% / var(--multi-column-columns-per-row) - var(--multi-column-gap) * ((var(--multi-column-columns-per-row) - 1) / var(--multi-column-columns-per-row)));
         --multi-column-grid: auto / repeat(auto-fit, var(--multi-column-column-width));
+         --multi-column-heading-max-width: 380px;
       }
     }
   </style>
@@ -106,7 +108,7 @@
               {%- elsif block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
                 <div class="prose text-{{ section.settings.text_alignment }}{% if block.settings.compact_text %} prose--compact{% endif %}">
                   {%- if block.settings.title != blank -%}
-                    <p class="{{ block.settings.heading_tag }}" style="max-width: 380px; text-wrap: balance;">{{ block.settings.title }}</p>
+                    <p class="{{ block.settings.heading_tag }}" style="max-width: var(--multi-column-heading-max-width); text-wrap: balance;">{{ block.settings.title }}</p>
                   {%- endif -%}
 
                   {{- block.settings.content -}}
