@@ -46,7 +46,7 @@
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": false,
-        "media_size": "lg",
+        "media_size": "auto",
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
@@ -96,7 +96,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "separate_section_with_border": false,
-        "reveal_on_scroll": true,
+        "reveal_on_scroll": false,
         "image_position": "start",
         "content_width": "md",
         "remove_vertical_spacing": false,
