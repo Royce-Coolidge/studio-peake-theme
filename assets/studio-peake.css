@@ -1119,7 +1119,7 @@
 
 .sp-contact-layout__form {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
 
 }
