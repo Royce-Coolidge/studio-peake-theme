@@ -1071,8 +1071,7 @@
 .sp-contact-layout {
   display: grid;
   grid-template-columns: 35% 1fr;
-  gap: 2.5rem;
-  min-height: 100vh;
+  
 }
 
 @media screen and (min-width: 700px) {
