@@ -322,7 +322,7 @@
         "image_zL6UL9"
       ],
       "custom_css": [
-        ".slideshow {border-block: 2px solid #F7F1EB;}"
+        ".slideshow {border-block: 2px solid #f7f1eb;}"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
@@ -371,7 +371,7 @@
         "image_with_text_nWU4Db"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column {row-gap: 0px; }}"
+        "@media screen and (max-width: 699px) {.multi-column {row-gap: 0px; } .section-spacing {border-bottom: 2px solid #f7f1eb; }}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
