@@ -616,6 +616,7 @@
   .prose span.metafield-multi_line_text_field {
     max-width: 460px;
     margin: auto;
+    text-align: left;
   }
 }
 
