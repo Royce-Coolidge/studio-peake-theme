@@ -106,11 +106,10 @@
       ],
       "custom_css": [
         "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; }}",
-        "multi-column > *:first-child {width: 42%;}",
-        ".multi-column > *:not(:first-child) {flex: 1;}",
+        "multi-column > *:first-child {width: 42%; flex: none;}",
+        ".multi-column > *:not(:first-child) {flex: 1 1 0%;}",
         ".h2 {overflow-wrap: break-word;}",
-        ".multi-column {align-items: flex-start; justify-content: flex-start; }",
-        " .multi-column > * {flex: 1 1 0%; }"
+        ".multi-column {align-items: flex-start; justify-content: flex-start; }"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
