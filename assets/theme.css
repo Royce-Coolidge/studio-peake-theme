@@ -2511,7 +2511,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   .product-list {
     --product-list-max-items-per-row-allowed: 3;
     --product-list-default-row-gap: 3rem;
-    --product-list-default-column-gap: 1.5rem;
+    --product-list-default-column-gap: 2px;
   }
 
   .product-list--compact {
@@ -2523,7 +2523,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   .product-list {
     --product-list-max-items-per-row-allowed: 4;
     --product-list-default-row-gap: 4rem;
-    --product-list-default-column-gap: 3rem;
+    --product-list-default-column-gap: 2px;
   }
 
   .product-list--compact {
@@ -2544,7 +2544,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
 @media screen and (min-width: 1400px) {
   .product-list {
     --product-list-default-row-gap: 4rem;
-    --product-list-default-column-gap: 3.75rem;
+    --product-list-default-column-gap: 2px;
   }
 }
 
