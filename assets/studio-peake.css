@@ -1083,6 +1083,7 @@
 .sp-contact-layout__image {
   overflow: hidden;
   position: relative;
+  max-height: 100vh;
 }
 
 .sp-contact-layout__image img,
