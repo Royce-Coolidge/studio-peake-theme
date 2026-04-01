@@ -615,8 +615,7 @@
 @media screen and (min-width: 700px) {
   .prose span.metafield-multi_line_text_field {
     max-width: 460px;
-    margin: auto;
-    text-align: left;
+    
   }
 }
 
