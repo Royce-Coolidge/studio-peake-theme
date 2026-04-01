@@ -1,0 +1,332 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false,
+            "show_below_gallery": false
+          }
+        },
+        "accordion_dPPgmW": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Specifications",
+            "content": "<p>{{ product.metafields.custom.specifications | metafield_tag }}</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_gMLjKa": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Materials",
+            "content": "<p>{{ product.metafields.custom.materials | metafield_tag }}</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "accordion_P4NPeb": {
+          "type": "accordion",
+          "settings": {
+            "show_below_gallery": false,
+            "icon": "none",
+            "title": "Lead Time & Shipping",
+            "content": "<p>{{ product.metafields.custom.lead_time | metafield_tag }}</p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "button_group_GqrLNK": {
+          "type": "button_group",
+          "settings": {
+            "button_1_text": "enquire here",
+            "button_1_link": "",
+            "button_1_aria_controls": "enquiry-modal",
+            "button_1_style": "solid",
+            "button_1_background": "",
+            "button_1_text_color": "",
+            "button_2_text": "tear sheet",
+            "button_2_link": "",
+            "button_2_aria_controls": "",
+            "button_2_style": "outline",
+            "button_2_background": "",
+            "button_2_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "description",
+        "accordion_dPPgmW",
+        "accordion_gMLjKa",
+        "accordion_P4NPeb",
+        "button_group_GqrLNK"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "color_scheme": "scheme-2",
+        "container_size": "full",
+        "product_info_size": 50,
+        "show_sticky_add_to_cart": false,
+        "center_basic_info": false,
+        "desktop_media_layout": "grid",
+        "desktop_media_grid_gap": 0,
+        "mobile_controls": "dots",
+        "enable_media_autoplay": true,
+        "enable_video_looping": true,
+        "enable_image_zoom": false,
+        "max_image_zoom_level": 3,
+        "anchor_id": ""
+      }
+    },
+    "slideshow_NGKhVb": {
+      "type": "slideshow",
+      "blocks": {
+        "image_JQJcGV": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.landscape.value }}",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+          }
+        },
+        "video_6t3zyD": {
+          "type": "video",
+          "settings": {
+            "video": "{{ product.metafields.custom.landscape.value }}",
+            "allow_sound": true,
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_JQJcGV",
+        "video_6t3zyD"
+      ],
+      "name": "Landscape ",
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": false,
+        "media_size": "auto",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "anchor_id": ""
+      }
+    },
+    "image_with_text_g8cCRy": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_eWxyjr": {
+          "type": "heading",
+          "settings": {
+            "text": "The Design",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_PQjGDw": {
+          "type": "richtext",
+          "settings": {
+            "content": "{{ product.metafields.custom.design_section.value.body_copy | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eWxyjr",
+        "richtext_PQjGDw"
+      ],
+      "custom_css": [
+        ".section-spacing {padding-block-end: 0px !important;}"
+      ],
+      "name": "The Design",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": false,
+        "image": "{{ product.metafields.custom.design_section.value.image_sketch.value }}",
+        "reveal_on_scroll": true,
+        "image_position": "end",
+        "content_width": "lg",
+        "content_alignment": "start",
+        "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
+    },
+    "image_with_text_tXeDzF": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_Bh4bnB": {
+          "type": "subheading",
+          "settings": {
+            "text": "Meet The Maker"
+          }
+        },
+        "heading_9wF3CP": {
+          "type": "heading",
+          "settings": {
+            "text": "{{ product.metafields.custom.the_design.value.the_maker.value }}",
+            "heading_tag": "h1"
+          }
+        },
+        "image_3rHHtt": {
+          "type": "image",
+          "settings": {
+            "image": "{{ product.metafields.custom.the_design.value.right_image_smaller.value }}"
+          }
+        },
+        "richtext_wFtfey": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>{{ product.metafields.custom.the_design.value.maker_bio | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Bh4bnB",
+        "heading_9wF3CP",
+        "image_3rHHtt",
+        "richtext_wFtfey"
+      ],
+      "custom_css": [
+        ".h1 {margin-block-start: 2px;}"
+      ],
+      "name": "Meet The Maker",
+      "settings": {
+        "color_scheme": "scheme-bf3577da-2951-40ec-9421-5091ed6dd682",
+        "separate_section_with_border": false,
+        "image": "{{ product.metafields.custom.the_design.value.image.value }}",
+        "reveal_on_scroll": true,
+        "image_position": "start",
+        "content_width": "lg",
+        "content_alignment": "center",
+        "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
+    },
+    "featured_collections_Q7PmtQ": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_T97ycn": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-projects",
+            "products_count": 8,
+            "title": "explore collection",
+            "link_url": "shopify://collections/workshop",
+            "link_text": "View all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_T97ycn"
+      ],
+      "name": "t:sections.featured_collections.presets.featured_collections.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "sp_add_vertical_spacing": true,
+        "sp_remove_bottom_padding": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 0,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "anchor_id": ""
+      }
+    },
+    "rich_text_NpgVXP": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_eyCNQ9": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_eyCNQ9"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_NGKhVb",
+    "image_with_text_g8cCRy",
+    "image_with_text_tXeDzF",
+    "featured_collections_Q7PmtQ",
+    "rich_text_NpgVXP"
+  ]
+}
