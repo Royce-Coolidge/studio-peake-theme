@@ -107,7 +107,8 @@
       "custom_css": [
         "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; }}",
         "multi-column > *:first-child {width: 42%;}",
-        ".multi-column > *:not(:first-child) {flex: 1;}"
+        ".multi-column > *:not(:first-child) {flex: 1;}",
+        ".h2 {overflow-wrap: break-word}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
