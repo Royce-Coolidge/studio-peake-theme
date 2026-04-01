@@ -108,7 +108,7 @@
         "image_with_text_n7hUh6"
       ],
       "custom_css": [
-        ".h1{max-width: 200px}"
+        ".h1 {max-width: 200px !important;}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
