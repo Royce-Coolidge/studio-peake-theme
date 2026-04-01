@@ -50,7 +50,7 @@
         "allow_transparent_header": true,
         "show_next_section_button": false,
         "media_size": "auto",
-        "show_initial_transition": true,
+        "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
         "cycle_speed": 5,
