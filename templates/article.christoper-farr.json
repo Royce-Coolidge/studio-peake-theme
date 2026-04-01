@@ -322,7 +322,7 @@
         "image_zL6UL9"
       ],
       "custom_css": [
-        ".slideshow {border-block: 2px solid #f7f1eb;}"
+        ".slideshow {border-top: 2px solid #f7f1eb;}"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
