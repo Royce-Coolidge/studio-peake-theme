@@ -1745,3 +1745,7 @@
     max-width: calc(100vw - 2rem);
   }
 }
+
+  .collection-toolbar {                                   
+    position: relative !important;
+  }     
