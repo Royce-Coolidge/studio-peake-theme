@@ -62,19 +62,19 @@
         "carousel_image_QGTmTQ": {
           "type": "carousel_image",
           "settings": {
-            "image": "{{ shop.metaobjects.project['surrey-arts-and-craft-home'].sketch_image.value }}"
+            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-01.jpg"
           }
         },
         "carousel_image_cYXQFn": {
           "type": "carousel_image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-02.jpg"
+            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-02_c14fd37d-070d-4767-9ead-b93fbfc085b9.jpg"
           }
         },
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-03.jpg"
+            "image": "shopify://shop_images/studiopeake-surrey-arts-and-craft-interior-sketch-03_634da23d-949e-4fbc-9fcc-c21eedc90d9e.jpg"
           }
         },
         "heading_Efre63": {
