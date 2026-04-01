@@ -61,16 +61,8 @@
         "carousel_image_QGTmTQ": {
           "type": "carousel_image",
           "settings": {
-            "image": "{{ shop.metaobjects.project['parsons-green-house'].sketch_image.value }}"
+            "image": "shopify://shop_images/studiopeake-projects-residential-parsons-green-townhouse-sketch_907acfdc-907f-40f2-b449-57859c7acfc5.jpg"
           }
-        },
-        "carousel_image_cYXQFn": {
-          "type": "carousel_image",
-          "settings": {}
-        },
-        "carousel_image_N9aQYx": {
-          "type": "carousel_image",
-          "settings": {}
         },
         "heading_Efre63": {
           "type": "heading",
@@ -95,8 +87,6 @@
       },
       "block_order": [
         "carousel_image_QGTmTQ",
-        "carousel_image_cYXQFn",
-        "carousel_image_N9aQYx",
         "heading_Efre63",
         "richtext_BiJLfL",
         "sp_link_tY3j7r"
@@ -133,6 +123,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -168,6 +159,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -203,6 +195,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -238,6 +231,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -273,6 +267,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -308,6 +303,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -343,6 +339,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -378,6 +375,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -413,6 +411,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -484,6 +483,7 @@
         "color_scheme": "",
         "separate_section_with_border": false,
         "sp_add_vertical_spacing": true,
+        "sp_remove_bottom_padding": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
