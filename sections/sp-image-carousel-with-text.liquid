@@ -190,7 +190,7 @@
     </image-with-text>
   </div>
 
-  {% comment %} <script type="module">
+  <script type="module">
     await customElements.whenDefined('effect-carousel');
 
     if (!customElements.get('sp-fade-carousel')) {
@@ -200,12 +200,12 @@
         createOnChangeAnimationControls(fromSlide, toSlide, { direction } = {}) {
           const fromAnim = fromSlide.animate(
             [{ opacity: 1 }, { opacity: 0 }],
-            { duration: 0, easing: 'ease-in-out', fill: 'forwards' }
+            { duration: 1000, easing: 'ease-in-out', fill: 'forwards' }
           );
           toSlide.classList.add('is-selected');
           const toAnim = toSlide.animate(
             [{ opacity: 0 }, { opacity: 1 }],
-            { duration: 0, easing: 'ease-in-out', fill: 'forwards'}
+            { duration: 1000, easing: 'ease-in-out', fill: 'forwards', delay: 300 }
           );
           return {
             finished: Promise.all([fromAnim.finished, toAnim.finished]),
@@ -214,7 +214,7 @@
         }
       });
     }
-  </script> {% endcomment %}
+  </script>
 {%- endif -%}
 
 {% schema %}
