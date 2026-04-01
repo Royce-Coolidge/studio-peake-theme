@@ -96,7 +96,7 @@
         "title": "news & views",
         "content": "<p>A peer into life at Studio Peake, from day-to-day happenings in the studio to the people and places that shape our work. We share all sorts, from the momentous to the mundane: thoughts about design, visits to workshops and galleries, collaborations with makers and artisans, studio celebrations and the other things that catch our eye along the way. <br/><br/></p>",
         "button_link": "shopify://blogs/news",
-        "button_text": "View all",
+        "button_text": "",
         "anchor_id": ""
       }
     }
