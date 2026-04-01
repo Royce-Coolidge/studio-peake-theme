@@ -272,6 +272,9 @@
       "block_order": [
         "richtext_8djb6F"
       ],
+      "custom_css": [
+        ".image-with-text {border-top: 2px solid #f7f1eb;}"
+      ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
         "color_scheme": "scheme-1f3e3275-c7f4-4736-948b-ec7297152781",
@@ -498,7 +501,7 @@
         "image_7E6f8V"
       ],
       "custom_css": [
-        ".media-grid {border-bottom: 2px solid #F7F1EB;}"
+        ".media-grid {border-bottom: 2px solid #f7f1eb;}"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
