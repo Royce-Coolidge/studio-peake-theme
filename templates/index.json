@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/studiopeake-home-hero-parsons-green.jpg",
-            "mobile_image": "shopify://shop_images/studiopeake-projects-residential-parsons-green-12.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-home-heading-parsons-green-mobile.jpg",
             "logo_image": "shopify://shop_images/Studio_Peake_Logo_Clotted_Cream.svg",
             "mobile_logo_image": "shopify://shop_images/Studio_Peake_Stacked_Logo_Clotted_Cream.png",
             "subheading": "",
