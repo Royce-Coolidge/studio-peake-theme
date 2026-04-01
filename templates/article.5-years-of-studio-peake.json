@@ -107,6 +107,9 @@
         "image_with_text_AUBd9h",
         "image_with_text_n7hUh6"
       ],
+      "custom_css": [
+        ".h1{max-width: 200px}"
+      ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "",
