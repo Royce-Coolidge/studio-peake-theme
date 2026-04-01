@@ -322,7 +322,7 @@
         "image_zL6UL9"
       ],
       "custom_css": [
-        ".slideshow{border-top: 2px solid #f7f1eb;}"
+        ".slideshow {border-top: 2px solid #f7f1eb;}"
       ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
@@ -370,10 +370,11 @@
         "image_with_text_iFH7Wp",
         "image_with_text_nWU4Db"
       ],
+      "custom_css": [],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
-        "separate_section_with_border": true,
+        "separate_section_with_border": false,
         "columns_per_row": 2,
         "stack_on_mobile": true,
         "overlap_image": false,
