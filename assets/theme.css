@@ -7,10 +7,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
- :root {                                                   
-    --product-list-default-column-gap: 2px !important;    
-  }                                                         
-  
+
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -2483,7 +2480,7 @@ model-media model-viewer, model-media .shopify-model-viewer-ui {
   --product-list-max-items-per-row-allowed: 2;
   --product-list-calculated-items-per-row: min(var(--product-list-max-items-per-row-allowed), var(--product-list-items-per-row));
   --product-list-default-row-gap: 2.1875rem;
-  --product-list-default-column-gap: .625rem;
+  --product-list-default-column-gap: 2px;
   --product-list-calculated-row-gap: clamp(var(--section-vertical-spacing) / 4, var(--product-list-default-row-gap) * var(--product-list-vertical-spacing-factor, 1), var(--section-vertical-spacing) * 2);
   --product-list-calculated-column-gap: clamp(2px, var(--product-list-default-column-gap) * var(--product-list-horizontal-spacing-factor, 1), var(--container-gutter) * 2);
   --product-list-card-width: calc(100% / var(--product-list-calculated-items-per-row)  - var(--product-list-calculated-column-gap, 0px) * (var(--product-list-calculated-items-per-row)  - 1) / var(--product-list-calculated-items-per-row));
