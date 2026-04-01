@@ -321,6 +321,9 @@
       "block_order": [
         "image_zL6UL9"
       ],
+      "custom_css": [
+        ".slideshow {border-block: 2px solid #F7F1EB;}"
+      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": true,
@@ -368,7 +371,7 @@
         "image_with_text_nWU4Db"
       ],
       "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column {row-gap: 0px }}"
+        "@media screen and (max-width: 699px) {.multi-column {row-gap: 0px; }}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
