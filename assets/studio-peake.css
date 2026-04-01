@@ -619,7 +619,7 @@
     
   }
 
-  .accordion__content p span {
+  .accordion__content p .metafield-multi_line_text_field {
     margin: unset;
   }
 }
