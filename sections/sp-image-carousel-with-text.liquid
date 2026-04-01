@@ -190,7 +190,7 @@
     </image-with-text>
   </div>
 
-  <script type="module">
+  {% comment %} <script type="module">
     await customElements.whenDefined('effect-carousel');
 
     if (!customElements.get('sp-fade-carousel')) {
@@ -214,7 +214,7 @@
         }
       });
     }
-  </script>
+  </script> {% endcomment %}
 {%- endif -%}
 
 {% schema %}
