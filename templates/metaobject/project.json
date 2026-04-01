@@ -60,14 +60,6 @@
     "sp_image_carousel_with_text_bXbecL": {
       "type": "sp-image-carousel-with-text",
       "blocks": {
-        "carousel_image_QGTmTQ": {
-          "type": "carousel_image",
-          "settings": {}
-        },
-        "carousel_image_cYXQFn": {
-          "type": "carousel_image",
-          "settings": {}
-        },
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
           "settings": {}
@@ -94,8 +86,6 @@
         }
       },
       "block_order": [
-        "carousel_image_QGTmTQ",
-        "carousel_image_cYXQFn",
         "carousel_image_N9aQYx",
         "heading_Efre63",
         "richtext_BiJLfL",
@@ -132,6 +122,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -166,6 +157,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -200,6 +192,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -234,6 +227,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -268,6 +262,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -302,6 +297,7 @@
             "link_text": "",
             "link_url": "",
             "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
             "text_position": "place-self-center text-center",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
@@ -370,6 +366,7 @@
         "color_scheme": "",
         "separate_section_with_border": false,
         "sp_add_vertical_spacing": true,
+        "sp_remove_bottom_padding": true,
         "hide_product_information": false,
         "stack_products": false,
         "products_per_row_mobile": "2",
