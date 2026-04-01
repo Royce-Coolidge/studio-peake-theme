@@ -790,6 +790,7 @@
 }
 
   .blog-post-card__title {
+    line-height: 115%;
     max-width: 260px;
     -webkit-line-clamp: 2;
   }
