@@ -321,6 +321,9 @@
       "block_order": [
         "image_zL6UL9"
       ],
+      "custom_css": [
+        ".slideshow{border-top: 2px solid #f7f1eb;}"
+      ],
       "name": "t:sections.slideshow.presets.slideshow.name",
       "settings": {
         "allow_transparent_header": true,
@@ -501,7 +504,7 @@
         "image_7E6f8V"
       ],
       "custom_css": [
-        ".media-grid{border-block: 2px solid #f7f1eb;}"
+        ".media-grid {border-block: 2px solid #f7f1eb;}"
       ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
