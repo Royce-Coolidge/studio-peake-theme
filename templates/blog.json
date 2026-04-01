@@ -78,6 +78,9 @@
     },
     "blog_posts_NyedkH": {
       "type": "blog-posts",
+      "custom_css": [
+        ".blog-posts-header__controls {justify-content: end}"
+      ],
       "name": "t:sections.blog_posts.presets.blog_posts.name",
       "settings": {
         "color_scheme": "",
