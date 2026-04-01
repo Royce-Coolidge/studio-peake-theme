@@ -362,6 +362,7 @@ height-observer {
 .blog-post-card__category {
   font-style: italic;
   margin: 0;
+  line-height: 110%;
 }
 
 .blog-post-card__category a {
