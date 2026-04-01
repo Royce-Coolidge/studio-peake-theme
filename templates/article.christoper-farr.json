@@ -367,6 +367,9 @@
         "image_with_text_iFH7Wp",
         "image_with_text_nWU4Db"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 699px) {.multi-column {row-gap: 0px }}"
+      ],
       "name": "t:sections.multi_column.presets.multi_column.name",
       "settings": {
         "color_scheme": "scheme-7b22112a-e5d0-4011-8d76-009305168e80",
