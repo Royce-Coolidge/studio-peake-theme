@@ -140,7 +140,7 @@
           "type": "link",
           "settings": {
             "text": "explore the collection",
-            "url": ""
+            "url": "shopify://collections/workshop"
           }
         }
       },
