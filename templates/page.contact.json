@@ -67,7 +67,7 @@
           "settings": {
             "title": "Visit",
             "heading_tag": "h5",
-            "content": "<p>Studio Peake First Floor,                              </p><p>Unit 6 Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
+            "content": "<p>Studio Peake                           </p><p>Unit 6 Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
@@ -79,7 +79,7 @@
           "settings": {
             "title": "telephone",
             "heading_tag": "h5",
-            "content": "<p>020 7736 7409</p><p></p><h5>Opening times </h5><p>9am – 5.30pm <br/>Monday - Friday</p>",
+            "content": "<p>020 7736 7409</p><p></p><h5></h5><p>9am – 5.30pm <br/>Monday - Friday</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
@@ -141,7 +141,7 @@
             "link_url": "",
             "link_text": "",
             "compact_text": false,
-            "column_span": 2
+            "column_span": 3
           }
         },
         "image_with_text_DcVbqr": {
