@@ -37,10 +37,10 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header {column-gap: 0rem; }"
+        ".header {column-gap: 0rem;}"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-2",
         "enable_sticky": true,
         "hide_on_scroll": true,
         "show_separation_border": false,
