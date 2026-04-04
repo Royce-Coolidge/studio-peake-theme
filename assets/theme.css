@@ -5180,6 +5180,8 @@ product-rerender {
   position: relative;
 }
 
+
+
 .header__dropdown-menu--restrictable {
   max-height: calc(100vh - var(--header-height, 0px)  - var(--announcement-bar-height, 0px)  - 40px);
   overflow-y: auto;
