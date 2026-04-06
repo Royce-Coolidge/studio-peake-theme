@@ -162,8 +162,8 @@
         "link_eiw6Y3": {
           "type": "link",
           "settings": {
-            "text": "LEARN MORE",
-            "url": "/#approach"
+            "text": "VIEW PORTFOLIO",
+            "url": "shopify://collections/all-projects"
           }
         }
       },
