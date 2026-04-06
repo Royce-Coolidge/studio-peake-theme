@@ -139,9 +139,14 @@
                       if section.settings.sp_enable_image_zoom == false
                         assign sp_zoom_class = ''
                       endif
-
-                      echo sp_block_image | image_url: width: sp_block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: sp_zoom_class
                     -%}
+                    {%- capture sp_img_tag -%}{{ sp_block_image | image_url: width: sp_block_image.width | image_tag: loading: loading_strategy, sizes: sizes_attribute, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600', class: sp_zoom_class }}{%- endcapture -%}
+                    {%- if sp_has_hotspots == false and block.settings.link_url == blank -%}
+                      {%- capture sp_lb_attrs %} data-lightbox-src="{{ sp_block_image | image_url: width: 2400 }}" data-lightbox-w="{{ sp_block_image.width }}" data-lightbox-h="{{ sp_block_image.height }}" data-lightbox-alt="{{ sp_block_image.alt | default: block.settings.title | escape }}"{% endcapture -%}
+                      {%- capture sp_img_open -%}<img{{ sp_lb_attrs }}{%- endcapture -%}
+                      {%- assign sp_img_tag = sp_img_tag | replace_first: '<img', sp_img_open -%}
+                    {%- endif -%}
+                    {{- sp_img_tag -}}
                   {%- else -%}
                     {%- capture collection_image -%}collection-{% cycle '1', '2', '3', '4' %}{%- endcapture -%}
                     {%- if section.settings.sp_enable_image_zoom -%}
@@ -225,7 +230,7 @@
                 {{- block_content -}}
               </a>
             {%- else -%}
-              <div class="media-grid__item" style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}; --sp-aspect: {{ sp_aspect }}" {{ block.shopify_attributes }}>
+              <div class="media-grid__item" {% if block.type == 'image' and sp_has_hotspots == false and sp_block_image %}data-lightbox-trigger{% endif %} style="--media-grid-item-column-span: {{ effective_col }}; --media-grid-item-row-span: {{ effective_row }}; --sp-aspect: {{ sp_aspect }}" {{ block.shopify_attributes }}>
                 {{- block_content -}}
               </div>
             {%- endif -%}

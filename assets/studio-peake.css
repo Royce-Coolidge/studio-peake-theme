@@ -1782,3 +1782,18 @@
   }
 }
 
+/* ============================================================
+   Media Grid Lightbox
+   ============================================================ */
+
+[data-lightbox-trigger] {
+  cursor: zoom-in;
+}
+
+.pswp__button--arrow--prev,
+.pswp__button--arrow--next,
+.pswp__button--zoom,
+.pswp__button--close {
+  display: none !important;
+}
+
