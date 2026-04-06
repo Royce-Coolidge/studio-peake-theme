@@ -348,24 +348,20 @@
 /* === Header Dropdown Overrides (Scheme 4) === */
 /* Remove borders and box-shadow on dropdown menus */
 .header__dropdown-menu {
-  padding-top: 0;
-}
-
-.color-scheme--scheme-2 .header__dropdown-menu {
+ 
   border-width: 0;
   box-shadow: none;
+  min-width: 0px;
 }
 
-.color-scheme--scheme-2 .header__dropdown-menu:before {
+.header__dropdown-menu:before {
   display: none;
 }
 
-.color-scheme--scheme-2 .header__dropdown-menu .header__dropdown-menu {
-  border-width: 0;
-}
+
 
 /* Apply button link styles to dropdown items */
-.color-scheme--scheme-4 .header__dropdown-menu :is(a, summary) {
+ .header__dropdown-menu :is(a, summary) {
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
   font-style: var(--button-font-style);
