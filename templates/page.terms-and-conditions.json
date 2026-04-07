@@ -443,6 +443,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose{margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
