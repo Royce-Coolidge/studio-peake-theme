@@ -81,6 +81,9 @@
         "text_3",
         "text_4"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -117,6 +120,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -145,6 +151,9 @@
       "block_order": [
         "text_1",
         "text_2"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -182,6 +191,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -218,6 +230,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -247,6 +262,9 @@
         "text_1",
         "text_2"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -275,6 +293,9 @@
       "block_order": [
         "text_1",
         "text_2"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -371,6 +392,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -406,6 +430,9 @@
         "text_1",
         "text_2",
         "text_3"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -444,7 +471,7 @@
         "text_3"
       ],
       "custom_css": [
-        ".prose{margin-block-start: 1.25rem;}"
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -474,6 +501,9 @@
       "block_order": [
         "text_1",
         "text_2"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -511,6 +541,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -546,6 +579,9 @@
         "text_1",
         "text_2",
         "text_3"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -583,6 +619,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -619,12 +658,38 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
         "content_width": "sm",
         "text_position": "start",
         "remove_vertical_spacing": true,
+        "anchor_id": ""
+      }
+    },
+    "rich_text_wVQBmG": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_QUj7tc": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_QUj7tc"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
         "anchor_id": ""
       }
     }
@@ -647,6 +712,7 @@
     "tc_workshop_6",
     "tc_workshop_7",
     "tc_workshop_8",
-    "tc_workshop_9"
+    "tc_workshop_9",
+    "rich_text_wVQBmG"
   ]
 }
