@@ -485,6 +485,29 @@
         "remove_vertical_spacing": true,
         "anchor_id": "glossary"
       }
+    },
+    "rich_text_8axpYK": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_yaYdrD": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_yaYdrD"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -498,6 +521,7 @@
     "privacy_section_7",
     "privacy_section_8",
     "privacy_section_9",
-    "privacy_section_10"
+    "privacy_section_10",
+    "rich_text_8axpYK"
   ]
 }
