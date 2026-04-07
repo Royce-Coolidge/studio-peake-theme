@@ -147,6 +147,9 @@
         "text_2",
         "text_3"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -176,6 +179,9 @@
       "block_order": [
         "heading",
         "text_1"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -242,6 +248,9 @@
         "text_5",
         "text_6"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -271,6 +280,9 @@
       "block_order": [
         "heading",
         "text_1"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -302,6 +314,9 @@
         "heading",
         "text_1"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -332,6 +347,9 @@
         "heading",
         "text_1"
       ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "separate_section_with_border": false,
@@ -361,6 +379,9 @@
       "block_order": [
         "heading",
         "text_1"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -398,6 +419,9 @@
         "heading",
         "text_1",
         "text_2"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
@@ -449,6 +473,9 @@
         "text_2",
         "text_3",
         "text_4"
+      ],
+      "custom_css": [
+        ".prose {margin-block-start: 1.25rem;}"
       ],
       "settings": {
         "color_scheme": "",
