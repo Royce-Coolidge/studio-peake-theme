@@ -81,8 +81,9 @@
         },
         "sp_link_tY3j7r": {
           "type": "sp-link",
+          "disabled": true,
           "settings": {
-            "text": "View project",
+            "text": "View Press Article",
             "url": ""
           }
         }
