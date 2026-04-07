@@ -23,6 +23,7 @@
       "type": "sp-contact-form",
       "custom_css": [
         ".sp-contact-form__row--submit {max-width: 277px;}",
+        ".sp-contact-radio-dropdown__trigger {opacity: 1 !important;}",
         "@media screen and (max-width: 699px) {.sp-contact-form__row--submit {max-width: none; }}"
       ],
       "settings": {
