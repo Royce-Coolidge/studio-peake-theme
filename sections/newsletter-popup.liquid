@@ -3,9 +3,9 @@
     {%- assign posted_successfully = false -%}
     {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
 
-    {%- comment -%}Only auto-show popup on workshop page; footer subscribe link works on all pages{%- endcomment -%}
+    {%- comment -%}Only auto-show popup on workshop collection page; footer subscribe link works on all pages{%- endcomment -%}
     {%- assign is_workshop_page = false -%}
-    {%- if request.path contains '/pages/the-workshop' -%}
+    {%- if request.path contains '/collections/workshop' -%}
       {%- assign is_workshop_page = true -%}
     {%- endif -%}
 
