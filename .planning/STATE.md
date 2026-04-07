@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 Phase: 4 of 5 (Trigger Wiring) — COMPLETE
 Plan: 1 of 1 in current phase — COMPLETE
 Status: Phase 4 complete, ready for Phase 5 (Keyline Animation System)
-Last activity: 2026-03-30 - Completed quick task 3: Add project metaobject block type to featured-collections section
+Last activity: 2026-04-07 - Completed quick task 4: Change newsletter popup to auto-show on /collections/workshop
 
 Progress: [████████░░] 80%
 
@@ -86,6 +86,7 @@ None yet.
 |---|-------------|------|--------|-----------|
 | 1 | Add dropdown desktop layout option for collection page Filters and sorting | 2026-03-27 | 58886a5 | [1-add-dropdown-desktop-layout-option-for-c](./quick/1-add-dropdown-desktop-layout-option-for-c/) |
 | 3 | Add project metaobject block type to featured-collections section | 2026-03-30 | 3dadf31 | [3-add-project-metaobject-block-type-to-fea](./quick/3-add-project-metaobject-block-type-to-fea/) |
+| 4 | Change newsletter popup to auto-show on /collections/workshop | 2026-04-07 | — (manual apply) | [4-change-newsletter-popup-to-auto-show-on-](./quick/4-change-newsletter-popup-to-auto-show-on-/) |
 
 ### Blockers/Concerns
 
