@@ -1422,7 +1422,6 @@
 .sp-hotspot-image-outer {
   grid-area: full-start / full-start / full-end / full-end;
   display: flex;
-  align-items: center;
   justify-content: center;
   overflow: visible;
   width: 100%;
