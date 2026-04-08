@@ -850,6 +850,7 @@
   }
 
   .blog-post-card {
+    display: grid;
     width: 100%;
     min-width: 0;
   }
