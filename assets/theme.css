@@ -323,6 +323,10 @@ height-observer {
   .blog-post-card__info {
     padding: 3rem 2.5rem;
   }
+
+  .blog-post-card__image {
+    min-height: 280px;
+  }
 }
 
 @media screen and (min-width: 1150px) {
