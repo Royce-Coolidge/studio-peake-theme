@@ -293,6 +293,7 @@ height-observer {
   @media screen and (max-width: 699px) {                                           
     .blog-post-card__image-wrap {
       height: 345px;
+      box-sizing: content-box;
  
     }              
   }  
