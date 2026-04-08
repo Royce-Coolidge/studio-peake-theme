@@ -37,9 +37,9 @@ Supported parameters
   <div class="blog-post-card__image-wrap">
     {%- if article -%}
       {%- if article.image != blank -%}
-        <a href="{{ article.url }}">
+       
           {{- article.image | image_url: width: article.image.width | image_tag: loading: loading_strategy, sizes: sizes, widths: '300,400,500,600,800,1000,1200,1400,1600,1800,2000', class: 'blog-post-card__image' -}}
-        </a>
+       
       {%- endif -%}
     {%- else -%}
       {{- 'image' | placeholder_svg_tag: 'blog-post-card__image placeholder placeholder--invert' -}}
