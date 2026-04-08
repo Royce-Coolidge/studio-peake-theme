@@ -294,7 +294,8 @@ height-observer {
   @media screen and (max-width: 699px) {                                           
     .blog-post-card__image-wrap {
       height: 100%;
-  aspect-ratio: 1 / 1;
+      aspect-ratio: 1 / 1;
+      box-sizing: content-box !important;
     }              
   }  
 
