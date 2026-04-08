@@ -416,7 +416,7 @@ height-observer {
 .blog-posts-header__right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 1.25rem;
 }
 
