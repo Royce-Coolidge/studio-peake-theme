@@ -29,11 +29,13 @@ LIQUID
               <div class="blog-posts-header__content prose">{{- section.settings.content -}}</div>
             {%- endif -%}
 
-            <div class="blog-posts-header__controls">
-              {%- if section.settings.button_text != blank -%}
+             {%- if section.settings.button_text != blank -%}
                 {%- assign button_link = section.settings.button_link | default: section.settings.blog.url -%}
                 {%- render 'button', href: button_link, content: section.settings.button_text -%}
               {%- endif -%}
+
+            <div class="blog-posts-header__controls">
+             
 
               {%- assign carousel_id = 'blog-carousel-' | append: section.id -%}
               <div class="blog-posts-header__arrows">
