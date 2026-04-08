@@ -287,13 +287,14 @@ height-observer {
 .blog-post-card__image-wrap {
   overflow: hidden;
   position: relative;
+  box-sizing: content-box
   /* aspect-ratio: 3 / 2; */
 }
 
   @media screen and (max-width: 699px) {                                           
     .blog-post-card__image-wrap {
       height: 345px;
-      box-sizing: content-box;
+     
  
     }              
   }  
