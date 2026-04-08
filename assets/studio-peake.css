@@ -856,7 +856,7 @@
   }
 
   .blog-post-card__info {
-    height: 280px;
+    min-height: 280px;
   }
 }
 
