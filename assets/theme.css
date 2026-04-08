@@ -416,14 +416,14 @@ height-observer {
 .blog-posts-header__right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 1.25rem;
 }
 
 .blog-posts-header__controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   gap: 1rem;
 }
