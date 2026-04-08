@@ -270,7 +270,7 @@ height-observer {
 }
 
 .blog-post-card {
-  
+  overflow-x: clip;
   grid-template-columns: 1fr;
   min-height: 400px;
 }
