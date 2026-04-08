@@ -417,7 +417,7 @@ height-observer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .blog-posts-header__controls {
