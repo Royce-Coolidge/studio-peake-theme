@@ -428,9 +428,7 @@ height-observer {
   gap: 1rem;
 }
 
-.blog-posts-header__controls * {
-flex: 1 1 auto;
-}
+
 
 .blog-posts-header__arrows {
   display: flex;
