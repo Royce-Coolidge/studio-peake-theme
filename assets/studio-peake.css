@@ -853,6 +853,7 @@
     display: grid;
     width: 100%;
     min-width: 0;
+    grid-auto-rows: minmax(50%, auto);
   }
 
   .blog-post-card__info {
