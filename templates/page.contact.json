@@ -92,7 +92,7 @@
           "settings": {
             "title": "email",
             "heading_tag": "h5",
-            "content": "<p><a href=\"mailto:info@studiopeake.com\" title=\"mailto:info@studiopeake.com\">info@studiopeake.com</a></p><h5>The Workshop</h5><p><a href=\"mailto:workshop@studiopeake.com \" title=\"mailto:workshop@studiopeake.com \">workshop@studiopeake.com </a></p>",
+            "content": "<p><a href=\"mailto:info@studiopeake.com\" title=\"mailto:info@studiopeake.com\">info@studiopeake.com</a></p><h5>The Workshop</h5><p><a href=\"mailto:workshop@studiopeake.com \" target=\"_blank\" title=\"mailto:workshop@studiopeake.com\">workshop@studiopeake.com</a></p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
