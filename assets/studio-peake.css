@@ -812,8 +812,8 @@
     font-size: 16px;
   }
 
-  .blog-post-card__title {
-    max-width: 200px;
+  .blog-post-card__info-top {
+    max-width: 60%;
   }
 
 }
