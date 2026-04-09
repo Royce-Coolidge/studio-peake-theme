@@ -817,6 +817,10 @@
     max-width: 68%;
   }
 
+  .blog-post-card__title {
+    max-width: none;
+  }
+
 }
 
 @media (pointer: fine) {                                                                   
