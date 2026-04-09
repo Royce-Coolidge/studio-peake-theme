@@ -807,6 +807,7 @@
     -webkit-line-clamp: 2;
   }
 
+ 
 @media screen and (max-width: 699px) {
   .blog-post-card__category {
     font-size: 16px;
