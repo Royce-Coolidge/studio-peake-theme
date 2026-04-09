@@ -92,7 +92,7 @@
           "settings": {
             "title": "email",
             "heading_tag": "h5",
-            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p>workshop@studiopeake.com </p>",
+            "content": "<p>info@studiopeake.com</p><h5>The Workshop</h5><p><a href=\"mailto:workshop@studiopeake.com \" title=\"mailto:workshop@studiopeake.com \">workshop@studiopeake.com </a></p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
@@ -108,6 +108,7 @@
       ],
       "custom_css": [
         "@media screen and (max-width: 699px) {.multi-column__item {grid-column: 1; } p {white-space: unset; }}",
+        "a {text-transform: lowercase; font-family: unset;}",
         "multi-column > *:first-child {width: 42%; flex: none;}",
         ".multi-column > *:not(:first-child) {flex: 1 1 0%;}",
         ".h2 {overflow-wrap: break-word; line-height: 110%;}",
