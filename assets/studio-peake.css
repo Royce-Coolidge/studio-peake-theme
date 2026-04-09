@@ -803,7 +803,7 @@
   .blog-post-card__title {
     line-height: 115%;
     font-size: 22px;
-    max-width: 260px;
+    max-width: 219px;
     -webkit-line-clamp: 2;
   }
 
