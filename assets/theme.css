@@ -296,11 +296,11 @@ height-observer {
       height: 100%;
       aspect-ratio: 1 / 1;
       box-sizing: content-box !important;
+      width: 100%
       
     }              
   }  
-
-  }          
+       
 
 .blog-post-card__image-wrap a {
   display: block;
