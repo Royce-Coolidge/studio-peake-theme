@@ -167,7 +167,7 @@
         "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1 !important; } p {white-space: wrap !important; }}",
         "multi-column > *:first-child {width: 42%; flex: none;}",
         ".multi-column > *:not(:first-child) {flex: 0%;}",
-        ".h2 {max-width: none; overflow-wrap: break-word; line-height: 110%;}",
+        ".h2 {overflow-wrap: break-word; line-height: 110%;}",
         ".multi-column {align-items: flex-start; justify-content: flex-start;}"
       ],
       "name": "t:sections.multi_column.presets.multi_column.name",
