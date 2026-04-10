@@ -204,7 +204,7 @@
 
                 {%- if block.settings.title != blank or block.settings.content != blank or block.settings.link_text != blank -%}
                   <div class="prose prose--tight text-start sm:text-center {{ block.settings.mobile_text_position }} {{ block.settings.text_position }}">
-                    <p class="{{ block.settings.heading_tag }} text-start sm:text-center" style="text-wrap: balance; max-inline-size: 15ch;">{{ block.settings.title }}</p>
+                    <p class="{{ block.settings.heading_tag }} text-start sm:text-center" style="text-wrap: balance; max-inline-size: 15ch; padding-bottom: 2px;">{{ block.settings.title }}</p>
 
                     {{- block.settings.content -}}
 
