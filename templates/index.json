@@ -216,8 +216,8 @@
           "type": "button",
           "settings": {
             "style": "link",
-            "text": "Learn more",
-            "url": "shopify://pages/about",
+            "text": "View Portfolio",
+            "url": "shopify://collections/all-projects",
             "background": "",
             "text_color": ""
           }
