@@ -83,6 +83,9 @@
     },
     "main": {
       "type": "main-collection",
+      "custom_css": [
+        ".collection__main {overflow: hidden;}"
+      ],
       "settings": {
         "color_scheme": "",
         "hide_product_information": false,
