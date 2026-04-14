@@ -217,7 +217,7 @@
           "settings": {
             "style": "link",
             "text": "Learn more",
-            "url": "shopify://pages/press",
+            "url": "shopify://pages/about",
             "background": "",
             "text_color": ""
           }
