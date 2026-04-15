@@ -58,8 +58,20 @@
             "page": ""
           }
         },
+        "buy_buttons_PrgaWJ": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": false,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
         "button_group_GqrLNK": {
           "type": "button_group",
+          "disabled": true,
           "settings": {
             "button_1_text": "enquire here",
             "button_1_link": "",
@@ -82,6 +94,7 @@
         "accordion_dPPgmW",
         "accordion_gMLjKa",
         "accordion_P4NPeb",
+        "buy_buttons_PrgaWJ",
         "button_group_GqrLNK"
       ],
       "settings": {
@@ -91,7 +104,7 @@
         "product_info_size": 50,
         "show_sticky_add_to_cart": false,
         "center_basic_info": false,
-        "desktop_media_layout": "grid",
+        "desktop_media_layout": "carousel_thumbnails_bottom",
         "desktop_media_grid_gap": 0,
         "mobile_controls": "dots",
         "enable_media_autoplay": true,
