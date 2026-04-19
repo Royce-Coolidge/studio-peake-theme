@@ -163,7 +163,6 @@
         "image_with_text_n4taaH",
         "image_with_text_DcVbqr"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1 !important; } p {white-space: wrap !important; }}",
         "multi-column > *:first-child {width: 60%; flex: none;}",
@@ -186,12 +185,68 @@
         "content": "",
         "anchor_id": ""
       }
+    },
+    "multi_column_XTj7nz": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_9NiAcY": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "book a consultation",
+            "heading_tag": "h2",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false,
+            "column_span": 2
+          }
+        },
+        "image_with_text_cNEa8w": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "heading_tag": "h3",
+            "content": "<p>Studio Peake founder Sarah Peake is available for 1:1 consultations via The Expert. These sessions offer a focused opportunity to explore your design ideas, gain creative direction, and receive considered, expert advice tailored to your needs.</p><p>Whether you’re seeking inspiration, professional guidance, or thoughtful feedback on a specific project, each consultation provides direct access to Studio Peake’s expertise, helping you move forward with clarity and confidence.</p>",
+            "link_url": "",
+            "link_text": "book a consultation",
+            "compact_text": false,
+            "column_span": 3
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_9NiAcY",
+        "image_with_text_cNEa8w"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1 !important; } p {white-space: wrap !important; }}",
+        "multi-column > *:first-child {width: 60%; flex: none;}",
+        ".multi-column > *:not(:first-child) {flex: 0%;}",
+        ".h2 {overflow-wrap: break-word; line-height: 110%;}",
+        ".multi-column {align-items: flex-start; justify-content: flex-start;}"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "scheme-7b22112a-e5d0-4011-8d76-009305168e80",
+        "separate_section_with_border": false,
+        "columns_per_row": 5,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "main",
     "sp_contact_form",
     "multi_column_UxUVyj",
-    "multi_column_XbQP8t"
+    "multi_column_XbQP8t",
+    "multi_column_XTj7nz"
   ]
 }
