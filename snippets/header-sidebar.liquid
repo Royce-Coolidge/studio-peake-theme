@@ -26,6 +26,7 @@ therefore using a different structure for the Shadow DOM template
 
     <div part="content">
       <header part="header">
+       <a href="{{ routes.root_url }}" class="header__logo">{{ logo_content }}</a>
         <dialog-close-button class="contents">
           <button type="button" part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
             {%- render 'icon' with 'close', width: 16 -%}
