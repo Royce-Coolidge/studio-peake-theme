@@ -293,8 +293,7 @@
     {%- assign sidebar_menu = section.settings.sidebar_menu | default: section.settings.menu -%}
 
     {%- if sidebar_menu.links.size > 0 -%}
-      {%- render 'header-sidebar', menu: sidebar_menu, color_scheme: section.settings.sidebar_color_scheme, show_dividers: section.settings.sidebar_show_dividers, open_second_level_menus: section.settings.sidebar_open_second_level_menus, logo_content: logo_content, logo_mobile_max_width:
-   section.settings.logo_mobile_max_width -%}
+      {%- render 'header-sidebar', menu: sidebar_menu, color_scheme: section.settings.sidebar_color_scheme, show_dividers: section.settings.sidebar_show_dividers, open_second_level_menus: section.settings.sidebar_open_second_level_menus, logo_content: logo_content, logo_mobile_max_width:section.settings.logo_mobile_max_width -%}
     {%- endif -%}
   </x-header>
 </height-observer>
