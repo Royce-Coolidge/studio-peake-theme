@@ -26,7 +26,7 @@ therefore using a different structure for the Shadow DOM template
 
     <div part="content">
       <header part="header">
-       <h1 class="header__logo">
+       <h1 class="header__logo" style="width: {{ logo_mobile_max_width }}px;>
         <a href="{{ routes.root_url }}">{{ logo_content }}</a>
       </h1>
         <dialog-close-button class="contents">
