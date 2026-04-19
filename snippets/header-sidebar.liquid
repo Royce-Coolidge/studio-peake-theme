@@ -26,7 +26,22 @@ therefore using a different structure for the Shadow DOM template
 
     <div part="content">
       <header part="header">
-       <a href="{{ routes.root_url }}" class="header__logo">{{ logo_content }}</a>
+       
+    {%- capture logo_content -%}
+      {%- if section.settings.logo -%}
+        {%- capture sizes -%}{{ section.settings.logo_max_width }}px{%- endcapture -%}
+        {%- capture widths -%}{{ section.settings.logo_max_width | times: 2 | at_most: section.settings.logo.width }}, {{ section.settings.logo_max_width | times: 3 | at_most: section.settings.logo.width }}{%- endcapture -%}
+
+        <span class="sr-only">{{ shop.name }}</span>
+        {{- section.settings.logo | image_url: width: section.settings.logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image' -}}
+
+        {%- if section.settings.transparent_logo -%}
+          {{- section.settings.transparent_logo | image_url: width: section.settings.transparent_logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image header__logo-image--transparent' -}}
+        {%- endif -%}
+      {%- else -%}
+        <span class="header__logo-text h5">{{ shop.name }}</span>
+      {%- endif -%}
+    {%- endcapture -%}
         <dialog-close-button class="contents">
           <button type="button" part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
             {%- render 'icon' with 'close', width: 16 -%}
