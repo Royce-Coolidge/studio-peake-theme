@@ -506,7 +506,8 @@
     "blog_posts_JHAxiV": {
       "type": "blog-posts",
       "custom_css": [
-        ".h4 {text-wrap: balance; max-width: 250px;}"
+        ".h4 {text-wrap: balance; max-width: 250px;}",
+        ".section-stack{gap:2rem;}"
       ],
       "name": "News and Views",
       "settings": {
