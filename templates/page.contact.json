@@ -131,61 +131,6 @@
         "anchor_id": ""
       }
     },
-    "multi_column_XbQP8t": {
-      "type": "multi-column",
-      "blocks": {
-        "image_with_text_n4taaH": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "we are hiring",
-            "heading_tag": "h2",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "compact_text": false,
-            "column_span": 2
-          }
-        },
-        "image_with_text_DcVbqr": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "",
-            "heading_tag": "h3",
-            "content": "<h3>Junior Designer</h3><p><em>Full-time - London</em></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
-            "link_url": "",
-            "link_text": "view job detials",
-            "compact_text": false,
-            "column_span": 3
-          }
-        }
-      },
-      "block_order": [
-        "image_with_text_n4taaH",
-        "image_with_text_DcVbqr"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1 !important; } p {white-space: wrap !important; }}",
-        "multi-column > *:first-child {width: 60%; flex: none;}",
-        ".multi-column > *:not(:first-child) {flex: 0%;}",
-        ".h2 {overflow-wrap: break-word; line-height: 110%;}",
-        ".multi-column {align-items: flex-start; justify-content: flex-start;}"
-      ],
-      "name": "t:sections.multi_column.presets.multi_column.name",
-      "settings": {
-        "color_scheme": "",
-        "separate_section_with_border": false,
-        "columns_per_row": 5,
-        "stack_on_mobile": true,
-        "overlap_image": false,
-        "content_alignment": "start",
-        "text_alignment": "start",
-        "spacing": "xs",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "anchor_id": ""
-      }
-    },
     "multi_column_XTj7nz": {
       "type": "multi-column",
       "blocks": {
@@ -240,13 +185,68 @@
         "content": "",
         "anchor_id": ""
       }
+    },
+    "multi_column_XbQP8t": {
+      "type": "multi-column",
+      "blocks": {
+        "image_with_text_n4taaH": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "we are hiring",
+            "heading_tag": "h2",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "compact_text": false,
+            "column_span": 2
+          }
+        },
+        "image_with_text_DcVbqr": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "",
+            "heading_tag": "h3",
+            "content": "<h3>Junior Designer</h3><p><em>Full-time - London</em></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+            "link_url": "",
+            "link_text": "view job detials",
+            "compact_text": false,
+            "column_span": 3
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_n4taaH",
+        "image_with_text_DcVbqr"
+      ],
+      "custom_css": [
+        "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1 !important; } p {white-space: wrap !important; }}",
+        "multi-column > *:first-child {width: 60%; flex: none;}",
+        ".multi-column > *:not(:first-child) {flex: 0%;}",
+        ".h2 {overflow-wrap: break-word; line-height: 110%;}",
+        ".multi-column {align-items: flex-start; justify-content: flex-start;}"
+      ],
+      "name": "t:sections.multi_column.presets.multi_column.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "columns_per_row": 5,
+        "stack_on_mobile": true,
+        "overlap_image": false,
+        "content_alignment": "start",
+        "text_alignment": "start",
+        "spacing": "xs",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "main",
     "sp_contact_form",
     "multi_column_UxUVyj",
-    "multi_column_XbQP8t",
-    "multi_column_XTj7nz"
+    "multi_column_XTj7nz",
+    "multi_column_XbQP8t"
   ]
 }
