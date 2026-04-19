@@ -115,8 +115,8 @@
         "content_width": "md",
         "remove_vertical_spacing": false,
         "autoplay": true,
-        "media_padding_inline": 11,
-        "cycle_speed": 4,
+        "media_padding_inline": 19,
+        "cycle_speed": 2,
         "dots_color": "",
         "dots_position": "underneath",
         "anchor_id": ""
