@@ -864,6 +864,12 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
   display: flex;
 }
 
+.product-gallery .page-dots {
+position: absolute;
+    bottom: 3rem;
+    z-index: 10;
+}
+
 .page-dots > * {
   width: var(--dot-size);
   height: var(--dot-size);
