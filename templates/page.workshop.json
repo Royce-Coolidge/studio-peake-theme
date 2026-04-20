@@ -172,7 +172,8 @@
     "blog_posts_about": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-posts-header__controls {justify-content: end !important;}"
+        ".blog-posts-header__controls {padding-top: 2rem}",
+        ".section-stack {gap:2rem}"
       ],
       "name": "Meet our makers",
       "settings": {
