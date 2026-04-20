@@ -22,21 +22,27 @@ therefore using a different structure for the Shadow DOM template
 {%- endcomment -%}
 <template id="header-sidebar-template">
                                                                           
-    <style>                                                                                               
-      :host {                                                             
-        --header-logo-width: {{ logo_mobile_max_width }}px;
-      }                                                                                                   
-   
-      @media screen and (min-width: 700px) {                                                              
-        :host {                                                           
-          --header-logo-width: {{ logo_max_width }}px;
-        }
-      }
-                                                                                                          
-      .header__logo-image--transparent {
-        display: none;                                                                                    
+   <style>                                                                                               
+      :host {                                                                                             
+        --header-logo-width: {{ logo_mobile_max_width }}px;                                               
       }                                                                   
-    </style>
+
+      @media screen and (min-width: 700px) {                                                              
+        :host {
+          --header-logo-width: {{ logo_max_width }}px;                                                    
+        }                                                                 
+      }
+
+      .header__logo-image:not(.header__logo-image--transparent) {                                         
+        display: none;
+      }                                                                                                   
+                                                                          
+      .header__logo-image--transparent {
+        display: block;
+        width: var(--header-logo-width);
+        height: auto;
+      }
+    </style>   
   <div part="base">
     <div part="overlay"></div>
 
