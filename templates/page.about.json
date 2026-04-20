@@ -111,9 +111,9 @@
         "image_position": "start",
         "content_width": "md",
         "remove_vertical_spacing": false,
-        "autoplay": false,
+        "autoplay": true,
         "media_padding_inline": 14,
-        "cycle_speed": 5,
+        "cycle_speed": 3,
         "dots_color": "",
         "dots_position": "underneath",
         "anchor_id": ""
