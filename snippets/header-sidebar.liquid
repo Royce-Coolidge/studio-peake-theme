@@ -21,12 +21,18 @@ IMPLEMENTATION NOTE: while being a drawer, the sidebar has a completely differen
 therefore using a different structure for the Shadow DOM template
 {%- endcomment -%}
 <template id="header-sidebar-template">
+<style>                                                               
+      :host {                                                                                             
+        --header-logo-width: {{ logo_mobile_max_width }}px;               
+    
+      }
+    </style>
   <div part="base">
     <div part="overlay"></div>
 
     <div part="content">
       <header part="header">
-     <h1 class="header__logo" style="--header-logo-width: {{ logo_mobile_max_width }}px;">                         
+     <h1 class="header__logo">                         
             <a href="{{ routes.root_url }}">{{ logo_content }}</a>        
           </h1>        
         <dialog-close-button class="contents">
