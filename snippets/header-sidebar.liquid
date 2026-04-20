@@ -21,11 +21,21 @@ IMPLEMENTATION NOTE: while being a drawer, the sidebar has a completely differen
 therefore using a different structure for the Shadow DOM template
 {%- endcomment -%}
 <template id="header-sidebar-template">
-<style>                                                               
-      :host {                                                                                             
-        --header-logo-width: {{ logo_mobile_max_width }}px;               
-    
+                                                                          
+    <style>                                                                                               
+      :host {                                                             
+        --header-logo-width: {{ logo_mobile_max_width }}px;
+      }                                                                                                   
+   
+      @media screen and (min-width: 700px) {                                                              
+        :host {                                                           
+          --header-logo-width: {{ logo_max_width }}px;
+        }
       }
+                                                                                                          
+      .header__logo-image--transparent {
+        display: none;                                                                                    
+      }                                                                   
     </style>
   <div part="base">
     <div part="overlay"></div>
