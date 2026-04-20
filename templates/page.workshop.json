@@ -172,8 +172,8 @@
     "blog_posts_about": {
       "type": "blog-posts",
       "custom_css": [
-        ".blog-posts-header__controls {padding-top: 2rem}",
-        ".section-stack {gap:2rem}"
+        ".blog-posts-header__controls {padding-top: 2rem;}",
+        ".section-stack {gap: 2rem;}"
       ],
       "name": "Meet our makers",
       "settings": {
@@ -237,7 +237,7 @@
         "show_next_section_button": false,
         "media_size": "auto",
         "show_initial_transition": false,
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_pause_on_video": true,
         "cycle_speed": 5,
         "background": "#000000",
