@@ -518,6 +518,9 @@
     },
     "blog_posts_about": {
       "type": "blog-posts",
+      "custom_css": [
+        ".section-stack {gap: 2rem;}"
+      ],
       "name": "News and Views",
       "settings": {
         "color_scheme": "",
