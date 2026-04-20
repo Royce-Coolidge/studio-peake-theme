@@ -26,7 +26,9 @@ therefore using a different structure for the Shadow DOM template
 
     <div part="content">
       <header part="header">
-      
+   #shopify-section-{{ section.id }} {
+      --header-logo-width: {{ section.settings.logo_mobile_max_width }}px;
+    }   
         <dialog-close-button class="contents">
           <button type="button" part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
             {%- render 'icon' with 'close', width: 16 -%}
