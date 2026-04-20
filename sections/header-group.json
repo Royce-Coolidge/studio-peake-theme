@@ -49,7 +49,7 @@
         "logo_max_width": 25,
         "logo_mobile_max_width": 20,
         "menu": "main-menu",
-        "sidebar_menu": "",
+        "sidebar_menu": "mobile-menu",
         "menu_open_trigger": "hover",
         "menu_text_font": "body",
         "enable_search": false,
