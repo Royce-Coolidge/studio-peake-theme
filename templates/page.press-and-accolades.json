@@ -123,6 +123,9 @@
     },
     "blog_posts_ijzeWC": {
       "type": "blog-posts",
+      "custom_css": [
+        ".section-stack {gap: 2rem;}"
+      ],
       "name": "t:sections.blog_posts.presets.blog_posts.name",
       "settings": {
         "color_scheme": "",
