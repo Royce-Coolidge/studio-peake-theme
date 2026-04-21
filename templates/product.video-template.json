@@ -108,7 +108,7 @@
           "type": "video",
           "settings": {
             "video": "{{ product.metafields.custom.landscape.value }}",
-            "allow_sound": true,
+            "allow_sound": false,
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
