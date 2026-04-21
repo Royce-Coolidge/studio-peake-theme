@@ -866,9 +866,17 @@ shopify-accelerated-checkout, shopify-accelerated-checkout-cart {
 
 .product-gallery .page-dots {
 position: absolute;
-    bottom: 3rem;
+    bottom: 1rem;
     z-index: 10;
 }
+
+@media screen and (min-width: 700px) {
+
+.product-gallery .page-dots {
+    bottom: 3rem;
+}
+
+
 
 .page-dots > * {
   width: var(--dot-size);
