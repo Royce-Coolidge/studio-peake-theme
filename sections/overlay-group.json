@@ -108,7 +108,6 @@
         "enquiry-notes",
         "enquiry-marketing"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-2"
       }
