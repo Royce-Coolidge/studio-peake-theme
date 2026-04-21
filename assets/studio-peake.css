@@ -1807,6 +1807,7 @@
 .product-gallery .page-dots {
 position: absolute;
     bottom: 1rem;
+    color: #F7F1EB;
     z-index: 10;
 }
 
