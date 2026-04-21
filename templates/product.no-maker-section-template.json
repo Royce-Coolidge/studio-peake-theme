@@ -84,6 +84,9 @@
         "accordion_P4NPeb",
         "button_group_GqrLNK"
       ],
+      "custom_css": [
+        "h1 {max-width: 360px;}"
+      ],
       "settings": {
         "allow_transparent_header": true,
         "color_scheme": "scheme-2",
