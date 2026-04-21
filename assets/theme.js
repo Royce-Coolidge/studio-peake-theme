@@ -5591,7 +5591,7 @@ getSlideEnteringSequence_fn = function(slide) {
   const slideContent = slide.querySelector(".slideshow__slide-content");
   return [
     [slide, { opacity: [0, 1] }, { duration: 0.8, delay: 0.15, easing: [0.25, 0.46, 0.45, 0.94] }],
-    [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1], transform: ["scale(1.05)", "scale(1)"] }, { duration: 0.8, delay: 0.15, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }]
+    [slide.querySelectorAll(".content-over-media > :is(video-media, svg), .content-over-media > picture img"), { opacity: [0, 1] }, { duration: 0.8, delay: 0.15, at: "<", easing: [0.25, 0.46, 0.45, 0.94] }]
   ];
 };
 /**
