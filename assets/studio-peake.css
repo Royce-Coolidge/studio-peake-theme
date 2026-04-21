@@ -1140,7 +1140,7 @@
   display: flex;
   align-items: start;
   justify-content: flex-start;
-
+ 
 }
 
 .sp-contact-form {
@@ -1164,6 +1164,11 @@
   }
   .sp-contact-form__row, .sp-contact-form__fields  {
     gap: 1.5rem;
+  }
+
+  .sp-contact-layout__form {
+    padding-block-start: 100px;
+
   }
 }
 
