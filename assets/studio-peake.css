@@ -1804,3 +1804,15 @@
   display: none !important;
 }
 
+.product-gallery .page-dots {
+position: absolute;
+    bottom: 1rem;
+    z-index: 10;
+}
+
+@media screen and (min-width: 700px) {
+
+.product-gallery .page-dots {
+    bottom: 3rem;
+}
+}
