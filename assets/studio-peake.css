@@ -1783,6 +1783,10 @@
     right: auto;
     max-width: calc(100vw - 2rem);
   }
+
+  .product-gallery__zoom-button {
+    display: none;
+  } 
 }
 
 /* ============================================================
