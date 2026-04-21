@@ -1669,7 +1669,6 @@
 
 .sp-filter-dropdown__popover {
   position: absolute;
-  top: calc(100% + 0.5rem);
   right: calc(4rem - 6px);
   left: auto;
   z-index: 10;
