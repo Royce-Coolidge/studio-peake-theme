@@ -122,7 +122,7 @@
           "settings": {
             "color_scheme": "",
             "collection": "",
-            "image": "shopify://shop_images/studiopeake-home-residential_6b9f268d-aa1c-48f3-870c-ac6351ceb48c.jpg",
+            "image": "shopify://shop_images/studiopeake-home-kensington-townhouse-mobile.jpg",
             "expand_collection": false,
             "content_position": "place-self-center text-center",
             "subheading": "Interior & Architectural Design",
@@ -507,7 +507,7 @@
       "type": "blog-posts",
       "custom_css": [
         ".h4 {text-wrap: balance; max-width: 250px;}",
-        ".section-stack{gap:2rem;}"
+        ".section-stack {gap: 2rem;}"
       ],
       "name": "News and Views",
       "settings": {
