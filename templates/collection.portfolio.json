@@ -372,7 +372,7 @@
             "heading_tag": "h3",
             "content": "",
             "link_text": "explore project",
-            "link_url": "",
+            "link_url": "shopify://metaobjects/project/demo-project",
             "link_style": "link",
             "mobile_text_position": "place-self-end-start text-start",
             "text_position": "sm:place-self-center sm:text-center",
