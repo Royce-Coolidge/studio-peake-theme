@@ -33,7 +33,7 @@
         "image_7fkBP7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-hero_f1277e28-fdb9-40a3-8e97-725ed9f97be6.jpg",
+            "image": "shopify://shop_images/studiopeake-glenthorne-mews-mobile.jpg",
             "mobile_image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake_1.jpg",
             "subheading": "",
             "title": "",
@@ -65,7 +65,7 @@
       "settings": {
         "allow_transparent_header": true,
         "show_next_section_button": false,
-        "media_size": "auto",
+        "media_size": "md",
         "show_initial_transition": false,
         "autoplay": true,
         "autoplay_pause_on_video": true,
@@ -81,7 +81,7 @@
         "image_with_text_AUBd9h": {
           "type": "image_with_text",
           "settings": {
-            "title": "{{ article.title }}",
+            "title": "Gala Dinner",
             "heading_tag": "h1",
             "content": "",
             "link_url": "",
@@ -95,7 +95,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "<p>Last night we celebrated five years of Studio Peake, and it was one of those evenings that felt genuinely special—full of familiar faces, brilliant conversation, and a room filled with the people who have helped shape the studio into what it is today.</p><p>We hosted a party with our suppliers, supporters and friends, and it was such a joy to have everyone together in one place. It felt like a rare moment to pause, reflect, and properly appreciate just how much has gone into building the studio over the last five years.</p>",
+            "content": "<p>Celebrate an unforgettable evening at our exclusive Gala Dinner. Join us for an elegant night of fine dining, sophisticated conversation, and curated moments designed to inspire. Dress to impress and experience the artistry that defines Studio Peake in an intimate, refined setting.</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": false,
