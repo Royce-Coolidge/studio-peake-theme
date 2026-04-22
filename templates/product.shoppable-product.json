@@ -58,6 +58,10 @@
             "page": ""
           }
         },
+        "quantity_selector_9xNJkG": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
         "buy_buttons_PrgaWJ": {
           "type": "buy_buttons",
           "settings": {
@@ -66,7 +70,7 @@
             "atc_button_background": "",
             "atc_button_text_color": "",
             "payment_button_background": "#4a262b",
-            "payment_button_text_color": "#000000"
+            "payment_button_text_color": "#4a262b"
           }
         },
         "button_group_GqrLNK": {
@@ -94,12 +98,13 @@
         "accordion_dPPgmW",
         "accordion_gMLjKa",
         "accordion_P4NPeb",
+        "quantity_selector_9xNJkG",
         "buy_buttons_PrgaWJ",
         "button_group_GqrLNK"
       ],
       "settings": {
         "allow_transparent_header": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "container_size": "full",
         "product_info_size": 50,
         "show_sticky_add_to_cart": false,
