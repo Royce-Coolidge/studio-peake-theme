@@ -569,7 +569,7 @@
         "section_width": "full",
         "spacing": "none",
         "sp_enable_image_zoom": false,
-        "sp_use_metaobject_gallery": true,
+        "sp_use_metaobject_gallery": false,
         "sp_masonry_style": "custom",
         "subheading": "",
         "title": "",
