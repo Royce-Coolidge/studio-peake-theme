@@ -46,7 +46,7 @@
         {%- form 'contact', class: 'sp-contact-form__fields' -%}
           {%- if form.posted_successfully? -%}
             <p class="sp-contact-form__success">{{ section.settings.success_message }}</p>
-          {%- else -%}
+          {%- endif -%}
 
           {%- if form.errors -%}
             <div class="sp-contact-form__errors">
@@ -167,7 +167,6 @@
           <div class="sp-contact-form__row sp-contact-form__row--submit">
             <button type="submit" class="button button--outline sp-contact-form__submit">{{ section.settings.submit_label }}</button>
           </div>
-          {%- endif -%}
         {%- endform -%}
       </div>
     </div>
