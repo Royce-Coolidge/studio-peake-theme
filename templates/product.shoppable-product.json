@@ -62,6 +62,16 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "variant_picker_i7eLei": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
         "buy_buttons_PrgaWJ": {
           "type": "buy_buttons",
           "settings": {
@@ -99,6 +109,7 @@
         "accordion_gMLjKa",
         "accordion_P4NPeb",
         "quantity_selector_9xNJkG",
+        "variant_picker_i7eLei",
         "buy_buttons_PrgaWJ",
         "button_group_GqrLNK"
       ],
