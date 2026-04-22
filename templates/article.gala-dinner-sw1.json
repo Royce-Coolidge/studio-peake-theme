@@ -81,7 +81,7 @@
         "image_with_text_AUBd9h": {
           "type": "image_with_text",
           "settings": {
-            "title": "{{ article.title }}",
+            "title": "Gala Dinner",
             "heading_tag": "h1",
             "content": "",
             "link_url": "",
@@ -95,7 +95,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "<p>Last night we celebrated five years of Studio Peake, and it was one of those evenings that felt genuinely special—full of familiar faces, brilliant conversation, and a room filled with the people who have helped shape the studio into what it is today.</p><p>We hosted a party with our suppliers, supporters and friends, and it was such a joy to have everyone together in one place. It felt like a rare moment to pause, reflect, and properly appreciate just how much has gone into building the studio over the last five years.</p>",
+            "content": "<p>Studio Peake Gala Dinner<br/><br/>Join us for an unforgettable evening celebrating five years of creativity, craftsmanship, and community. Our gala dinner brings together clients, collaborators, and friends for an exclusive night of fine dining, live entertainment, and meaningful connections.<br/><br/>Dress code: Black tie<br/>Date: Saturday, 15 May 2026<br/>Venue: The Savoy, London<br/><br/>Experience the artistry that defines Studio Peake in an intimate setting designed to honour those who have been part of our journey. Limited spaces available.</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": false,
