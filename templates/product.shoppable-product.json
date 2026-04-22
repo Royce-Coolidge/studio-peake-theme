@@ -124,6 +124,7 @@
       "blocks": {
         "image_JQJcGV": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "{{ product.metafields.custom.landscape.value }}",
             "subheading": "",
@@ -150,6 +151,7 @@
         },
         "video_6t3zyD": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video": "{{ product.metafields.custom.landscape.value }}",
             "allow_sound": true,
@@ -215,6 +217,7 @@
         "heading_eWxyjr",
         "richtext_PQjGDw"
       ],
+      "disabled": true,
       "custom_css": [
         ".section-spacing {padding-block-end: 0px !important;}"
       ],
@@ -266,6 +269,7 @@
         "image_3rHHtt",
         "richtext_wFtfey"
       ],
+      "disabled": true,
       "custom_css": [
         ".h1 {margin-block-start: 2px;}"
       ],
