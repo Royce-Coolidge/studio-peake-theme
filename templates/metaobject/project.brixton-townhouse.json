@@ -36,7 +36,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 41.11%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 41.11%)"
           }
         }
       },
@@ -62,7 +62,15 @@
       "blocks": {
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-flame-mirror-sketch_8b7e64e1-1364-4a0f-bba8-93b9f24abd8c.jpg"
+          }
+        },
+        "carousel_image_kaiNzd": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-flame-mirror-sketch_8b7e64e1-1364-4a0f-bba8-93b9f24abd8c.jpg"
+          }
         },
         "heading_Efre63": {
           "type": "heading",
@@ -87,6 +95,7 @@
       },
       "block_order": [
         "carousel_image_N9aQYx",
+        "carousel_image_kaiNzd",
         "heading_Efre63",
         "richtext_BiJLfL",
         "sp_link_tY3j7r"
@@ -114,7 +123,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "column_count": "4",
+            "image": "shopify://shop_images/studiopeake-workshop-the-collection.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -149,7 +159,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "column_count": "4",
+            "image": "shopify://shop_images/studiopeake-home-residential_d4bff3b5-fdb1-4e3f-88db-96ff4de6d100.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -184,6 +195,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-about-the-team_7f7dcdf7-1fdf-4bed-9cbc-007c22749fef.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -339,7 +351,7 @@
         "spacing": "none",
         "sp_enable_image_zoom": false,
         "sp_use_metaobject_gallery": true,
-        "sp_masonry_style": "custom",
+        "sp_masonry_style": "landscape_thirds",
         "subheading": "",
         "title": "",
         "content": "",
