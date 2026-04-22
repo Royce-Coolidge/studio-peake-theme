@@ -146,6 +146,7 @@
 .header__dropdown-menu :is(a,summary) 
 {
   padding: 0px !important;
+  padding-block:0px;
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
   font-style: var(--button-font-style);
