@@ -95,7 +95,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "{{ article.content }}",
+            "content": "<p>It was such a joy to welcome everyone into the studio to celebrate the launch of our new rug designs with Christopher Farr, surrounded by friends, collaborators, and the many people who have supported Studio Peake along the way.</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": false,
