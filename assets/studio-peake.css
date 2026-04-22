@@ -146,7 +146,6 @@
 .header__dropdown-menu :is(a,summary) 
 {
   padding: 0px !important;
-  padding-block:0px;
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
   font-style: var(--button-font-style);
@@ -349,7 +348,7 @@
 /* === Header Dropdown Overrides (Scheme 4) === */
 /* Remove borders and box-shadow on dropdown menus */
 .header__dropdown-menu {
- 
+  padding-block: 0px;
   border-width: 0;
   box-shadow: none;
   min-width: 0px;
