@@ -1438,7 +1438,7 @@
   overflow: visible;
   width: 100%;
   height: 100%;
-  max-width: none;
+  max-width: none !important;
 }
 
 .sp-hotspot-image-wrap {
