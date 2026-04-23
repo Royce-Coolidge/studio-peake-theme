@@ -68,7 +68,7 @@
           "settings": {
             "title": "Visit",
             "heading_tag": "h5",
-            "content": "<p>Studio Peake                           </p><p>Unit 6 Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
+            "content": "<p>Studio Peake                           </p><p>Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
@@ -218,6 +218,7 @@
         "image_with_text_n4taaH",
         "image_with_text_DcVbqr"
       ],
+      "disabled": true,
       "custom_css": [
         "@media screen and (max-width: 699px) {.multi-column__item {grid-column: span 1 !important; } p {white-space: wrap !important; }}",
         "multi-column > *:first-child {width: 60%; flex: none;}",
