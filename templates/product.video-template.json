@@ -62,7 +62,7 @@
           "type": "button_group",
           "settings": {
             "button_1_text": "enquire here",
-            "button_1_link": "",
+            "button_1_link": "{{ product.metafields.custom.tear_sheet_url.value }}",
             "button_1_aria_controls": "enquiry-modal",
             "button_1_style": "solid",
             "button_1_background": "",
