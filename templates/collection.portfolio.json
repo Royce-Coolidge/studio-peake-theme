@@ -257,7 +257,7 @@
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-18.jpg",
-            "column_count": "6",
+            "column_count": "4",
             "row_count": 3,
             "title": "georgian cottage",
             "heading_tag": "h3",
@@ -330,7 +330,7 @@
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-commercial-sophie-breitmeyer-jewellery-shop-03.jpg",
-            "column_count": "6",
+            "column_count": "4",
             "row_count": 3,
             "title": "Notting Hill Jewellery Shop",
             "heading_tag": "h3",
@@ -365,7 +365,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "column_count": "12",
+            "column_count": "4",
             "row_count": 2,
             "title": "Barons Court Garden Flat",
             "heading_tag": "h3",
