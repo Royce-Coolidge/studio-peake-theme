@@ -60,6 +60,12 @@
     "sp_image_carousel_with_text_bXbecL": {
       "type": "sp-image-carousel-with-text",
       "blocks": {
+        "carousel_image_LjrNFx": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-04-24_at_16.50.05.png"
+          }
+        },
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
           "disabled": true,
@@ -87,6 +93,7 @@
         }
       },
       "block_order": [
+        "carousel_image_LjrNFx",
         "carousel_image_N9aQYx",
         "heading_Efre63",
         "richtext_BiJLfL",
