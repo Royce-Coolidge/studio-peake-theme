@@ -1,0 +1,420 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_WRWAkr": {
+      "type": "slideshow",
+      "blocks": {
+        "image_qBF3yC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-17.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-06.jpg",
+            "subheading": "",
+            "title": "",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "content_max_width": 1200,
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_1_style": "solid",
+            "button_1_background": "#ffffff",
+            "button_1_text_color": "#000000",
+            "button_2_text": "",
+            "button_2_link": "",
+            "button_2_style": "outline",
+            "button_2_background": "#ffffff",
+            "button_2_text_color": "#000000",
+            "background": "",
+            "background_opacity": 50,
+            "text_color": "#ffffff",
+            "border_color": "",
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 41.11%)"
+          }
+        }
+      },
+      "block_order": [
+        "image_qBF3yC"
+      ],
+      "name": "t:sections.slideshow.presets.slideshow.name",
+      "settings": {
+        "allow_transparent_header": true,
+        "show_next_section_button": false,
+        "media_size": "md",
+        "show_initial_transition": false,
+        "autoplay": true,
+        "autoplay_pause_on_video": true,
+        "cycle_speed": 5,
+        "background": "#000000",
+        "controls_color": "#ffffff",
+        "anchor_id": ""
+      }
+    },
+    "sp_image_carousel_with_text_bXbecL": {
+      "type": "sp-image-carousel-with-text",
+      "blocks": {
+        "carousel_image_N9aQYx": {
+          "type": "carousel_image",
+          "settings": {}
+        },
+        "heading_Efre63": {
+          "type": "heading",
+          "settings": {
+            "text": "Project title",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_BiJLfL": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers.</p>"
+          }
+        },
+        "sp_link_tY3j7r": {
+          "type": "sp-link",
+          "settings": {
+            "text": "View project",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "carousel_image_N9aQYx",
+        "heading_Efre63",
+        "richtext_BiJLfL",
+        "sp_link_tY3j7r"
+      ],
+      "name": "SP Carousel with text",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "reveal_on_scroll": false,
+        "image_position": "start",
+        "content_width": "md",
+        "remove_vertical_spacing": false,
+        "autoplay": false,
+        "media_padding_inline": 10,
+        "cycle_speed": 5,
+        "dots_color": "",
+        "dots_position": "underneath",
+        "anchor_id": ""
+      }
+    },
+    "media_grid_sp": {
+      "type": "media-grid",
+      "blocks": {
+        "img_1": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "img_8": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "img_9": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_gEQn9x": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_tyDnVz": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "column_count": "6",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        },
+        "image_zeGcdn": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "column_count": "12",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
+        }
+      },
+      "block_order": [
+        "img_1",
+        "img_8",
+        "img_9",
+        "image_gEQn9x",
+        "image_tyDnVz",
+        "image_zeGcdn"
+      ],
+      "settings": {
+        "allow_transparent_header": true,
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "desktop_row_height": 290,
+        "mobile_row_height": 180,
+        "section_width": "full",
+        "spacing": "none",
+        "sp_enable_image_zoom": false,
+        "sp_use_metaobject_gallery": true,
+        "sp_masonry_style": "custom",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "anchor_id": "",
+        "tooltip_footer_color": "#7a8450"
+      }
+    },
+    "sp_featured_collection": {
+      "type": "featured-collections",
+      "blocks": {
+        "project_block_1": {
+          "type": "project",
+          "settings": {
+            "title": "Explore Projects",
+            "link_url": "/collections/all-projects",
+            "link_text": "View all projects"
+          }
+        }
+      },
+      "block_order": [
+        "project_block_1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "sp_add_vertical_spacing": true,
+        "sp_remove_bottom_padding": true,
+        "hide_product_information": false,
+        "stack_products": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "horizontal_spacing_factor": 0,
+        "vertical_spacing_factor": 1,
+        "subheading": "",
+        "anchor_id": ""
+      }
+    },
+    "rich_text_project_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_project_cta": {
+          "type": "heading",
+          "settings": {
+            "text": "have a project in mind?",
+            "heading_tag": "h1"
+          }
+        },
+        "link_project_cta": {
+          "type": "link",
+          "settings": {
+            "text": "Tell Us About Your Project",
+            "url": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "heading_project_cta",
+        "link_project_cta"
+      ],
+      "name": "Have a project in mind?",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "xs",
+        "text_position": "center",
+        "remove_vertical_spacing": false,
+        "anchor_id": "have-a-project-in-mind"
+      }
+    }
+  },
+  "order": [
+    "slideshow_WRWAkr",
+    "sp_image_carousel_with_text_bXbecL",
+    "media_grid_sp",
+    "sp_featured_collection",
+    "rich_text_project_cta"
+  ]
+}
