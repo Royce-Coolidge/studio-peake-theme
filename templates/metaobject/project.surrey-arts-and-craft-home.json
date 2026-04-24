@@ -795,13 +795,13 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_wf7UhT": {
+        "image_3d8XBy": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-19.jpg",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-23.jpg",
             "column_count": "4",
-            "row_count": 2,
+            "row_count": 1,
             "title": "",
             "heading_tag": "h4",
             "content": "",
@@ -831,13 +831,13 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_3d8XBy": {
+        "image_wf7UhT": {
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-23.jpg",
+            "image": "shopify://shop_images/studiopeake-projects-residential-surrey-arts-and-craft-19.jpg",
             "column_count": "6",
-            "row_count": 1,
+            "row_count": 2,
             "title": "",
             "heading_tag": "h4",
             "content": "",
@@ -1356,8 +1356,8 @@
         "image_48q6qD",
         "image_NxLwAt",
         "image_YnwWkr",
-        "image_wf7UhT",
         "image_3d8XBy",
+        "image_wf7UhT",
         "image_3HqRT4",
         "image_WwLqTy",
         "image_9RpAtA",
