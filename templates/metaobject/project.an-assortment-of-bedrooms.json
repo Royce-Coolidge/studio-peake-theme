@@ -62,7 +62,9 @@
       "blocks": {
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-04-24_at_16.52.13.png"
+          }
         },
         "heading_Efre63": {
           "type": "heading",
