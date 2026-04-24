@@ -620,7 +620,7 @@
           "settings": {
             "color_scheme": "",
             "image": "shopify://shop_images/studiopeake-projects-residential-notting-hill-pied-a-terre-01.jpg",
-            "column_count": "3",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -656,7 +656,7 @@
           "settings": {
             "color_scheme": "",
             "image": "shopify://shop_images/studiopeake-projects-residential-notting-hill-pied-a-terre-03.jpg",
-            "column_count": "3",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -692,7 +692,7 @@
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-residential-notting-hill-pied-a-terre-04.jpg",
-            "column_count": "3",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -725,6 +725,7 @@
         },
         "image_FmwwJP": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-residential-notting-hill-pied-a-terre-15.jpg",
