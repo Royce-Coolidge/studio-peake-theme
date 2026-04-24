@@ -220,11 +220,11 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "img_9": {
+        "image_f89ftd": {
           "type": "image",
           "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-03.jpg",
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-07.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -256,11 +256,11 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_f89ftd": {
+        "img_9": {
           "type": "image",
           "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-07.jpg",
+            "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-03.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -441,8 +441,8 @@
         "image_gEQn9x",
         "image_tyDnVz",
         "img_8",
-        "img_9",
         "image_f89ftd",
+        "img_9",
         "image_93Tyar",
         "image_hiGYUC",
         "img_1",
