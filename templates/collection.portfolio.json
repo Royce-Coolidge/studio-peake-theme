@@ -365,6 +365,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/AJ_902_344_copy.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "Barons Court Garden Flat",
