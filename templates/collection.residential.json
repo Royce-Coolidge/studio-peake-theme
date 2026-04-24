@@ -286,6 +286,7 @@
         },
         "image_pxchJ8": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-residential-barons-court-garden-flat-9.jpg",
@@ -322,6 +323,7 @@
         },
         "image_Gwd6Kq": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "color_scheme": "scheme-4",
             "image": "shopify://shop_images/studiopeake-projects-residential-bedroom-assortment-1.jpg",
