@@ -59,10 +59,22 @@
     "sp_image_carousel_with_text_bXbecL": {
       "type": "sp-image-carousel-with-text",
       "blocks": {
-        "carousel_image_QGTmTQ": {
+        "carousel_image_yNtjMQ": {
           "type": "carousel_image",
           "settings": {
-            "image": "{{ shop.metaobjects.project['chelsea-townhouse'].sketch_image.value }}"
+            "image": "shopify://shop_images/Screenshot_2026-04-24_at_15.22.49.png"
+          }
+        },
+        "carousel_image_NYnPQL": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-04-24_at_15.22.43.png"
+          }
+        },
+        "carousel_image_BeiUkk": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-04-24_at_15.22.56.png"
           }
         },
         "heading_Efre63": {
@@ -87,7 +99,9 @@
         }
       },
       "block_order": [
-        "carousel_image_QGTmTQ",
+        "carousel_image_yNtjMQ",
+        "carousel_image_NYnPQL",
+        "carousel_image_BeiUkk",
         "heading_Efre63",
         "richtext_BiJLfL",
         "sp_link_tY3j7r"
