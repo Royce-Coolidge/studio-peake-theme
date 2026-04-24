@@ -15,8 +15,8 @@
         "image_qBF3yC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-17.jpg",
-            "mobile_image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-06.jpg",
+            "image": "shopify://shop_images/AJ_902_296_copy.jpg",
+            "mobile_image": "shopify://shop_images/AJ_902_296_copy.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -36,7 +36,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 41.11%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0) 41.11%)"
           }
         }
       },
@@ -62,19 +62,20 @@
       "blocks": {
         "carousel_image_N9aQYx": {
           "type": "carousel_image",
+          "disabled": true,
           "settings": {}
         },
         "heading_Efre63": {
           "type": "heading",
           "settings": {
-            "text": "Project title",
+            "text": "Barons Court Garden Flat",
             "heading_tag": "h1"
           }
         },
         "richtext_BiJLfL": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers.</p>"
+            "content": "<p>Refurbishment and extension of our very own garden flat in Barons Court. We dramatically reconfigured the existing layout and put in place new joinery throughout to make the most of the space and then filled it with our favourite colours and fabrics.</p>"
           }
         },
         "sp_link_tY3j7r": {
@@ -114,7 +115,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "column_count": "4",
+            "image": "shopify://shop_images/AJ_902_344_copy.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -149,7 +151,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "column_count": "4",
+            "image": "shopify://shop_images/AJ_902_164_copy.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -184,6 +187,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
+            "image": "shopify://shop_images/AJ_902_312_copy.jpg",
             "column_count": "4",
             "row_count": 2,
             "title": "",
@@ -219,7 +223,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "column_count": "6",
+            "image": "shopify://shop_images/AJ_902_103_copy.jpg",
+            "column_count": "4",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -254,6 +259,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/AJ_902_080_copy.jpg",
             "column_count": "6",
             "row_count": 2,
             "title": "",
@@ -289,7 +295,8 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "column_count": "12",
+            "image": "shopify://shop_images/AJ_902_065_copy.jpg",
+            "column_count": "6",
             "row_count": 2,
             "title": "",
             "heading_tag": "h4",
@@ -319,6 +326,42 @@
             "hotspot_4_vertical": 70,
             "hotspot_4_color": "#7a8450"
           }
+        },
+        "image_DtfPWX": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/AJ_902_462_copy.jpg",
+            "column_count": "4",
+            "row_count": 2,
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_text": "",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "sm:place-self-center sm:text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 9,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
         }
       },
       "block_order": [
@@ -327,7 +370,8 @@
         "img_9",
         "image_gEQn9x",
         "image_tyDnVz",
-        "image_zeGcdn"
+        "image_zeGcdn",
+        "image_DtfPWX"
       ],
       "settings": {
         "allow_transparent_header": true,
