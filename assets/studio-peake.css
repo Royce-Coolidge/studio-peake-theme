@@ -1102,7 +1102,6 @@
 .sp-contact-layout__image {
   overflow: hidden;
   position: relative;
-  Title has now been lowered. 
 }
 
 .sp-contact-layout__image img,
@@ -1346,6 +1345,31 @@
 .sp-contact-form__errors {
   margin-bottom: 1rem;
   color: #c00;
+}
+
+.sp-contact-form__marketing {
+  padding-top: 6px;
+}
+
+.sp-contact-form__marketing label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: inherit;
+}
+
+.sp-contact-form__marketing .checkbox:not(:disabled, :checked) ~ label,
+.sp-contact-form__marketing .checkbox:checked ~ label {
+  opacity: 1;
+}
+
+.sp-contact-form__marketing-heading {
+  
+  opacity: 1;
+}
+.sp-contact-form__marketing-disclaimer {
+  color: inherit;
+  opacity: 0.75;
 }
 
 @media screen and (max-width: 699px) {

@@ -159,6 +159,20 @@
             </div>
           </div>
 
+          {%- if section.settings.show_marketing -%}
+            <div class="sp-contact-form__row sp-contact-form__marketing">
+              {%- capture marketing_label -%}
+                {%- if section.settings.marketing_heading != blank -%}
+                  <span class="sp-contact-form__marketing-heading">{{ section.settings.marketing_heading }}</span>
+                {%- endif -%}
+                {%- if section.settings.marketing_disclaimer != blank -%}
+                  <span class="sp-contact-form__marketing-disclaimer">{{ section.settings.marketing_disclaimer }}</span>
+                {%- endif -%}
+              {%- endcapture -%}
+              {%- render 'checkbox', name: 'contact[marketing]', value: 'yes', label: marketing_label -%}
+            </div>
+          {%- endif -%}
+
           {%- comment -%}--- Submit ---{%- endcomment -%}
           <div class="sp-contact-form__row sp-contact-form__row--submit">
             <button type="submit" class="button button--outline sp-contact-form__submit">{{ section.settings.submit_label }}</button>
@@ -328,6 +342,28 @@
       "id": "submit_label",
       "label": "Submit button text",
       "default": "Submit form"
+    },
+    {
+      "type": "header",
+      "content": "Marketing opt-in"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_marketing",
+      "label": "Show marketing opt-in",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "marketing_heading",
+      "label": "Marketing heading",
+      "default": "I want to receive email marketing"
+    },
+    {
+      "type": "richtext",
+      "id": "marketing_disclaimer",
+      "label": "Marketing disclaimer",
+      "default": "<p>I agree to receive marketing communications from Studio Peake.</p>"
     },
     {
       "type": "text",
