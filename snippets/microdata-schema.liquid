@@ -6,9 +6,43 @@ managed at the theme level.
 {%- endcomment -%}
 
 {%- if request.page_type == 'product' -%}
-  <script type="application/ld+json">
-    {{- product | structured_data -}}
-  </script>
+  {%- assign price_suppressed_templates = 'short-product,video-no-maker,video-template,no-maker-section-template,landscape-image-template,vertical-stack-layout' | split: ',' -%}
+  {%- if price_suppressed_templates contains template.suffix -%}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": {{ product.title | json }},
+        "url": {{ shop.url | append: product.url | json }},
+        {%- if product.description != blank -%}
+          "description": {{ product.description | strip_html | json }},
+        {%- endif -%}
+        {%- if product.images.size > 0 -%}
+          "image": [
+            {%- for image in product.images limit: 5 -%}
+              {{- image | image_url: width: 1200 | prepend: 'https:' | json -}}
+              {%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ],
+        {%- endif -%}
+        {%- if product.vendor != blank -%}
+          "brand": {
+            "@type": "Brand",
+            "name": {{ product.vendor | json }}
+          },
+        {%- endif -%}
+        {%- assign current_variant = product.selected_or_first_available_variant -%}
+        {%- if current_variant.sku != blank -%}
+          "sku": {{ current_variant.sku | json }},
+        {%- endif -%}
+        "@id": {{ shop.url | append: product.url | json }}
+      }
+    </script>
+  {%- else -%}
+    <script type="application/ld+json">
+      {{- product | structured_data -}}
+    </script>
+  {%- endif -%}
 {%- elsif request.page_type == 'article' -%}
   <script type="application/ld+json">
     {{- article | structured_data -}}
