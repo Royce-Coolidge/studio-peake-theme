@@ -67,7 +67,7 @@
             "button_1_style": "solid",
             "button_1_background": "",
             "button_1_text_color": "",
-            "button_2_text": "tear sheet",
+            "button_2_text": "",
             "button_2_link": "{{ product.metafields.custom.tear_sheet_url.value }}",
             "button_2_aria_controls": "",
             "button_2_style": "outline",

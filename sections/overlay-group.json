@@ -109,7 +109,8 @@
         "enquiry-marketing"
       ],
       "settings": {
-        "color_scheme": "scheme-2"
+        "color_scheme": "scheme-2",
+        "fallback_image": "shopify://shop_images/studiopeake-contact-surrey-arts-and-craft-desktop_9c36954b-dd24-4b4a-91bb-8cb8b4726f8a.jpg"
       }
     }
   },
