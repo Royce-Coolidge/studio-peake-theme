@@ -230,7 +230,8 @@
       if (form) form.reset();
     });
 
-    if (!modal.querySelector('.enquiry-modal__success').hidden || modal.querySelector('.banner--error')) {
+    const hasSpContactForm = !!document.querySelector('.sp-contact-form');
+    if (!hasSpContactForm && (!modal.querySelector('.enquiry-modal__success').hidden || modal.querySelector('.banner--error'))) {
       modal.show();
     }
   });
