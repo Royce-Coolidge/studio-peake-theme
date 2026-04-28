@@ -109,10 +109,19 @@ only way to do it on Shopify right now.
     ----------------------------------------------------------------------------------------------------------------------
     {%- endcomment -%}
 
-    <div class="{% if mobile_controls == 'arrows' %}product-gallery__carousel-with-arrows{% else %}contents{% endif %}">
+    <div class="{% if mobile_controls == 'arrows' %}product-gallery__carousel-with-arrows{% else %}contents{% endif %}{% if desktop_layout == 'carousel_arrows' %} product-gallery__carousel-with-overlay-arrows{% endif %}">
       {%- if mobile_controls == 'arrows' -%}
         <carousel-prev-button aria-controls="{{ product_gallery_carousel_id }}" class="contents">
           <button type="button" class="tap-area sm:hidden">
+            <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
+            {%- render 'icon' with 'arrow-left', direction_aware: true -%}
+          </button>
+        </carousel-prev-button>
+      {%- endif -%}
+
+      {%- if desktop_layout == 'carousel_arrows' -%}
+        <carousel-prev-button aria-controls="{{ product_gallery_carousel_id }}" class="contents">
+          <button type="button" class="circle-button product-gallery__overlay-arrow product-gallery__overlay-arrow--prev md-max:hidden">
             <span class="sr-only">{{ 'general.accessibility.previous' | t }}</span>
             {%- render 'icon' with 'arrow-left', direction_aware: true -%}
           </button>
@@ -176,6 +185,15 @@ only way to do it on Shopify right now.
       {%- if mobile_controls == 'arrows' -%}
         <carousel-next-button aria-controls="{{ product_gallery_carousel_id }}" class="contents">
           <button type="button" class="tap-area sm:hidden">
+            <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
+            {%- render 'icon' with 'arrow-right', direction_aware: true -%}
+          </button>
+        </carousel-next-button>
+      {%- endif -%}
+
+      {%- if desktop_layout == 'carousel_arrows' -%}
+        <carousel-next-button aria-controls="{{ product_gallery_carousel_id }}" class="contents">
+          <button type="button" class="circle-button product-gallery__overlay-arrow product-gallery__overlay-arrow--next md-max:hidden">
             <span class="sr-only">{{ 'general.accessibility.next' | t }}</span>
             {%- render 'icon' with 'arrow-right', direction_aware: true -%}
           </button>

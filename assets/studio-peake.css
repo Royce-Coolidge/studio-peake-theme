@@ -1848,3 +1848,26 @@ position: absolute;
     bottom: 3rem;
 }
 }
+
+/* === Desktop carousel arrows (overlay style) — used when desktop_media_layout = 'carousel_arrows' === */
+@media screen and (min-width: 1000px) {
+  .product-gallery__carousel-with-overlay-arrows {
+    display: block;
+    position: relative;
+  }
+
+  .product-gallery__overlay-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .product-gallery__overlay-arrow--prev {
+    left: 1rem;
+  }
+
+  .product-gallery__overlay-arrow--next {
+    right: 1rem;
+  }
+}

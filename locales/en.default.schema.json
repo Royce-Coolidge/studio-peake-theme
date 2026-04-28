@@ -1113,7 +1113,8 @@
         "grid_2x_highlighted": "Grid (2 per row + 1st highlighted)",
         "carousel_thumbnails_left": "Thumbnails left (carousel)",
         "carousel_thumbnails_bottom": "Thumbnails bottom (carousel)",
-        "carousel_dots": "Dots (carousel)"
+        "carousel_dots": "Dots (carousel)",
+        "carousel_arrows": "Arrows (carousel)"
       },
       "desktop_media_grid_gap": "Grid gap between images (desktop)",
       "mobile_controls": "Mobile controls",
