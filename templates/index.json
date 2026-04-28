@@ -214,6 +214,7 @@
         },
         "button_etmkqJ": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "style": "link",
             "text": "View Portfolio",
