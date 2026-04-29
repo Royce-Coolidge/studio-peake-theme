@@ -225,6 +225,7 @@
         },
         "sp_link_group_GE8CYD": {
           "type": "sp-link-group",
+          "disabled": true,
           "settings": {
             "link_text_1": "House and Garden Top 100 2025 ",
             "link_url_1": "https://www.houseandgarden.co.uk/gallery/top-100-interior-designers-architects-2025",
