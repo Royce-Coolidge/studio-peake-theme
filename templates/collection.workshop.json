@@ -62,7 +62,6 @@
         "image_with_text_b9Wxq8",
         "image_with_text_LNbTNg"
       ],
-      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 700px) {p {margin-block-start: 1.875rem; }}",
         "p {margin-block-start: 1rem;}"
