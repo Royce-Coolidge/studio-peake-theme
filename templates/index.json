@@ -225,16 +225,15 @@
         },
         "sp_link_group_GE8CYD": {
           "type": "sp-link-group",
-          "disabled": true,
           "settings": {
             "link_text_1": "House and Garden Top 100 2025 ",
-            "link_url_1": "https://www.houseandgarden.co.uk/gallery/top-100-interior-designers-architects-2025",
+            "link_url_1": "shopify://pages/press",
             "link_text_2": "Country & Townhouse Top 50 2024",
-            "link_url_2": "https://www.countryandtownhouse.com/interiors/meet-the-uks-best-interior-designers-2024/",
+            "link_url_2": "shopify://pages/press",
             "link_text_3": "AD (Germany) Top 100 2022",
-            "link_url_3": "https://www.ad-magazin.de/artikel/ad100-2022",
+            "link_url_3": "shopify://pages/press",
             "link_text_4": "House & Garden 30 Up & Coming interior Designers 2022",
-            "link_url_4": "https://www.houseandgarden.co.uk/gallery/interior-designers-to-watch",
+            "link_url_4": "shopify://pages/press",
             "link_text_5": "",
             "link_url_5": ""
           }
