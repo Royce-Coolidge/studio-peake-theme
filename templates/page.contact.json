@@ -44,6 +44,9 @@
         "referral_label": "How did you hear about us?*",
         "email_label": "Email address*",
         "submit_label": "SUBMIT FORM",
+        "show_marketing": true,
+        "marketing_heading": "I want to receive email marketing",
+        "marketing_disclaimer": "<p>I agree to receive marketing communications from Studio Peake.</p>",
         "success_message": "Thank you for your enquiry. We will be in touch shortly.",
         "anchor_id": ""
       }
@@ -66,9 +69,9 @@
         "image_with_text_UCbyJX": {
           "type": "image_with_text",
           "settings": {
-            "title": "Visit",
+            "title": "Visit By Appointment",
             "heading_tag": "h5",
-            "content": "<p>Studio Peake                           </p><p>Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
+            "content": "<p>                        </p><p>Glenthorne Mews</p><p>115a Glenthorne Road</p><p>London, W6 0LJ</p>",
             "link_url": "",
             "link_text": "",
             "compact_text": true,
