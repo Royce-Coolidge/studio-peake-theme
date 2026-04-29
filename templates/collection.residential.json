@@ -104,18 +104,18 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_3iDGTE": {
+        "image_georgian": {
           "type": "image",
           "settings": {
-            "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-residential-coming-soon.jpg",
+            "color_scheme": "",
+            "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-18.jpg",
             "column_count": "4",
-            "row_count": 2,
-            "title": "North Berwick Farmhouse",
+            "row_count": 1,
+            "title": "{{ metaobjects.project[\"georgian-cottage\"].title.value }}",
             "heading_tag": "h3",
             "content": "",
-            "link_text": "coming soon",
-            "link_url": "",
+            "link_text": "Explore Project",
+            "link_url": "shopify://metaobjects/project/georgian-cottage",
             "link_style": "link",
             "mobile_text_position": "place-self-end-start text-start",
             "text_position": "sm:place-self-center sm:text-center",
@@ -284,42 +284,6 @@
             "hotspot_4_color": "#7a8450"
           }
         },
-        "image_georgian": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-projects-residential-georgian-cottage-02.jpg",
-            "column_count": "12",
-            "row_count": 2,
-            "title": "{{ metaobjects.project[\"georgian-cottage\"].title.value }}",
-            "heading_tag": "h3",
-            "content": "",
-            "link_text": "Explore Project",
-            "link_url": "shopify://metaobjects/project/georgian-cottage",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 9,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
         "image_pxchJ8": {
           "type": "image",
           "disabled": true,
@@ -393,19 +357,55 @@
             "hotspot_4_vertical": 70,
             "hotspot_4_color": "#7a8450"
           }
+        },
+        "image_3iDGTE": {
+          "type": "image",
+          "settings": {
+            "color_scheme": "scheme-4",
+            "image": "shopify://shop_images/studiopeake-projects-residential-coming-soon_2a166ed2-4c3b-406c-8d34-7eadbb550572.jpg",
+            "column_count": "12",
+            "row_count": 2,
+            "title": "North Berwick Farmhouse",
+            "heading_tag": "h3",
+            "content": "",
+            "link_text": "coming soon",
+            "link_url": "",
+            "link_style": "link",
+            "mobile_text_position": "place-self-end-start text-start",
+            "text_position": "sm:place-self-center sm:text-center",
+            "overlay_color": "#000000",
+            "overlay_opacity": 9,
+            "sp_gradient_overlay": true,
+            "product_hotspot_1": "",
+            "hotspot_1_horizontal": 30,
+            "hotspot_1_vertical": 30,
+            "hotspot_1_color": "#7a8450",
+            "product_hotspot_2": "",
+            "hotspot_2_horizontal": 60,
+            "hotspot_2_vertical": 50,
+            "hotspot_2_color": "#7a8450",
+            "product_hotspot_3": "",
+            "hotspot_3_horizontal": 80,
+            "hotspot_3_vertical": 40,
+            "hotspot_3_color": "#7a8450",
+            "product_hotspot_4": "",
+            "hotspot_4_horizontal": 40,
+            "hotspot_4_vertical": 70,
+            "hotspot_4_color": "#7a8450"
+          }
         }
       },
       "block_order": [
         "image_kensington",
         "image_grade_ii",
-        "image_3iDGTE",
+        "image_georgian",
         "image_surrey",
         "image_chelsea",
         "image_notting_hill",
         "image_parsons",
-        "image_georgian",
         "image_pxchJ8",
-        "image_Gwd6Kq"
+        "image_Gwd6Kq",
+        "image_3iDGTE"
       ],
       "settings": {
         "allow_transparent_header": true,
