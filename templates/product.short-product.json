@@ -133,10 +133,34 @@
         "subheading": "",
         "anchor_id": ""
       }
+    },
+    "rich_text_YDqEM3": {
+      "type": "rich-text",
+      "blocks": {
+        "richtext_XtnqAw": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "richtext_XtnqAw"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "content_width": "sm",
+        "text_position": "start",
+        "remove_vertical_spacing": false,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "main",
-    "featured_collections_Q7PmtQ"
+    "featured_collections_Q7PmtQ",
+    "rich_text_YDqEM3"
   ]
 }
