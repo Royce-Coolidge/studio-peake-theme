@@ -996,11 +996,21 @@
   overflow: hidden;
 }
 
-/* Enquiry form: inputs underline-only */
+/* Enquiry + SP contact: form-control layout matches theme; inputs underline-only */
+
+.enquiry-modal__form-content .form-control,
+.sp-contact-form .form-control {
+  gap: var(--form-control-gap);
+  display: grid;
+  position: relative;
+}
 
 .enquiry-modal__form-content .input,
 .enquiry-modal__form-content .textarea,
-.enquiry-modal__form-content .select {
+.enquiry-modal__form-content .select,
+.sp-contact-form .input,
+.sp-contact-form .textarea,
+.sp-contact-form .select {
   border: none;
   border-bottom: 1px solid rgb(var(--text-color) / .3);
   border-radius: 0;
@@ -1015,7 +1025,9 @@
 }
 
 .enquiry-modal__form-content .input::placeholder,
-.enquiry-modal__form-content .textarea::placeholder {
+.enquiry-modal__form-content .textarea::placeholder,
+.sp-contact-form .input::placeholder,
+.sp-contact-form .textarea::placeholder {
   color: rgb(var(--text-color));
   opacity: 1;
   font-family: inherit;
@@ -1024,7 +1036,8 @@
   letter-spacing: normal;
 }
 
-.enquiry-modal__form-content :is(.input:focus, .textarea:focus, .select:focus-visible) {
+.enquiry-modal__form-content :is(.input:focus, .textarea:focus, .select:focus-visible),
+.sp-contact-form :is(.input:focus, .textarea:focus, .select:focus-visible) {
   border-bottom-color: currentColor;
 }
 
@@ -1186,33 +1199,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.sp-contact-form__input,
-.sp-contact-form__select {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid currentColor;
-  border-radius: 0;
-  background: transparent;
-  padding: 0.75rem 0;
-  font-family: var(--body-font-family);
-  font-weight: var(--button-font-weight);
-  font-size: var(--text-xs);
-  text-transform: none;
-  color: inherit;
-  outline: none;
-  appearance: none;
-}
-
-.sp-contact-form__input::placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
-.sp-contact-form__input:focus,
-.sp-contact-form__select:focus {
-  border-bottom-color: currentColor;
-}
-
 .sp-contact-radio-dropdown {
   position: relative;
 }
@@ -1223,18 +1209,25 @@
   justify-content: space-between;
   width: 100%;
   border: none;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid rgb(var(--text-color) / .3);
   border-radius: 0;
   background: transparent;
   padding: 0.75rem 0;
   font-family: var(--body-font-family);
-  font-weight: var(--button-font-weight);
+  font-weight: var(--body-font-weight);
   font-size: var(--text-xs);
+  letter-spacing: var(--body-letter-spacing);
   text-transform: none;
-  color: inherit;
+  color: rgb(var(--text-color));
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
+}
+
+.sp-contact-form .form-control:has(.sp-contact-radio-dropdown__trigger:focus-visible) .sp-contact-radio-dropdown__trigger,
+.sp-contact-radio-dropdown__trigger:focus-visible {
+  border-bottom-color: currentColor;
+  outline: none;
 }
 
 .sp-contact-radio-dropdown__trigger--selected {

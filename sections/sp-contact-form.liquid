@@ -65,24 +65,24 @@
 
           {%- comment -%}--- Row: First Name / Last Name ---{%- endcomment -%}
           <div class="sp-contact-form__row sp-contact-form__row--half">
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[first_name]" id="contact-first-name" class="sp-contact-form__input" placeholder="{{ section.settings.first_name_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[first_name]" id="contact-first-name" class="input" placeholder="{{ section.settings.first_name_label }}" required>
             </div>
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[last_name]" id="contact-last-name" class="sp-contact-form__input" placeholder="{{ section.settings.last_name_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[last_name]" id="contact-last-name" class="input" placeholder="{{ section.settings.last_name_label }}" required>
             </div>
           </div>
 
           {%- comment -%}--- Project Address ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[project_address]" id="contact-project-address" class="sp-contact-form__input" placeholder="{{ section.settings.project_address_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[project_address]" id="contact-project-address" class="input" placeholder="{{ section.settings.project_address_label }}" required>
             </div>
           </div>
 
           {%- comment -%}--- Property Type (radio dropdown) ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
+            <div class="form-control">
               <div class="sp-contact-radio-dropdown">
                 <button type="button" class="sp-contact-radio-dropdown__trigger" aria-expanded="false">
                   <span class="sp-contact-radio-dropdown__label">{{ section.settings.property_type_label }}</span>
@@ -108,38 +108,38 @@
 
           {%- comment -%}--- Approximate Square Footage ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[square_footage]" id="contact-square-footage" class="sp-contact-form__input" placeholder="{{ section.settings.square_footage_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[square_footage]" id="contact-square-footage" class="input" placeholder="{{ section.settings.square_footage_label }}" required>
             </div>
           </div>
 
           {%- comment -%}--- Architect ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[architect]" id="contact-architect" class="sp-contact-form__input" placeholder="{{ section.settings.architect_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[architect]" id="contact-architect" class="input" placeholder="{{ section.settings.architect_label }}" required>
             </div>
           </div>
 
           {%- comment -%}--- Row: Estimated Timeline / Estimated Budget ---{%- endcomment -%}
           <div class="sp-contact-form__row sp-contact-form__row--half">
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[timeline]" id="contact-timeline" class="sp-contact-form__input" placeholder="{{ section.settings.timeline_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[timeline]" id="contact-timeline" class="input" placeholder="{{ section.settings.timeline_label }}" required>
             </div>
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[budget]" id="contact-budget" class="sp-contact-form__input" placeholder="{{ section.settings.budget_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[budget]" id="contact-budget" class="input" placeholder="{{ section.settings.budget_label }}" required>
             </div>
           </div>
 
           {%- comment -%}--- Other Key Information ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
-              <input type="text" name="contact[other_info]" id="contact-other-info" class="sp-contact-form__input" placeholder="{{ section.settings.other_info_label }}" required>
+            <div class="form-control">
+              <input type="text" name="contact[other_info]" id="contact-other-info" class="input" placeholder="{{ section.settings.other_info_label }}" required>
             </div>
           </div>
 
           {%- comment -%}--- How Did You Hear About Us (radio dropdown) ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
+            <div class="form-control">
               <div class="sp-contact-radio-dropdown">
                 <button type="button" class="sp-contact-radio-dropdown__trigger" aria-expanded="false">
                   <span class="sp-contact-radio-dropdown__label">{{ section.settings.referral_label }}</span>
@@ -165,8 +165,8 @@
 
           {%- comment -%}--- Email (hidden visually but required by Shopify contact form) ---{%- endcomment -%}
           <div class="sp-contact-form__row">
-            <div class="sp-contact-form__field">
-              <input type="email" name="contact[email]" id="contact-email" class="sp-contact-form__input" placeholder="{{ section.settings.email_label }}" required>
+            <div class="form-control">
+              <input type="email" name="contact[email]" id="contact-email" class="input" placeholder="{{ section.settings.email_label }}" required>
             </div>
           </div>
 
