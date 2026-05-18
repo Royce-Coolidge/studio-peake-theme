@@ -117,14 +117,14 @@
                     {%- unless rendered_country -%}
                       {%- if has_country and has_postcode -%}
                         <div class="fieldset-row" {{ block.shopify_attributes }}>
-                          {%- render 'select', name: 'contact[country]', label: 'Country', options: all_country_option_tags, show_empty_value: true, autocomplete: 'country' -%}
+                          {%- render 'select', name: 'contact[country]', options: all_country_option_tags, empty_option_label: 'Country', autocomplete: 'country' -%}
                           {%- render 'input', type: 'text', name: 'contact[postcode]', label: 'Postcode', autocomplete: 'postal-code' -%}
                         </div>
                         {%- assign rendered_country = true -%}
                         {%- assign rendered_postcode = true -%}
                       {%- else -%}
                         <div {{ block.shopify_attributes }}>
-                          {%- render 'select', name: 'contact[country]', label: 'Country', options: all_country_option_tags, show_empty_value: true, autocomplete: 'country' -%}
+                          {%- render 'select', name: 'contact[country]', options: all_country_option_tags, empty_option_label: 'Country', autocomplete: 'country' -%}
                         </div>
                         {%- assign rendered_country = true -%}
                       {%- endif -%}
@@ -134,7 +134,7 @@
                     {%- unless rendered_postcode -%}
                       {%- if has_country and has_postcode -%}
                         <div class="fieldset-row" {{ block.shopify_attributes }}>
-                          {%- render 'select', name: 'contact[country]', label: 'Country', options: all_country_option_tags, show_empty_value: true, autocomplete: 'country' -%}
+                          {%- render 'select', name: 'contact[country]', options: all_country_option_tags, empty_option_label: 'Country', autocomplete: 'country' -%}
                           {%- render 'input', type: 'text', name: 'contact[postcode]', label: 'Postcode', autocomplete: 'postal-code' -%}
                         </div>
                         {%- assign rendered_country = true -%}

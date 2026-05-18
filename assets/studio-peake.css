@@ -1895,3 +1895,7 @@ position: absolute;
     right: 1rem;
   }
 }
+
+.select {
+  box-shadow: none;
+}
