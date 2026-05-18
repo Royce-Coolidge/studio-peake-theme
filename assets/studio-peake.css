@@ -1336,10 +1336,34 @@
   align-self: flex-start;
 }
 
+.sp-contact-form__stack {
+  position: relative;
+  overflow: hidden;
+}
+
 .sp-contact-form__success {
-  padding: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-block: 1rem;
   font-family: var(--text-font-family);
+  outline: none;
+  animation: sp-contact-form-success-in 500ms cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+.sp-contact-form__success[hidden] {
+  display: none;
+}
+
+@keyframes sp-contact-form-success-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-contact-form__success {
+    animation: none;
+  }
 }
 
 .sp-contact-form__errors {

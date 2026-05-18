@@ -39,11 +39,22 @@
     {%- comment -%}--- FORM PANEL ---{%- endcomment -%}
     <div class="sp-contact-layout__form">
       <div class="sp-contact-form container section-spacing">
-        {%- if section.settings.heading != blank -%}
-          <h2 class="h2 sp-contact-form__heading">{{ section.settings.heading }}</h2>
-        {%- endif -%}
+        {%- form 'contact', class: 'sp-contact-form__form' -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="h2 sp-contact-form__heading" {% if form.posted_successfully? %}hidden{% endif %}>{{ section.settings.heading }}</h2>
+          {%- endif -%}
 
-        {%- form 'contact', class: 'sp-contact-form__fields' -%}
+          <div class="sp-contact-form__stack">
+            <div class="sp-contact-form__success"
+                 role="status"
+                 aria-live="polite"
+                 tabindex="-1"
+                 {% unless form.posted_successfully? %}hidden{% endunless %}>
+              <p class="h2">WE'LL BE IN TOUCH</p>
+              <p class="text-subdued">{{ section.settings.success_message }}</p>
+            </div>
+
+            <div class="sp-contact-form__fields" {% if form.posted_successfully? %}hidden{% endif %}>
           {%- if form.errors -%}
             <div class="sp-contact-form__errors">
               {{ form.errors | default_errors }}
@@ -177,10 +188,8 @@
           <div class="sp-contact-form__row sp-contact-form__row--submit">
             <button type="submit" class="button button--outline sp-contact-form__submit">{{ section.settings.submit_label }}</button>
           </div>
-
-          {%- if form.posted_successfully? -%}
-            <p class="sp-contact-form__success">{{ section.settings.success_message }}</p>
-          {%- endif -%}
+            </div>
+          </div>
         {%- endform -%}
       </div>
     </div>
@@ -222,6 +231,11 @@
       var label = trigger.querySelector('.sp-contact-radio-dropdown__label');
       label.textContent = radio.value;
       trigger.classList.add('sp-contact-radio-dropdown__trigger--selected');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var success = document.querySelector('.sp-contact-form__success:not([hidden])');
+      if (success) success.focus({ preventScroll: false });
     });
   })();
 </script>
