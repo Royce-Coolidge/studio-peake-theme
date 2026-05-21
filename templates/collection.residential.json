@@ -72,10 +72,10 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "image": "{{ metaobjects.project[\"grade-ii-listed-historic-house\"].hero_image.value }}",
+            "image": "shopify://shop_images/studiopeake-grade-II-listed.jpg",
             "column_count": "4",
             "row_count": 2,
-            "title": "{{ metaobjects.project[\"grade-ii-listed-historic-house\"].title.value }}",
+            "title": "GRADE II LISTED HISTORIC HOUSE",
             "heading_tag": "h3",
             "content": "",
             "link_text": "coming soon",
