@@ -33,8 +33,8 @@
         "image_7fkBP7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-hero_f1277e28-fdb9-40a3-8e97-725ed9f97be6.jpg",
-            "mobile_image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake_1.jpg",
+            "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-09.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-09.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -81,7 +81,7 @@
         "image_with_text_AUBd9h": {
           "type": "image_with_text",
           "settings": {
-            "title": "{{ article.title }}",
+            "title": "AROUND THE STUDIO",
             "heading_tag": "h1",
             "content": "",
             "link_url": "",
@@ -128,121 +128,6 @@
     },
     "media_grid_rEzmQM": {
       "type": "media-grid",
-      "blocks": {
-        "image_QDTKXA": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-01.jpg",
-            "column_count": "8",
-            "row_count": 2,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_cCipQX": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-06_3ad80753-643c-4aa3-af3f-c92a220de0f7.jpg",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_bDjF7q": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-09_e8b9547d-586e-4cfe-ab59-a60cbf523dac.jpg",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        }
-      },
-      "block_order": [
-        "image_QDTKXA",
-        "image_cCipQX",
-        "image_bDjF7q"
-      ],
       "name": "t:sections.media_grid.presets.media_grid.name",
       "settings": {
         "allow_transparent_header": true,
@@ -280,9 +165,9 @@
       ],
       "name": "t:sections.image_with_text.presets.image_with_text.name",
       "settings": {
-        "color_scheme": "scheme-7b22112a-e5d0-4011-8d76-009305168e80",
+        "color_scheme": "scheme-3",
         "separate_section_with_border": false,
-        "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-07_1b3ada4e-6fa7-40bf-97fd-d84d1b2ce3aa.jpg",
+        "image": "shopify://shop_images/studiopeake-projects-commercial-glenthorne-studio-05.jpg",
         "reveal_on_scroll": true,
         "image_position": "end",
         "content_width": "md",
@@ -297,7 +182,7 @@
         "image_zL6UL9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-08_64ab1357-bb0c-4017-ad50-f2060e5a7d15.jpg",
+            "image": "shopify://shop_images/studiopeake-about-the-team_aef4e608-9c51-4d01-94f3-3dd18c411f19.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
@@ -317,7 +202,7 @@
             "background_opacity": 50,
             "text_color": "#ffffff",
             "border_color": "",
-            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
+            "gradient_overlay": "linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0) 53.24%, rgba(0, 0, 0, 0) 75%, rgba(4, 4, 4, 0.65) 100%)"
           }
         }
       },
@@ -341,172 +226,8 @@
         "anchor_id": ""
       }
     },
-    "multi_column_DPbJLw": {
-      "type": "multi-column",
-      "blocks": {
-        "image_with_text_iFH7Wp": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "",
-            "heading_tag": "h3",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "compact_text": false,
-            "column_span": 1
-          }
-        },
-        "image_with_text_nWU4Db": {
-          "type": "image_with_text",
-          "settings": {
-            "title": "",
-            "heading_tag": "h3",
-            "content": "<p>And of course, behind the scenes, there is always Ed—my husband—who somehow manages to also be head of legal, head of PR, and head of founder therapy at 11pm most nights.</p><p>But most of all, this milestone belongs to the Studio Peake team, past and present. They are the heart of the studio, and everything we do is built on their dedication, talent and care. It was important to take the time to celebrate them properly.</p><p>Five years in, we feel incredibly proud—and incredibly grateful. Last night was a reminder that Studio Peake is, and always has been, a collaboration.</p><p>And we couldn’t be more excited for what comes next.</p>",
-            "link_url": "",
-            "link_text": "",
-            "compact_text": false,
-            "column_span": 1
-          }
-        }
-      },
-      "block_order": [
-        "image_with_text_iFH7Wp",
-        "image_with_text_nWU4Db"
-      ],
-      "custom_css": [],
-      "name": "t:sections.multi_column.presets.multi_column.name",
-      "settings": {
-        "color_scheme": "scheme-e70f18a6-0720-4612-a0a1-f3c66638194c",
-        "separate_section_with_border": false,
-        "columns_per_row": 2,
-        "stack_on_mobile": true,
-        "overlap_image": false,
-        "content_alignment": "start",
-        "text_alignment": "start",
-        "spacing": "md",
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "anchor_id": ""
-      }
-    },
     "media_grid_DzP8bU": {
       "type": "media-grid",
-      "blocks": {
-        "image_imx3d3": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-05_d066efd4-6878-4338-98c6-103340814f82.jpg",
-            "column_count": "8",
-            "row_count": 2,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_y7FyLd": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-02_1ef3309c-9c07-45bc-8b09-ab9bbb71ed11.jpg",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        },
-        "image_7E6f8V": {
-          "type": "image",
-          "settings": {
-            "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-news-and-views-five-years-of-studio-peake-04_040441c8-c242-4ee2-93f9-143b69ea3d96.jpg",
-            "column_count": "4",
-            "row_count": 1,
-            "title": "",
-            "heading_tag": "h4",
-            "content": "",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "link",
-            "mobile_text_position": "place-self-end-start text-start",
-            "text_position": "sm:place-self-center sm:text-center",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "sp_gradient_overlay": true,
-            "product_hotspot_1": "",
-            "hotspot_1_horizontal": 30,
-            "hotspot_1_vertical": 30,
-            "hotspot_1_color": "#7a8450",
-            "product_hotspot_2": "",
-            "hotspot_2_horizontal": 60,
-            "hotspot_2_vertical": 50,
-            "hotspot_2_color": "#7a8450",
-            "product_hotspot_3": "",
-            "hotspot_3_horizontal": 80,
-            "hotspot_3_vertical": 40,
-            "hotspot_3_color": "#7a8450",
-            "product_hotspot_4": "",
-            "hotspot_4_horizontal": 40,
-            "hotspot_4_vertical": 70,
-            "hotspot_4_color": "#7a8450"
-          }
-        }
-      },
-      "block_order": [
-        "image_imx3d3",
-        "image_y7FyLd",
-        "image_7E6f8V"
-      ],
       "custom_css": [
         ".media-grid {border-block: 2px solid #f7f1eb;}"
       ],
@@ -550,7 +271,6 @@
     "media_grid_rEzmQM",
     "image_with_text_PYx3yi",
     "slideshow_nUgUFX",
-    "multi_column_DPbJLw",
     "media_grid_DzP8bU",
     "prev-next-blog-posts"
   ]
