@@ -95,7 +95,7 @@
           "settings": {
             "title": "",
             "heading_tag": "h3",
-            "content": "<p>Last night we celebrated five years of Studio Peake, and it was one of those evenings that felt genuinely special—full of familiar faces, brilliant conversation, and a room filled with the people who have helped shape the studio into what it is today.</p><p>We hosted a party with our suppliers, supporters and friends, and it was such a joy to have everyone together in one place. It felt like a rare moment to pause, reflect, and properly appreciate just how much has gone into building the studio over the last five years.</p>",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/></p>",
             "link_url": "",
             "link_text": "",
             "compact_text": false,
@@ -268,7 +268,7 @@
         "richtext_8djb6F": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Because while Studio Peake may have started with me, it certainly hasn’t grown because of me alone.</p><p>The truth is, the studio is here because of the incredible people we work with. Without each and every one of them, Studio Peake simply wouldn’t be what it is today. The past five years have been an exciting journey and a constant learning curve—one that never seems to flatten out—and it’s been made possible by the talent, expertise and support of those around us.</p><p>Over time, I’ve realised something very clearly: every project is only ever as good as the people you’re working with. We care deeply about quality and detail, and we hold ourselves to very high standards. We want to work with the best—and we are so lucky that we do.</p><p>We are endlessly grateful to the architects, landscape designers, lighting designers, project managers and contractors we collaborate with. Their professionalism, experience and creative thinking elevate every project and make the process not only smoother, but genuinely enjoyable.</p><p>We also owe so much to the suppliers and makers we rely on—people whose creativity, knowledge, craftsmanship and eye for detail constantly inspire us. Their work is what brings our ideas to life, and their expertise is something we lean on hugely throughout every stage of a project.</p>"
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/></p>"
           }
         }
       },
