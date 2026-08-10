@@ -1,5 +1,5 @@
 {%- unless request.page_type == 'captcha' -%}
-  {%- unless section.settings.show_only_for_visitors and customer -%}
+  {%- unless section.settings.hide_for_account_holders and customer -%}
     {%- assign posted_successfully = false -%}
     {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
 
@@ -117,6 +117,38 @@
           if (popup) popup.show();
         }
       });
+
+      // Shareable link support: opening the site with #newsletter-popup in the
+      // URL force-opens the popup. Calling .show() directly bypasses the
+      // show-once / no-auto-show logic (that only gates the timed auto-appear),
+      // so it opens even for visitors who dismissed it before. whenDefined
+      // avoids a race: theme.js is a module and upgrades <newsletter-popup>
+      // after this inline script parses.
+      //
+      //   load /#newsletter-popup
+      //        │ hash matches?
+      //        ▼ yes            whenDefined     popup.show()   clean hash
+      //   openNewsletterFromHash() ──► ─────► ──► ─────────► ──► (no re-pop on refresh)
+      (function() {
+        function openNewsletterFromHash() {
+          if (window.location.hash !== '#newsletter-popup') return;
+          window.customElements.whenDefined('newsletter-popup').then(function() {
+            var popup = document.getElementById('newsletter-popup');
+            if (!popup) return;
+            popup.show();
+            // Strip the hash so a refresh / bookmarked address doesn't re-pop.
+            if (window.history && window.history.replaceState) {
+              window.history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+          });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', openNewsletterFromHash);
+        } else {
+          openNewsletterFromHash();
+        }
+      })();
     </script>
   {%- endunless -%}
 {%- endunless -%}
