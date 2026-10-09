@@ -62,7 +62,9 @@
       "blocks": {
         "carousel_image_cYXQFn": {
           "type": "carousel_image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Vaulted_Library_Lounge_Sketch.png"
+          }
         },
         "heading_Efre63": {
           "type": "heading",
@@ -93,7 +95,7 @@
       ],
       "name": "SP Carousel with text",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "separate_section_with_border": false,
         "reveal_on_scroll": false,
         "image_position": "start",
