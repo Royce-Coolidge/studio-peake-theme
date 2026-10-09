@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-42.jpg",
-            "mobile_image": "shopify://shop_images/studiopeake-grade-II-listed.jpg",
+            "mobile_image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-42.jpg",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
