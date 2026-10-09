@@ -81,7 +81,7 @@
           "type": "sp-link",
           "settings": {
             "text": "View press article",
-            "url": ""
+            "url": "https://www.houseandgarden.co.uk/gallery/sarah-peake-arts-and-crafts-former-dairy-in-the-home-counties"
           }
         }
       },
@@ -222,7 +222,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "",
-            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-61.jpg",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-612.jpg",
             "column_count": "12",
             "row_count": 2,
             "title": "",
@@ -906,7 +906,7 @@
           "type": "image",
           "settings": {
             "color_scheme": "scheme-4",
-            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-114.jpg",
+            "image": "shopify://shop_images/studiopeake-projects-residential-grade-II-listed-1142.jpg",
             "column_count": "12",
             "row_count": 2,
             "title": "",
